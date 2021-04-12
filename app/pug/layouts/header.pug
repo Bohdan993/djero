@@ -2,40 +2,20 @@ header.header
 	.header__layout
 		.center
 			.f-container
-				.header__logo-layer
-					a.header__logo-link(href="#")
-						img.header__logo(src="img/Logo.svg" alt="Psychograde")
-				.header__menu-layer
-					nav.header__navigation
-						ul.header__menu
-							li.header__menu-item
-								a.header__menu-link(href="#").mobile-menu-item
-									|О нас
-							li.header__menu-item.search-item
-								div#autocomplete.input-group.header__input-group-menu.autocomplete
-									input.header__input-menu.search-input.field.autocomplete-input(type="text" placeholder="Найти друзей...")
-									.header__autocomplete-layer
-										.header__autocomplete-tabs-layer
-											.header__autocomplete-tabs
-												.header__autocomplete-tabs-item.active(data-tab="fb")
-													p.header__autocomplete-tab-text
-														|Facebook
-												.header__autocomplete-tabs-item(data-tab="li")
-													p.header__autocomplete-tab-text
-														|LinkedIn
-										ul.autocomplete-result-list
-									.header__search-ico-layer
-										i.ico.s-magnifying-glass.header__search-ico
-							li.header__menu-item
-								a.header__menu-link(href="#").mobile-menu-item
-									|Кабинет
-				.header__button-layer
-					button.header__button.golden-account-btn.mobile-menu-item
+				.header__btn-layer.header-inner-layer
+					a.header__btn.btn.white(href='#')
 						span
-							|Голден-аккаунт
-				.header__exit-button-layer
-					a.link-btn.header__exit-button.mobile-menu-item(href="#")
-						|Выход
-				.header__burger-layer
-					.header__btn
-						.header__btn-burger
+							|Замовити дзвінок
+				.header__logo-layer.header-inner-layer
+					.header__logo-link-layer
+						a.header__logo-link(href="#")
+							img.header__logo(src="img/logo.svg" alt="Djero")
+				.header__menu-layer.header-inner-layer
+					nav.header__menu
+						ul.header__menu-list
+							li.header__menu-list-item 
+								a.header__menu-link(href="#")
+									|Як це працює? 
+							li.header__menu-list-item 
+								a.header__menu-link(href="#")
+									|Розважайся з Djero! 

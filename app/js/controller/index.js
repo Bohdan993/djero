@@ -1,17 +1,19 @@
+import { FullPageInit, BurgerMenu } from '../model';
 import {
-	BurgerMenu,
-
-} from '../model'
-import {
-	body,
-} from '../view'
+	body
+} from '../view';
 
 const app = {
 	init() {
 		this.bm()
+		this.fpi()
 	},
-	bm(){
-		// BurgerMenu(menuBtn, mobileMenuItems, mobileMenuParent, body)
+	bm() {
+		// console.log(Fullpage, Splide)
+		// BurgerMenu(body)
+	},
+	fpi(){
+		FullPageInit()
 	},
 
 }

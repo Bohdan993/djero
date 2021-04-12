@@ -8,6 +8,8 @@
     "@babel/runtime": "^7.10.5",
     "@splidejs/splide": "^2.4.21",
     "cart-localstorage": "^1.1.5",
+    "fullpage.js": "^2.9.7",
+    "jquery": "^3.6.0",
     "normalize.css": "^8.0.1",
     "vanilla-lazyload": "^17.3.0"
   },

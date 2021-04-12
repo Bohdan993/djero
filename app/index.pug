@@ -29,9 +29,13 @@ block content
 	include pug/layouts/header
 	main.main
 		.main__layout
-			.center
-				.f-container.main__f-container
-					section.main__content
+			.f-container.main__f-container
+				section.main__content.fullpage
+					include pug/layouts/main-screen
+					include pug/layouts/main-screen
+					include pug/layouts/main-screen
+					include pug/layouts/main-screen
+				include pug/layouts/sidebar
 	include pug/layouts/footer
 	.popups
 		.popups__layer
