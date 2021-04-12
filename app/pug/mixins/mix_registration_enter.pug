@@ -1,0 +1,59 @@
+mixin registration_enter(clazz, text)
+				div(class=`${clazz} auth`)
+					div(class=`${clazz}__layout violet-layer auth__layout`)
+						div.center
+							div.f-container
+								div.floating-images-layer
+									div.floating-images
+										img.floating-image.first(src="img/enter-pic1.png" alt="Image")
+										img.floating-image.second(src="img/enter-pic2.png" alt="Image")
+										img.floating-image.third(src="img/enter-pic3.png" alt="Image")
+										img.floating-image.fourth(src="img/enter-pic4.png" alt="Image")
+								div(class=`${clazz}__form-layer auth__form-layer block`)
+									div(class=`${clazz}__form-logo-layer auth__form-logo-layer`)
+										img(class=`${clazz}__form-logo form-logo auth__form-logo` src="img/logo.png")
+									if(clazz === 'enter' || clazz === 'registration')
+										div(class=`${clazz}__form-layer auth__form-layer_inner`)
+											form(class=`${clazz}__form auth__form`)
+												div(class=`${clazz}__input-layer field-layer`)
+													span.validate-message
+													input(class=`${clazz}__input field` type="email" placeholder="Email" requaired name="email" id="email" autocomplete="email")
+												div(class=`${clazz}__input-layer field-layer`)
+													span.validate-message
+													input(class=`${clazz}__input field` type="password" placeholder="Пароль" requaired name="password" id="password" autocomplete="password")
+												div(class=`${clazz}__button-layer btn-layer`)
+													button(class=`${clazz}__button btn auth__button` type="submit")
+														span=text
+													if(clazz === 'enter')
+														div(class=`${clazz}__forget-password-layer auth__forget-password-layer`)
+															a(class=`${clazz}__forget-password auth__forget-password` href="#")
+																|Забыли пароль?
+									if(clazz === 'start')
+										div(class=`${clazz}__form-layer_inner auth__form-layer_inner`)
+												div(class=`${clazz}__text-layer`)
+													div(class=`${clazz}__title-layer`)
+														h3(class=`${clazz}__title`)
+															|Узнайте как видят Вас другие люди
+													div(class=`${clazz}__description-layer`)
+														p(class=`${clazz}__description`)
+															|Открыто или анонимно
+												div(class=`${clazz}__button-layer btn-layer`)
+													a(class=`${clazz}__button btn link-btn auth__button` href="#")
+														span
+															|Регистрация
+												div(class=`${clazz}__button-layer btn-layer`)
+													a(class=`${clazz}__button link-btn btn auth__button_second` href="#")
+														span
+															|Вход
+									div(class=`${clazz}__social-layer auth__social-layer`)
+										div(class=`${clazz}__social social`)
+											div(class=`${clazz}__social-text-layer auth__social-text-layer`)
+												p(class=`${clazz}__social-text social-text auth__social-text`)
+													|Авторизация
+											ul(class=`${clazz}__social-list social-list auth__social-list`)
+												li(class=`${clazz}__social-list-item social-list-item`)
+													a(class=`${clazz}__social-link social-link` href="#" target="_blank")
+														i(class=`${clazz}__social-ico ico s-facebook-ico social-ico`)
+												li(class=`${clazz}__social-list-item social-list-item`)
+													a(class=`${clazz}__social-link social-link` href="#" target="_blank")
+														i(class=`${clazz}__social-ico ico s-linkedin-ico social-ico`)

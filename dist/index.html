@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
+    <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
+    <link rel="preload" href="css/main.min.css?v=1618218703328" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1618218703328">
+    <link rel="stylesheet" href="css/main.min.css?v=1618218703328">
+  </head>
+  <body class="home-page">
+    <header class="header">
+      <div class="header__layout">
+        <div class="center">
+          <div class="f-container">
+            <div class="header__logo-layer"><a class="header__logo-link" href="#"><img class="header__logo" src="img/Logo.svg" alt="Psychograde"></a></div>
+            <div class="header__menu-layer">
+              <nav class="header__navigation">
+                <ul class="header__menu">
+                  <li class="header__menu-item"><a class="header__menu-link mobile-menu-item" href="#">О нас</a></li>
+                  <li class="header__menu-item search-item">
+                    <div class="input-group header__input-group-menu autocomplete" id="autocomplete">
+                      <input class="header__input-menu search-input field autocomplete-input" type="text" placeholder="Найти друзей...">
+                      <div class="header__autocomplete-layer">
+                        <div class="header__autocomplete-tabs-layer">
+                          <div class="header__autocomplete-tabs">
+                            <div class="header__autocomplete-tabs-item active" data-tab="fb">
+                              <p class="header__autocomplete-tab-text">Facebook</p>
+                            </div>
+                            <div class="header__autocomplete-tabs-item" data-tab="li">
+                              <p class="header__autocomplete-tab-text">LinkedIn</p>
+                            </div>
+                          </div>
+                        </div>
+                        <ul class="autocomplete-result-list"></ul>
+                      </div>
+                      <div class="header__search-ico-layer"><i class="ico s-magnifying-glass header__search-ico"></i></div>
+                    </div>
+                  </li>
+                  <li class="header__menu-item"><a class="header__menu-link mobile-menu-item" href="#">Кабинет</a></li>
+                </ul>
+              </nav>
+            </div>
+            <div class="header__button-layer">
+              <button class="header__button golden-account-btn mobile-menu-item"><span>Голден-аккаунт</span></button>
+            </div>
+            <div class="header__exit-button-layer"><a class="link-btn header__exit-button mobile-menu-item" href="#">Выход</a></div>
+            <div class="header__burger-layer">
+              <div class="header__btn">
+                <div class="header__btn-burger"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__layout">
+        <div class="center">
+          <div class="f-container main__f-container">
+            <section class="main__content"></section>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__layout">
+        <div class="footer__info-layer">
+          <div class="center">
+            <div class="footer__info">
+              <nav class="footer__menu-layer">
+                <ul class="footer__menu">
+                  <li class="footer__menu-item"><a class="footer__menu-item-link" href="#">Потребность в достижениях</a><a class="footer__menu-item-link" href="#">Темперамент</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-item-link" href="#">Эмоциональный интеллект</a><a class="footer__menu-item-link" href="#">САН</a></li>
+                  <li class="footer__menu-item"><a class="footer__menu-item-link" href="#">Визуальные асоциации</a><a class="footer__menu-item-link" href="#">Словесные асоциации</a></li>
+                </ul>
+              </nav>
+              <div class="footer__social-layer">
+                <div class="footer__social social">
+                  <ul class="footer__social-list social-list">
+                    <li class="footer__social-list-item social-list-item"><a class="footer__social-link social-link" href="#" target="_blank"><i class="footer__social-ico ico s-facebook-footer social-ico"></i></a></li>
+                    <li class="footer__social-list-item social-list-item"><a class="footer__social-link social-link" href="#" target="_blank"><i class="footer__social-ico ico s-instagram-footer social-ico"></i></a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer__copyright-layer">
+          <div class="center">
+            <p class="footer__copyright">© Psychograde</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="popups">
+      <div class="popups__layer">
+        <div class="popups__modal">
+          <div class="modal-block" id="assessment-modal">
+            <div class="modal-overlay close-modal">
+              <div class="modal-layer">
+                <div class="close-modal-btn close-modal close-btn"></div>
+                <div class="assessment__modal modal">
+                  <div class="assessment__layout modal-layout">
+                    <header class="assessment__modal-header modal-header"></header>
+                    <section class="assessment__modal-body modal-body"></section>
+                    <footer class="assessment__modal-footer modal-footer">
+                      <div class="social assessment__social">
+                        <ul class="social-list assessment__social-list">
+                          <li class="social-list-item assessment__social-list-item"><a class="social-link assessment__social-link" href="#" target="_blank"><i class="assessment__social-ico ico s-facebook-ico social-ico"></i></a></li>
+                          <li class="social-list-item assessment__social-list-item"><a class="social-link assessment__social-link" href="#" target="_blank"><i class="assessment__social-ico ico s-linkedin-ico social-ico"></i></a></li>
+                          <li class="social-list-item assessment__social-list-item"><a class="social-link assessment__social-link" href="#" target="_blank"><i class="assessment__social-ico ico s-whatsapp-ico social-ico"></i></a></li>
+                          <li class="social-list-item assessment__social-list-item"><a class="social-link assessment__social-link" href="#" target="_blank"><i class="assessment__social-ico ico s-viber-ico social-ico"></i></a></li>
+                          <li class="social-list-item assessment__social-list-item"><a class="social-link assessment__social-link" href="#" target="_blank"><i class="assessment__social-ico ico s-telegram-ico social-ico"></i></a></li>
+                          <li class="social-list-item assessment__social-list-item"><a class="social-link assessment__social-link" href="#" target="_blank"><i class="assessment__social-ico ico s-pinterest-ico social-ico"></i></a></li>
+                        </ul>
+                      </div>
+                    </footer>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/libs.min.js?v=1618218703328" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1618218703328" as="script">
+    <script src="js/main.min.js?v=1618218703328" async></script>
+  </body>
+</html>

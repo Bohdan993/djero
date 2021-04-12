@@ -1,0 +1,46 @@
+extends pug/base
+
+
+
+append vars
+	- body.classList.push('home-page')
+
+
+prepend vars
+
+
+
+
+
+block links
+	// link(rel="preconnect" href="https://fonts.gstatic.com")
+	// link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")
+
+
+block head-end
+
+
+
+
+
+
+
+block content
+	include pug/layouts/header
+	main.main
+		.main__layout
+			.center
+				.f-container.main__f-container
+					section.main__content
+	include pug/layouts/footer
+	.popups
+		.popups__layer
+			include pug/layouts/_popup
+
+
+block scripts
+	script(src=`js/libs.min.js?v=${Date.now()}` defer)
+	link(rel="preload" href=`js/main.min.js?v=${Date.now()}` as="script")
+	script(src=`js/main.min.js?v=${Date.now()}` async)
+
+

@@ -1,2 +1,2 @@
-# djero
-Djero site
+# Djero
+Web site

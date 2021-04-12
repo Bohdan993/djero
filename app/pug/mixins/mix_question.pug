@@ -1,0 +1,17 @@
+mixin question(text, index)
+			div.test-questions__card.block
+				.f-container
+					div.test-questions__question-layer
+						div.test-questions__question
+							.test-questions__text-layer
+								p.test-questions__text=text
+					div.test-questions__inputs-layer
+						div.test-questions__inputs
+							div(class=`test-question__input-layer field-layer`)
+								input(class=`test-question__input field` type="radio" id=`test-answer-yes-${index}` name=`test-answer-${index}` )
+								label(class="test-question__label" for=`test-answer-yes-${index}`)
+									|Да
+							div(class=`test-question__input-layer field-layer`)
+								input(class=`test-question__input field` id=`test-answer-no-${index}` type="radio" name=`test-answer-${index}`)
+								label(class="test-question__label" for=`test-answer-no-${index}`)
+									|Нет

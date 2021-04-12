@@ -1,0 +1,22 @@
+mixin menu(list, clazz)
+				div(class=`${clazz}__list-wrapper`)
+					ul(class=`${clazz}__list`)
+						each item, index in list
+							li(class=`${clazz}__list-item`)
+								a(
+								class=`${clazz}__link`
+								href=item.url ? item.url : '#'
+								)= item.text
+						if clazz === 'menu'
+							li(class=`${clazz}__list-item social-list-item`)
+								div(class=`social-icons ${clazz}__social-icons`)
+									a.facebook-link.social-link(href="https://facebook.com" target="_blank" rel="noopener noreffer nofollow")
+										span.menu__ico
+											i.ico.s-facebook-black
+									a.instagram-link.social-link(href="https://instagram.com" target="_blank" rel="noopener noreffer nofollow")
+										span.menu__ico
+											i.ico.s-instagram-black
+					if clazz === 'menu'
+						div(class=`${clazz}__close close-popup`)
+				if clazz === 'menu'
+					div(class=`${clazz}__overlay`)

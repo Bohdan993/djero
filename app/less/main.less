@@ -1,0 +1,512 @@
+@import url("app/less/_var.less");
+@import url("app/less/_mixins.less");
+@import url("app/less/_fonts.less");
+@import url("app/less/_init-sprites.less");
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+  overflow-y:scroll;
+}
+html,
+body {
+  color: @font-color;
+  height: 100%;
+  width: 100%;
+  // overflow-x: hidden;
+ 
+}
+
+
+::selection {
+  background: rgba(@pink, 0.6);
+  color: @white;
+}
+body {
+  margin: 0;
+  padding: 0;
+  // overflow-x: hidden;
+  // font-family: 'Century Gothic', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: @font-color;
+  // letter-spacing: 1.15px;
+  letter-spacing: 0.01rem;
+  line-height: 24/17;
+
+  background-color: @white;
+
+  &.menu-open {
+    overflow: hidden;
+  }
+
+  &.fixed {
+    overflow: hidden;
+  }
+
+  &.open-search {
+    position: relative;
+
+    &:before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(70, 80, 91, 0.1);
+      z-index: 98;
+    }
+  }
+
+}
+
+
+div,
+a {
+  outline: none;
+  color: @font-color;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  line-height: 1;
+}
+
+img, picture, source{
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  padding: 0;
+  margin: 0;
+}
+
+h2 {
+  overflow-wrap: break-word;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  display: block;
+  color: @white;
+  cursor: pointer;
+  font-weight: normal;
+}
+
+input, select, textarea {
+  width: 100%;
+  outline: none;
+  border: none;
+  text-align: center;
+}
+
+
+
+label {
+  margin-bottom: 0;
+  font-size: 12px;
+  font-weight:400;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+
+main {
+  width: 100%;
+  padding-top: 79px;
+}
+.center {
+  max-width: 1220px + 30px + 30px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.f-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+.ico {
+  display: block;
+  // max-width: 100%;
+  // max-height: 100%;
+}
+
+
+
+//|||||||||||||||||||COMMON ELEMENTS|||||||||||||||||||//
+
+// .main-btn {
+//   font-family: Geometria, sans-serif;
+//   font-weight: 500;
+//   background: @font-color;
+//   width: 100%;
+//   font-size: (14px/15px) * 1rem;
+//   line-height: 1;
+//   height: 50px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   text-align: center;
+//   color: @white;
+//   max-width: 200px;
+//   outline: none;
+//   border: 2px solid @secondary;
+//   overflow: hidden;
+//   cursor: pointer;
+//   letter-spacing: 0.1px;
+//   position: relative;
+//   transition: color .25s linear;
+//   .btn-overlay {
+//     position: absolute;
+//     width: 300px;
+//     height: 300px;
+//     left: 50%;
+//     top: 50%;
+//     z-index:2;
+//     border-radius: 50%;
+//     transition: transform .25s cubic-bezier(.75,.1,.25,.9);
+//     transform: translate(-50%, -50%) scale(0,0);
+//     background: @secondary;
+//   }
+
+//   .btn-text {
+//     position: relative;
+//     z-index: 3;
+//     letter-spacing: 1px;
+//   }
+
+//   &:hover {
+//     color: @font-color;
+//     .btn-overlay {
+//       transform: translate(-50%, -50%) scale(1,1);
+//     }
+//   }
+
+//   &.reverse {
+//     background: @secondary;
+//     color: @font-color;
+
+//     .btn-overlay {
+//       background: @font-color;
+//     }
+
+//     &:hover {
+//       color: @white;
+//       .btn-overlay {
+//         transform: translate(-50%, -50%) scale(1,1);
+//       }
+//     }
+//   }
+// }
+
+
+.h2-title {
+  .fSize(60vw, 60px * (576/1200), 60px, 576px, 1200px);
+  font-weight: 700;
+  font-family: 'Dancing Script', cursive;
+  text-align: center;
+  line-height: 1.35;
+  color: @font-color;
+}
+
+.block {
+  box-shadow: 0px 0px 6px rgba(186, 186, 196, 0.15);
+  background: @white;
+  border-radius: 6px;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.block-title {
+  font-family: 'Century Gothic', sans-serif;
+  font-weight: 700;
+  font-size: 28/17 * 1rem;
+  line-height: 34/28;
+  padding-bottom: 25px;
+}
+
+
+.btn {
+    font-family: 'Century Gothic', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 21/17;
+    color: @white;
+    background-color: @gray;
+    transition: background-color 0.25s linear;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    height: 42px;
+    width: 100%;
+    max-width: 171px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+      background-color: @font-color;
+    }
+
+}
+
+
+.form-group {
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: unset;
+}
+
+.field {
+
+    &:not([type="checkbox"]):not([type="radio"]) {
+      background-color: @light-gray;
+      border-radius: 6px;
+      text-align: left;
+      height: 38px;
+      padding: 0 10px;
+      border: 1px solid transparent;
+      transition: box-shadow .2s linear, border .2s linear;
+      box-shadow: none;
+
+      &:focus {
+        border: 1px solid @pink;
+        box-shadow: 0 0 0 0.25rem rgba(@pink, 25%);
+      }
+
+      &.no-valid {
+        border: 1px solid @red;
+      }
+    }
+    
+}
+
+
+.field-layer {
+  position: relative;
+}
+
+
+.validate-message {
+  color: @red;
+  position: absolute;
+  top: -20px;
+  font-size: 14/17 *1rem;
+  line-height: 16/14;
+  display: none;
+}
+
+// .section__layout {
+//   .fPa(40%, 40%, 40px, 40px, 992px,  1366px);
+// }
+
+.close-btn {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    &:hover {
+      &:before, &:after {
+        background: @red;
+      }
+    }
+
+
+
+    &:before, &:after {
+      content: '';
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      
+      background: @font-color;
+      width: 32px;
+      height: 5px;
+      border-radius: 6px;
+      transition: background 0.25s linear;
+
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+
+    &:after {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+
+
+.floating-images {
+  overflow: hidden;
+}
+
+.floating-image {
+  position: absolute;
+}
+
+.test-card {
+  height: 100%;
+  cursor: pointer;
+  background: @white;
+  box-shadow: 0px 2px 6px #EDEDED;
+  transition: box-shadow 0.25s linear;
+  border-radius: 6px;
+  margin: 0;
+  padding: 0;
+  &:hover {
+    box-shadow: 0px 4px 14px 7px #EDEDED;
+  }
+}
+
+
+.fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+
+.characteristic-card {
+  cursor: pointer;
+  background: @white;
+  box-shadow: 0px 2px 6px #EDEDED;
+  border-radius: 6px;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 15px;
+  padding: 0 15px;
+  transition: box-shadow 0.25s linear;
+
+  &:hover {
+    box-shadow: 0px 4px 14px 7px #EDEDED;
+  }
+}
+
+
+
+
+
+
+
+
+////////Animations/////
+
+.fadeIn {
+  animation: .75s linear forwards fadeIn;
+}
+
+.fadeInBlock {
+  display: block!important;
+  animation: .25s linear forwards fadeIn;
+}
+
+
+.slideInLeftBlock {
+  display: block;
+  animation: .75s linear forwards slideInLeft;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  } to {
+    opacity: 1;
+  }
+}
+
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  } to {
+    opacity: 0;
+  }
+}
+
+
+@keyframes fadeInBlock {
+  from {
+    opacity: 0;
+    display: none;
+  } to {
+    opacity: 1;
+    display: block;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    left: -100%;
+  } to {
+    left: 0;
+  }
+}
+
+
+@keyframes fadeInTranslate {
+  from {
+    opacity: 0;
+    // transform: translateX(-50%);
+    display: none;
+  }
+
+  to {
+    opacity: 1;
+    display: block;
+  }
+}
+//|||||||||||||||||||COMMON ELEMENTS END|||||||||||||||||||//
+
+//////////////////////////
+
+//////////////////////////
+
+@import url("app/less/_header.less");
+@import url("app/less/_footer.less");
+
+
+
+@import url("app/less/_popup.less");
+@import url("app/less/_media.less");
+@import url("app/less/sprite.less");
+
