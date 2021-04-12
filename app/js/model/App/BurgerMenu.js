@@ -3,6 +3,8 @@ import { throttle } from './Helpers'
 const BurgerMenu = (menuBtn, items, parent, body) => {
 	let menuOpen = false
 
+	console.log(manuOpen)
+
 	function createMenu(items){
 		let menuItems = Array.from(items)
 		let menu = `
