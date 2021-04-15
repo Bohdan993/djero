@@ -1,16 +1,264 @@
 .main-screen__layout {
-	 .main-screen__background {
+	height: 100%;
+
+	.main-screen__background {
 		position: absolute;
 		width: 100%;
 		height: 100%;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-	 }
-	 .main-screen__background-video {
-		max-width: 100%;
+	}
+
+	.main-screen__background-video {
+		position: absolute;
 		width: 100%;
 		height: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 		object-fit: cover;
-	 }
+		object-position: 75%;
+	}
+
+	.main-screen__content-layer {
+		position: relative;
+		z-index: 2;
+		height: 100%;
+		padding-top: 74px;
+	}
+
+	.main-screen__center {
+		height: 100%;
+	}
+
+	.main-screen__f-container {
+		height: 100%;
+		align-content: center;
+	}
+
+	.main-screen__content {
+		height: 100%;
+	}
+
+	.main-screen__header-layer {
+		width: 100%;
+		padding-bottom: 60/1220 * 100%;
+		padding-top: 60/1220 * 100%;
+	}
+
+	.main-screen__title {
+		padding-bottom: 10px;
+	}
+
+	.main-screen__header {
+		width: 100%;
+		position: relative;
+
+
+
+	}
+
+	.main-screen__target-icon {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 50%;
+		background-color: @red-orange;
+		padding: 14px;
+		cursor: pointer;
+		transition: background-color 0.25s linear;
+
+		position: absolute;
+		left: 50%;
+		top: 0%;
+		z-index: 2;
+
+		&::before,
+		&::after {
+			content: "";
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			transform: scale(1);
+			background-color: rgba(@red-orange, 0.75);
+			position: absolute;
+			border-radius: 50%;
+			z-index: -1;
+			transform-origin: center;
+			animation: scaleOpacity linear 2.8s infinite;
+		}
+
+		&::after {
+			animation-delay: 1.4s;
+		}
+	}
+
+	.main-screen__target-ico {
+		height: 22px;
+		width: 22px;
+
+		svg {
+			height: 22px;
+			width: 22px;
+			fill: @white;
+		}
+	}
+
+	.main-screen__subtitle {
+		font-size: 22/16 * 1rem;
+		letter-spacing: 2px;
+		line-height: 34/22;
+		color: @font-color;
+		text-align: center;
+	}
+
+	.main-screen__body-layer {
+		width: 100%;
+		padding-bottom: 40px;
+	}
+
+	.main-screen__body {
+		width: 100%;
+		padding-left: 25px;
+		max-width: 455/1220 * 100%;
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			background: url('../img/figure-arrow.png') no-repeat center/contain;
+			width: 150px;
+			height: 117px;
+			top: -150px;
+			left: 56%;
+		}
+	}
+
+	.main-screen__slider-list,
+	.main-screen__slider-slide {
+		max-width: 100%;
+	}
+
+	.main-screen__slider {
+		// max-width: 420px;
+	}
+
+	.main-screen__footer-layer {
+		width: 100%;
+		position: relative;
+	}
+
+	.main-screen__footer {
+		width: 100%;
+	}
+
+
+	.main-screen__footer-call {
+		.fSize(36vw, 36px * (576/1220), 36px, 576px, 1220px);
+		letter-spacing: 2px;
+		line-height: 68/36;
+		font-family: "Adventure Indiana Jones";
+		text-align: center;
+	}
+
+	.main-screen__footer-arrow-wrapper {
+		display: flex;
+		justify-content: center;
+
+	}
+
+	.main-screen__footer-arrow {
+		animation: upDown 0.75s linear infinite alternate;
+	}
+
+
+	.main-screen__footer-ball-wrapper {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		top: -115%;
+		
+	}
+
+	.main-screen__footer-ball {
+		animation: rotate 2.5s linear infinite;
+		cursor: pointer;
+	}
+	
 }
+
+
+
+@keyframes upDown {
+
+	from {
+		transform: translateY(-40%);
+	}
+
+	to {
+		transform: translateY(20%);
+	}
+	
+}
+
+
+@keyframes rotate {
+
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+
+}
+
+
+@keyframes scaleOpacity {
+	from {
+		opacity: 1;
+		transform: scale(1);
+	}
+
+	to {
+		opacity: 0;
+		transform: scale(1.5);
+		// width: 150%;
+		// height: 150%;
+	}
+}
+
+// @media screen and (orientation: portrait) {
+// 	.main-screen__layout {
+// 		.main-screen__background-video {
+// 			position: absolute;
+// 			width: 100%;
+// 			height: 100%;
+// 			top: 50%;
+// 			left: 50%;
+// 			transform: translate(-50%, -50%);
+// 			object-fit: cover;
+// 			object-position: 75%;
+// 		}
+// 	}
+// }
+
+// @media screen and (orientation: landscape) {
+// 	.main-screen__layout {
+// 		.main-screen__background-video {
+// 			position: absolute;
+// 			width: 100%;
+// 			height: 100%;
+// 			top: 50%;
+// 			left: 50%;
+// 			transform: translate(-50%, -50%);
+// 			object-fit: cover;
+// 			object-position: 75%;
+// 		}
+// 	}
+// }

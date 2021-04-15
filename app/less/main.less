@@ -19,7 +19,7 @@ body {
 
 
 ::selection {
-  background: rgba(orange, 0.6);
+  background: rgba(@dark-orange, 0.9);
   color: @white;
 }
 body {
@@ -105,7 +105,7 @@ a {
   padding: 0;
   margin: 0;
   display: block;
-  color: @white;
+  color: @font-color;
   cursor: pointer;
   font-weight: normal;
 }
@@ -167,13 +167,18 @@ main {
 
 
 
-.h2-title {
-  .fSize(60vw, 60px * (576/1200), 60px, 576px, 1200px);
-  font-weight: 700;
-  font-family: 'Dancing Script', cursive;
+.h1-title {
+  .fSize(60vw, 60px * (576/1220), 60px, 576px, 1220px);
+  font-weight: 400;
+  font-family: 'Adventure Indiana Jones',cursive;
   text-align: center;
-  line-height: 1.35;
+  line-height: 68/60;
   color: @font-color;
+  letter-spacing: 4px;
+
+  span {
+    color: @red-orange;
+  }
 }
 
 
@@ -199,6 +204,7 @@ main {
     cursor: pointer;
     overflow: hidden;
     position: relative;
+    text-align: center;
 
     span {
       position: relative;
@@ -245,9 +251,8 @@ main {
 }
 
 .main__content {
-  position: relative;
-  width: 100%;
-  height: 100vh;
+  // width: (1600 - 140)/1600 * 100%;
+  width: calc(100% - 140px);
 }
 
 
@@ -328,14 +333,14 @@ main {
     transition: box-shadow .2s linear, border .2s linear;
     box-shadow: none;
 
-    &:focus {
-      // border: 1px solid @pink;
-      // box-shadow: 0 0 0 0.25rem rgba(@pink, 25%);
-    }
+    // &:focus {
+    //   // border: 1px solid @pink;
+    //   // box-shadow: 0 0 0 0.25rem rgba(@pink, 25%);
+    // }
 
-    &.no-valid {
-      // border: 1px solid @red;
-    }
+    // &.no-valid {
+    //   // border: 1px solid @red;
+    // }
   }
   
 }
@@ -364,6 +369,19 @@ main {
   animation: .75s linear forwards fadeIn;
 }
 
+.slideTop {
+   animation: 5.75s linear forwards slideTop;
+}
+
+.slideBottom {
+
+}
+
+
+.slideLeft {
+
+}
+
 
 
 @keyframes fadeIn {
@@ -381,6 +399,45 @@ main {
   } to {
     opacity: 0;
   }
+}
+
+
+@keyframes slideTop {
+  from {
+    // position: absolute;
+    transform: translateY(0);
+  }
+
+  to {
+    // top: -100%;
+    transform: translateY(-9999px);
+  }
+}
+
+
+@keyframes slideBottom {
+   from {
+     // position: absolute;
+     transform: translateY(0);
+   }
+
+   to {
+     // top: -100%;
+     transform: translateY(9999px);
+   }
+}
+
+
+@keyframes slideLeft {
+   from {
+     // position: absolute;
+     transform: translateY(0);
+   }
+
+   to {
+     // top: -100%;
+     transform: translateX(-9999px);
+   }
 }
 
 

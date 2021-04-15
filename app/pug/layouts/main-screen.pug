@@ -4,5 +4,39 @@
 			.main-screen__background
 				video.main-screen__background-video(autoplay="true" loop muted preload="metadata")
 					source(src="video/Djero-Main-Animation-2.mp4" type="video/mp4")
-		.center
-			.f-container
+		.main-screen__content-layer
+			.main-screen__content
+				.center.main-screen__center
+					.f-container.main-screen__f-container
+						.main-screen__header-layer
+							.main-screen__header
+								h1.main-screen__title.h1-title
+									|Відкривай баскетбол 
+									br
+									|із&nbsp;
+									span
+										|Djero!
+								p.main-screen__subtitle
+									|Смакуй печиво та влучай у корзину!
+						.main-screen__body-layer
+							.main-screen__body
+								.main-screen__target-icon
+									i.main-screen__target-ico.ico
+										+svg2('target')
+								.splide.main-screen__slider
+									.splide__track.main-screen__slider-track
+										ul.splide__list.main-screen__slider-list
+											li.splide__slide.main-screen__slider-slide
+												img.main-screen__slider-img(src="img/cookie-box.png", alt="Cookie Box")
+											li.splide__slide.main-screen__slider-slide
+												img.main-screen__slider-img(src="img/cookie-box.png", alt="Cookie Box")
+											li.splide__slide.main-screen__slider-slide
+												img.main-screen__slider-img(src="img/ball-animation.png", alt="Cookie Box")
+						.main-screen__footer-layer
+							.main-screen__footer
+								.main-screen__footer-ball-wrapper
+									img.main-screen__footer-ball(src="img/ball.png", alt="Ball")
+								.main-screen__footer-arrow-wrapper
+									img.main-screen__footer-arrow(src="img/arrow-up.png", alt="Arrow")
+								p.main-screen__footer-call
+									|Подай м'яч DJERO!

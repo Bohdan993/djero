@@ -2,7 +2,7 @@ function throttle(f, ms){
 	
 	let isThrottled = false,
 	t, a
-
+	
 	function d(){
 		
 		if (isThrottled) {
@@ -28,9 +28,11 @@ function throttle(f, ms){
 }
 
 
+
+
+
 function addText(elem, text) {
 	elem.textContent = text
-
 	return elem
 }
 

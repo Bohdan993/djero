@@ -7,9 +7,10 @@ header.header
 						span
 							|Замовити дзвінок
 				.header__logo-layer.header-inner-layer
-					.header__logo-link-layer
+					.header__logo-link-wrapper
 						a.header__logo-link(href="#")
-							img.header__logo(src="img/logo.svg" alt="Djero")
+							svg&attributes({class: 'header__logo'})
+								use(xlink:href=`img/logo.svg#Logo`)
 				.header__menu-layer.header-inner-layer
 					nav.header__menu
 						ul.header__menu-list

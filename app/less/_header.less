@@ -1,9 +1,15 @@
-.header__layout {
+.header {
 	position: fixed;
-	background: @transparent;
-	width: 100%;
 	z-index: 99;
+	// width: (1600 - 140)/1600 * 100%;
+	width: calc(100% - 140px);
+	
+}
 
+.header__layout {
+	
+	background: @transparent;
+	// width: 100%;
 	.f-container {
 		justify-content: space-between;
 		padding: 12px 0;
@@ -13,25 +19,86 @@
 		flex-basis: 33%;
 	}
 
-	.header__logo-link-layer {
+	.header__logo-link-wrapper {
 		display: flex;
 		justify-content: center;
 		align-items: center;
+		position: relative;
+		width: 100%;
+
+		&:before {
+			content: '';
+			display: block;
+			padding-top: 50px;
+		}
 	}
 
 	.header__logo-link {
+		padding: 12px;
+		// padding-bottom: 28px;
 		display: inline-block;
+		background-color: @orange;
+		position: absolute;
+		transition: background-color 0.25s linear;
+		top: -15px;
+
+		&:after {
+			content: ''; 
+			position: absolute; /* Абсолютное позиционирование */
+			left: 0px; 
+			bottom: -15px; /* Положение треугольника */
+			border: 15px solid @transparent; /* Прозрачные границы */
+			border-left: 51.5px solid @orange; /* Добавляем треугольник */
+			transition: border-left 0.25s linear;
+		   }
+
+		&:before {
+			content: ''; 
+			position: absolute; /* Абсолютное позиционирование */
+			right: 0px; 
+			bottom: -15px; /* Положение треугольника */
+			border: 15px solid @transparent; /* Прозрачные границы */
+			border-right: 51.5px solid @orange; /* Добавляем треугольник */
+			transition: border-right 0.25s linear;
+		}
+
+		&:hover {
+			background-color: @red-orange;
+
+			&:after {
+				border-left: 51.5px solid @red-orange; /* Добавляем треугольник */
+			   }
+	
+			&:before {
+				border-right: 51.5px solid @red-orange; /* Добавляем треугольник */
+			}
+		}
 	}
 
 	.header__menu-list {
 		display: flex;
 	}
 
+	.header__menu-list-item {
+		&:not(:last-child) {
+			padding-right: 20px;
+		}
+	}
+
 	.header__menu-link {
 		transition: color 0.25s linear;
+		text-transform: uppercase;
+		font-size: 14/16 * 1rem;
 
 		&:hover {
 			color: @red-orange;
 		}
+
+	
+	}
+
+	.header__logo {
+		width: 79px;
+		height: 82px;
 	}
 }
