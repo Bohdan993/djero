@@ -370,17 +370,20 @@ main {
 }
 
 .slideTop {
-   animation: 5.75s linear forwards slideTop;
+   animation: 3.5s linear forwards slideTop;
 }
 
 .slideBottom {
-
+    animation: 3.5s linear forwards slideBottom;
 }
 
 
 .slideLeft {
-
+    animation: 3.5s linear forwards slideLeft;
 }
+
+
+// transform .6s cubic-bezier(.415, 0, .185, 1)
 
 
 
@@ -411,6 +414,7 @@ main {
   to {
     // top: -100%;
     transform: translateY(-9999px);
+    display: none;
   }
 }
 
@@ -424,6 +428,7 @@ main {
    to {
      // top: -100%;
      transform: translateY(9999px);
+     display: none;
    }
 }
 
@@ -437,6 +442,7 @@ main {
    to {
      // top: -100%;
      transform: translateX(-9999px);
+     display: none;
    }
 }
 
@@ -454,7 +460,7 @@ main {
 
 
 
-@import url("app/less/_popup.less");
+@import url("app/less/_popups.less");
 @import url("app/less/_media.less");
 @import url("app/less/sprite.less");
 

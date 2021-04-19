@@ -2,8 +2,10 @@
 	.main-screen__layout
 		.main-screen__background-layer
 			.main-screen__background
-				video.main-screen__background-video(autoplay="true" loop muted preload="metadata")
+				video.main-screen__background-video.active(autoplay="true" loop muted preload="metadata")
 					source(src="video/Djero-Main-Animation-2.mp4" type="video/mp4")
+				video.main-screen__background-video-2(muted preload="metadata")
+					source(src="video/Djero-Main-Animation-1.mp4" type="video/mp4")
 		.main-screen__content-layer
 			.main-screen__content
 				.center.main-screen__center
@@ -28,13 +30,13 @@
 										ul.splide__list.main-screen__slider-list
 											li.splide__slide.main-screen__slider-slide
 												img.main-screen__slider-img(src="img/cookie-box.png", alt="Cookie Box")
-											li.splide__slide.main-screen__slider-slide
-												img.main-screen__slider-img(src="img/cookie-box.png", alt="Cookie Box")
-											li.splide__slide.main-screen__slider-slide
-												img.main-screen__slider-img(src="img/ball-animation.png", alt="Cookie Box")
+											//- li.splide__slide.main-screen__slider-slide
+											//- 	img.main-screen__slider-img(src="img/cookie-box.png", alt="Cookie Box")
+											//- li.splide__slide.main-screen__slider-slide
+											//- 	img.main-screen__slider-img(src="img/ball-animation.png", alt="Cookie Box")
 						.main-screen__footer-layer
 							.main-screen__footer
-								.main-screen__footer-ball-wrapper
+								.main-screen__footer-ball-wrapper.active
 									img.main-screen__footer-ball(src="img/ball.png", alt="Ball")
 								.main-screen__footer-arrow-wrapper
 									img.main-screen__footer-arrow(src="img/arrow-up.png", alt="Arrow")

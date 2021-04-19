@@ -13,7 +13,7 @@ const ShareButtonToggle = (btn) => {
         const name = btn.className.split(' ')[0]
 
         if (isActive) {
-            removeClass(btn, ['active'])
+            removeClass(btn, 'active')
             isActive = false
             return
         }
@@ -22,7 +22,7 @@ const ShareButtonToggle = (btn) => {
 
 
         if (!isActive) {
-            addClass(btn, ['active'])
+            addClass(btn, 'active')
             isActive = true
             return
         }

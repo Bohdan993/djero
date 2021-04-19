@@ -4,7 +4,8 @@ import {
 	InitTippy,
 	ShareButtonToggle,
 	InitSplide,
-	BallClickAnimation
+	BallClickAnimation,
+	InitMagnificPopups
 } from '../model';
 import {
 	SOCIAL_SHARE_BTN
@@ -13,7 +14,14 @@ import {
 	$body,
 	$socialShareList,
 	$socialShareBtn,
-	$mainScreenFooterBall
+	$mainScreenFooterBall,
+	$backgroundVideoAnimation1,
+	$backgroundVideoAnimation2,
+	$mainScreenHeaderLayer,
+	$mainScreenBodyLayer,
+	$mainScreenFooterLayer,
+	$header,
+	$mainScreenFooterBallWrapper
 } from '../view';
 
 const app = {
@@ -24,6 +32,7 @@ const app = {
 		this.stb()
 		this.is()
 		this.bca()
+		this.imp()
 	},
 	bm() {
 		// console.log(Fullpage, Splide)
@@ -42,7 +51,21 @@ const app = {
 		InitSplide()
 	},
 	bca() {
-		BallClickAnimation($mainScreenFooterBall)
+		BallClickAnimation(
+			{
+				ball: $mainScreenFooterBall,
+				ballWrapper: $mainScreenFooterBallWrapper,
+				firstAnimation:$backgroundVideoAnimation1,
+				secondAnimation: $backgroundVideoAnimation2,
+				pageHeader: $header,
+				header: $mainScreenHeaderLayer,
+				body: $mainScreenBodyLayer,
+				footer: $mainScreenFooterLayer
+			}
+		)
+	},
+	imp(){
+		InitMagnificPopups()
 	}
 
 }

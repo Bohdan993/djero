@@ -37,15 +37,14 @@ function addText(elem, text) {
 }
 
 function addClass(elem, ...clazz) {
-	// console.log(clazz)
-	elem.classList.add(...clazz)
 
+	elem.classList.add(...clazz)
 	return elem
 }
 
-function removeClass(elem, clazz) {
-	elem.classList.remove(clazz)
+function removeClass(elem, ...clazz) {
 
+	elem.classList.remove(...clazz)
 	return elem
 }
 
