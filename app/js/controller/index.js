@@ -1,3 +1,4 @@
+import { timers } from 'jquery';
 import {
 	FullPageInit,
 	BurgerMenu,
@@ -5,7 +6,8 @@ import {
 	ShareButtonToggle,
 	InitSplide,
 	BallClickAnimation,
-	InitMagnificPopups
+	InitMagnificPopups,
+	ClosePopup
 } from '../model';
 import {
 	SOCIAL_SHARE_BTN
@@ -21,7 +23,9 @@ import {
 	$mainScreenBodyLayer,
 	$mainScreenFooterLayer,
 	$header,
-	$mainScreenFooterBallWrapper
+	$mainScreenFooterBallWrapper,
+	$closePopup,
+	// $popupMain
 } from '../view';
 
 const app = {
@@ -33,6 +37,8 @@ const app = {
 		this.is()
 		this.bca()
 		this.imp()
+		this.cp()
+		// this.iosb()
 	},
 	bm() {
 		// console.log(Fullpage, Splide)
@@ -51,22 +57,28 @@ const app = {
 		InitSplide()
 	},
 	bca() {
-		BallClickAnimation(
-			{
-				ball: $mainScreenFooterBall,
-				ballWrapper: $mainScreenFooterBallWrapper,
-				firstAnimation:$backgroundVideoAnimation1,
-				secondAnimation: $backgroundVideoAnimation2,
-				pageHeader: $header,
-				header: $mainScreenHeaderLayer,
-				body: $mainScreenBodyLayer,
-				footer: $mainScreenFooterLayer
-			}
-		)
+		BallClickAnimation({
+			ball: $mainScreenFooterBall,
+			ballWrapper: $mainScreenFooterBallWrapper,
+			firstAnimation: $backgroundVideoAnimation1,
+			secondAnimation: $backgroundVideoAnimation2,
+			pageHeader: $header,
+			header: $mainScreenHeaderLayer,
+			body: $mainScreenBodyLayer,
+			footer: $mainScreenFooterLayer
+		})
 	},
-	imp(){
+	imp() {
 		InitMagnificPopups()
+	},
+	cp(){
+		ClosePopup($closePopup)
 	}
+	// iosb() {
+	// 	InitOverlayScrollbars({
+	// 		popup: $popupMain
+	// 	})
+	// }
 
 }
 

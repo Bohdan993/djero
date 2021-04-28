@@ -5,7 +5,9 @@ import ShareButtonToggle from './App/ShareButtonToggle';
 import InitSplide from './App/InitSplide';
 import BallClickAnimation from './App/BallClickAnimation';
 import InitMagnificPopups from './App/InitMagnificPopups';
-import PlayAndOrderModalShow from './App/PlayAndOrderModalShow';
+import PlayAndOrderPopupShow from './App/PlayAndOrderPopupShow';
+import InitOverlayScrollbars from './App/InitOverlayScrollbars';
+import ClosePopup from './App/ClosePopup';
 
 export {
 	BurgerMenu,
@@ -15,5 +17,7 @@ export {
 	InitSplide,
 	BallClickAnimation,
 	InitMagnificPopups,
-	PlayAndOrderModalShow
+	PlayAndOrderPopupShow,
+	InitOverlayScrollbars,
+	ClosePopup
 }

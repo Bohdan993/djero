@@ -8,7 +8,7 @@ import {
     removeClass
 } from "./Helpers"
 
-import {PlayAndOrderModalShow} from '../';
+import {PlayAndOrderPopupShow} from '../';
 
 
 const BallClickAnimation = (data) => {
@@ -62,7 +62,7 @@ const BallClickAnimation = (data) => {
         changeClassesReverse()
         secondAnimation.currentTime = 0;
         firstAnimation.play()
-        PlayAndOrderModalShow()
+        PlayAndOrderPopupShow()
     }
 
 

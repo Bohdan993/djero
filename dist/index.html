@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1618876144338" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1618876144338">
-    <link rel="stylesheet" href="css/main.min.css?v=1618876144338">
+    <link rel="preload" href="css/main.min.css?v=1619648973821" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1619648973821">
+    <link rel="stylesheet" href="css/main.min.css?v=1619648973821">
   </head>
   <body class="home-page">
     <header class="header">
       <div class="header__layout">
         <div class="center">
           <div class="f-container">
-            <div class="header__btn-layer header-inner-layer"><a class="header__btn btn white" href="#"><span>Замовити дзвінок</span></a></div>
+            <div class="header__btn-layer header-inner-layer"><a class="header__btn btn white open-popup-link" href="#"><span>Замовити дзвінок</span></a></div>
             <div class="header__logo-layer header-inner-layer">
               <div class="header__logo-link-wrapper"><a class="header__logo-link" href="#">
                   <svg class="header__logo">
@@ -23,6 +23,7 @@
                   </svg></a></div>
             </div>
             <div class="header__menu-layer header-inner-layer">
+              <div class="close-popup close-popup-btn"><span></span><span></span></div>
               <nav class="header__menu">
                 <ul class="header__menu-list">
                   <li class="header__menu-list-item"> <a class="header__menu-link" href="#">Як це працює? </a></li>
@@ -244,15 +245,12 @@
               <div class="sidebar__burger-layer">
                 <div class="sidebar__burger"><span> </span><span> </span><span> </span></div>
               </div>
-              <div class="sidebar__wantbuy-layer">
-                <div class="sidebar__wantbuy">
+              <div class="sidebar__wantbuy-layer"><a class="sidebar__wantbuy open-popup-link" href="#catalog-popup">
                   <div class="sidebar__wantbuy-icon"><i class="sidebar__wantbuy-ico ico">
                       <svg>
                         <use xlink:href="img/sprites/svg/symbol/sprite.svg#ball"></use>
                       </svg></i></div>
-                  <p class="sidebar__wantbuy-text">Хочу <br><span>придбати!</span></p>
-                </div>
-              </div>
+                  <p class="sidebar__wantbuy-text">Хочу <br><span>придбати!</span></p></a></div>
               <div class="sidebar__cart-layer">
                 <div class="sidebar__cart"><span class="sidebar__cart-counter"></span>
                   <div class="sidebar__cart-icon"><i class="sidebar__cart-ico ico">
@@ -342,14 +340,144 @@
     </footer>
     <div class="popups">
       <div class="popups__layout"><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-        <div class="zoom-anim-dialog mfp-hide" id="small-dialog">
-          <h1>Dialog example</h1>
-          <p>This is dummy copy. It is not meant to be read. It has been placed here solely to demonstrate the look and feel of finished, typeset text. Only for show. He who searches for meaning here will be sorely disappointed</p>
+        <div class="popup play-and-order-popup" id="play-and-order-popup"> 
+          <div class="popup__layout play-and-order-popup__layout">
+            <div class="center"> 
+              <h2 class="popup__title h2-title play-and-order-popup__title">Моє печиво - твоє печиво!</h2>
+              <div class="popup__cards play-and-order-popup__cards">
+                <div class="popup__card-layer play-and-order-popup__card-layer">
+                  <div class="popup__card play-and-order-popup__card">
+                    <figure class="popup__card-boxing play-and-order-popup__card-boxing">
+                      <div class="popup__card-img-wrapper play-and-order-popup__card-img-wrapper"><img class="popup__card-img play-and-order-popup__card-img" src="img/cookies-sandwich-big.png" alt="Cookies box"></div>
+                      <figcaption class="popup__card-mass play-and-order-popup__card-mass"><span>1 упаковка</span><span><sup>*</sup>120 г.</span></figcaption>
+                    </figure>
+                    <div class="popup__card-description play-and-order-popup__card-description">
+                      <p class="popup__card-price play-and-order-popup__card-price">35 грн.</p>
+                      <div class="popup__card-tariff-wrapper play-and-order-popup__card-tariff-wrapper"><i class="ico box-ico"></i>
+                        <p class="popup__card-tariff play-and-order-popup__card-tariff">
+                           За тарифами перевізника</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup__card-layer play-and-order-popup__card-layer">
+                  <div class="popup__card play-and-order-popup__card">
+                    <figure class="popup__card-boxing play-and-order-popup__card-boxing">
+                      <div class="popup__card-img-wrapper play-and-order-popup__card-img-wrapper"><img class="popup__card-img play-and-order-popup__card-img" src="img/cookies-sandwich.png" alt="Cookies box"></div>
+                      <figcaption class="popup__card-mass play-and-order-popup__card-mass"><span>3 упаковки</span><span><sup>*</sup>360 г.</span></figcaption>
+                    </figure>
+                    <div class="popup__card-description play-and-order-popup__card-description">
+                      <p class="popup__card-price play-and-order-popup__card-price">99 грн.</p>
+                      <div class="popup__card-tariff-wrapper play-and-order-popup__card-tariff-wrapper"><i class="ico box-ico"></i>
+                        <p class="popup__card-tariff play-and-order-popup__card-tariff">
+                           За тарифами перевізника</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup__card-layer play-and-order-popup__card-layer">
+                  <div class="popup__card play-and-order-popup__card">
+                    <figure class="popup__card-boxing play-and-order-popup__card-boxing">
+                      <div class="popup__card-img-wrapper play-and-order-popup__card-img-wrapper"><img class="popup__card-img play-and-order-popup__card-img" src="img/box.png" alt="Cookies box"></div>
+                      <figcaption class="popup__card-mass play-and-order-popup__card-mass"><span>1 ящик (30 упаковок)</span><span><sup>*</sup>3,6 кг.</span></figcaption>
+                    </figure>
+                    <div class="popup__card-description play-and-order-popup__card-description">
+                      <p class="popup__card-price play-and-order-popup__card-price">850 грн.</p>
+                      <div class="popup__card-tariff-wrapper play-and-order-popup__card-tariff-wrapper"><i class="ico box-ico"></i>
+                        <p class="popup__card-tariff play-and-order-popup__card-tariff"><span>Безкоштовна </span>доставка </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup__card-layer play-and-order-popup__card-layer">
+                  <div class="popup__card play-and-order-popup__card">
+                    <figure class="popup__card-boxing play-and-order-popup__card-boxing">
+                      <div class="popup__card-img-wrapper play-and-order-popup__card-img-wrapper"><img class="popup__card-img play-and-order-popup__card-img" src="img/pallet.png" alt="Pallet"></div>
+                      <figcaption class="popup__card-mass play-and-order-popup__card-mass"><span>Піддон</span></figcaption>
+                    </figure>
+                    <div class="popup__card-description play-and-order-popup__card-description">
+                      <p class="popup__card-price play-and-order-popup__card-price"></p>
+                      <div class="popup__card-tariff-wrapper play-and-order-popup__card-tariff-wrapper"><i class="ico box-ico"></i>
+                        <p class="popup__card-tariff play-and-order-popup__card-tariff"><span>Безкоштовна </span>доставка </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="popup__note play-and-order-popup__note"><sup>*</sup>Вага нетто</p>
+              <div class="popup__btn-wrapper play-and-order-popup__btn-wrapper"><a class="popup__btn play-and-order-popup__btn btn red-orange open-popup-link" href="#catalog-popup"><i class="ico ball-ico"></i><span>Замовляй та грай</span></a></div>
+            </div>
+          </div>
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="popup catalog-popup" id="catalog-popup"> 
+          <div class="popup__layout catalog-popup__layout">
+            <div class="center"> 
+              <h2 class="popup__title h2-title catalog-popup__title">Замовляй та грай</h2>
+              <div class="popup__cards catalog-popup__cards">
+                <div class="popup__card-layer catalog-popup__card-layer">
+                  <div class="popup__card catalog-popup__card">
+                    <figure class="popup__card-boxing catalog-popup__card-boxing">
+                      <div class="popup__card-img-wrapper catalog-popup__card-img-wrapper"><img class="popup__card-img catalog-popup__card-img" src="img/cookies-sandwich-big.png" alt="Cookies box"></div>
+                      <figcaption class="popup__card-mass catalog-popup__card-mass"><span>* 120г.</span></figcaption>
+                    </figure>
+                    <div class="popup__card-description catalog-popup__card-description">
+                      <p class="popup__card-packing catalog-popup__card-packing">
+                         1 упаковка</p>
+                      <p class="popup__card-price catalog-popup__card-price">35 грн.</p>
+                      <div class="popup__card-quantity-wrapper catalog-popup__card-quantity-wrapper">
+                        <p>Кількість:</p>
+                        <div class="popup__card-quantity catalog-popup__card-quantity"><span class="popup__card-quantity-minus popup__card-quantity-control catalog-popup__card-quantity-minus">-</span><span class="popup__card-quantity-count popup__card-quantity-count">2</span><span class="popup__card-quantity-plus popup__card-quantity-control catalog-popup__card-quantity-plus">+</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup__card-layer catalog-popup__card-layer">
+                  <div class="popup__card catalog-popup__card">
+                    <figure class="popup__card-boxing catalog-popup__card-boxing">
+                      <div class="popup__card-img-wrapper catalog-popup__card-img-wrapper"><img class="popup__card-img catalog-popup__card-img" src="img/box.png" alt="Cookies box"></div>
+                      <figcaption class="popup__card-mass catalog-popup__card-mass"><span>* 3,6кг.</span></figcaption>
+                    </figure>
+                    <div class="popup__card-description catalog-popup__card-description">
+                      <p class="popup__card-packing catalog-popup__card-packing">
+                         1 ящик (30 упаковок)</p>
+                      <p class="popup__card-price catalog-popup__card-price">850 грн.</p>
+                      <div class="popup__card-quantity-wrapper catalog-popup__card-quantity-wrapper">
+                        <p>Кількість:</p>
+                        <div class="popup__card-quantity catalog-popup__card-quantity"><span class="popup__card-quantity-minus popup__card-quantity-control catalog-popup__card-quantity-minus">-</span><span class="popup__card-quantity-count popup__card-quantity-count">0</span><span class="popup__card-quantity-plus popup__card-quantity-control catalog-popup__card-quantity-plus">+</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="popup__card-layer catalog-popup__card-layer">
+                  <div class="popup__card catalog-popup__card">
+                    <figure class="popup__card-boxing catalog-popup__card-boxing">
+                      <div class="popup__card-img-wrapper catalog-popup__card-img-wrapper"><img class="popup__card-img catalog-popup__card-img" src="img/pallet.png" alt="Cookies box"></div>
+                    </figure>
+                    <div class="popup__card-description catalog-popup__card-description">
+                      <p class="popup__card-packing catalog-popup__card-packing">
+                         Піддон</p>
+                      <div class="popup__card-btn-wrapper catalog-popup__card-btn-wrapper"><a class="popup__card-btn catalog-popup__card-btn btn white open-popup-link" href="#"><span>Зателефонувати мені</span></a></div><a class="popup__card-phone catalog-popup__card-phone" href="tel:+380999999999"><i class="ico phone-ico"></i><span>+380 99 999-99-99</span></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="popup__note catalog-popup__note"><sup>*</sup>Вага нетто</p>
+              <div class="popup__basket-info catalog-popup__basket-info">
+                <button class="popup__basket-clear catalog-popup__basket-clear">Очистити корзину</button>
+                <div class="popup__total catalog-popup__total">
+                  <p class="popup__total-text catalog-popup__total-text">Загальна вартість</p>
+                  <p class="popup__total-price catalog-popup__total-price">
+                     70 грн.</p>
+                </div>
+              </div>
+              <div class="popup__btns catalog-popup__btns"><a class="popup__card-btn catalog-popup__card-btn btn close-popup-btn" href="#"><span>На головну</span></a><a class="popup__btn catalog-popup__btn btn red-orange open-popup-link" href="#order-popup"><span>Оформити замовлення</span></a></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1618876144338" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1618876144338" as="script">
-    <script src="js/main.min.js?v=1618876144338" async></script>
+    <script src="js/libs.min.js?v=1619648973822" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1619648973822" as="script">
+    <script src="js/main.min.js?v=1619648973822" async></script>
   </body>
 </html>

@@ -3,7 +3,7 @@ header.header
 		.center
 			.f-container
 				.header__btn-layer.header-inner-layer
-					a.header__btn.btn.white(href='#')
+					a.header__btn.btn.white.open-popup-link(href='#')
 						span
 							|Замовити дзвінок
 				.header__logo-layer.header-inner-layer
@@ -12,6 +12,9 @@ header.header
 							svg&attributes({class: 'header__logo'})
 								use(xlink:href=`img/logo.svg#Logo`)
 				.header__menu-layer.header-inner-layer
+					.close-popup.close-popup-btn
+						span
+						span
 					nav.header__menu
 						ul.header__menu-list
 							li.header__menu-list-item 

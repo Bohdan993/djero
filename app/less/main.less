@@ -6,15 +6,16 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
-  overflow-y:scroll;
+  overflow-y: scroll;
 }
+
 html,
 body {
   color: @font-color;
   height: 100%;
   width: 100%;
   // overflow-x: hidden;
- 
+
 }
 
 
@@ -22,6 +23,7 @@ body {
   background: rgba(@dark-orange, 0.9);
   color: @white;
 }
+
 body {
 
   margin: 0;
@@ -42,18 +44,25 @@ body {
     overflow: hidden;
   }
 
-  &.open-search {
-    position: relative;
 
-    &:before {
-      content: '';
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(70, 80, 91, 0.1);
-      z-index: 98;
+  &.popup-open {
+    .header {
+      z-index: 2050;
+
+
+      .f-container {
+        background: url("../img/bg-pattern.png") no-repeat center/cover,
+          @blue;
+      }
+    }
+
+    .header__menu {
+      display: none;
+      pointer-events: none;
+    }
+
+    .close-popup {
+      display: block;
     }
   }
 
@@ -73,7 +82,9 @@ a {
   line-height: 1;
 }
 
-img, picture, source{
+img,
+picture,
+source {
   max-width: 100%;
   display: block;
 }
@@ -110,7 +121,9 @@ a {
   font-weight: normal;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   width: 100%;
   outline: none;
   border: none;
@@ -122,7 +135,7 @@ input, select, textarea {
 label {
   margin-bottom: 0;
   font-size: 12px;
-  font-weight:400;
+  font-weight: 400;
 }
 
 button {
@@ -170,7 +183,7 @@ main {
 .h1-title {
   .fSize(60vw, 60px * (576/1220), 60px, 576px, 1220px);
   font-weight: 400;
-  font-family: 'Adventure Indiana Jones',cursive;
+  font-family: 'Adventure Indiana Jones', cursive;
   text-align: center;
   line-height: 68/60;
   color: @font-color;
@@ -181,73 +194,101 @@ main {
   }
 }
 
+.h2-title {
+  .fSize(36vw, 36px * (576/1220), 36px, 576px, 1220px);
+  font-weight: 400;
+  font-family: 'Adventure Indiana Jones', cursive;
+  text-align: center;
+  line-height: 68/36;
+  color: @font-color;
+  letter-spacing: 2px;
+}
+
 
 
 .btn {
-    font-family: 'Gotham Pro', sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14/16 * 1rem;
-    line-height: 16/14;
-    color: @white;
-    transition: color 0.25s linear;
-    border: none;
-    outline: none;
-    border-radius: 25px;
-    height: 50px;
-    width: 100%;
-    max-width: 210px;
-    padding: 0 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    overflow: hidden;
+  font-family: 'Gotham Pro', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14/16 * 1rem;
+  line-height: 16/14;
+  color: @white;
+  transition: color 0.25s linear;
+  border: none;
+  outline: none;
+  border-radius: 25px;
+  height: 50px;
+  width: 100%;
+  max-width: 210px;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+
+  span, i {
     position: relative;
-    text-align: center;
+    z-index: 1;
+  }
 
-    span {
-      position: relative;
-      z-index: 1;
+
+  &::after {
+    /*background-color: #f00;*/
+    height: 100%;
+    left: -35%;
+    top: 0;
+    transform: skew(50deg);
+    transition-duration: 0.6s;
+    transform-origin: top left;
+    width: 0;
+    content: '';
+    position: absolute;
+    z-index: 0;
+  }
+
+  &:hover:after {
+    height: 100%;
+    width: 135%;
+  }
+
+
+  &.white {
+    background-color: @white;
+    color: @dark-blue;
+
+    &:hover {
+      background-color: @font-color;
     }
-  
-    
-    &::after {
-      /*background-color: #f00;*/
-      height: 100%;
-      left: -35%;
-      top: 0;
-      transform: skew(50deg);
-      transition-duration: 0.6s;
-      transform-origin: top left;
-      width: 0;
-      content: '';
-      position: absolute;
-      z-index: 0;
-    }
-    
-    &:hover:after {
-      height: 100%;
-      width: 135%;
+
+    &:after {
+      background: @red-orange;
     }
 
-
-    &.white {
-      background-color: @white;
-      color: @dark-blue;
-
-      &:hover {
-        background-color: @font-color;
-      }
-
-      &:after {
-        background: @red-orange;
-      }
-
-      &:hover {
-        color: @font-color;
-      }
+    &:hover {
+      color: @font-color;
     }
+  }
+
+
+  &.red-orange {
+    background-color: @red-orange;
+    color: @font-color;
+
+    &:hover {
+      background-color: @red-orange;
+    }
+
+    &:after {
+      background: @dark-orange;
+    }
+
+    &:hover {
+      color: @font-color;
+    }
+  }
 }
 
 .main__content {
@@ -269,20 +310,23 @@ main {
   cursor: pointer;
 
   &:hover {
-    &:before, &:after {
+
+    &:before,
+    &:after {
       // background: @red;
     }
   }
 
 
 
-  &:before, &:after {
+  &:before,
+  &:after {
     content: '';
     pointer-events: none;
     position: absolute;
     top: 50%;
     left: 50%;
-    
+
     background: @font-color;
     width: 32px;
     height: 5px;
@@ -342,7 +386,7 @@ main {
     //   // border: 1px solid @red;
     // }
   }
-  
+
 }
 
 .field-layer {
@@ -355,7 +399,41 @@ main {
   padding: 0;
 }
 
+.close-popup {
+  width: 20px; 
+  height: 20px;
+  position: relative;
+  display: none;
+  cursor: pointer;
+  margin-left: auto;
 
+  &:hover {
+    span {
+      background-color: @dark-orange;
+    }
+  }
+
+  span {
+    width: 20px;
+    height: 2px;
+    display: block;
+    background-color: @white;
+    transition: background-color 0.2s linear;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    // transform-origin: center;
+
+
+    &:first-child {
+      transform: translate(-50%, -50%) rotate(135deg);
+    }
+
+    &:last-child {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  }
+}
 
 
 
@@ -370,16 +448,16 @@ main {
 }
 
 .slideTop {
-   animation: 3.5s linear forwards slideTop;
+  animation: 3.5s linear forwards slideTop;
 }
 
 .slideBottom {
-    animation: 3.5s linear forwards slideBottom;
+  animation: 3.5s linear forwards slideBottom;
 }
 
 
 .slideLeft {
-    animation: 3.5s linear forwards slideLeft;
+  animation: 3.5s linear forwards slideLeft;
 }
 
 
@@ -390,7 +468,9 @@ main {
 @keyframes fadeIn {
   from {
     opacity: 0;
-  } to {
+  }
+
+  to {
     opacity: 1;
   }
 }
@@ -399,7 +479,9 @@ main {
 @keyframes fadeOut {
   from {
     opacity: 1;
-  } to {
+  }
+
+  to {
     opacity: 0;
   }
 }
@@ -420,30 +502,30 @@ main {
 
 
 @keyframes slideBottom {
-   from {
-     // position: absolute;
-     transform: translateY(0);
-   }
+  from {
+    // position: absolute;
+    transform: translateY(0);
+  }
 
-   to {
-     // top: -100%;
-     transform: translateY(9999px);
-     display: none;
-   }
+  to {
+    // top: -100%;
+    transform: translateY(9999px);
+    display: none;
+  }
 }
 
 
 @keyframes slideLeft {
-   from {
-     // position: absolute;
-     transform: translateY(0);
-   }
+  from {
+    // position: absolute;
+    transform: translateY(0);
+  }
 
-   to {
-     // top: -100%;
-     transform: translateX(-9999px);
-     display: none;
-   }
+  to {
+    // top: -100%;
+    transform: translateX(-9999px);
+    display: none;
+  }
 }
 
 
@@ -459,8 +541,12 @@ main {
 @import url("app/less/_footer.less");
 
 
+@import url("app/less/Popups/_play-and-order-popup.less");
+@import url("app/less/Popups/_catalog-popup.less");
+
+
 
 @import url("app/less/_popups.less");
+@import url("app/less/_scrollbars.less");
 @import url("app/less/_media.less");
 @import url("app/less/sprite.less");
-

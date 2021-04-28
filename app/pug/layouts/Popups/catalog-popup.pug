@@ -1,0 +1,89 @@
+<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+#catalog-popup.popup.catalog-popup 
+	.popup__layout.catalog-popup__layout
+		.center 
+			h2.popup__title.h2-title.catalog-popup__title
+				|Замовляй та грай
+			.popup__cards.catalog-popup__cards
+				.popup__card-layer.catalog-popup__card-layer
+					.popup__card.catalog-popup__card
+						figure.popup__card-boxing.catalog-popup__card-boxing
+							.popup__card-img-wrapper.catalog-popup__card-img-wrapper
+								img.popup__card-img.catalog-popup__card-img(src="img/cookies-sandwich-big.png" alt="Cookies box")
+							figcaption.popup__card-mass.catalog-popup__card-mass
+								span
+									|* 120г.
+						.popup__card-description.catalog-popup__card-description
+							p.popup__card-packing.catalog-popup__card-packing 
+								|1 упаковка
+							p.popup__card-price.catalog-popup__card-price
+								|35 грн.
+							.popup__card-quantity-wrapper.catalog-popup__card-quantity-wrapper
+								p
+									|Кількість:
+								.popup__card-quantity.catalog-popup__card-quantity
+									span.popup__card-quantity-minus.popup__card-quantity-control.catalog-popup__card-quantity-minus
+										|-
+									span.popup__card-quantity-count.popup__card-quantity-count
+										|2
+									span.popup__card-quantity-plus.popup__card-quantity-control.catalog-popup__card-quantity-plus
+										|+
+				.popup__card-layer.catalog-popup__card-layer
+					.popup__card.catalog-popup__card
+						figure.popup__card-boxing.catalog-popup__card-boxing
+							.popup__card-img-wrapper.catalog-popup__card-img-wrapper
+								img.popup__card-img.catalog-popup__card-img(src="img/box.png" alt="Cookies box")
+							figcaption.popup__card-mass.catalog-popup__card-mass
+								span
+									|* 3,6кг.
+						.popup__card-description.catalog-popup__card-description
+							p.popup__card-packing.catalog-popup__card-packing 
+								|1 ящик (30 упаковок)
+							p.popup__card-price.catalog-popup__card-price
+								|850 грн.
+							.popup__card-quantity-wrapper.catalog-popup__card-quantity-wrapper
+								p
+									|Кількість:
+								.popup__card-quantity.catalog-popup__card-quantity
+									span.popup__card-quantity-minus.popup__card-quantity-control.catalog-popup__card-quantity-minus
+										|-
+									span.popup__card-quantity-count.popup__card-quantity-count
+										|0
+									span.popup__card-quantity-plus.popup__card-quantity-control.catalog-popup__card-quantity-plus
+										|+
+				.popup__card-layer.catalog-popup__card-layer
+					.popup__card.catalog-popup__card
+						figure.popup__card-boxing.catalog-popup__card-boxing
+							.popup__card-img-wrapper.catalog-popup__card-img-wrapper
+								img.popup__card-img.catalog-popup__card-img(src="img/pallet.png" alt="Cookies box")
+						.popup__card-description.catalog-popup__card-description
+							p.popup__card-packing.catalog-popup__card-packing 
+								|Піддон
+							.popup__card-btn-wrapper.catalog-popup__card-btn-wrapper
+								a.popup__card-btn.catalog-popup__card-btn.btn.white.open-popup-link(href='#')
+									span
+										|Зателефонувати мені
+							a.popup__card-phone.catalog-popup__card-phone(href="tel:+380999999999")
+								i.ico.phone-ico
+								span
+									|+380 99 999-99-99
+			p.popup__note.catalog-popup__note
+				sup
+					|*
+				|Вага нетто
+			.popup__basket-info.catalog-popup__basket-info
+				button.popup__basket-clear.catalog-popup__basket-clear
+					|Очистити корзину
+				.popup__total.catalog-popup__total
+					p.popup__total-text.catalog-popup__total-text
+						|Загальна вартість
+					p.popup__total-price.catalog-popup__total-price 
+						|70 грн.
+			.popup__btns.catalog-popup__btns
+				a.popup__card-btn.catalog-popup__card-btn.btn.close-popup-btn(href='#')
+					span
+						|На головну
+				a.popup__btn.catalog-popup__btn.btn.red-orange.open-popup-link(href='#order-popup')
+					span
+						|Оформити замовлення
+				

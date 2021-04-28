@@ -1,0 +1,73 @@
+.play-and-order-popup__layout {
+    .center {
+        max-width: 1010px + 60px;
+    }
+    .play-and-order-popup__card-layer {
+
+        &:not(:last-child) {
+            padding-bottom: 20px;
+        }
+    }
+
+    .play-and-order-popup__cards {
+        padding-bottom: 20px;
+    }
+
+    .play-and-order-popup__note {
+        padding-bottom: 25px;
+    }
+
+    .play-and-order-popup__card {
+        background: @blue;
+        border: 1px solid @gray;
+        border-radius: 14px;
+    }
+
+    .popup__title {
+        padding-bottom: 45px - ((68px - 36px) / 2);
+    }
+
+    .play-and-order-popup__card-tariff-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    .play-and-order-popup__card-tariff {
+        font-size: 18/16 * 1rem;
+        letter-spacing: 0px;
+        line-height: 20/18;
+        text-align: center;
+
+        span {
+            color: @orange;
+        }
+    }
+
+    .play-and-order-popup__card-price {
+        padding-top: 22px;
+    }
+
+    .play-and-order-popup__card-mass {
+        padding-top: 22px;
+    }
+
+    .play-and-order-popup__btn {
+        max-width: 240px;
+
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    .play-and-order-popup__btn-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

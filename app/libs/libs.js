@@ -4,6 +4,7 @@ import fullpage from 'fullpage.js/dist/jquery.fullpage.min'
 import tippy from 'tippy.js';
 import magnificPopup from 'magnific-popup'
 import './jquery-fullpage-scrolloverflow'
+import OverlayScrollbars from 'overlayscrollbars'
 
 
 
@@ -11,4 +12,5 @@ export {
 	Splide,
 	$,
 	tippy,
+	OverlayScrollbars
 }

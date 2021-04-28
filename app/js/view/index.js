@@ -9,6 +9,8 @@ const $header = document.querySelector('.header')
 const $mainScreenHeaderLayer = document.querySelector('.main-screen__header-layer')
 const $mainScreenBodyLayer = document.querySelector('.main-screen__body-layer')
 const $mainScreenFooterLayer = document.querySelector('.main-screen__footer-layer')
+const $popupMain = document.querySelector('.popup-main')
+const $closePopup = document.querySelectorAll('.close-popup-btn')
 
 export {
 	$body,
@@ -21,5 +23,7 @@ export {
 	$header,
 	$mainScreenHeaderLayer,
 	$mainScreenBodyLayer,
-	$mainScreenFooterLayer
+	$mainScreenFooterLayer,
+	$popupMain,
+	$closePopup
 }
