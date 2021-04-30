@@ -3,6 +3,7 @@ const TOP_ANIMATION_CLASS = 'slideTop'
 const BOTTOM_ANIMATION_CLASS = 'slideBottom'
 const LEFT_ANIMATION_CLASS = 'slideLeft'
 const SIDEBAR__LAYOUT = 'sidebar__layout'
+const OPEN_POPUP_LINK = '.open-popup-link'
 
 
 export {
@@ -10,5 +11,6 @@ export {
     TOP_ANIMATION_CLASS,
     BOTTOM_ANIMATION_CLASS,
     LEFT_ANIMATION_CLASS,
-    SIDEBAR__LAYOUT
+    SIDEBAR__LAYOUT,
+    OPEN_POPUP_LINK
 }

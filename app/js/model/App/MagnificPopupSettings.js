@@ -19,6 +19,7 @@ const settings = {
     mainClass: 'popup-main zoom-in-animation',
     callbacks: {
         open() {
+            console.log(this)
             instance = InitOverlayScrollbars({
                 popup: this.wrap[0]
             })

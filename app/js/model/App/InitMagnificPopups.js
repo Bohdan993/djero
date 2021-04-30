@@ -1,12 +1,14 @@
 import {
     $
 } from "../../../libs/libs"
+import { OPEN_POPUP_LINK } from "./Constants";
 
 import settings from './MagnificPopupSettings';
 
 
 const InitMagnificPopups = () => {
-    $('.open-popup-link').magnificPopup(settings);
+    
+    $(OPEN_POPUP_LINK).magnificPopup(settings);
 
 }
 

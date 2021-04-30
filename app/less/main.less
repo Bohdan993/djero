@@ -220,6 +220,7 @@ main {
   height: 50px;
   width: 100%;
   max-width: 210px;
+  min-width: 175px;
   padding: 0 15px;
   display: flex;
   align-items: center;
@@ -229,9 +230,11 @@ main {
   position: relative;
   text-align: center;
 
-  span, i {
+  span,
+  i {
     position: relative;
     z-index: 1;
+    transition: color 0.25s linear;
   }
 
 
@@ -261,14 +264,34 @@ main {
 
     &:hover {
       background-color: @font-color;
+      color: @font-color;
     }
 
     &:after {
       background: @red-orange;
     }
 
+  }
+
+  &.transparent {
+    background-color: @transparent;
+    color: @font-color;
+    border: 1px solid @font-color;
+    transition: border 0.25s linear;
+
     &:hover {
-      color: @font-color;
+      color: @orange;
+      border: 1px solid @orange;
+
+      &:after { 
+        border-right: 15px solid rgba(@orange, 0.05);
+      }
+    }
+
+    &:after {
+      background: @transparent;
+      transition: background-color 0.2s 0.6s linear, height 0.6s, width 0.6s;
+      border-right: 15px solid rgba(@light-gray, 0.05);
     }
   }
 
@@ -279,15 +302,13 @@ main {
 
     &:hover {
       background-color: @red-orange;
+      color: @font-color;
     }
 
     &:after {
       background: @dark-orange;
     }
 
-    &:hover {
-      color: @font-color;
-    }
   }
 }
 
@@ -389,7 +410,7 @@ main {
 
 }
 
-.field-layer {
+.field-wrapper {
   position: relative;
 }
 
@@ -400,7 +421,7 @@ main {
 }
 
 .close-popup {
-  width: 20px; 
+  width: 20px;
   height: 20px;
   position: relative;
   display: none;
@@ -435,7 +456,28 @@ main {
   }
 }
 
+.transparent-btn {
+  background: unset;
+  border: none;
+  outline: none;
+  color: @gray;
+  font-size: 14/16 * 1rem;
+  letter-spacing: 0px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
 
+.rubbish-ico {
+  width: 13px;
+  height: 16px;
+
+  svg {
+    width: 13px;
+    height: 16px;
+    fill: @gray;
+  }
+}
 
 
 
@@ -543,6 +585,8 @@ main {
 
 @import url("app/less/Popups/_play-and-order-popup.less");
 @import url("app/less/Popups/_catalog-popup.less");
+@import url("app/less/Popups/_cart-popup.less");
+@import url("app/less/Popups/_order-popup.less");
 
 
 

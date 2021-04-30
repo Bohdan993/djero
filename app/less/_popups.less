@@ -46,6 +46,7 @@
 	.mfp-content {
 		padding-top: 178px;
 		padding-bottom: 178px;
+		// min-height: 730px;
 		min-height: 100%;
 
 	}
@@ -60,28 +61,33 @@
 
 		.center {
 			height: 100%;
+			min-height: 730px;
 		}
 	}
 }
 
 .popup__cards {
 	width: 100%;
-	
+	padding-bottom: 20px;
 	margin: 0 auto;
 }
 
 .popup__card {
-	padding: 15px 45px 20px 20px;
+	padding: 20px 45px 20px 20px;
 	height: 175px;
 	display: flex;
 	align-items: center;
 	width: 100%;
+	background: @blue;
+	border: 1px solid @gray;
+	border-radius: 14px;
+	position: relative;
 }
 
 .popup__card-boxing {
 	padding: 0;
 	margin: 0;
-	flex-basis: 60%;
+	flex-basis: 55%;
 	height: 100%;
 }
 
@@ -106,26 +112,39 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-right: 55/((1010 - 30)/2) * 100%;
+	margin-right: 55/((1010 - 65) * 0.55) * 100%;
 }
 
 .popup__card-mass {
 	padding: 0;
 	margin: 0;
+	flex-basis: (518 - 216 - 55) / 518 * 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	position: relative;
 
 	span {
+		overflow-x: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		max-width: 100%;
 		display: block;
 
 		&:last-child {
 			font-size: 24/16 * 1rem;
-			line-height: 68/24;
+			line-height: 32/24;
 			color: @sky-blue;
 		}
 
 		&:first-child {
 			font-size: 18/16 * 1rem;
 			letter-spacing: 1px;
-			color: @white;
+			color: @font-color;
+			position: absolute;
+			top: 20px;
+			line-height: 1.35;
 		}
 	}
 }
@@ -183,6 +202,72 @@
 	border-radius: 14px;
 	height: 28px;
 	width: 47px;
+}
+
+.popup__basket-clear {
+
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 1px;
+		background: @gray;
+	}
+
+
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 1px;
+		background: @red-orange;
+		transition: width 0.2s linear;
+	}
+
+	&:hover {
+		&:after {
+			width: 100%;
+		}
+	}
+}
+
+.popup__note {
+	font-size: 14/16 * 1rem;
+}
+
+.popup__total-price {
+	font-size: 28/16 * 1rem;
+	letter-spacing: 1px;
+	font-weight: 500;
+}
+
+.popup__card-quantity-minus,
+.popup__card-quantity-count {
+	margin-right: 7px;
+}
+
+.popup__basket-remove {
+	display: flex;
+	position: absolute;
+	align-items: center;
+	right: 45px;
+	bottom: 20px;
+	i {
+		margin-right: 7px;
+	}
+	svg {
+		transition: fill 0.25s linear;
+	}
+
+	&:hover {
+		svg {
+			fill: @red-orange;
+		}
+	}
 }
 
 /**

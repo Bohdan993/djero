@@ -1,0 +1,83 @@
+<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+#order-popup.popup.order-popup 
+	.popup__layout.order-popup__layout
+		.center 
+			h2.popup__title.h2-title.order-popup__title
+				|Оформити замовлення
+			.order-popup__form-layer
+				form#order-popup__form.order-popup__form(method="POST")
+					fieldset.fieldset
+						legend.legend
+							|Данні покупця
+						.field-row
+							.field-wrapper
+								input(type="text" placeholder="Ім'я")
+							.field-wrapper
+								input(type="text" placeholder="Прізвище")
+						.field-row
+							.field-wrapper
+								input(type="tel" placeholder="Телефон")
+							.field-wrapper
+								input(type="email" placeholder="E-mail")
+						.field-row
+							.field-wrapper
+								textarea(name="" rows="5" placeholder="Коментар") 
+					fieldset.fieldset
+						legend.legend 
+							|Спосіб оплати
+						.field-row
+							.field-wrapper
+								input(type="radio" name="payment-radio")
+								label
+							.field-wrapper
+								input(type="radio" name="payment-radio")
+								label
+						.field-row
+							.field-wrapper
+								input(type="radio" name="payment-radio")
+								label
+					fieldset.fieldset
+						legend.legend 
+							|Доставка
+						.field-row
+							.field-wrapper
+								input(type="radio" name="delivery-radio")
+								label
+							.field-wrapper
+								input(type="radio" name="delivery-radio")
+								label
+						.field-row
+							.field-wrapper
+								select(name="")
+					fieldset.fieldset
+						legend.legend 
+							|Консультація
+						.field-row
+							.field-wrapper
+								input(type="radio" name="consultation-radio")
+								label
+							.field-wrapper
+								input(type="radio" name="consultation-radio")
+								label
+					fieldset.fieldset
+						legend.legend 
+							|Контактні данні отримувача замовлення
+						.field-row
+							.field-wrapper
+								input(type="radio" name="contacts-radio")
+								label
+							.field-wrapper
+								input(type="radio" name="contacts-radio")
+								label
+						.field-row
+							.field-wrapper
+								input(type="text" placeholder="Ім'я")
+							.field-wrapper
+								input(type="text" placeholder="Прізвище")
+						.field-row
+							.field-wrapper
+								input(type="text" placeholder="По батькові")
+							.field-wrapper
+								input(type="tel" placeholder="Мобільний телефон")
+			.order-popup__preview-layer
+				.order-popup__preview
