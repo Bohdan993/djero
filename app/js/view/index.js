@@ -27,5 +27,5 @@ export {
 	$mainScreenFooterLayer,
 	$popupMain,
 	$closePopup,
-	$choices
+	$choices,
 }

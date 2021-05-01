@@ -26,7 +26,7 @@ import {
 	$header,
 	$mainScreenFooterBallWrapper,
 	$closePopup,
-	$choices,
+	$choices
 	// $popupMain
 } from '../view';
 

@@ -1,5 +1,5 @@
 <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-#catalog-popup.popup.catalog-popup 
+#catalog-popup.popup.catalog-popup.mfp-hide.zoom-anim-dialog
 	.popup__layout.catalog-popup__layout
 		.center 
 			h2.popup__title.h2-title.catalog-popup__title
@@ -60,7 +60,7 @@
 							p.popup__card-packing.catalog-popup__card-packing 
 								|Піддон
 							.popup__card-btn-wrapper.catalog-popup__card-btn-wrapper
-								a.popup__card-btn.catalog-popup__card-btn.btn.white.open-popup-link(href='#')
+								a.popup__card-btn.catalog-popup__card-btn.btn.white.open-popup-link_secondary(href='#call-me-popup')
 									span
 										|Зателефонувати мені
 							a.popup__card-phone.catalog-popup__card-phone(href="tel:+380999999999")
@@ -70,7 +70,7 @@
 			p.popup__note.catalog-popup__note
 				|* Вага нетто
 			.popup__basket-info.catalog-popup__basket-info
-				button.popup__basket-clear.catalog-popup__basket-clear.transparent-btn
+				button.popup__basket-clear.catalog-popup__basket-clear.transparent-btn.with-underline
 					span
 						|Очистити корзину
 				.popup__total.catalog-popup__total

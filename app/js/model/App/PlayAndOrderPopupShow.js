@@ -12,7 +12,7 @@ const PlayAndOrderPopupShow = () => {
         }
     }
 
-    const fullSettings = Object.assign(settings, pertialSettings)
+    const fullSettings = Object.assign({}, settings, pertialSettings)
 
     $.magnificPopup.open(fullSettings, 0);
 }

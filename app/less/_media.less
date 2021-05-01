@@ -9,6 +9,31 @@
     //     transform: translate(((50% + (85vw/1600px * 100%)) * -1), -50%);
     // }
 
+    .order-popup__layout {
+        .order-popup__f-container {
+            flex-wrap: wrap;
+        }
+
+        .order-popup__preview-layer {
+            padding-left: 0;
+            flex-basis: 100%;
+        }
+
+        .order-popup__form-layer {
+            padding-right: 0;
+            flex-basis: 100%;
+        }
+        .field-wrapper {
+            max-width: unset;
+
+            &.small {
+                max-width: unset;
+            }
+        }
+
+    }
+    
+
     .center {
         padding: 0 25px;
     }

@@ -4,7 +4,7 @@
 /* Styles for dialog window */
 .popup {
 	text-align: left;
-	// margin: 40px auto;
+	margin: 0 auto;
 	width: 100%;
 	position: relative;
 }
@@ -34,6 +34,9 @@
 		background: url("../img/bg-pattern.png") no-repeat center/cover,
 			@blue;
 		opacity: 1;
+
+
+
 	}
 
 
@@ -48,6 +51,9 @@
 		padding-bottom: 178px;
 		// min-height: 730px;
 		min-height: 100%;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
 
 	}
 
@@ -65,6 +71,71 @@
 		}
 	}
 }
+
+.popup_secondary {
+	max-width: 530px;
+	&.mfp-wrap {
+		width: calc(100% - 140px);
+	}
+}
+
+
+.popup__layout_secondary {
+	background-color: @white;
+	color: @dark-blue;
+	border-radius: 14px;
+	padding: 35px 10px;
+
+	.field-wrapper {
+		background-color: @semi-light-gray;
+		border-color: @semi-light-gray2;
+		max-width: unset;
+		height: 60px;
+		border-radius: 30px;
+
+		.field {
+			border-radius: 30px;
+			color: @dark-blue;
+			font-size: 14/16 * 1rem;
+
+			&::-moz-placeholder,
+			&::-webkit-input-placeholder {
+				color: @dark-blue;
+				font-size: 14/16 * 1rem;
+			}
+		}
+
+		&:hover,
+		&:focus-within {
+			border-color: @orange;
+		}
+
+	}
+
+	 .popup__title,
+	 .popup__subtitle {
+	 	color: @dark-blue;
+	 	text-align: center;
+	 }
+
+	 .popup__subtitle {
+	 	padding-bottom: 25px;
+	 }
+
+	 .popup__btn {
+	 	max-width: unset;
+	 	height: 60px;
+	 	border-radius: 30px;
+	 }
+
+	 .field-row {
+	 	padding-bottom: 15px;
+	 }
+}
+
+
+
+
 
 .popup__cards {
 	width: 100%;
@@ -204,36 +275,7 @@
 	width: 47px;
 }
 
-.popup__basket-clear {
-
-	&:before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 1px;
-		background: @gray;
-	}
-
-
-	&:after {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 0%;
-		height: 1px;
-		background: @red-orange;
-		transition: width 0.2s linear;
-	}
-
-	&:hover {
-		&:after {
-			width: 100%;
-		}
-	}
-}
+.popup__basket-clear {}
 
 .popup__note {
 	font-size: 14/16 * 1rem;
@@ -256,9 +298,11 @@
 	align-items: center;
 	right: 45px;
 	bottom: 20px;
+
 	i {
 		margin-right: 7px;
 	}
+
 	svg {
 		transition: fill 0.25s linear;
 	}
@@ -306,47 +350,5 @@
 
 /* animate out */
 .my-mfp-zoom-in.mfp-removing.mfp-bg {
-	opacity: 0;
-}
-
-
-
-/**
- * Fade-move animation for second dialog
- */
-
-/* at start */
-.my-mfp-slide-bottom .zoom-anim-dialog {
-	opacity: 0;
-	transition: all 0.2s ease-out;
-	transform: translateY(-20px) perspective(600px) rotateX(10deg);
-
-}
-
-/* animate in */
-.my-mfp-slide-bottom.mfp-ready .zoom-anim-dialog {
-	opacity: 1;
-	transform: translateY(0) perspective(600px) rotateX(0);
-}
-
-/* animate out */
-.my-mfp-slide-bottom.mfp-removing .zoom-anim-dialog {
-	opacity: 0;
-	transform: translateY(-10px) perspective(600px) rotateX(10deg);
-}
-
-/* Dark overlay, start state */
-.my-mfp-slide-bottom.mfp-bg {
-	opacity: 0;
-	transition: opacity 0.3s ease-out;
-}
-
-/* animate in */
-.my-mfp-slide-bottom.mfp-ready.mfp-bg {
-	opacity: 0.8;
-}
-
-/* animate out */
-.my-mfp-slide-bottom.mfp-removing.mfp-bg {
 	opacity: 0;
 }

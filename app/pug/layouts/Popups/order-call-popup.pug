@@ -1,0 +1,25 @@
+<!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+#order-call-popup.popup.order-call-popup.mfp-hide.zoom-anim-dialog.popup_secondary
+	.popup__layout_secondary.order-call-popup__layout
+		.center 
+			h2.popup__title.h2-title.order-call-popup__title
+				|Замовте дзвінок
+			p.popup__subtitle.order-call-popup__subtitle
+				|Заповніть форму зворотного зв'язку, і наш фахівець зв'яжеться з вами
+			.order-call-popup__form-layer
+				form#order-call-popup__form.order-call-popup__form(method="POST")
+					fieldset.fieldset
+						.field-row.order-call-popup__field-row
+							.field-wrapper.order-call-popup__field-wrapper
+								input.field(type="text" placeholder=" " id="order-call-name-input")
+								label.text-field-label(for="order-call-name-input")
+									|Ваше ім'я
+						.field-row.order-call-popup__field-row
+							.field-wrapper.order-call-popup__field-wrapper
+								input.field(type="tel" placeholder=" " id="order-call-tel-input")
+								label.text-field-label(for="order-call-tel-input")
+									|Ваш номер телефону
+						.field-row.order-call-popup__field-row
+							button.popup__btn.order-call-popup__btn.btn.red-orange(type="submit")
+								span
+									|Відправити

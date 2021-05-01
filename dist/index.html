@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1619829909254" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1619829909254">
-    <link rel="stylesheet" href="css/main.min.css?v=1619829909254">
+    <link rel="preload" href="css/main.min.css?v=1619912818812" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1619912818812">
+    <link rel="stylesheet" href="css/main.min.css?v=1619912818812">
   </head>
   <body class="home-page">
     <header class="header">
       <div class="header__layout">
         <div class="center">
           <div class="f-container">
-            <div class="header__btn-layer header-inner-layer"><a class="header__btn btn white open-popup-link" href="#"><span>Замовити дзвінок</span></a></div>
+            <div class="header__btn-layer header-inner-layer"><a class="header__btn btn white open-popup-link_secondary" href="#order-call-popup"><span>Замовити дзвінок</span></a></div>
             <div class="header__logo-layer header-inner-layer">
               <div class="header__logo-link-wrapper"><a class="header__logo-link" href="#">
                   <svg class="header__logo">
@@ -337,7 +337,7 @@
     </footer>
     <div class="popups">
       <div class="popups__layout"><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-        <div class="popup play-and-order-popup" id="play-and-order-popup"> 
+        <div class="popup play-and-order-popup mfp-hide zoom-anim-dialog" id="play-and-order-popup">
           <div class="popup__layout play-and-order-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title play-and-order-popup__title">Моє печиво - твоє печиво!</h2>
@@ -406,7 +406,7 @@
             </div>
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-        <div class="popup catalog-popup" id="catalog-popup"> 
+        <div class="popup catalog-popup mfp-hide zoom-anim-dialog" id="catalog-popup">
           <div class="popup__layout catalog-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title catalog-popup__title">Замовляй та грай</h2>
@@ -453,14 +453,14 @@
                     <div class="popup__card-description catalog-popup__card-description">
                       <p class="popup__card-packing catalog-popup__card-packing">
                          Піддон</p>
-                      <div class="popup__card-btn-wrapper catalog-popup__card-btn-wrapper"><a class="popup__card-btn catalog-popup__card-btn btn white open-popup-link" href="#"><span>Зателефонувати мені</span></a></div><a class="popup__card-phone catalog-popup__card-phone" href="tel:+380999999999"><i class="ico phone-ico"></i><span>+380 99 999-99-99</span></a>
+                      <div class="popup__card-btn-wrapper catalog-popup__card-btn-wrapper"><a class="popup__card-btn catalog-popup__card-btn btn white open-popup-link_secondary" href="#call-me-popup"><span>Зателефонувати мені</span></a></div><a class="popup__card-phone catalog-popup__card-phone" href="tel:+380999999999"><i class="ico phone-ico"></i><span>+380 99 999-99-99</span></a>
                     </div>
                   </div>
                 </div>
               </div>
               <p class="popup__note catalog-popup__note">* Вага нетто</p>
               <div class="popup__basket-info catalog-popup__basket-info">
-                <button class="popup__basket-clear catalog-popup__basket-clear transparent-btn"><span>Очистити корзину</span></button>
+                <button class="popup__basket-clear catalog-popup__basket-clear transparent-btn with-underline"><span>Очистити корзину</span></button>
                 <div class="popup__total catalog-popup__total">
                   <p class="popup__total-text catalog-popup__total-text">Загальна вартість</p>
                   <p class="popup__total-price catalog-popup__total-price">
@@ -471,7 +471,7 @@
             </div>
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-        <div class="popup cart-popup" id="cart-popup"> 
+        <div class="popup cart-popup mfp-hide zoom-anim-dialog" id="cart-popup">
           <div class="popup__layout cart-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title cart-popup__title">Корзина</h2>
@@ -517,7 +517,7 @@
               <p class="popup__note cart-popup__note">* Вага нетто</p>
               <div class="cart-popup__summary">
                 <div class="popup__card-btn-wrapper cart-popup__card-btn-wrapper"><a class="popup__card-btn cart-popup__card-btn btn transparent close-popup-btn" href="#"><span>На головну</span></a></div>
-                <button class="popup__basket-clear cart-popup__basket-clear transparent-btn"><span>Очистити корзину</span></button>
+                <button class="popup__basket-clear cart-popup__basket-clear transparent-btn with-underline"><span>Очистити корзину</span></button>
                 <div class="cart-popup__total">
                   <p class="popup__total-price cart-popup__total-price">
                      70 грн.</p><a class="popup__btn cart-popup__btn btn red-orange open-popup-link" href="#order-popup"><span>Оформити замовлення</span></a>
@@ -526,159 +526,242 @@
             </div>
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-        <div class="popup order-popup" id="order-popup"> 
+        <div class="popup order-popup mfp-hide zoom-anim-dialog" id="order-popup">
           <div class="popup__layout order-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title order-popup__title">Оформити замовлення</h2>
-              <div class="order-popup__form-layer">
-                <form class="order-popup__form" id="order-popup__form" method="POST">
+              <div class="f-container order-popup__f-container">
+                <div class="order-popup__form-layer">
+                  <form class="order-popup__form" id="order-popup__form" method="POST">
+                    <fieldset class="fieldset">
+                      <legend class="legend order-popup__legend">Данні покупця</legend>
+                      <div class="field-row">
+                        <div class="field-wrapper">
+                          <input class="field" type="text" placeholder=" " id="name-input">
+                          <label class="text-field-label" for="name-input">Ім'я</label>
+                        </div>
+                        <div class="field-wrapper">
+                          <input class="field" type="text" placeholder=" " id="surname-input">
+                          <label class="text-field-label" for="surname-input">Прізвище</label>
+                        </div>
+                      </div>
+                      <div class="field-row">
+                        <div class="field-wrapper">
+                          <input class="field" type="tel" placeholder=" " id="tel-input">
+                          <label class="text-field-label" for="tel-input">Телефон</label>
+                        </div>
+                        <div class="field-wrapper">
+                          <input class="field" type="email" placeholder=" " id="email-input">
+                          <label class="text-field-label" for="email-input">E-mail</label>
+                        </div>
+                      </div>
+                      <div class="field-row">
+                        <div class="field-wrapper textarea-field-wrapper">
+                          <textarea class="field textarea" name="" rows="5" placeholder=" " id="comment-textarea" value=""></textarea>
+                          <label class="textarea-field-label" for="comment-textarea">Коментар</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="legend order-popup__legend">
+                         Спосіб оплати</legend>
+                      <div class="field-row">
+                        <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                          <input class="field" type="radio" name="payment-radio" id="payment-radio-1" checked="true">
+                          <label for="payment-radio-1">Готівкою</label>
+                        </div>
+                        <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                          <input class="field" type="radio" name="payment-radio" id="payment-radio-2">
+                          <label for="payment-radio-2">Банківською картою</label>
+                        </div>
+                      </div>
+                      <div class="field-row">
+                        <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                          <input class="field" type="radio" name="payment-radio" id="payment-radio-3">
+                          <label for="payment-radio-3">Розрахунковий рахунок</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="legend order-popup__legend">
+                         Доставка</legend>
+                      <div class="field-row">
+                        <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                          <input class="field" type="radio" name="delivery-radio" id="delivery-radio-1" checked="true">
+                          <label for="delivery-radio-1">Cамовивіз з Нової Пошти</label>
+                        </div>
+                        <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                          <input class="field" type="radio" name="delivery-radio" id="delivery-radio-2">
+                          <label for="delivery-radio-2">Кур'єр Нова Пошта</label>
+                        </div>
+                      </div>
+                      <div class="field-row">
+                        <div class="field-wrapper order-popup__select-field-wrapper">
+                          <select class="choice order-popup__select-field department-select"></select>
+                        </div>
+                      </div>
+                      <div class="field-row">
+                        <div class="field-wrapper order-popup__select-field-wrapper">
+                          <select class="choice order-popup__select-field town-select"></select>
+                        </div>
+                        <div class="field-wrapper">
+                          <input class="field" type="text" placeholder=" " id="street-input">
+                          <label class="text-field-label" for="street-input">Вулиця</label>
+                        </div>
+                      </div>
+                      <div class="field-row">
+                        <div class="field-wrapper">
+                          <input class="field" type="text" placeholder=" " id="house-input">
+                          <label class="text-field-label" for="house-input">Будинок</label>
+                        </div>
+                        <div class="field-wrapper">
+                          <input class="field" type="text" placeholder=" " id="flat-input">
+                          <label class="text-field-label" for="flat-input">Квартира</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="legend order-popup__legend">
+                         Консультація</legend>
+                      <div class="field-row">
+                        <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                          <input class="field" type="radio" name="consultation-radio" id="consultation-radio-1" checked="true">
+                          <label for="consultation-radio-1">Не телефонувати мені</label>
+                        </div>
+                        <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                          <input class="field" type="radio" name="consultation-radio" id="consultation-radio-2">
+                          <label for="consultation-radio-2">Зателефонуйте мені</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                    <fieldset class="fieldset">
+                      <legend class="legend order-popup__legend">
+                         Контактні данні отримувача замовлення</legend>
+                      <div class="field-row order-popup__field-row_small">
+                        <div class="field-wrapper order-popup__radio-field-wrapper small">
+                          <input class="field" type="radio" name="contacts-radio" id="contacts-radio-1" checked="true">
+                          <label for="contacts-radio-1">Я</label>
+                        </div>
+                        <div class="field-wrapper order-popup__radio-field-wrapper small">
+                          <input class="field" type="radio" name="contacts-radio" id="contacts-radio-2">
+                          <label for="contacts-radio-2">Інша особа</label>
+                        </div>
+                      </div>
+                      <div class="field-row">
+                        <div class="field-wrapper">
+                          <input class="field" type="text" placeholder=" " id="name-input-2">
+                          <label class="text-field-label" for="name-input-2">Ім'я</label>
+                        </div>
+                        <div class="field-wrapper">
+                          <input class="field" type="text" placeholder=" " id="surname-input-2">
+                          <label class="text-field-label" for="surname-input-2">Прізвище</label>
+                        </div>
+                      </div>
+                      <div class="field-row">
+                        <div class="field-wrapper">
+                          <input class="field" type="text" placeholder=" " id="middle-name-input">
+                          <label class="text-field-label" for="middle-name-input">По батькові</label>
+                        </div>
+                        <div class="field-wrapper">
+                          <input class="field" type="tel" placeholder=" " id="mob-tel-input">
+                          <label class="text-field-label" for="mob-tel-input">Мобільний телефон</label>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+                <div class="order-popup__preview-layer">
+                  <div class="order-popup__preview">
+                    <div class="order-popup__preview-section total-product-section">
+                      <p class="order-popup__product-text">Ваше замовлення</p>
+                      <p class="order-popup__product-count">2 товара</p>
+                    </div>
+                    <div class="order-popup__preview-section"><a class="order-popup__return-basket-btn transparent-btn with-underline open-popup-link" href="#cart-popup"><span>Повернутися в корзину</span></a></div>
+                    <div class="order-popup__preview-section">
+                      <ul class="order-popup__list">
+                        <li class="order-popup__list-item">
+                          <p class="order-popup__list-item-text">Товар  на суму</p>
+                          <p class="order-popup__list-item-price">70 грн.</p>
+                        </li>
+                        <li class="order-popup__list-item">
+                          <p class="order-popup__list-item-text">Вигода від знижок</p>
+                          <p class="order-popup__list-item-price">0 грн.</p>
+                        </li>
+                        <li class="order-popup__list-item"> 
+                          <p class="order-popup__list-item-text">Доставка</p>
+                          <p class="order-popup__list-item-price">Платна</p>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="order-popup__preview-section">
+                      <div class="popup__total order-popup__total">
+                        <p class="popup__total-text order-popup__total-text">Разом</p>
+                        <p class="popup__total-price order-popup__total-price">
+                           70 грн.</p>
+                      </div>
+                      <button class="popup__btn order-popup__btn btn red-orange" type="submit" form="order-popup__form"><span>Замовлення підтверджую</span></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="popup order-call-popup mfp-hide zoom-anim-dialog popup_secondary" id="order-call-popup">
+          <div class="popup__layout_secondary order-call-popup__layout">
+            <div class="center"> 
+              <h2 class="popup__title h2-title order-call-popup__title">Замовте дзвінок</h2>
+              <p class="popup__subtitle order-call-popup__subtitle">Заповніть форму зворотного зв'язку, і наш фахівець зв'яжеться з вами</p>
+              <div class="order-call-popup__form-layer">
+                <form class="order-call-popup__form" id="order-call-popup__form" method="POST">
                   <fieldset class="fieldset">
-                    <legend class="legend order-popup__legend">Данні покупця</legend>
-                    <div class="field-row">
-                      <div class="field-wrapper">
-                        <input class="field" type="text" placeholder=" " id="name-input">
-                        <label class="text-field-label" for="name-input">Ім'я</label>
-                      </div>
-                      <div class="field-wrapper">
-                        <input class="field" type="text" placeholder=" " id="surname-input">
-                        <label class="text-field-label" for="surname-input">Прізвище</label>
+                    <div class="field-row order-call-popup__field-row">
+                      <div class="field-wrapper order-call-popup__field-wrapper">
+                        <input class="field" type="text" placeholder=" " id="order-call-name-input">
+                        <label class="text-field-label" for="order-call-name-input">Ваше ім'я</label>
                       </div>
                     </div>
-                    <div class="field-row">
-                      <div class="field-wrapper">
-                        <input class="field" type="tel" placeholder=" " id="tel-input">
-                        <label class="text-field-label" for="tel-input">Телефон</label>
-                      </div>
-                      <div class="field-wrapper">
-                        <input class="field" type="email" placeholder=" " id="email-input">
-                        <label class="text-field-label" for="email-input">E-mail</label>
+                    <div class="field-row order-call-popup__field-row">
+                      <div class="field-wrapper order-call-popup__field-wrapper">
+                        <input class="field" type="tel" placeholder=" " id="order-call-tel-input">
+                        <label class="text-field-label" for="order-call-tel-input">Ваш номер телефону</label>
                       </div>
                     </div>
-                    <div class="field-row">
-                      <div class="field-wrapper textarea-field-wrapper">
-                        <textarea class="field textarea" name="" rows="5" placeholder=" " id="comment-textarea" value=""></textarea>
-                        <label class="textarea-field-label" for="comment-textarea">Коментар</label>
-                      </div>
-                    </div>
-                  </fieldset>
-                  <fieldset class="fieldset">
-                    <legend class="legend order-popup__legend">
-                       Спосіб оплати</legend>
-                    <div class="field-row">
-                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
-                        <input class="field" type="radio" name="payment-radio" id="payment-radio-1" checked="true">
-                        <label for="payment-radio-1">Готівкою</label>
-                      </div>
-                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
-                        <input class="field" type="radio" name="payment-radio" id="payment-radio-2">
-                        <label for="payment-radio-2">Банківською картою</label>
-                      </div>
-                    </div>
-                    <div class="field-row">
-                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
-                        <input class="field" type="radio" name="payment-radio" id="payment-radio-3">
-                        <label for="payment-radio-3">Розрахунковий рахунок</label>
-                      </div>
-                    </div>
-                  </fieldset>
-                  <fieldset class="fieldset">
-                    <legend class="legend order-popup__legend">
-                       Доставка</legend>
-                    <div class="field-row">
-                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
-                        <input class="field" type="radio" name="delivery-radio" id="delivery-radio-1" checked="true">
-                        <label for="delivery-radio-1">Cамовивіз з Нової Пошти</label>
-                      </div>
-                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
-                        <input class="field" type="radio" name="delivery-radio" id="delivery-radio-2">
-                        <label for="delivery-radio-2">Кур'єр Нова Пошта</label>
-                      </div>
-                    </div>
-                    <div class="field-row">
-                      <div class="field-wrapper order-popup__select-field-wrapper">
-                        <select class="choice"></select>
-                      </div>
-                    </div>
-                    <div class="field-row">
-                      <div class="field-wrapper order-popup__select-field-wrapper">
-                        <select class="choice"></select>
-                      </div>
-                      <div class="field-wrapper">
-                        <input class="field" type="text" placeholder=" " id="street-input">
-                        <label class="text-field-label" for="street-input">Вулиця</label>
-                      </div>
-                    </div>
-                    <div class="field-row">
-                      <div class="field-wrapper">
-                        <input class="field" type="text" placeholder=" " id="house-input">
-                        <label class="text-field-label" for="house-input">Будинок</label>
-                      </div>
-                      <div class="field-wrapper">
-                        <input class="field" type="text" placeholder=" " id="flat-input">
-                        <label class="text-field-label" for="flat-input">Квартира</label>
-                      </div>
-                    </div>
-                  </fieldset>
-                  <fieldset class="fieldset">
-                    <legend class="legend order-popup__legend">
-                       Консультація</legend>
-                    <div class="field-row">
-                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
-                        <input class="field" type="radio" name="consultation-radio" id="consultation-radio-1" checked="true">
-                        <label for="consultation-radio-1">Не телефонувати мені</label>
-                      </div>
-                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
-                        <input class="field" type="radio" name="consultation-radio" id="consultation-radio-2">
-                        <label for="consultation-radio-2">Зателефонуйте мені</label>
-                      </div>
-                    </div>
-                  </fieldset>
-                  <fieldset class="fieldset">
-                    <legend class="legend order-popup__legend">
-                       Контактні данні отримувача замовлення</legend>
-                    <div class="field-row">
-                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
-                        <input class="field" type="radio" name="contacts-radio" id="contacts-radio-1" checked="true">
-                        <label for="contacts-radio-1">Я</label>
-                      </div>
-                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
-                        <input class="field" type="radio" name="contacts-radio" id="contacts-radio-2">
-                        <label for="contacts-radio-2">Інша особа</label>
-                      </div>
-                    </div>
-                    <div class="field-row">
-                      <div class="field-wrapper">
-                        <input class="field" type="text" placeholder=" " id="name-input-2">
-                        <label class="text-field-label" for="name-input-2">Ім'я</label>
-                      </div>
-                      <div class="field-wrapper">
-                        <input class="field" type="text" placeholder=" " id="surname-input-2">
-                        <label class="text-field-label" for="surname-input-2">Прізвище</label>
-                      </div>
-                    </div>
-                    <div class="field-row">
-                      <div class="field-wrapper">
-                        <input class="field" type="text" placeholder=" " id="middle-name-input">
-                        <label class="text-field-label" for="middle-name-input">По батькові</label>
-                      </div>
-                      <div class="field-wrapper">
-                        <input class="field" type="tel" placeholder=" " id="mob-tel-input">
-                        <label class="text-field-label" for="mob-tel-input">Мобільний телефон</label>
-                      </div>
+                    <div class="field-row order-call-popup__field-row">
+                      <button class="popup__btn order-call-popup__btn btn red-orange" type="submit"><span>Відправити</span></button>
                     </div>
                   </fieldset>
                 </form>
               </div>
-              <div class="order-popup__preview-layer">
-                <div class="order-popup__preview"></div>
+            </div>
+          </div>
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="popup call-me-popup mfp-hide zoom-anim-dialog popup_secondary" id="call-me-popup">
+          <div class="popup__layout_secondary call-me-popup__layout">
+            <div class="center"> 
+              <h2 class="popup__title h2-title call-me-popup__title">Зателефонувати мені</h2>
+              <div class="call-me-popup__form-layer">
+                <form class="call-me-popup__form" id="call-me-popup__form" method="POST">
+                  <fieldset class="fieldset">
+                    <div class="field-row call-me-popup__field-row">
+                      <div class="field-wrapper call-me-popup__field-wrapper">
+                        <input class="field" type="tel" placeholder=" " id="call-me-tel-input">
+                        <label class="text-field-label" for="call-me-tel-input">Ваш номер телефону</label>
+                      </div>
+                    </div>
+                    <div class="field-row call-me-popup__field-row">
+                      <button class="popup__btn call-me-popup__btn btn red-orange" type="submit"><span>Зателефонуйте</span></button>
+                    </div>
+                  </fieldset>
+                </form>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1619829909255" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1619829909255" as="script">
-    <script src="js/main.min.js?v=1619829909255" async></script>
+    <script src="js/libs.min.js?v=1619912818813" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1619912818813" as="script">
+    <script src="js/main.min.js?v=1619912818813" async></script>
   </body>
 </html>

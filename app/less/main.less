@@ -45,6 +45,8 @@ body {
   }
 
 
+
+
   &.popup-open {
     .header {
       z-index: 2050;
@@ -63,6 +65,17 @@ body {
 
     .close-popup {
       display: block;
+    }
+
+    &.secondary-popup {
+      .header__btn{
+        display: none;
+        pointer-events: none;
+      }
+
+      .close-popup {
+        display: none;
+      }
     }
   }
 
@@ -317,6 +330,10 @@ main {
   width: calc(100% - 140px);
 }
 
+.section {
+  padding: 0;
+}
+
 
 // .section__layout {
 //   .fPa(40%, 40%, 40px, 40px, 992px,  1366px);
@@ -564,6 +581,41 @@ main {
   position: relative;
   padding: 0;
   margin: 0;
+  display: inline-flex;
+
+  span {
+    color: @gray;
+  }
+
+  &.with-underline {
+    	&:before {
+    	  content: '';
+    	  position: absolute;
+    	  bottom: 0;
+    	  left: 0;
+    	  width: 100%;
+    	  height: 1px;
+    	  background: @gray;
+    	}
+
+
+    	&:after {
+    	  content: '';
+    	  position: absolute;
+    	  bottom: 0;
+    	  left: 0;
+    	  width: 0%;
+    	  height: 1px;
+    	  background: @red-orange;
+    	  transition: width 0.2s linear;
+    	}
+
+    	&:hover {
+    	  &:after {
+    	    width: 100%;
+    	  }
+    	}
+  }
 }
 
 .rubbish-ico {
@@ -685,6 +737,8 @@ main {
 @import url("app/less/Popups/_catalog-popup.less");
 @import url("app/less/Popups/_cart-popup.less");
 @import url("app/less/Popups/_order-popup.less");
+@import url("app/less/Popups/_order-call-popup.less");
+@import url("app/less/Popups/_call-me-popup.less");
 
 
 
