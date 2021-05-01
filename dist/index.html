@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1619741265753" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1619741265753">
-    <link rel="stylesheet" href="css/main.min.css?v=1619741265753">
+    <link rel="preload" href="css/main.min.css?v=1619829909254" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1619829909254">
+    <link rel="stylesheet" href="css/main.min.css?v=1619829909254">
   </head>
   <body class="home-page">
     <header class="header">
@@ -533,109 +533,137 @@
               <div class="order-popup__form-layer">
                 <form class="order-popup__form" id="order-popup__form" method="POST">
                   <fieldset class="fieldset">
-                    <legend class="legend">Данні покупця</legend>
+                    <legend class="legend order-popup__legend">Данні покупця</legend>
                     <div class="field-row">
                       <div class="field-wrapper">
-                        <input type="text" placeholder="Ім'я">
+                        <input class="field" type="text" placeholder=" " id="name-input">
+                        <label class="text-field-label" for="name-input">Ім'я</label>
                       </div>
                       <div class="field-wrapper">
-                        <input type="text" placeholder="Прізвище">
+                        <input class="field" type="text" placeholder=" " id="surname-input">
+                        <label class="text-field-label" for="surname-input">Прізвище</label>
                       </div>
                     </div>
                     <div class="field-row">
                       <div class="field-wrapper">
-                        <input type="tel" placeholder="Телефон">
+                        <input class="field" type="tel" placeholder=" " id="tel-input">
+                        <label class="text-field-label" for="tel-input">Телефон</label>
                       </div>
                       <div class="field-wrapper">
-                        <input type="email" placeholder="E-mail">
+                        <input class="field" type="email" placeholder=" " id="email-input">
+                        <label class="text-field-label" for="email-input">E-mail</label>
                       </div>
                     </div>
                     <div class="field-row">
-                      <div class="field-wrapper">
-                        <textarea name="" rows="5" placeholder="Коментар"> </textarea>
+                      <div class="field-wrapper textarea-field-wrapper">
+                        <textarea class="field textarea" name="" rows="5" placeholder=" " id="comment-textarea" value=""></textarea>
+                        <label class="textarea-field-label" for="comment-textarea">Коментар</label>
                       </div>
                     </div>
                   </fieldset>
                   <fieldset class="fieldset">
-                    <legend class="legend">
+                    <legend class="legend order-popup__legend">
                        Спосіб оплати</legend>
                     <div class="field-row">
-                      <div class="field-wrapper">
-                        <input type="radio" name="payment-radio">
-                        <label></label>
+                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                        <input class="field" type="radio" name="payment-radio" id="payment-radio-1" checked="true">
+                        <label for="payment-radio-1">Готівкою</label>
                       </div>
-                      <div class="field-wrapper">
-                        <input type="radio" name="payment-radio">
-                        <label></label>
+                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                        <input class="field" type="radio" name="payment-radio" id="payment-radio-2">
+                        <label for="payment-radio-2">Банківською картою</label>
                       </div>
                     </div>
                     <div class="field-row">
-                      <div class="field-wrapper">
-                        <input type="radio" name="payment-radio">
-                        <label></label>
+                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                        <input class="field" type="radio" name="payment-radio" id="payment-radio-3">
+                        <label for="payment-radio-3">Розрахунковий рахунок</label>
                       </div>
                     </div>
                   </fieldset>
                   <fieldset class="fieldset">
-                    <legend class="legend">
+                    <legend class="legend order-popup__legend">
                        Доставка</legend>
                     <div class="field-row">
-                      <div class="field-wrapper">
-                        <input type="radio" name="delivery-radio">
-                        <label></label>
+                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                        <input class="field" type="radio" name="delivery-radio" id="delivery-radio-1" checked="true">
+                        <label for="delivery-radio-1">Cамовивіз з Нової Пошти</label>
+                      </div>
+                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                        <input class="field" type="radio" name="delivery-radio" id="delivery-radio-2">
+                        <label for="delivery-radio-2">Кур'єр Нова Пошта</label>
+                      </div>
+                    </div>
+                    <div class="field-row">
+                      <div class="field-wrapper order-popup__select-field-wrapper">
+                        <select class="choice"></select>
+                      </div>
+                    </div>
+                    <div class="field-row">
+                      <div class="field-wrapper order-popup__select-field-wrapper">
+                        <select class="choice"></select>
                       </div>
                       <div class="field-wrapper">
-                        <input type="radio" name="delivery-radio">
-                        <label></label>
+                        <input class="field" type="text" placeholder=" " id="street-input">
+                        <label class="text-field-label" for="street-input">Вулиця</label>
                       </div>
                     </div>
                     <div class="field-row">
                       <div class="field-wrapper">
-                        <select name=""></select>
+                        <input class="field" type="text" placeholder=" " id="house-input">
+                        <label class="text-field-label" for="house-input">Будинок</label>
+                      </div>
+                      <div class="field-wrapper">
+                        <input class="field" type="text" placeholder=" " id="flat-input">
+                        <label class="text-field-label" for="flat-input">Квартира</label>
                       </div>
                     </div>
                   </fieldset>
                   <fieldset class="fieldset">
-                    <legend class="legend">
+                    <legend class="legend order-popup__legend">
                        Консультація</legend>
                     <div class="field-row">
-                      <div class="field-wrapper">
-                        <input type="radio" name="consultation-radio">
-                        <label></label>
+                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                        <input class="field" type="radio" name="consultation-radio" id="consultation-radio-1" checked="true">
+                        <label for="consultation-radio-1">Не телефонувати мені</label>
                       </div>
-                      <div class="field-wrapper">
-                        <input type="radio" name="consultation-radio">
-                        <label></label>
+                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                        <input class="field" type="radio" name="consultation-radio" id="consultation-radio-2">
+                        <label for="consultation-radio-2">Зателефонуйте мені</label>
                       </div>
                     </div>
                   </fieldset>
                   <fieldset class="fieldset">
-                    <legend class="legend">
+                    <legend class="legend order-popup__legend">
                        Контактні данні отримувача замовлення</legend>
                     <div class="field-row">
-                      <div class="field-wrapper">
-                        <input type="radio" name="contacts-radio">
-                        <label></label>
+                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                        <input class="field" type="radio" name="contacts-radio" id="contacts-radio-1" checked="true">
+                        <label for="contacts-radio-1">Я</label>
                       </div>
-                      <div class="field-wrapper">
-                        <input type="radio" name="contacts-radio">
-                        <label></label>
-                      </div>
-                    </div>
-                    <div class="field-row">
-                      <div class="field-wrapper">
-                        <input type="text" placeholder="Ім'я">
-                      </div>
-                      <div class="field-wrapper">
-                        <input type="text" placeholder="Прізвище">
+                      <div class="field-wrapper order-popup__radio-field-wrapper"> 
+                        <input class="field" type="radio" name="contacts-radio" id="contacts-radio-2">
+                        <label for="contacts-radio-2">Інша особа</label>
                       </div>
                     </div>
                     <div class="field-row">
                       <div class="field-wrapper">
-                        <input type="text" placeholder="По батькові">
+                        <input class="field" type="text" placeholder=" " id="name-input-2">
+                        <label class="text-field-label" for="name-input-2">Ім'я</label>
                       </div>
                       <div class="field-wrapper">
-                        <input type="tel" placeholder="Мобільний телефон">
+                        <input class="field" type="text" placeholder=" " id="surname-input-2">
+                        <label class="text-field-label" for="surname-input-2">Прізвище</label>
+                      </div>
+                    </div>
+                    <div class="field-row">
+                      <div class="field-wrapper">
+                        <input class="field" type="text" placeholder=" " id="middle-name-input">
+                        <label class="text-field-label" for="middle-name-input">По батькові</label>
+                      </div>
+                      <div class="field-wrapper">
+                        <input class="field" type="tel" placeholder=" " id="mob-tel-input">
+                        <label class="text-field-label" for="mob-tel-input">Мобільний телефон</label>
                       </div>
                     </div>
                   </fieldset>
@@ -649,8 +677,8 @@
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1619741265753" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1619741265753" as="script">
-    <script src="js/main.min.js?v=1619741265753" async></script>
+    <script src="js/libs.min.js?v=1619829909255" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1619829909255" as="script">
+    <script src="js/main.min.js?v=1619829909255" async></script>
   </body>
 </html>

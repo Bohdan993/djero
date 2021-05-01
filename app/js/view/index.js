@@ -11,6 +11,7 @@ const $mainScreenBodyLayer = document.querySelector('.main-screen__body-layer')
 const $mainScreenFooterLayer = document.querySelector('.main-screen__footer-layer')
 const $popupMain = document.querySelector('.popup-main')
 const $closePopup = document.querySelectorAll('.close-popup-btn')
+const $choices = document.querySelectorAll('.choice')
 
 export {
 	$body,
@@ -25,5 +26,6 @@ export {
 	$mainScreenBodyLayer,
 	$mainScreenFooterLayer,
 	$popupMain,
-	$closePopup
+	$closePopup,
+	$choices
 }

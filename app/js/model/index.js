@@ -8,6 +8,7 @@ import InitMagnificPopups from './App/InitMagnificPopups';
 import PlayAndOrderPopupShow from './App/PlayAndOrderPopupShow';
 import InitOverlayScrollbars from './App/InitOverlayScrollbars';
 import ClosePopup from './App/ClosePopup';
+import InitChoices from './App/InitChoises';
 
 export {
 	BurgerMenu,
@@ -19,5 +20,6 @@ export {
 	InitMagnificPopups,
 	PlayAndOrderPopupShow,
 	InitOverlayScrollbars,
-	ClosePopup
+	ClosePopup,
+	InitChoices
 }

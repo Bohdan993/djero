@@ -7,77 +7,120 @@
 			.order-popup__form-layer
 				form#order-popup__form.order-popup__form(method="POST")
 					fieldset.fieldset
-						legend.legend
+						legend.legend.order-popup__legend
 							|Данні покупця
 						.field-row
 							.field-wrapper
-								input(type="text" placeholder="Ім'я")
+								input.field(type="text" placeholder=" " id="name-input")
+								label.text-field-label(for="name-input")
+									|Ім'я
 							.field-wrapper
-								input(type="text" placeholder="Прізвище")
+								input.field(type="text" placeholder=" " id="surname-input")
+								label.text-field-label(for="surname-input")
+									|Прізвище
 						.field-row
 							.field-wrapper
-								input(type="tel" placeholder="Телефон")
+								input.field(type="tel" placeholder=" " id="tel-input")
+								label.text-field-label(for="tel-input")
+									|Телефон
 							.field-wrapper
-								input(type="email" placeholder="E-mail")
+								input.field(type="email" placeholder=" " id="email-input")
+								label.text-field-label(for="email-input")
+									|E-mail
 						.field-row
-							.field-wrapper
-								textarea(name="" rows="5" placeholder="Коментар") 
+							.field-wrapper.textarea-field-wrapper
+								textarea.field.textarea(name="" rows="5" placeholder=" " id="comment-textarea" value="")
+								label.textarea-field-label(for="comment-textarea")
+									|Коментар
 					fieldset.fieldset
-						legend.legend 
+						legend.legend.order-popup__legend 
 							|Спосіб оплати
 						.field-row
-							.field-wrapper
-								input(type="radio" name="payment-radio")
-								label
-							.field-wrapper
-								input(type="radio" name="payment-radio")
-								label
+							.field-wrapper.order-popup__radio-field-wrapper 
+								input.field(type="radio" name="payment-radio" id="payment-radio-1" checked="true")
+								label(for="payment-radio-1")
+									|Готівкою
+							.field-wrapper.order-popup__radio-field-wrapper 
+								input.field(type="radio" name="payment-radio" id="payment-radio-2")
+								label(for="payment-radio-2")
+									|Банківською картою
 						.field-row
-							.field-wrapper
-								input(type="radio" name="payment-radio")
-								label
+							.field-wrapper.order-popup__radio-field-wrapper 
+								input.field(type="radio" name="payment-radio" id="payment-radio-3")
+								label(for="payment-radio-3")
+									|Розрахунковий рахунок
 					fieldset.fieldset
-						legend.legend 
+						legend.legend.order-popup__legend 
 							|Доставка
 						.field-row
+							.field-wrapper.order-popup__radio-field-wrapper 
+								input.field(type="radio" name="delivery-radio"  id="delivery-radio-1" checked="true")
+								label(for="delivery-radio-1")
+									|Cамовивіз з Нової Пошти
+							.field-wrapper.order-popup__radio-field-wrapper 
+								input.field(type="radio" name="delivery-radio" id="delivery-radio-2")
+								label(for="delivery-radio-2")
+									|Кур'єр Нова Пошта
+						.field-row
+							.field-wrapper.order-popup__select-field-wrapper
+								select.choice
+						.field-row
+							.field-wrapper.order-popup__select-field-wrapper
+								select.choice
 							.field-wrapper
-								input(type="radio" name="delivery-radio")
-								label
-							.field-wrapper
-								input(type="radio" name="delivery-radio")
-								label
+								input.field(type="text" placeholder=" " id="street-input")
+								label.text-field-label(for="street-input")
+									|Вулиця
 						.field-row
 							.field-wrapper
-								select(name="")
+								input.field(type="text" placeholder=" " id="house-input")
+								label.text-field-label(for="house-input")
+									|Будинок
+							.field-wrapper
+								input.field(type="text" placeholder=" " id="flat-input")
+								label.text-field-label(for="flat-input")
+									|Квартира
 					fieldset.fieldset
-						legend.legend 
+						legend.legend.order-popup__legend 
 							|Консультація
 						.field-row
-							.field-wrapper
-								input(type="radio" name="consultation-radio")
-								label
-							.field-wrapper
-								input(type="radio" name="consultation-radio")
-								label
+							.field-wrapper.order-popup__radio-field-wrapper 
+								input.field(type="radio" name="consultation-radio" id="consultation-radio-1" checked="true")
+								label(for="consultation-radio-1")
+									|Не телефонувати мені
+							.field-wrapper.order-popup__radio-field-wrapper 
+								input.field(type="radio" name="consultation-radio" id="consultation-radio-2")
+								label(for="consultation-radio-2")
+									|Зателефонуйте мені
 					fieldset.fieldset
-						legend.legend 
+						legend.legend.order-popup__legend 
 							|Контактні данні отримувача замовлення
 						.field-row
-							.field-wrapper
-								input(type="radio" name="contacts-radio")
-								label
-							.field-wrapper
-								input(type="radio" name="contacts-radio")
-								label
+							.field-wrapper.order-popup__radio-field-wrapper 
+								input.field(type="radio" name="contacts-radio" id="contacts-radio-1" checked="true")
+								label(for="contacts-radio-1")
+									|Я
+							.field-wrapper.order-popup__radio-field-wrapper 
+								input.field(type="radio" name="contacts-radio" id="contacts-radio-2")
+								label(for="contacts-radio-2")
+									|Інша особа
 						.field-row
 							.field-wrapper
-								input(type="text" placeholder="Ім'я")
+								input.field(type="text" placeholder=" " id="name-input-2")
+								label.text-field-label(for="name-input-2")
+									|Ім'я
 							.field-wrapper
-								input(type="text" placeholder="Прізвище")
+								input.field(type="text" placeholder=" " id="surname-input-2")
+								label.text-field-label(for="surname-input-2")
+									|Прізвище
 						.field-row
 							.field-wrapper
-								input(type="text" placeholder="По батькові")
+								input.field(type="text" placeholder=" " id="middle-name-input")
+								label.text-field-label(for="middle-name-input")
+									|По батькові
 							.field-wrapper
-								input(type="tel" placeholder="Мобільний телефон")
+								input.field(type="tel" placeholder=" " id="mob-tel-input")
+								label.text-field-label(for="mob-tel-input")
+									|Мобільний телефон
 			.order-popup__preview-layer
 				.order-popup__preview

@@ -1,4 +1,4 @@
-import { timers } from 'jquery';
+// import { timers } from 'jquery';
 import {
 	FullPageInit,
 	BurgerMenu,
@@ -7,7 +7,8 @@ import {
 	InitSplide,
 	BallClickAnimation,
 	InitMagnificPopups,
-	ClosePopup
+	ClosePopup,
+	InitChoices
 } from '../model';
 import {
 	SOCIAL_SHARE_BTN
@@ -25,6 +26,7 @@ import {
 	$header,
 	$mainScreenFooterBallWrapper,
 	$closePopup,
+	$choices,
 	// $popupMain
 } from '../view';
 
@@ -38,6 +40,7 @@ const app = {
 		this.bca()
 		this.imp()
 		this.cp()
+		this.ic()
 		// this.iosb()
 	},
 	bm() {
@@ -73,6 +76,9 @@ const app = {
 	},
 	cp(){
 		ClosePopup($closePopup)
+	},
+	ic(){
+		InitChoices($choices)
 	}
 	// iosb() {
 	// 	InitOverlayScrollbars({

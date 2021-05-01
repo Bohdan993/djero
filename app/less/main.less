@@ -283,7 +283,7 @@ main {
       color: @orange;
       border: 1px solid @orange;
 
-      &:after { 
+      &:after {
         border-right: 15px solid rgba(@orange, 0.05);
       }
     }
@@ -388,20 +388,70 @@ main {
 
 .field {
 
+  &[type="checkbox"],
+  &[type="radio"] {
+    display: none;
+
+
+    &+label {
+      position: relative;
+      cursor: pointer;
+      font-size: 14/16 * 1rem;
+      letter-spacing: 0px;
+      text-align: center;
+    }
+
+  }
+
   &:not([type="checkbox"]):not([type="radio"]) {
     // background-color: @light-gray;
-    border-radius: 6px;
+    background: @transparent;
+    width: 100%;
+    height: 100%;
     text-align: left;
-    height: 38px;
-    padding: 0 10px;
-    border: 1px solid transparent;
-    transition: box-shadow .2s linear, border .2s linear;
-    box-shadow: none;
+    color: @font-color;
+    padding: 0 20px;
+    border-radius: 23px;
 
-    // &:focus {
-    //   // border: 1px solid @pink;
-    //   // box-shadow: 0 0 0 0.25rem rgba(@pink, 25%);
-    // }
+    &::-webkit-input-placeholder {
+      color: @gray;
+    }
+
+    &::-moz-placeholder {
+      color: @gray;
+    }
+
+    &.textarea {
+      padding: 15px 20px;
+      resize: none;
+    }
+
+    &+label {
+      transform-origin: 0 0;
+      transition: transform 0.25s linear, color 0.25s linear;
+    }
+
+    &:not(:placeholder-shown) {
+      &+label {
+        transform: scale(.6) translate(0%, -36px);
+        color: @orange;
+      }
+    }
+
+    &:not(:placeholder-shown):not(:focus) {
+      &+label {
+        transform: scale(.6) translate(0%, -36px);
+        color: @gray;
+      }
+    }
+
+    &:focus,
+    &:active {
+      &+label {
+        transform: scale(.6) translate(0%, -36px);
+        color: @orange;
+      }
+    }
 
     // &.no-valid {
     //   // border: 1px solid @red;
@@ -412,12 +462,44 @@ main {
 
 .field-wrapper {
   position: relative;
+  width: 100%;
+  max-width: 282px;
+  height: 46px;
+  border-radius: 23px;
+  background-color: @semi-light-blue;
+  border: 1px solid @light-blue;
+  transition: 0.25s border-color linear;
+
+
+  &:hover,
+  &:focus-within {
+    border-color: @red-orange;
+  }
+  
+
+  &.textarea-field-wrapper {
+    height: auto;
+    max-width: 100%;
+
+  }
 }
 
 .fieldset {
   border: none;
   margin: 0;
   padding: 0;
+}
+
+.field-row {
+  display: flex;
+  width: 100%;
+  padding-bottom: 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.field-wrapper {
+  width: 100%;
 }
 
 .close-popup {
@@ -454,6 +536,22 @@ main {
       transform: translate(-50%, -50%) rotate(45deg);
     }
   }
+}
+
+.text-field-label {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: @gray;
+}
+
+.textarea-field-label {
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  transform: translateY(-50%);
+  color: @gray;
 }
 
 .transparent-btn {

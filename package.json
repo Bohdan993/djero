@@ -8,6 +8,7 @@
     "@babel/runtime": "^7.10.5",
     "@splidejs/splide": "^2.4.21",
     "cart-localstorage": "^1.1.5",
+    "choices.js": "^9.0.1",
     "fullpage.js": "^2.9.7",
     "jquery": "^3.6.0",
     "magnific-popup": "^1.1.0",

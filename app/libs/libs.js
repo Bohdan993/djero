@@ -5,6 +5,7 @@ import tippy from 'tippy.js';
 import magnificPopup from 'magnific-popup'
 import './jquery-fullpage-scrolloverflow'
 import OverlayScrollbars from 'overlayscrollbars'
+import Choices from 'choices.js'
 
 
 
@@ -12,5 +13,6 @@ export {
 	Splide,
 	$,
 	tippy,
-	OverlayScrollbars
+	OverlayScrollbars,
+	Choices
 }
