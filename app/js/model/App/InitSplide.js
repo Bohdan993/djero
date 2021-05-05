@@ -10,7 +10,7 @@ const InitSplide = () => {
         // interval: 5000,
         arrows: false,
         // speed: 1500,
-        drag: true,
+        // drag: true,
         lazyLoad: 'nearby',
         pagination: false,
         pauseOnHover: true,
@@ -21,13 +21,13 @@ const InitSplide = () => {
     let thumbnailSlider = new Splide( '#screen-5__slider-secondary', {
 		fixedWidth  : 290,
 		height      : 210,
-		gap         : 10,
+		gap         : 15,
 		cover       : true,
 		isNavigation: true,
+        focus       : 'center',
         pagination: false,
-        drag: true,
         lazyLoad: 'nearby',
-		focus       : 'center',
+		
 		// breakpoints : {
 		// 	'600': {
 		// 		fixedWidth: 66,
@@ -42,8 +42,7 @@ const InitSplide = () => {
 		heightRatio: 350/625,
 		pagination : false,
 		cover      : true,
-        pagination: false,
-        lazyLoad: 'nearby',
+        lazyLoad: 'nearby', 
         // autoWidth: true
 	} );
 
