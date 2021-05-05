@@ -1,0 +1,90 @@
+.screen-5__layout {
+
+    .screen-5__title {
+        .fPa(34%, 129%, 34px, 129px, 576px, 1220px);
+    }
+
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 670/1460 * 100%;
+        height: 630/980 * 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 4;
+        background: url('../img/ball-left.png') no-repeat left bottom/contain;
+
+    }
+
+
+
+    .screen-5__slider-layer-main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+    .screen-5__slider-main {
+        max-width: 625px;
+        width: 100%;
+    }
+
+    .screen-5__slider-main {
+        .screen-5__slider-track {
+            .screen-5__slider-list {
+                .screen-5__slider-slide {
+                    border: unset;
+                    border-radius: 40px;
+                }
+            }
+        }
+        .screen-5__slider-slide {
+            
+        }
+    }
+
+    .screen-5__slider-secondary {
+        .screen-5__slider-track {
+            .screen-5__slider-list {
+                .screen-5__slider-slide {
+                    border: unset;
+                    border-radius: 14px;
+                }
+            }
+        }
+        .screen-5__slider-slide {
+            
+            &:before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 3;
+                border-radius: 14px;
+                background-color: @transparent;
+                transition: background-color 0.25s linear;
+            }
+
+
+
+
+            &:not(.is-active) {
+                &:before {
+                    background-color: rgba(@white, 0.6);
+                }
+
+                &:hover {
+                    &:before {
+                        background-color: @transparent;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

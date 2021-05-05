@@ -130,11 +130,34 @@
 								|Ваше замовлення
 							p.order-popup__product-count
 								|2 товара
-						.order-popup__preview-section
-							a.order-popup__return-basket-btn.transparent-btn.with-underline.open-popup-link(href='#cart-popup')
-								span
-									|Повернутися в корзину
-						.order-popup__preview-section
+						.order-popup__preview-section.product-list-section
+							ul.order-popup__product-list
+								li.order-popup__product-list-item
+									.order-popup__product-item-img-wrapper
+										img.order-popup__product-item-img(src="img/cookies-sandwich-big.png" alt="Cookies box")
+									p.order-popup__product-item-count
+										|2 упаковки
+									p.order-popup__product-item-price
+										|70 грн.
+								li.order-popup__product-list-item
+									.order-popup__product-item-img-wrapper
+										img.order-popup__product-item-img(src="img/box.png" alt="Cookies box")
+									p.order-popup__product-item-count
+										|2 упаковки
+									p.order-popup__product-item-price
+										|70 грн.
+								li.order-popup__product-list-item
+									.order-popup__product-item-img-wrapper
+										img.order-popup__product-item-img(src="img/pallet.png" alt="Cookies box")
+									p.order-popup__product-item-count
+										|2 упаковки
+									p.order-popup__product-item-price
+										|70 грн. 
+							.order-popup__return-basket-btn-wrapper
+								a.order-popup__return-basket-btn.transparent-btn.with-underline.open-popup-link(href='#cart-popup')
+									span
+										|Повернутися в корзину
+						.order-popup__preview-section.product-stats-section
 							ul.order-popup__list
 								li.order-popup__list-item
 									p.order-popup__list-item-text
@@ -151,12 +174,12 @@
 										|Доставка
 									p.order-popup__list-item-price
 										|Платна
-						.order-popup__preview-section
+						.order-popup__preview-section.total-section
 							.popup__total.order-popup__total
 								p.popup__total-text.order-popup__total-text
 									|Разом
 								p.popup__total-price.order-popup__total-price 
 									|70 грн.
-							button.popup__btn.order-popup__btn.btn.red-orange(type="submit" form="order-popup__form")
+							button.popup__btn.order-popup__btn.btn.red-orange.big(type="submit" form="order-popup__form")
 								span
 									|Замовлення підтверджую

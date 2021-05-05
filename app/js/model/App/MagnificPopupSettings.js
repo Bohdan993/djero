@@ -18,7 +18,7 @@ const settings = {
     showCloseBtn: false,
     removalDelay: 300,
     fixedBgPos: true,
-    mainClass: 'popup-main zoom-in-animation my-mfp-zoom-in',
+    mainClass: 'zoom-in-animation my-mfp-zoom-in',
     callbacks: {    
         change: function () {
                 removeClass(this.wrap[0], 'mfp-ready')
@@ -30,13 +30,20 @@ const settings = {
                 }, 50)
             
             if(this.content[0].classList.contains('popup_secondary')) {
-                addClass($body, 'secondary-popup')
+                addClass($body, 'popup-open_secondary')
+                instance.destroy()
             } else {
-                removeClass($body, 'secondary-popup')
+                removeClass($body, 'popup-open_secondary')
+            }
+
+            if(this.content[0].classList.contains('menu-popup')) {
+                addClass($body, 'popup-open_menu')
+                instance.destroy()
+            } else {
+                removeClass($body, 'popup-open_menu')
             }
         },
         open() {
-            // console.log(this.content)
             instance = InitOverlayScrollbars({
                 popup: this.wrap[0]
             })
@@ -45,7 +52,7 @@ const settings = {
         },
 
         close() {
-            removeClass($body, 'popup-open')
+            removeClass($body, 'popup-open', 'popup-open_secondary', 'popup-open_menu')
             instance.destroy()
         }
     }

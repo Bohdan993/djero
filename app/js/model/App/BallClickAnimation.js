@@ -28,7 +28,7 @@ const BallClickAnimation = (data) => {
         changeClasses()
         secondAnimationAction()
 
-        console.log('click')
+        // console.log('click')
     }
 
     function changeClasses() {

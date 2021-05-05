@@ -12,6 +12,7 @@ const $mainScreenFooterLayer = document.querySelector('.main-screen__footer-laye
 const $popupMain = document.querySelector('.popup-main')
 const $closePopup = document.querySelectorAll('.close-popup-btn')
 const $choices = document.querySelectorAll('.choice')
+const $screenPlayVideo = document.querySelectorAll('.screen-play-video')
 
 export {
 	$body,
@@ -28,4 +29,5 @@ export {
 	$popupMain,
 	$closePopup,
 	$choices,
+	$screenPlayVideo
 }

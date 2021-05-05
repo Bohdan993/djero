@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1619912818812" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1619912818812">
-    <link rel="stylesheet" href="css/main.min.css?v=1619912818812">
+    <link rel="preload" href="css/main.min.css?v=1620169811551" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1620169811551">
+    <link rel="stylesheet" href="css/main.min.css?v=1620169811551">
   </head>
   <body class="home-page">
     <header class="header">
@@ -44,10 +44,10 @@
                 <div class="main-screen__background-layer">
                   <div class="main-screen__background">
                     <video class="main-screen__background-video active" autoplay="true" loop muted preload="metadata">
-                      <source src="video/Djero-Main-Animation-2.mp4" type="video/mp4">
+                      <source data-src="video/Djero-Main-Animation-2.mp4" type="video/mp4">
                     </video>
                     <video class="main-screen__background-video-2" muted preload="metadata">
-                      <source src="video/Djero-Main-Animation-1.mp4" type="video/mp4">
+                      <source data-src="video/Djero-Main-Animation-1.mp4" type="video/mp4">
                     </video>
                   </div>
                 </div>
@@ -70,7 +70,7 @@
                             <div class="splide main-screen__slider">
                               <div class="splide__track main-screen__slider-track">
                                 <ul class="splide__list main-screen__slider-list">
-                                  <li class="splide__slide main-screen__slider-slide"><img class="main-screen__slider-img" src="img/cookie-box.png" alt="Cookie Box"></li>
+                                  <li class="splide__slide main-screen__slider-slide"><img class="main-screen__slider-img" data-src="img/cookie-box.png" alt="Cookie Box"></li>
                                 </ul>
                               </div>
                             </div>
@@ -78,8 +78,8 @@
                         </div>
                         <div class="main-screen__footer-layer">
                           <div class="main-screen__footer">
-                            <div class="main-screen__footer-ball-wrapper active"><img class="main-screen__footer-ball" src="img/ball.png" alt="Ball"></div>
-                            <div class="main-screen__footer-arrow-wrapper"><img class="main-screen__footer-arrow" src="img/arrow-up.png" alt="Arrow"></div>
+                            <div class="main-screen__footer-ball-wrapper active"><img class="main-screen__footer-ball" data-src="img/ball.png" alt="Ball"></div>
+                            <div class="main-screen__footer-arrow-wrapper"><img class="main-screen__footer-arrow" data-src="img/arrow-up.png" alt="Arrow"></div>
                             <p class="main-screen__footer-call">Подай м'яч DJERO!</p>
                           </div>
                         </div>
@@ -89,162 +89,110 @@
                 </div>
               </div>
             </div>
-            <div class="main-screen fullpage-section section">
-              <div class="main-screen__layout">
-                <div class="main-screen__background-layer">
-                  <div class="main-screen__background">
-                    <video class="main-screen__background-video active" autoplay="true" loop muted preload="metadata">
-                      <source src="video/Djero-Main-Animation-2.mp4" type="video/mp4">
-                    </video>
-                    <video class="main-screen__background-video-2" muted preload="metadata">
-                      <source src="video/Djero-Main-Animation-1.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-                <div class="main-screen__content-layer">
-                  <div class="main-screen__content">
-                    <div class="center main-screen__center">
-                      <div class="f-container main-screen__f-container">
-                        <div class="main-screen__header-layer">
-                          <div class="main-screen__header">
-                            <h1 class="main-screen__title h1-title">Відкривай баскетбол <br>із&nbsp;<span>Djero!</span></h1>
-                            <p class="main-screen__subtitle">Смакуй печиво та влучай у корзину!</p>
-                          </div>
-                        </div>
-                        <div class="main-screen__body-layer">
-                          <div class="main-screen__body">
-                            <div class="main-screen__target-icon"><i class="main-screen__target-ico ico">
-                                <svg>
-                                  <use xlink:href="img/sprites/svg/symbol/sprite.svg#target"></use>
-                                </svg></i></div>
-                            <div class="splide main-screen__slider">
-                              <div class="splide__track main-screen__slider-track">
-                                <ul class="splide__list main-screen__slider-list">
-                                  <li class="splide__slide main-screen__slider-slide"><img class="main-screen__slider-img" src="img/cookie-box.png" alt="Cookie Box"></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="main-screen__footer-layer">
-                          <div class="main-screen__footer">
-                            <div class="main-screen__footer-ball-wrapper active"><img class="main-screen__footer-ball" src="img/ball.png" alt="Ball"></div>
-                            <div class="main-screen__footer-arrow-wrapper"><img class="main-screen__footer-arrow" src="img/arrow-up.png" alt="Arrow"></div>
-                            <p class="main-screen__footer-call">Подай м'яч DJERO!</p>
-                          </div>
-                        </div>
-                      </div>
+            <div class="screen-2 fullpage-section section screen">
+              <div class="screen-2__layout screen__layout">
+                <div class="center screen-2__center">
+                  <h2 class="h2-title screen-2__title">Як це працює?</h2>
+                  <div class="f-container screen-2__f-container screen-f-container">
+                    <div class="screen-2__text-layer screen-text-layer"><span class="screen-2__text-counter screen-text-counter">1</span>
+                      <p class="screen-2__text screen-text">Склади коробку у режим "баскетбол", підготуй та встанови корзину</p>
+                    </div>
+                    <div class="screen-2__video-layer screen-video-layer">
+                      <div class="screen-play-video screen-2__play-video"></div>
+                      <video class="screen-2__video screen-video" preload="metadata">
+                        <source data-src="video/make-box.mp4" type="video/mp4">
+                      </video>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="main-screen fullpage-section section">
-              <div class="main-screen__layout">
-                <div class="main-screen__background-layer">
-                  <div class="main-screen__background">
-                    <video class="main-screen__background-video active" autoplay="true" loop muted preload="metadata">
-                      <source src="video/Djero-Main-Animation-2.mp4" type="video/mp4">
-                    </video>
-                    <video class="main-screen__background-video-2" muted preload="metadata">
-                      <source src="video/Djero-Main-Animation-1.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-                <div class="main-screen__content-layer">
-                  <div class="main-screen__content">
-                    <div class="center main-screen__center">
-                      <div class="f-container main-screen__f-container">
-                        <div class="main-screen__header-layer">
-                          <div class="main-screen__header">
-                            <h1 class="main-screen__title h1-title">Відкривай баскетбол <br>із&nbsp;<span>Djero!</span></h1>
-                            <p class="main-screen__subtitle">Смакуй печиво та влучай у корзину!</p>
-                          </div>
-                        </div>
-                        <div class="main-screen__body-layer">
-                          <div class="main-screen__body">
-                            <div class="main-screen__target-icon"><i class="main-screen__target-ico ico">
-                                <svg>
-                                  <use xlink:href="img/sprites/svg/symbol/sprite.svg#target"></use>
-                                </svg></i></div>
-                            <div class="splide main-screen__slider">
-                              <div class="splide__track main-screen__slider-track">
-                                <ul class="splide__list main-screen__slider-list">
-                                  <li class="splide__slide main-screen__slider-slide"><img class="main-screen__slider-img" src="img/cookie-box.png" alt="Cookie Box"></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="main-screen__footer-layer">
-                          <div class="main-screen__footer">
-                            <div class="main-screen__footer-ball-wrapper active"><img class="main-screen__footer-ball" src="img/ball.png" alt="Ball"></div>
-                            <div class="main-screen__footer-arrow-wrapper"><img class="main-screen__footer-arrow" src="img/arrow-up.png" alt="Arrow"></div>
-                            <p class="main-screen__footer-call">Подай м'яч DJERO!</p>
-                          </div>
-                        </div>
-                      </div>
+            <div class="screen-3 fullpage-section section screen">
+              <div class="screen-3__layout screen__layout">
+                <div class="center screen-3__center">
+                  <h2 class="h2-title screen-3__title">Як це працює?</h2>
+                  <div class="f-container screen-3__f-container screen-f-container">
+                    <div class="screen-3__video-layer screen-video-layer">
+                      <div class="screen-play-video screen-3__play-video"></div>
+                      <video class="screen-3__video screen-video" preload="metadata">
+                        <source data-src="video/paint-ball.mp4" type="video/mp4">
+                      </video>
+                    </div>
+                    <div class="screen-3__text-layer screen-text-layer"><span class="screen-3__text-counter screen-text-counter">2</span>
+                      <p class="screen-3__text screen-text">Намалюй лінії м'ячика та влучай в корзину</p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="main-screen fullpage-section section">
-              <div class="main-screen__layout">
-                <div class="main-screen__background-layer">
-                  <div class="main-screen__background">
-                    <video class="main-screen__background-video active" autoplay="true" loop muted preload="metadata">
-                      <source src="video/Djero-Main-Animation-2.mp4" type="video/mp4">
-                    </video>
-                    <video class="main-screen__background-video-2" muted preload="metadata">
-                      <source src="video/Djero-Main-Animation-1.mp4" type="video/mp4">
-                    </video>
-                  </div>
-                </div>
-                <div class="main-screen__content-layer">
-                  <div class="main-screen__content">
-                    <div class="center main-screen__center">
-                      <div class="f-container main-screen__f-container">
-                        <div class="main-screen__header-layer">
-                          <div class="main-screen__header">
-                            <h1 class="main-screen__title h1-title">Відкривай баскетбол <br>із&nbsp;<span>Djero!</span></h1>
-                            <p class="main-screen__subtitle">Смакуй печиво та влучай у корзину!</p>
-                          </div>
-                        </div>
-                        <div class="main-screen__body-layer">
-                          <div class="main-screen__body">
-                            <div class="main-screen__target-icon"><i class="main-screen__target-ico ico">
-                                <svg>
-                                  <use xlink:href="img/sprites/svg/symbol/sprite.svg#target"></use>
-                                </svg></i></div>
-                            <div class="splide main-screen__slider">
-                              <div class="splide__track main-screen__slider-track">
-                                <ul class="splide__list main-screen__slider-list">
-                                  <li class="splide__slide main-screen__slider-slide"><img class="main-screen__slider-img" src="img/cookie-box.png" alt="Cookie Box"></li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="main-screen__footer-layer">
-                          <div class="main-screen__footer">
-                            <div class="main-screen__footer-ball-wrapper active"><img class="main-screen__footer-ball" src="img/ball.png" alt="Ball"></div>
-                            <div class="main-screen__footer-arrow-wrapper"><img class="main-screen__footer-arrow" src="img/arrow-up.png" alt="Arrow"></div>
-                            <p class="main-screen__footer-call">Подай м'яч DJERO!</p>
-                          </div>
-                        </div>
+            <div class="screen-4 fullpage-section section screen">
+              <div class="screen-4__layout screen__layout">
+                <div class="center screen-4__center">
+                  <h2 class="h2-title screen-4__title">Викидаєш упаковку від солодощів? Djero пропонує інше!</h2>
+                  <div class="screen-4__steps-layer">
+                    <div class="screen-4__steps">
+                      <div class="screen-4__step"><span class="screen-4__step-counter screen-text-counter">1</span>
+                        <p class="screen-4__step-text">Склав майданчик!</p>
+                      </div>
+                      <div class="screen-4__step"><span class="screen-4__step-counter screen-text-counter">2</span>
+                        <p class="screen-4__step-text">Розмалював м'яч!</p>
+                      </div>
+                      <div class="screen-4__step"><span class="screen-4__step-counter screen-text-counter">3</span>
+                        <p class="screen-4__step-text">Влучив у корзинку!</p>
                       </div>
                     </div>
                   </div>
+                  <div class="screen-4__images-layer">
+                    <h3 class="screen-4__images-text">Отримуй нагороду - <span>фірмове печиво Djero!</span></h3>
+                    <div class="screen-4__images-wrapper"><img src="img/cookies-pack-2.png" alt="Cookie Pack"><img src="img/cookies-pack.png" alt="Cookie Pack"></div>
+                  </div>
                 </div>
+              </div>
+            </div>
+            <div class="fullpage-section section">
+              <div class="screen-5 screen">
+                <div class="screen-5__layout screen__layout">
+                  <div class="center screen-5__center">
+                    <h2 class="h2-title screen-5__title">Розважайся разом із Djero!</h2>
+                    <div class="screen-5__slider-layer-secondary">
+                      <div class="splide screen-5__slider-secondary" id="screen-5__slider-secondary">
+                        <div class="splide__track screen-5__slider-track">
+                          <ul class="splide__list screen-5__slider-list">
+                            <li class="splide__slide screen-5__slider-slide"><img class="screen-5__slider-img" src="img/slider-photo1.png" alt="Slide1"></li>
+                            <li class="splide__slide screen-5__slider-slide"><img class="screen-5__slider-img" src="img/slider-photo2.png" alt="Slide2"></li>
+                            <li class="splide__slide screen-5__slider-slide"><img class="screen-5__slider-img" src="img/slider-photo3.png" alt="Slide3"></li>
+                            <li class="splide__slide screen-5__slider-slide"><img class="screen-5__slider-img" src="img/slider-photo1.png" alt="Slide4"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="screen-5__slider-layer-main">
+                      <div class="splide screen-5__slider-main" id="screen-5__slider-main">
+                        <div class="splide__track screen-5__slider-track">
+                          <ul class="splide__list screen-5__slider-list">
+                            <li class="splide__slide screen-5__slider-slide"><img src="img/slider-photo1.png" alt="Slide1"></li>
+                            <li class="splide__slide screen-5__slider-slide"><img src="img/slider-photo2.png" alt="Slide2"></li>
+                            <li class="splide__slide screen-5__slider-slide"><img src="img/slider-photo3.png" alt="Slide3"></li>
+                            <li class="splide__slide screen-5__slider-slide"><img src="img/slider-photo1.png" alt="Slide4"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="screen-5__social-layer"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="contacts">
+                <div class="contacts__layout"></div>
+              </div>
+              <div class="contacts">
+                <div class="contacts__layout"></div>
               </div>
             </div>
           </section>
           <aside class="sidebar">
             <div class="sidebar__layout">
-              <div class="sidebar__burger-layer">
-                <div class="sidebar__burger"><span> </span><span> </span><span> </span></div>
-              </div>
+              <div class="sidebar__burger-layer"><a class="sidebar__burger open-popup-link-menu" href="#menu-popup"><span> </span><span> </span><span> </span></a></div>
               <div class="sidebar__wantbuy-layer"><a class="sidebar__wantbuy open-popup-link" href="#catalog-popup">
                   <div class="sidebar__wantbuy-icon"><i class="sidebar__wantbuy-ico ico">
                       <svg>
@@ -305,38 +253,26 @@
         </div>
       </div>
     </main>
-    <footer class="footer">
-      <div class="footer__layout">
-        <div class="footer__info-layer">
-          <div class="center">
-            <div class="footer__info">
-              <nav class="footer__menu-layer">
-                <ul class="footer__menu">
-                  <li class="footer__menu-item"><a class="footer__menu-item-link" href="#">Потребность в достижениях</a><a class="footer__menu-item-link" href="#">Темперамент</a></li>
-                  <li class="footer__menu-item"><a class="footer__menu-item-link" href="#">Эмоциональный интеллект</a><a class="footer__menu-item-link" href="#">САН</a></li>
-                  <li class="footer__menu-item"><a class="footer__menu-item-link" href="#">Визуальные асоциации</a><a class="footer__menu-item-link" href="#">Словесные асоциации</a></li>
-                </ul>
-              </nav>
-              <div class="footer__social-layer">
-                <div class="footer__social social">
-                  <ul class="footer__social-list social-list">
-                    <li class="footer__social-list-item social-list-item"><a class="footer__social-link social-link" href="#" target="_blank"><i class="footer__social-ico ico s-facebook-footer social-ico"></i></a></li>
-                    <li class="footer__social-list-item social-list-item"><a class="footer__social-link social-link" href="#" target="_blank"><i class="footer__social-ico ico s-instagram-footer social-ico"></i></a></li>
+    <div class="popups">
+      <div class="popups__layout"><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="popup menu-popup mfp-hide zoom-anim-dialog" id="menu-popup">
+          <div class="close-popup close-popup-btn close-popup_menu"><span></span><span></span></div>
+          <div class="popup__layout menu-popup__layout">
+            <div class="center">
+              <div class="menu-popup__navigation-layer">
+                <nav class="menu-popup__navigation">
+                  <ul class="menu-popup__list">
+                    <li class="menu-popup__list-item"><a class="menu-popup__link" href="#"><i class="ico arrow-menu-ico"></i><span>Головна</span></a></li>
+                    <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link" href="#"><i class="ico arrow-menu-ico"></i><span>Про набір</span></a></li>
+                    <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link" href="#"><i class="ico arrow-menu-ico"></i><span>Новини</span></a></li>
+                    <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link" href="#"><i class="ico arrow-menu-ico"></i><span>Доставка</span></a></li>
+                    <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link" href="#"><i class="ico arrow-menu-ico"></i><span>Контакти</span></a></li>
                   </ul>
-                </div>
+                </nav>
               </div>
             </div>
           </div>
-        </div>
-        <div class="footer__copyright-layer">
-          <div class="center">
-            <p class="footer__copyright">© Psychograde</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <div class="popups">
-      <div class="popups__layout"><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
         <div class="popup play-and-order-popup mfp-hide zoom-anim-dialog" id="play-and-order-popup">
           <div class="popup__layout play-and-order-popup__layout">
             <div class="center"> 
@@ -500,6 +436,10 @@
                     <p class="popup__card-price cart-popup__card-price">850 грн.</p>
                     <div class="popup__card-quantity cart-popup__card-quantity"><span class="popup__card-quantity-minus popup__card-quantity-control cart-popup__card-quantity-minus">-</span><span class="popup__card-quantity-count popup__card-quantity-count">1</span><span class="popup__card-quantity-plus popup__card-quantity-control cart-popup__card-quantity-plus">+</span></div>
                     <p class="popup__card-total-price cart-popup__card-total-price">850 грн.</p>
+                    <button class="popup__basket-remove cart-popup__basket-remove transparent-btn"><i class="ico rubbish-ico cart-popup__rubbish-ico">
+                        <svg>
+                          <use xlink:href="img/sprites/svg/symbol/sprite.svg#rubbish-bin"></use>
+                        </svg></i><span>Прибрати з корзини</span></button>
                   </div>
                 </div>
                 <div class="popup__card-layer cart-popup__card-layer">
@@ -511,6 +451,10 @@
                     <p class="popup__card-price cart-popup__card-price">8000 грн.</p>
                     <div class="popup__card-quantity cart-popup__card-quantity"><span class="popup__card-quantity-minus popup__card-quantity-control cart-popup__card-quantity-minus">-</span><span class="popup__card-quantity-count popup__card-quantity-count">5</span><span class="popup__card-quantity-plus popup__card-quantity-control cart-popup__card-quantity-plus">+</span></div>
                     <p class="popup__card-total-price cart-popup__card-total-price">40000 грн.</p>
+                    <button class="popup__basket-remove cart-popup__basket-remove transparent-btn"><i class="ico rubbish-ico cart-popup__rubbish-ico">
+                        <svg>
+                          <use xlink:href="img/sprites/svg/symbol/sprite.svg#rubbish-bin"></use>
+                        </svg></i><span>Прибрати з корзини</span></button>
                   </div>
                 </div>
               </div>
@@ -676,8 +620,27 @@
                       <p class="order-popup__product-text">Ваше замовлення</p>
                       <p class="order-popup__product-count">2 товара</p>
                     </div>
-                    <div class="order-popup__preview-section"><a class="order-popup__return-basket-btn transparent-btn with-underline open-popup-link" href="#cart-popup"><span>Повернутися в корзину</span></a></div>
-                    <div class="order-popup__preview-section">
+                    <div class="order-popup__preview-section product-list-section">
+                      <ul class="order-popup__product-list">
+                        <li class="order-popup__product-list-item">
+                          <div class="order-popup__product-item-img-wrapper"><img class="order-popup__product-item-img" src="img/cookies-sandwich-big.png" alt="Cookies box"></div>
+                          <p class="order-popup__product-item-count">2 упаковки</p>
+                          <p class="order-popup__product-item-price">70 грн.</p>
+                        </li>
+                        <li class="order-popup__product-list-item">
+                          <div class="order-popup__product-item-img-wrapper"><img class="order-popup__product-item-img" src="img/box.png" alt="Cookies box"></div>
+                          <p class="order-popup__product-item-count">2 упаковки</p>
+                          <p class="order-popup__product-item-price">70 грн.</p>
+                        </li>
+                        <li class="order-popup__product-list-item">
+                          <div class="order-popup__product-item-img-wrapper"><img class="order-popup__product-item-img" src="img/pallet.png" alt="Cookies box"></div>
+                          <p class="order-popup__product-item-count">2 упаковки</p>
+                          <p class="order-popup__product-item-price">70 грн. </p>
+                        </li>
+                      </ul>
+                      <div class="order-popup__return-basket-btn-wrapper"><a class="order-popup__return-basket-btn transparent-btn with-underline open-popup-link" href="#cart-popup"><span>Повернутися в корзину</span></a></div>
+                    </div>
+                    <div class="order-popup__preview-section product-stats-section">
                       <ul class="order-popup__list">
                         <li class="order-popup__list-item">
                           <p class="order-popup__list-item-text">Товар  на суму</p>
@@ -693,13 +656,13 @@
                         </li>
                       </ul>
                     </div>
-                    <div class="order-popup__preview-section">
+                    <div class="order-popup__preview-section total-section">
                       <div class="popup__total order-popup__total">
                         <p class="popup__total-text order-popup__total-text">Разом</p>
                         <p class="popup__total-price order-popup__total-price">
                            70 грн.</p>
                       </div>
-                      <button class="popup__btn order-popup__btn btn red-orange" type="submit" form="order-popup__form"><span>Замовлення підтверджую</span></button>
+                      <button class="popup__btn order-popup__btn btn red-orange big" type="submit" form="order-popup__form"><span>Замовлення підтверджую</span></button>
                     </div>
                   </div>
                 </div>
@@ -708,6 +671,7 @@
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
         <div class="popup order-call-popup mfp-hide zoom-anim-dialog popup_secondary" id="order-call-popup">
+          <div class="close-popup close-popup-btn close-popup_secondary"><span></span><span></span></div>
           <div class="popup__layout_secondary order-call-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title order-call-popup__title">Замовте дзвінок</h2>
@@ -728,7 +692,7 @@
                       </div>
                     </div>
                     <div class="field-row order-call-popup__field-row">
-                      <button class="popup__btn order-call-popup__btn btn red-orange" type="submit"><span>Відправити</span></button>
+                      <button class="popup__btn order-call-popup__btn btn red-orange big" type="submit"><span>Відправити</span></button>
                     </div>
                   </fieldset>
                 </form>
@@ -737,6 +701,7 @@
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
         <div class="popup call-me-popup mfp-hide zoom-anim-dialog popup_secondary" id="call-me-popup">
+          <div class="close-popup close-popup-btn close-popup_secondary"><span></span><span></span></div>
           <div class="popup__layout_secondary call-me-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title call-me-popup__title">Зателефонувати мені</h2>
@@ -750,7 +715,7 @@
                       </div>
                     </div>
                     <div class="field-row call-me-popup__field-row">
-                      <button class="popup__btn call-me-popup__btn btn red-orange" type="submit"><span>Зателефонуйте</span></button>
+                      <button class="popup__btn call-me-popup__btn btn red-orange big" type="submit"><span>Зателефонуйте</span></button>
                     </div>
                   </fieldset>
                 </form>
@@ -760,8 +725,8 @@
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1619912818813" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1619912818813" as="script">
-    <script src="js/main.min.js?v=1619912818813" async></script>
+    <script src="js/libs.min.js?v=1620169811551" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1620169811551" as="script">
+    <script src="js/main.min.js?v=1620169811551" async></script>
   </body>
 </html>

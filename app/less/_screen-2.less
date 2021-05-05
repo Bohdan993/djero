@@ -1,0 +1,48 @@
+.screen-2__layout {
+    padding-bottom: 30px;
+
+    .screen-2__title {
+        .fPa(34%, 129%, 34px, 129px, 576px, 1220px);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 670/1460 * 100%;
+        height: 630/980 * 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 4;
+        background: url('../img/ball-left.png') no-repeat left bottom/contain;
+
+    }
+
+    .screen-2__f-container {
+        flex-wrap: nowrap;
+    }
+
+    .screen-2__text-counter {
+        margin-right: 18px;
+    }
+
+    .screen-2__video-layer {
+        &:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            background: url('../img/make-box-poster.png') no-repeat/cover;
+            background-position: center;
+            z-index: 6;
+        }
+    }
+
+    .screen-2__text-layer {
+        padding-right: 80/1220 * 100%;
+    }
+
+
+}

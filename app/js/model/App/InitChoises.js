@@ -78,8 +78,6 @@ const InitChoices = (choices) => {
 
         }
 
-        // el.addEventListener('showDropdown', showDropdownHandler.bind(this, instance))
-
     }
 
     choices.forEach(forEachChoice)

@@ -1,0 +1,81 @@
+.menu-popup__layout {
+    .center {
+        max-width: 63.75%;
+        margin-left: auto;
+        margin-right: unset;
+    }
+
+    .menu-popup__list-item {
+        display: flex;
+        align-items: center;
+        
+
+        &:not(:last-child) {
+            padding-bottom: 35px;
+        }
+
+    }
+
+    .menu-popup__link {
+        position: relative;
+        transition: transform 0.25s linear;
+
+        span {
+            .fSize(40vw, 40px * (576/1220), 40px, 576px, 1220px);
+            letter-spacing: 2px;
+            line-height: 45/40;
+            color: @white;
+            font-weight: 400;
+            font-family: "Playfair Display SC",
+            serif;
+            text-transform: uppercase;
+            transition: 0.25s font linear;
+            
+        }
+        
+
+        &:hover {
+            
+            transform: translateX(10%);
+            span {
+                font-weight: 700;
+                .fSize(50vw, 50px * (576/1220), 50px, 576px, 1220px);
+                line-height: (40/50) * 1.125;
+            }
+
+            .arrow-menu-ico {
+                display: block;
+                animation: slideInLeft 0.25s linear forwards;
+            }
+        }
+    }
+
+    .menu-popup__navigation-layer {
+        padding-left: 240/960 * 100%;
+    }
+
+    .arrow-menu-ico {
+        margin-right: 25px;
+        position: absolute;
+        transform: translate(-250%, -50%);
+        top: 50%;
+        left: 0;
+        opacity: 0;
+        display: none;
+    }
+}
+
+
+@keyframes slideInLeft {
+    from {
+        display: none;
+        opacity: 0;
+        transform: translate(-250%, -50%);
+    }
+
+    to {
+        display: block;
+        opacity: 1;
+        transform: translate(-150%, -50%);
+    }
+}

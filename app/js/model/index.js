@@ -1,5 +1,5 @@
 import BurgerMenu from './App/BurgerMenu'
-import FullPageInit from './App/FullPageInit';
+import InitFullPage from './App/InitFullPage';
 import InitTippy from './App/InitTippy';
 import ShareButtonToggle from './App/ShareButtonToggle';
 import InitSplide from './App/InitSplide';
@@ -9,10 +9,11 @@ import PlayAndOrderPopupShow from './App/PlayAndOrderPopupShow';
 import InitOverlayScrollbars from './App/InitOverlayScrollbars';
 import ClosePopup from './App/ClosePopup';
 import InitChoices from './App/InitChoises';
+import PlayVideo from './App/PlayVideo';
 
 export {
 	BurgerMenu,
-	FullPageInit,
+	InitFullPage,
 	InitTippy,
 	ShareButtonToggle,
 	InitSplide,
@@ -21,5 +22,6 @@ export {
 	PlayAndOrderPopupShow,
 	InitOverlayScrollbars,
 	ClosePopup,
-	InitChoices
+	InitChoices,
+	PlayVideo
 }
