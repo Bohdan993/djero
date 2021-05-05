@@ -1,9 +1,6 @@
 .screen-5__layout {
 
-    .screen-5__title {
-        .fPa(34%, 129%, 34px, 129px, 576px, 1220px);
-    }
-
+    padding-bottom: 130px;
 
     &:before {
         content: '';
@@ -17,18 +14,72 @@
 
     }
 
+    .screen-5__title {
+        .fPa(34%, 111%, 34px, 111px, 576px, 1220px);
+    }
+
+
+    .screen-5__center {
+        max-width: unset;
+        // padding: 0;
+    }
 
 
     .screen-5__slider-layer-main {
         display: flex;
         justify-content: center;
         align-items: center;
-    }
+        // padding: (615px - 350px)/2 0;
+        position: relative;
 
+
+        &:after {
+            content: '';
+            display: block;
+            // padding-top: 50%;
+            height: 50vw;
+            max-height: 680px;
+            width: 100%;
+        }
+
+
+
+        &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 615px;
+            width: 100%;
+            background: url('../img/TV.png') no-repeat center/contain;
+        }
+
+        // max-width: 750px;
+        // margin: 0 auto;
+        // background: url('../img/TV.png') no-repeat center;
+    }
 
     .screen-5__slider-main {
         max-width: 625px;
-        width: 100%;
+        width: 625/750 * 100%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-55%, -45%);
+
+
+        .screen-5__slider-arrows {
+            position: absolute;
+            width: 115px;
+            height: 55px;
+            left: 50%;
+            bottom: -150px;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
     }
 
     .screen-5__slider-main {
@@ -40,22 +91,67 @@
                 }
             }
         }
-        .screen-5__slider-slide {
-            
+
+        .screen-5__slider-slide {}
+    }
+
+    .screen-5__slider-layer-secondary {
+        max-width: 1200px;
+        position: relative;
+        width: 93%;
+        
+
+
+        &:before {
+            content: '';
+            display: block;
+            // padding-top: 210px;
+            padding-bottom: 230/1200 * 100%;
+        }
+
+
+        &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            height: 308px;
+            top: -14.5%;
+            left: -30px;
+            width: 100%;
+            background: url('../img/photographic-film.png') no-repeat top/contain;
         }
     }
 
+    .screen-5__slider-wrapper-secondary {
+        margin-bottom: 35px;
+    }
+
     .screen-5__slider-secondary {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        left: -55px;
+        z-index: 3;
+
+
+        &:before {}
+
         .screen-5__slider-track {
             .screen-5__slider-list {
+                width: 100%;
+
                 .screen-5__slider-slide {
                     border: unset;
                     border-radius: 14px;
                 }
             }
         }
+
         .screen-5__slider-slide {
-            
+            width: 25%;
+            cursor: pointer;
+
             &:before {
                 content: '';
                 position: absolute;
@@ -67,6 +163,14 @@
                 border-radius: 14px;
                 background-color: @transparent;
                 transition: background-color 0.25s linear;
+            }
+
+
+            &:after {
+                content: '';
+                display: block;
+                width: 100%;
+                padding-top: 210/290 * 100%;
             }
 
 
@@ -83,7 +187,39 @@
                     }
                 }
             }
+
+
+
+            .screen-5__slider-img {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 14px;
+            }
         }
+
+
+        .screen-5__slider-arrows {
+            position: absolute;
+            width: 55px;
+            height: 100%;
+            right: -100px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+        }
+
+
+    }
+
+    .screen-5__slider-arrow {
+        position: static;
+        transform: unset;
     }
 
 
