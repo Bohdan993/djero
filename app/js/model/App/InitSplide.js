@@ -107,7 +107,7 @@ const InitSplide = () => {
     primarySlider.sync(thumbnailSlider).mount();
     primarySlider.on('move', moveHandler.bind(primarySlider))
     thumbnailSlider.on('move', moveHandler.bind(thumbnailSlider))
-    
+
 }
 
 
