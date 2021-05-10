@@ -27,7 +27,7 @@ const InitFullPage = (headerLayout) => {
             scrollbars: 'custom'
         },
         afterLoad,
-        onLeave,gg
+        onLeave
     })
 
 
