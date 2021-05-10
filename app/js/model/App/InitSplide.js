@@ -22,36 +22,6 @@ const InitSplide = () => {
     }).mount()
 
 
-<<<<<<< HEAD
-    let thumbnailSlider = new Splide( '#screen-5__slider-secondary', {
-		fixedWidth  : 290,
-		height      : 210,
-		gap         : 15,
-		cover       : true,
-		isNavigation: true,
-        focus       : 'center',
-        pagination: false,
-        lazyLoad: 'nearby',
-		
-		// breakpoints : {
-		// 	'600': {
-		// 		fixedWidth: 66,
-		// 		height    : 40,
-		// 	}
-		// },
-	} ).mount();
-
-
-    let primarySlider = new Splide( '#screen-5__slider-main', {
-		type       : 'fade',
-		heightRatio: 350/625,
-		pagination : false,
-		cover      : true,
-        lazyLoad: 'nearby', 
-        // autoWidth: true
-	} );
-
-=======
 
     function moveHandler(newIndex, oldIndex, destIndex) {
 
@@ -130,7 +100,6 @@ const InitSplide = () => {
             next: 'splide__arrow--next screen-5__slider-arrow-next',
         },
     });
->>>>>>> new-branch
 
     primarySlider.on('arrows:mounted', arrowsMountedHandler.bind(primarySlider))
     thumbnailSlider.on('arrows:mounted', arrowsMountedHandler.bind(thumbnailSlider))
