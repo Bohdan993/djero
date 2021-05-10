@@ -1,2 +1,32 @@
-.contacts
-	.contacts__layout
+
+.contacts__layout
+	.center
+		.f-container
+			.contacts__address-layer
+				h3.contacts__title
+					|Контакти
+				address.contacts__address
+					a.contacts__email(href="mailto:office@djero.com.ua")
+						|office@djero.com.ua 
+					p.contacts__name
+						|ФОП Пасічник С.С.
+					p.contacts__location
+						|Вінницька обл., Козятинський р-н., с.Махнівка, вул. Київська, 53 кв. 4
+			.contacts__question-layer
+				h3.contacts__title
+					|Виникли питання?
+				p.contacts__action-call
+					|Зателефонуйте нам!
+				a.contacts__phone(href="tel:+380679312635")
+					|+38 (067) 931 26 35
+				ul.contacts__social-list.social-list
+					li.contacts__social-list-item.social-list-item
+						a.contacts__social-link.social-link(href="#" rel="")
+							i.ico.contacts__social-ico.social-ico
+								+svg2('call-2')
+					li.contacts__social-list-item.social-list-item
+						a.contacts__social-link.social-link(href="#" rel="")
+							i.ico.contacts__social-ico.social-ico
+								+svg2('tg')
+					
+					

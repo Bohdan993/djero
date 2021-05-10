@@ -9,7 +9,8 @@ import {
 	InitMagnificPopups,
 	ClosePopup,
 	InitChoices,
-	PlayVideo
+	PlayVideo,
+	PlayVideoYoutube
 } from '../model';
 import {
 	SOCIAL_SHARE_BTN
@@ -28,7 +29,8 @@ import {
 	$mainScreenFooterBallWrapper,
 	$closePopup,
 	$choices,
-	$screenPlayVideo
+	$screenPlayVideo,
+	$headerLayout
 	// $popupMain
 } from '../view';
 
@@ -44,6 +46,7 @@ const app = {
 		this.cp()
 		this.ic()
 		this.pv()
+		this.pvy()
 		// this.iosb()
 	},
 	bm() {
@@ -51,7 +54,7 @@ const app = {
 		// BurgerMenu(body)
 	},
 	fpi() {
-		InitFullPage()
+		InitFullPage($headerLayout)
 	},
 	it() {
 		InitTippy(SOCIAL_SHARE_BTN, $socialShareList)
@@ -84,8 +87,10 @@ const app = {
 		InitChoices($choices)
 	},
 	pv(){
-		
 		PlayVideo($screenPlayVideo)
+	},
+	pvy(){
+		PlayVideoYoutube()
 	}
 	// iosb() {
 	// 	InitOverlayScrollbars({
