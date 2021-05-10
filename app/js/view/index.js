@@ -13,6 +13,7 @@ const $popupMain = document.querySelector('.popup-main')
 const $closePopup = document.querySelectorAll('.close-popup-btn')
 const $choices = document.querySelectorAll('.choice')
 const $screenPlayVideo = document.querySelectorAll('.screen-play-video')
+const $headerLayout = document.querySelector('.header__layout')
 
 export {
 	$body,
@@ -29,5 +30,6 @@ export {
 	$popupMain,
 	$closePopup,
 	$choices,
-	$screenPlayVideo
+	$screenPlayVideo,
+	$headerLayout
 }

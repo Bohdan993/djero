@@ -7,30 +7,25 @@ import {
 import {
     SIDEBAR__LAYOUT
 } from './Constants'
+import {
+    addClass,
+    removeClass
+} from "./Helpers"
 
 
-const InitFullPage = () => {
+const InitFullPage = (headerLayout) => {
     $('.fullpage').fullpage({
         normalScrollElements: '.' + SIDEBAR__LAYOUT,
         scrollOverflow: true,
-        scrollOverflowReset: true,
         lazyLoading: true,
         scrollingSpeed: 350,
-        anchors: ['main-screen', 'screen-2', 'screen-3', 'screen-4', 'screen-5'],
+        anchors: ['main-screen', 'screen-2', 'screen-3', 'screen-4', 'screen-5', 'footer'],
         scrollOverflowOptions: {
-            // click: true,
             disableTouch: true,
             disablePointer: true,
             disableMouse: true,
             scrollbars: 'custom'
         },
-        // fadingEffect:true,
-        //options here
-        // navigation: true,
-        // navigationPosition: 'right',
-        // navigationTooltips: ['firstSlide', 'secondSlide'],
-        // autoScrolling:true,
-        // scrollHorizontally: true
         afterLoad,
         onLeave,
     })
@@ -39,11 +34,10 @@ const InitFullPage = () => {
     function afterLoad(origin, destination, direction) {
 
         $.fn.fullpage.reBuild()
-        // $('.header__layout').addClass('blue')
+
         if (destination === 1) {
             $backgroundVideoAnimation1.play()
 
-            // $('.header__layout').removeClass('blue')
         }
 
 
@@ -52,11 +46,38 @@ const InitFullPage = () => {
 
     function onLeave(origin, destination, direction) {
 
-        $('.header__layout').addClass('blue')
+        addClass(
+            removeClass(
+                removeClass(
+                    headerLayout, 
+                    'white'), 
+                'blue'), 
+            'blue-full')
+
         if (destination === 1) {
-            $('.header__layout').removeClass('blue')
+            removeClass(
+            headerLayout, 
+            'blue-full')
+            return
         }
 
+        if (destination === 5) {
+            removeClass(
+                addClass(
+                    headerLayout, 
+                    'blue'), 
+                'blue-full')
+            return
+        }
+
+        if (destination === 6) {
+            removeClass(
+                addClass(
+                    headerLayout, 
+                    'white'), 
+                'blue-full')
+            return
+        }
 
     }
 

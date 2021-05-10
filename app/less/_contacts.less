@@ -1,0 +1,156 @@
+
+.contacts__layout {
+    .fPa(90%, 95%, 90px, 95px, 576px, 1220px);
+     background: url('../img/bg-pattern-contacts.png') no-repeat right/contain, @light-gray;
+     height: 50vh;
+     min-height: 380px;
+
+
+    a {
+        transition: 0.25s linear color;
+
+        &:active,
+        &:focus,
+        &:visited {
+            color: @dark-blue;
+        }
+    }
+
+    .contacts__title {
+        font-size: 36/16 * 1rem;
+        letter-spacing: 2px;
+        line-height: 42/32;
+        color: @dark-blue;
+        font-family: "Adventure Indiana Jones";
+        text-align: left;
+        padding-bottom: 12px;
+    }
+
+    .contacts__address {
+        font-style: normal;
+        padding: 0;
+        margin: 0;
+        font-weight: 400;
+    }
+
+    .contacts__address-layer,
+    .contacts__question-layer {
+        flex-basis: 50%;
+    }
+
+    .contacts__address-layer {
+        padding-right: 25px;
+    }
+
+
+    .contacts__email {
+        font-size: 26/16 * 1rem;
+        letter-spacing: 0px;
+        line-height: 42/26;
+        color: @dark-blue;
+        font-weight: 400;
+        display: inline-block;
+        position: relative;
+        padding-bottom: 13px;
+
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 1px;
+            background-color: @dark-blue;
+            left: 0;
+            bottom: 0px;
+            transition: width 0.25s linear;
+        }
+
+        &:hover {
+            &:before {
+                width: 100%;
+            }
+        }
+
+
+    }
+
+    .contacts__name,
+    .contacts__location {
+        font-size: 22/16 * 1rem;
+        letter-spacing: 1px;
+        line-height: 30/22;
+        color: @dark-blue;
+    }
+
+    .contacts__location {
+        max-width: 440px;
+    }
+
+    .contacts__name {
+        padding-bottom: 9px;
+    }
+
+    .contacts__phone {
+        font-size: 36/16 * 1rem;
+        line-height: 42/26;
+        color: @red-orange;
+        font-weight: 500;
+        padding-bottom: 13px;
+
+        &:hover {
+            color: @orange;
+        }
+    }
+
+    .contacts__action-call {
+        font-size: 26/16 * 1rem;
+        letter-spacing: 1px;
+        line-height: 42/26;
+        color: @dark-blue;
+        font-weight: 400;
+    }
+
+    .contacts__social-link {
+    cursor: pointer;
+      border-radius: 50%;
+      border: 2px solid @dark-blue;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 35px;
+      height: 35px;
+      transition: background-color 0.25s linear;
+
+      .contacts__social-ico {
+            svg {
+               fill: @dark-blue;
+            }
+         }
+
+
+      &:hover {
+         background-color: @dark-blue;
+
+         .contacts__social-ico {
+            svg {
+               fill: @light-gray;
+            }
+         }
+      }
+    }
+
+
+    .contacts__social-list {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .contacts__social-list-item {
+        &:not(:last-child) {
+            padding-right: 15px;
+        }
+    }
+
+
+}

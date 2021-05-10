@@ -2,19 +2,27 @@ import {
     SCREEN_VIDEO_LAYER
 } from "./Constants"
 
+
+import {addStyle} from './Helpers'
+
 const PlayVideo = (btsn) => {
 
     function forEachBtn(el) {
         el.addEventListener('click', clickHandler)
+
     }
 
     function clickHandler(e) {
 
         const video = this.closest(`.${SCREEN_VIDEO_LAYER}`).querySelector('video')
         video.play()
-        video.style.zIndex = '10'
+        addStyle(video, {
+            zIndex: '32'
+        })
         video.setAttribute('controls', true)
-        this.style.display = 'none'
+        addStyle(this, {
+            display: 'none'
+        })
         onVideoEnded(video, this)
     }
 
@@ -23,11 +31,14 @@ const PlayVideo = (btsn) => {
     }
 
     function videoEndedHandler(btn, e) {
-        // alert('ended')
         this.removeAttribute('controls')
         this.setAttribute('poster', this.getAttribute('poster'))
-        btn.style.display = 'flex'
-        this.style.zIndex = '-1'
+        addStyle(btn, {
+            display: 'flex'
+        })
+        addStyle(this, {
+            zIndex: '-1'
+        })
     }
 
     btsn.forEach(forEachBtn)

@@ -18,12 +18,9 @@
         .fPa(34%, 111%, 34px, 111px, 576px, 1220px);
     }
 
-
     .screen-5__center {
         max-width: unset;
-        // padding: 0;
     }
-
 
     .screen-5__slider-layer-main {
         display: flex;
@@ -37,7 +34,7 @@
             content: '';
             display: block;
             // padding-top: 50%;
-            height: 50vw;
+            height: 80vw;
             max-height: 680px;
             width: 100%;
         }
@@ -66,25 +63,8 @@
         top: 50%;
         transform: translate(-55%, -45%);
 
-
-        .screen-5__slider-arrows {
-            position: absolute;
-            width: 115px;
-            height: 55px;
-            left: 50%;
-            bottom: -150px;
-            transform: translateX(-50%);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-
-    }
-
-    .screen-5__slider-main {
         .screen-5__slider-track {
-            .screen-5__slider-list {
+        .screen-5__slider-list {
                 .screen-5__slider-slide {
                     border: unset;
                     border-radius: 40px;
@@ -93,13 +73,28 @@
         }
 
         .screen-5__slider-slide {}
+
+
+        .screen-5__slider-arrows {
+            position: absolute;
+            width: 115px;
+            height: 55px;
+            left: 50%;
+            bottom: -150px;
+            transform: translateX(-25%);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
     }
 
     .screen-5__slider-layer-secondary {
         max-width: 1200px;
         position: relative;
         width: 93%;
-        
+
 
 
         &:before {
@@ -214,13 +209,141 @@
             align-items: center;
         }
 
-
+        .screen-5__slider-arrow-next {
+            margin-bottom: 10px
+        }
     }
 
     .screen-5__slider-arrow {
         position: static;
         transform: unset;
+        width: 50px;
+        height: 50px;
+        background: @light-gray;
+        transition: 0.25s background-color linear;
+        opacity: 1;
+
+
+        &.disabled {
+            background-color: @gray;
+            opacity: 1;
+            cursor: auto;
+
+            &:hover {
+                background-color: @gray;
+                opacity: 1;
+            }
+        }
+
+        &:hover {
+
+            &:not(.disabled) {
+                background-color: @red-orange;
+                opacity: 1;
+                svg {
+                    fill: @white;
+                }
+            }
+            
+        }
+
+        &:first-child {
+            svg {
+                transform: rotate(0deg);
+            }
+        }
+
+        &:last-child {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+
+        
     }
 
+    .screen-5__social-layer {
+        max-width: 1100px;
+        margin: 0 auto;  
+    }
+
+    .screen-5__social-wrapper {
+        background-color: @semi-light-blue;
+        border: 1px solid @light-gray;
+        border-radius: 14px;
+        padding: 37px 50px 45px 50px;
+        margin-top: 110/1100 * 100%;
+    }
+
+    .screen-5__social-text {
+        font-size: 26/16 * 1rem;
+        letter-spacing: 2px;
+        line-height: 52/26;
+        font-weight: 700;
+        font-family: "Playfair Display SC", serif;
+        text-align: center;
+        padding-bottom: 12px;
+    }
+
+    .screen-5__social-list {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .screen-5__social-list-item {
+        &:not(:last-child) {
+            padding-right: 20px;
+        }
+    }
+
+    .screen-5__social-link {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.25s linear;
+
+        
+    }
+
+    .screen-5__social-ico {
+        max-width: 26px;
+        max-height: 26px;
+
+        svg {
+            max-width: 26px;
+            max-height: 26px;
+        }
+    }
+    
+    .inst-link {
+        background-color: @inst;
+
+        &:hover {
+            background-color: rgba(@inst, 0.8);
+        }
+    }
+
+    .fb-link {
+        background-color: @fb;
+
+        &:hover {
+            background-color: rgba(@fb, 0.8);
+        }
+    }
+
+    .screen-5__play-video {
+        width: 80px;
+        height: 80px;
+
+        &:before {
+            width: 25px;
+            height: 30px;
+            border-width: 15px 0 15px 25px;
+        }
+    }
 
 }

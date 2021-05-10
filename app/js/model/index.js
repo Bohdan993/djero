@@ -10,6 +10,7 @@ import InitOverlayScrollbars from './App/InitOverlayScrollbars';
 import ClosePopup from './App/ClosePopup';
 import InitChoices from './App/InitChoises';
 import PlayVideo from './App/PlayVideo';
+import PlayVideoYoutube from './App/PlayVideoYoutube';
 
 export {
 	BurgerMenu,
@@ -23,5 +24,6 @@ export {
 	InitOverlayScrollbars,
 	ClosePopup,
 	InitChoices,
-	PlayVideo
+	PlayVideo,
+	PlayVideoYoutube
 }

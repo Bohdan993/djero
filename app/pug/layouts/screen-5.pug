@@ -1,4 +1,4 @@
-.fullpage-section.section
+.fullpage-section.section.fp-auto-height
 	.screen-5.screen
 		.screen-5__layout.screen__layout
 			.center.screen-5__center
@@ -7,6 +7,11 @@
 				.screen-5__slider-layer-secondary
 					.screen-5__slider-wrapper-secondary
 						#screen-5__slider-secondary.splide.screen-5__slider-secondary
+							.splide__arrows.screen-5__slider-arrows
+								.splide__arrow.splide__arrow--prev.screen-5__slider-arrow.screen-5__slider-arrow-prev
+									+svg2('arrow')
+								.splide__arrow.splide__arrow--next.screen-5__slider-arrow.screen-5__slider-arrow-next
+									+svg2('arrow')
 							.splide__track.screen-5__slider-track
 								ul.splide__list.screen-5__slider-list
 									li.splide__slide.screen-5__slider-slide
@@ -23,18 +28,40 @@
 				.screen-5__slider-layer-main
 					.screen-5__slider-wrapper-main
 						#screen-5__slider-main.splide.screen-5__slider-main
+							.splide__arrows.screen-5__slider-arrows
+								.splide__arrow.splide__arrow--prev.screen-5__slider-arrow.screen-5__slider-arrow-prev
+									+svg2('arrow')
+								.splide__arrow.splide__arrow--next.screen-5__slider-arrow.screen-5__slider-arrow-next
+									+svg2('arrow')
 							.splide__track.screen-5__slider-track
 								ul.splide__list.screen-5__slider-list
 									li.splide__slide.screen-5__slider-slide
+										.screen-play-video.screen-5__play-video
 										img(src="img/slider-photo1.png"  alt="Slide1")
 									li.splide__slide.screen-5__slider-slide
+										.screen-play-video.screen-5__play-video
 										img(src="img/slider-photo2.png"  alt="Slide2")
 									li.splide__slide.screen-5__slider-slide
+										.screen-play-video.screen-5__play-video
 										img(src="img/slider-photo3.png"  alt="Slide3")
 									li.splide__slide.screen-5__slider-slide
+										.screen-play-video.screen-5__play-video
 										img(src="img/slider-photo1.png"  alt="Slide4")
 									li.splide__slide.screen-5__slider-slide
+										.screen-play-video.screen-5__play-video
 										img(src="img/slider-photo2.png"  alt="Slide5")
 				.screen-5__social-layer
-	include contacts
-	include footer
+					.screen-5__social-wrapper
+						p.screen-5__social-text
+							|Слідкуй за Djero в соцмережах!
+						ul.screen-5__social-list.social-list 
+							li.screen-5__social-list-item.social-list-item
+								a.screen-5__social-link.social-link.inst-link(href="#" rel="")
+									i.ico.screen-5__social-ico.social-ico
+										+svg2('inst')
+							li.screen-5__social-list-item.social-list-item
+								a.screen-5__social-link.social-link.fb-link(href="#" rel="")
+									i.ico.screen-5__social-ico.social-ico
+										+svg2('fb')
+	//- include contacts
+	//- include footer

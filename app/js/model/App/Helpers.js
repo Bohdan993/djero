@@ -48,6 +48,14 @@ function removeClass(elem, ...clazz) {
 	return elem
 }
 
+function addStyle(elem, styles) {
+	for(let key in styles) {
+		elem.style[key] = styles[key]
+	}
+
+	return elem
+}
+
 
 
 
@@ -56,5 +64,6 @@ export {
 	throttle,
 	addText,
 	addClass,
-	removeClass
+	removeClass,
+	addStyle
 }
