@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1620608366837" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1620608366837">
-    <link rel="stylesheet" href="css/main.min.css?v=1620608366837">
+    <link rel="preload" href="css/main.min.css?v=1620773191633" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1620773191633">
+    <link rel="stylesheet" href="css/main.min.css?v=1620773191633">
   </head>
   <body class="home-page">
     <header class="header">
@@ -62,11 +62,10 @@
                           </div>
                         </div>
                         <div class="main-screen__body-layer">
-                          <div class="main-screen__body">
-                            <div class="main-screen__target-icon"><i class="main-screen__target-ico ico">
+                          <div class="main-screen__body"><a class="main-screen__target-icon open-popup-link" href="#second-branch-popup"><i class="main-screen__target-ico ico">
                                 <svg>
                                   <use xlink:href="img/sprites/svg/symbol/sprite.svg#target"></use>
-                                </svg></i></div>
+                                </svg></i></a>
                             <div class="splide main-screen__slider">
                               <div class="splide__track main-screen__slider-track">
                                 <ul class="splide__list main-screen__slider-list">
@@ -127,6 +126,9 @@
             </div>
             <div class="screen-4 fullpage-section section screen">
               <div class="screen-4__layout screen__layout">
+                <div class="screen-4__background-layer">
+                  <div class="screen-4__background"><img class="screen-4__background-image" data-src="img/cookie-2.png" alt=""><img class="screen-4__background-image" data-src="img/cookie.png" alt=""></div>
+                </div>
                 <div class="center screen-4__center">
                   <h2 class="h2-title screen-4__title">Викидаєш упаковку від солодощів? Djero пропонує інше!</h2>
                   <div class="screen-4__steps-layer">
@@ -144,7 +146,10 @@
                   </div>
                   <div class="screen-4__images-layer">
                     <h3 class="screen-4__images-text">Отримуй нагороду - <span>фірмове печиво Djero!</span></h3>
-                    <div class="screen-4__images-wrapper"><img src="img/cookies-pack-2.png" alt="Cookie Pack"><img src="img/cookies-pack.png" alt="Cookie Pack"></div>
+                    <div class="screen-4__images">
+                      <div class="screen-4__image-wrapper"><img class="screen-4__image" src="img/cookies-pack-2.png" alt="Cookie Pack"></div>
+                      <div class="screen-4__image-wrapper"><img class="screen-4__image" src="img/cookies-pack.png" alt="Cookie Pack"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -152,6 +157,9 @@
             <div class="fullpage-section section fp-auto-height">
               <div class="screen-5 screen">
                 <div class="screen-5__layout screen__layout">
+                  <div class="screen-5__background-layer">
+                    <div class="screen-5__background"><img class="screen-5__background-image" data-src="img/cookie-2.png" alt=""><img class="screen-5__background-image" data-src="img/cookie.png" alt=""><img class="screen-5__background-image" data-src="img/cookie-3.png" alt=""></div>
+                  </div>
                   <div class="center screen-5__center">
                     <h2 class="h2-title screen-5__title">Розважайся разом із Djero!</h2>
                     <div class="screen-5__slider-layer-secondary">
@@ -841,11 +849,37 @@
               </div>
             </div>
           </div>
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="popup second-branch-popup mfp-hide zoom-anim-dialog" id="second-branch-popup">
+          <div class="close-popup close-popup-btn close-popup_secondary"><span></span><span></span></div>
+          <div class="fullpage-popup"><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+            <div class="popup about-set-popup fullpage-section section screen">
+              <div class="popup__layout about-set-popup__layout">
+                <div class="center"> 
+                  <h2 class="popup__title h2-title about-set-popup__title">Про набір</h2>
+                </div>
+              </div>
+            </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+            <div class="popup about-set-popup fullpage-section section screen">
+              <div class="popup__layout about-set-popup__layout">
+                <div class="center"> 
+                  <h2 class="popup__title h2-title about-set-popup__title">Про набір</h2>
+                </div>
+              </div>
+            </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+            <div class="popup about-set-popup fullpage-section section screen">
+              <div class="popup__layout about-set-popup__layout">
+                <div class="center"> 
+                  <h2 class="popup__title h2-title about-set-popup__title">Про набір</h2>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1620608366837" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1620608366837" as="script">
-    <script src="js/main.min.js?v=1620608366837" async></script>
+    <script src="js/libs.min.js?v=1620773191634" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1620773191634" as="script">
+    <script src="js/main.min.js?v=1620773191634" async></script>
   </body>
 </html>

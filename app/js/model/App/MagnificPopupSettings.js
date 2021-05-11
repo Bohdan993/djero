@@ -1,4 +1,5 @@
 import InitOverlayScrollbars from './InitOverlayScrollbars'
+
 import {
     $body
 } from "../../view"
@@ -19,24 +20,24 @@ const settings = {
     removalDelay: 300,
     fixedBgPos: true,
     mainClass: 'zoom-in-animation my-mfp-zoom-in',
-    callbacks: {    
+    callbacks: {
         change: function () {
-                removeClass(this.wrap[0], 'mfp-ready')
-                removeClass(this.bgOverlay[0], 'mfp-ready')
+            removeClass(this.wrap[0], 'mfp-ready')
+            removeClass(this.bgOverlay[0], 'mfp-ready')
 
-                setTimeout(()=>{
-                    addClass(this.wrap[0], 'mfp-ready')
-                    addClass(this.bgOverlay[0], 'mfp-ready')
-                }, 50)
-            
-            if(this.content[0].classList.contains('popup_secondary')) {
+            setTimeout(() => {
+                addClass(this.wrap[0], 'mfp-ready')
+                addClass(this.bgOverlay[0], 'mfp-ready')
+            }, 50)
+
+            if (this.content[0].classList.contains('popup_secondary')) {
                 addClass($body, 'popup-open_secondary')
                 instance.destroy()
             } else {
                 removeClass($body, 'popup-open_secondary')
             }
 
-            if(this.content[0].classList.contains('menu-popup')) {
+            if (this.content[0].classList.contains('menu-popup')) {
                 addClass($body, 'popup-open_menu')
                 instance.destroy()
             } else {
@@ -49,6 +50,7 @@ const settings = {
             })
 
             addClass($body, 'popup-open')
+
         },
 
         close() {

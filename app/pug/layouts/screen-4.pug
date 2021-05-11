@@ -1,5 +1,9 @@
 .screen-4.fullpage-section.section.screen
 	.screen-4__layout.screen__layout
+		.screen-4__background-layer
+			.screen-4__background
+				img.screen-4__background-image(data-src="img/cookie-2.png", alt="")
+				img.screen-4__background-image(data-src="img/cookie.png", alt="")
 		.center.screen-4__center
 			h2.h2-title.screen-4__title
 				|Викидаєш упаковку від солодощів? Djero пропонує інше!
@@ -25,6 +29,8 @@
 					|Отримуй нагороду - 
 					span
 						|фірмове печиво Djero!
-				.screen-4__images-wrapper
-					img(src="img/cookies-pack-2.png", alt="Cookie Pack")
-					img(src="img/cookies-pack.png", alt="Cookie Pack")
+				.screen-4__images
+					.screen-4__image-wrapper
+						img.screen-4__image(src="img/cookies-pack-2.png", alt="Cookie Pack")
+					.screen-4__image-wrapper
+						img.screen-4__image(src="img/cookies-pack.png", alt="Cookie Pack")

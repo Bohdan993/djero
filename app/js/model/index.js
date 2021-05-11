@@ -1,5 +1,6 @@
 import BurgerMenu from './App/BurgerMenu'
 import InitFullPage from './App/InitFullPage';
+import InitFullPagePopup from './App/InitFullPagePopup';
 import InitTippy from './App/InitTippy';
 import ShareButtonToggle from './App/ShareButtonToggle';
 import InitSplide from './App/InitSplide';
@@ -15,6 +16,7 @@ import PlayVideoYoutube from './App/PlayVideoYoutube';
 export {
 	BurgerMenu,
 	InitFullPage,
+	InitFullPagePopup,
 	InitTippy,
 	ShareButtonToggle,
 	InitSplide,
