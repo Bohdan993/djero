@@ -29,8 +29,7 @@ import {
 	$mainScreenFooterBallWrapper,
 	$closePopup,
 	$choices,
-	$screenPlayVideo,
-	$headerLayout
+	$screenPlayVideo
 	// $popupMain
 } from '../view';
 
@@ -54,7 +53,7 @@ const app = {
 		// BurgerMenu(body)
 	},
 	fpi() {
-		InitFullPage($headerLayout)
+		InitFullPage()
 	},
 	it() {
 		InitTippy(SOCIAL_SHARE_BTN, $socialShareList)

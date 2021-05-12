@@ -21,7 +21,7 @@ const settings = {
     fixedBgPos: true,
     mainClass: 'zoom-in-animation my-mfp-zoom-in',
     callbacks: {
-        change: function () {
+        change() {
             removeClass(this.wrap[0], 'mfp-ready')
             removeClass(this.bgOverlay[0], 'mfp-ready')
 
@@ -29,6 +29,8 @@ const settings = {
                 addClass(this.wrap[0], 'mfp-ready')
                 addClass(this.bgOverlay[0], 'mfp-ready')
             }, 50)
+
+            // console.log(this.content[0])
 
             if (this.content[0].classList.contains('popup_secondary')) {
                 addClass($body, 'popup-open_secondary')

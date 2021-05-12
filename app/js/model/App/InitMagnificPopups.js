@@ -4,7 +4,8 @@ import {
 import {
     OPEN_POPUP_LINK,
     OPEN_POPUP_LINK_MENU,
-    OPEN_POPUP_LINK_SECONDARY
+    OPEN_POPUP_LINK_SECONDARY,
+    OPEN_POPUP_LINK_SECOND_BRANCH
 } from "./Constants"
 import {
     addClass,
@@ -59,15 +60,33 @@ const InitMagnificPopups = (body) => {
         ...{
             mainClass: 'zoom-in-animation my-mfp-zoom-in',
             callbacks: {
+                change() {
+                    removeClass(this.wrap[0], 'mfp-ready')
+                    removeClass(this.bgOverlay[0], 'mfp-ready')
+
+                    setTimeout(() => {
+                        addClass(this.wrap[0], 'mfp-ready')
+                        addClass(this.bgOverlay[0], 'mfp-ready')
+                    }, 50)
+
+                    if (this.content[0].classList.contains('popup_secondary')) {
+                        addClass(body, 'popup-open_secondary')
+                        removeClass(body, 'popup-open_second-branch')
+                        $.fn.fullpage.destroy('all')
+                        InitFullPage()
+                    } else {
+                        removeClass(body, 'popup-open_secondary')
+                    }
+                },
                 open() {
                     addClass(body, 'popup-open', 'popup-open_second-branch')
 
                     $.fn.fullpage.destroy('all')
-                    InitFullPagePopup
+                    InitFullPagePopup()
                 },
 
                 close() {
-                    removeClass(body, 'popup-open', 'popup-open_second-branch')
+                    removeClass(body, 'popup-open', 'popup-open_second-branch', 'popup-open_secondary')
                     $.fn.fullpage.destroy('all')
                     InitFullPage()
                 }
@@ -79,7 +98,7 @@ const InitMagnificPopups = (body) => {
     $(OPEN_POPUP_LINK).magnificPopup(settings)
     $(OPEN_POPUP_LINK_SECONDARY).magnificPopup(settingsSecondary)
     $(OPEN_POPUP_LINK_MENU).magnificPopup(settingMenu)
-    $(OPEN_POPUP_LINK_MENU).magnificPopup(settingSecondBranch)
+    $(OPEN_POPUP_LINK_SECOND_BRANCH).magnificPopup(settingSecondBranch)
 
 
 
