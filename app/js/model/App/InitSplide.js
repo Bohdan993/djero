@@ -7,7 +7,8 @@ import {
 } from "./Helpers"
 
 const InitSplide = () => {
-    let mainScreenSlider = new Splide('.main-screen__slider', {
+
+    const mainScreenSlider = new Splide('#main-screen__slider', {
         // autoplay: true,
         type: 'fade',
         rewind: true,
@@ -55,7 +56,7 @@ const InitSplide = () => {
     }
 
 
-    let thumbnailSlider = new Splide('#screen-5__slider-secondary', {
+    const screen5thumbnailSlider = new Splide('#screen-5__slider-secondary', {
         // fixedWidth: 290,
         // height: 210,
         // heightRatio: 210/290,
@@ -85,7 +86,7 @@ const InitSplide = () => {
     })
 
 
-    let primarySlider = new Splide('#screen-5__slider-main', {
+    const screen5MainSlider = new Splide('#screen-5__slider-main', {
         type: 'fade',
         heightRatio: 350 / 625,
         pagination: false,
@@ -101,12 +102,27 @@ const InitSplide = () => {
         },
     });
 
-    primarySlider.on('arrows:mounted', arrowsMountedHandler.bind(primarySlider))
-    thumbnailSlider.on('arrows:mounted', arrowsMountedHandler.bind(thumbnailSlider))
-    thumbnailSlider.mount()
-    primarySlider.sync(thumbnailSlider).mount();
-    primarySlider.on('move', moveHandler.bind(primarySlider))
-    thumbnailSlider.on('move', moveHandler.bind(thumbnailSlider))
+
+    const aboutSetPopupSlider = new Splide('#about-set-popup__slider', {
+        autoplay: true,
+        type: 'fade',
+        rewind: true,
+        interval: 3000,
+        arrows: false,
+        speed: 1500,
+        // drag: true,
+        lazyLoad: 'nearby',
+        pagination: true,
+        // pauseOnHover: true,
+        autoWidth: true
+    }).mount()
+
+    screen5MainSlider.on('arrows:mounted', arrowsMountedHandler.bind(screen5MainSlider))
+    screen5thumbnailSlider.on('arrows:mounted', arrowsMountedHandler.bind(screen5thumbnailSlider))
+    screen5thumbnailSlider.mount()
+    screen5MainSlider.sync(screen5thumbnailSlider).mount();
+    screen5MainSlider.on('move', moveHandler.bind(screen5MainSlider))
+    screen5thumbnailSlider.on('move', moveHandler.bind(screen5thumbnailSlider))
 
 }
 

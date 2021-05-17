@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1620859124314" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1620859124314">
-    <link rel="stylesheet" href="css/main.min.css?v=1620859124314">
+    <link rel="preload" href="css/main.min.css?v=1621204825478" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1621204825478">
+    <link rel="stylesheet" href="css/main.min.css?v=1621204825478">
   </head>
   <body class="home-page">
     <header class="header">
@@ -66,7 +66,7 @@
                                 <svg>
                                   <use xlink:href="img/sprites/svg/symbol/sprite.svg#target"></use>
                                 </svg></i></a>
-                            <div class="splide main-screen__slider">
+                            <div class="splide main-screen__slider" id="main-screen__slider">
                               <div class="splide__track main-screen__slider-track">
                                 <ul class="splide__list main-screen__slider-list">
                                   <li class="splide__slide main-screen__slider-slide"><img class="main-screen__slider-img" data-src="img/cookie-box.png" alt="Cookie Box"></li>
@@ -145,7 +145,7 @@
                     </div>
                   </div>
                   <div class="screen-4__images-layer">
-                    <h3 class="screen-4__images-text">Отримуй нагороду - <span>фірмове печиво Djero!</span></h3>
+                    <h3 class="screen-4__images-text subtitle">Отримуй нагороду - <span>фірмове печиво Djero!</span></h3>
                     <div class="screen-4__images">
                       <div class="screen-4__image-wrapper"><img class="screen-4__image" src="img/cookies-pack-2.png" alt="Cookie Pack"></div>
                       <div class="screen-4__image-wrapper"><img class="screen-4__image" src="img/cookies-pack.png" alt="Cookie Pack"></div>
@@ -469,7 +469,7 @@
             </div>
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-        <div class="popup catalog-popup mfp-hide zoom-anim-dialog" id="catalog-popup">
+        <div class="popup catalog-popup mfp-hide zoom-anim-dialog payment-popup" id="catalog-popup">
           <div class="popup__layout catalog-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title catalog-popup__title">Замовляй та грай</h2>
@@ -534,7 +534,7 @@
             </div>
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-        <div class="popup cart-popup mfp-hide zoom-anim-dialog" id="cart-popup">
+        <div class="popup cart-popup mfp-hide zoom-anim-dialog payment-popup" id="cart-popup">
           <div class="popup__layout cart-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title cart-popup__title">Корзина</h2>
@@ -597,7 +597,7 @@
             </div>
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-        <div class="popup order-popup mfp-hide zoom-anim-dialog" id="order-popup">
+        <div class="popup order-popup mfp-hide zoom-anim-dialog payment-popup" id="order-popup">
           <div class="popup__layout order-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title order-popup__title">Оформити замовлення</h2>
@@ -832,7 +832,7 @@
           <div class="popup__layout_secondary call-me-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title call-me-popup__title">Зателефонувати мені</h2>
-              <div class="call-me-popup__form-layer">
+              <section class="call-me-popup__form-layer">
                 <form class="call-me-popup__form" id="call-me-popup__form" method="POST">
                   <fieldset class="fieldset">
                     <div class="field-row call-me-popup__field-row">
@@ -846,7 +846,7 @@
                     </div>
                   </fieldset>
                 </form>
-              </div>
+              </section>
             </div>
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
@@ -856,6 +856,28 @@
               <div class="popup__layout about-set-popup__layout">
                 <div class="center"> 
                   <h2 class="popup__title h2-title about-set-popup__title">Про набір</h2>
+                  <p class="subtitle about-set-popup__subtitle"><span>Печиво-сендвіч - </span>талісман для Djero та ключ до перемог</p>
+                  <div class="f-container">
+                    <div class="about-set-popup__info-layer">
+                      <div class="about-set-popup__info">
+                        <div class="about-set-popup__buttons"><a class="about-set-popup__button btn small sky-blue open-popup-link-about-set" href="#about-manufacturer-popup"><span>Про виробника</span></a><a class="about-set-popup__button btn small sky-blue open-popup-link-about-set" href="#about-cookie-popup"><span>Про печиво</span></a><a class="about-set-popup__button btn small sky-blue open-popup-link-about-set" href="#additional-info-popup"><span>Додаткова інформація</span></a><a class="about-set-popup__button btn small sky-blue open-popup-link-about-set" href="#about-toy-popup"><span>Про іграшку</span></a></div>
+                        <div class="splide about-set-popup__slider" id="about-set-popup__slider">
+                          <div class="splide__track about-set-popup__slider-track">
+                            <ul class="splide__list about-set-popup__slider-list">
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-1.png" alt="Cookie Box"></li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-2.png" alt="Cookie Box"></li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-3.png" alt="Cookie Box"></li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-4.png" alt="Cookie Box"></li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-5.png" alt="Cookie Box"></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="about-set-popup__images-layer">
+                      <div class="about-set-popup__images"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
@@ -863,22 +885,332 @@
               <div class="popup__layout about-set-popup__layout">
                 <div class="center"> 
                   <h2 class="popup__title h2-title about-set-popup__title">Про набір</h2>
+                  <p class="subtitle about-set-popup__subtitle"><span>Печиво-сендвіч - </span>талісман для Djero та ключ до перемог</p>
+                  <div class="f-container">
+                    <div class="about-set-popup__info-layer">
+                      <div class="about-set-popup__info">
+                        <div class="about-set-popup__buttons"><a class="about-set-popup__button btn small sky-blue open-popup-link-about-set" href="#about-manufacturer-popup"><span>Про виробника</span></a><a class="about-set-popup__button btn small sky-blue open-popup-link-about-set" href="#about-cookie-popup"><span>Про печиво</span></a><a class="about-set-popup__button btn small sky-blue open-popup-link-about-set" href="#additional-info-popup"><span>Додаткова інформація</span></a><a class="about-set-popup__button btn small sky-blue open-popup-link-about-set" href="#about-toy-popup"><span>Про іграшку</span></a></div>
+                        <div class="splide about-set-popup__slider" id="about-set-popup__slider">
+                          <div class="splide__track about-set-popup__slider-track">
+                            <ul class="splide__list about-set-popup__slider-list">
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-1.png" alt="Cookie Box"></li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-2.png" alt="Cookie Box"></li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-3.png" alt="Cookie Box"></li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-4.png" alt="Cookie Box"></li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-5.png" alt="Cookie Box"></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="about-set-popup__images-layer">
+                      <div class="about-set-popup__images"></div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
-            <div class="popup about-set-popup fullpage-section section screen">
-              <div class="popup__layout about-set-popup__layout">
+            <div class="delivery-popup popup fullpage-section section screen">
+              <div class="delivery-popup__layout popup__layout">
                 <div class="center"> 
-                  <h2 class="popup__title h2-title about-set-popup__title">Про набір</h2>
+                  <h2 class="popup__title h2-title delivery-popup__title">Оплата, доставка та повернення</h2>
+                  <div class="f-container">
+                    <section class="delivery-popup__payment-methods-layer">
+                      <h3 class="delivery-popup__payment-methods-title popup__text-subtitle_white">Як оплачувати</h3>
+                      <div class="delivery-popup__payment-methods">
+                        <div class="delivery-popup__payment-methods-card payment-methods-card">
+                          <p class="delivery-popup__payment-methods-card-name">На карту</p>
+                        </div>
+                        <div class="delivery-popup__payment-methods-card">
+                          <p class="delivery-popup__payment-methods-card-name">На розрахунковий рахунок</p>
+                        </div>
+                        <div class="delivery-popup__payment-methods-card"> 
+                          <p class="delivery-popup__payment-methods-card-name">Накладний платіж</p>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="delivery-popup__delivery-methods-layer">
+                      <h3 class="delivery-popup__delivery-methods-title popup__text-subtitle_white">Доставимо печиво Новою Поштою<span>в будь яке місто України!</span></h3>
+                      <div class="delivery-popup__delivery-images">
+                        <div class="delivery-popup__delivery-image-wrapper"><img class="delivery-popup__delivery-image" src="img/map.png" alt="Map"></div>
+                        <div class="delivery-popup__delivery-image-wrapper"><img class="delivery-popup__delivery-image" src="img/boxes.png" alt="Boxes">
+                          <div class="delivery-popup__delivery-note"><i class="delivery-popup__delivery-ico ico box-ico"></i>
+                            <p class="delivery-popup__delivery-note-text">Доставка замовлень на суму від 500 грн – <span>безкоштовно!</span></p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="delivery-popup__return-methods-layer">
+                      <div class="delivery-popup__return-methods_left">
+                        <div class="delivery-popup__delivery-time">
+                          <h3 class="delivery-popup__delivery-time-title popup__text-subtitle_white">Скільки чекати?</h3>
+                          <div class="delivery-popup__text_white-wrapper">
+                            <p class="delivery-popup__delivery-time-text popup__text_white">Замовлення, які надійдуть після 14:00 будуть надіслані наступного дня.</p>
+                          </div>
+                          <div class="delivery-popup__text_white-wrapper">
+                            <p class="delivery-popup__delivery-time-text popup__text_white">Максимальні терміни доставки – <strong>2 доби.</strong></p>
+                          </div>
+                        </div>
+                        <div class="delivery-popup__return-money">
+                          <h3 class="delivery-popup__return-money-title popup__text-subtitle_white">Що потрібно зробити для повернення коштів?</h3>
+                          <div class="delivery-popup__text_white-wrapper">
+                            <p class="delivery-popup__return-money-text popup__text_white">Надішліть свої банківські реквізити (номер карти, ПІБ власника АБО р/р, ПІБ власника, МФО банку, код ЄДРПОУ) на нашу електронну адресу office@djero.com.ua та вкажіть у темі листа: «Повернення коштів за № замовлення».</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="delivery-popup__return-methods_right">
+                        <div class="delivery-popup__return-methods">
+                          <h3 class="delivery-popup__return-method-title popup__text-subtitle_white">Повернення товару</h3>
+                          <div class="delivery-popup__text_white-wrapper">
+                            <p class="delivery-popup__return-method-text popup__text_white">При отриманні замовлення уважно оглядайте його ще у відділенні служби доставки.</p>
+                            <p class="delivery-popup__return-method-text popup__text_white">Згідно з постановою <strong>Кабінету Міністрів України від 19.03.1994 року № 172 </strong>продукти харчування з нормальними термінами придатності і належної якості обміну та поверненню не підлягають.</p>
+                            <p class="delivery-popup__return-method-text popup__text_white">Продукти харчування неналежної якості (браковані, зіпсовані) підлягають обміну та поверненню за умови недотримання продавцем умов продажу товару – якщо продукт був спочатку бракований, а не при транспортуванні або зберіганні на складах перевізників.</p>
+                          </div>
+                          <div class="delivery-popup__text_white-wrapper">
+                            <p class="delivery-popup__return-method-text popup__text_white">Товари, які підлягають поверненню, повертаються зручним для покупця способом, після узгодження з менеджером.</p>
+                            <p class="delivery-popup__return-method-text popup__text_white">Не викидайте чек! При поверненні він знадобиться для підтвердження покупки в інтернет-магазині djero.com.ua.</p>
+                          </div>
+                          <div class="delivery-popup__text_white-wrapper">
+                            <p class="delivery-popup__return-method-text popup__text_white">Транспортні витрати оплачуєте ви як ініціатор повернення. Після цього ми повернемо вам кошти за товар на розрахунковий рахунок або карту клієнта <strong>протягом 1-3 робочих днів </strong>з моменту отримання повернення.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
                 </div>
+              </div>
+            </div>
+            <footer class="footer section">
+              <div class="contacts__layout">
+                <div class="center">
+                  <div class="f-container">
+                    <div class="contacts__address-layer">
+                      <h3 class="contacts__title">Контакти</h3>
+                      <address class="contacts__address"><a class="contacts__email" href="mailto:office@djero.com.ua">office@djero.com.ua </a>
+                        <p class="contacts__name">ФОП Пасічник С.С.</p>
+                        <p class="contacts__location">Вінницька обл., Козятинський р-н., с.Махнівка, вул. Київська, 53 кв. 4</p>
+                      </address>
+                    </div>
+                    <div class="contacts__question-layer">
+                      <h3 class="contacts__title">Виникли питання?</h3>
+                      <p class="contacts__action-call">Зателефонуйте нам!</p><a class="contacts__phone" href="tel:+380679312635">+38 (067) 931 26 35</a>
+                      <ul class="contacts__social-list social-list">
+                        <li class="contacts__social-list-item social-list-item"><a class="contacts__social-link social-link" href="#" rel=""><i class="ico contacts__social-ico social-ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#call-2"></use>
+                              </svg></i></a></li>
+                        <li class="contacts__social-list-item social-list-item"><a class="contacts__social-link social-link" href="#" rel=""><i class="ico contacts__social-ico social-ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#tg"></use>
+                              </svg></i></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="footer__layout">
+                <div class="center">
+                  <div class="footer__logo-layer"><img class="footer__logo logo" src="img/logo.png" alt="Logo"></div>
+                  <div class="footer__info-layer">
+                    <div class="footer__info-main">
+                      <div class="footer__payments">
+                        <p class="footer__payments-text">Платіжні системи</p>
+                        <ul class="footer__payments-list">
+                          <li class="footer__payments-list-item"><i class="ico footer__payments-ico visa-ico"></i></li>
+                          <li class="footer__payments-list-item"><i class="ico footer__payments-ico mastercard-ico"></i></li>
+                        </ul>
+                      </div>
+                      <nav class="footer__menu">
+                        <ul class="footer__menu-list">
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Головна</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Про набір</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Новини</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Доставка</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Контакти</a></li>
+                        </ul>
+                      </nav>
+                      <div class="footer__contacts"><a class="footer__phone footer-contact-link" href="tel:+380679312635"><i class="ico">
+                            <svg>
+                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#call"></use>
+                            </svg></i>+ 38 (067) 931 26 35</a><a class="footer__call-me open-popup-link_secondary transparent-btn with-underline" href="#order-call-popup">Зателефонувати мені </a><a class="footer__email footer-contact-link" href="mailto:office@djero.com.ua"><i class="ico">
+                            <svg>
+                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#envelope"></use>
+                            </svg></i>office@djero.com.ua</a></div>
+                    </div>
+                    <div class="footer__info-secondary">
+                      <div class="footer__oferta"><a class="footer__oferta-link transparent-btn with-underline" href="#">Договір оферти </a></div>
+                      <p class="footer__copyright">Copyright Djero 2021. Всі права захищені.</p>
+                      <div class="footer__arrow-up">
+                        <div class="footer__arrow-up-link" href="#"><i class="ico">
+                            <svg>
+                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#arrow"></use>
+                            </svg></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </footer>
+          </div>
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="popup additional-info-popup mfp-hide zoom-anim-dialog popup_third" id="additional-info-popup"><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
+          <div class="popup__layout_secondary additional-info-popup__layout">
+            <div class="center"> 
+              <h2 class="popup__title h2-title additional-info-popup__title">Додаткова інформація</h2>
+              <div class="additional-info-popup__text-layer">
+                <div class="additional-info-popup__text-wrapper">
+                  <div class="additional-info__storage-conditions additional-info-popup__text">
+                    <h3 class="additional-info__storage-conditions-title popup__text-subtitle">Умови зберігання</h3>
+                    <p class="additional-info__storage-conditions-text popup__text">Зберігати при температурі (18±5)°C та відносній вологості не більше 75%. Печиво не повинно зазнавати впливу прямих сонячних променів.</p>
+                  </div>
+                  <div class="additional-info__storage-conditions additional-info-popup__text">
+                    <h3 class="additional-info__made-title popup__text-subtitle">Виготовлено на замовлення</h3>
+                    <p class="additional-info__made-text popup__text">ФОП Пасічник С.С. Адреса: Вінницька обл., Козятинський р-н., с. Махнівка, вул. Київська, 53 <br>кв.4. Тел. +380679312635</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="popup about-manufacturer-popup mfp-hide zoom-anim-dialog popup_third" id="about-manufacturer-popup"><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
+          <div class="popup__layout_secondary about-manufacturer-popup__layout">
+            <div class="center"> 
+              <h2 class="popup__title h2-title about-manufacturer-popup__title">Про виробника</h2>
+              <div class="about-manufacturer-popup__text-layer">
+                <p class="about-manufacturer__text popup__text">Вироблено на сучасних поточно-механізованих лініях за класичною рецептурою на підприємстві <strong>ТОВ «ФАБРИКА ПЕЧИВА №1».</strong></p>
+                <p class="about-manufacturer__text popup__text">Виробництво компанії сертифіковане за міжнародною системою менеджменту якості <strong>ISO 22000: 2005, ISO 9001: 2015, </strong>також отриманий сертифікат якості HALAL CERTIFICATE. Введена система забезпечення безпеки харчової продукції НАССР, яка дає можливість своєчасно попередити виникнення будь-яких ризиків.</p>
+                <p class="about-manufacturer__text text_bg-blue popup__text">Адреса виробничих потужностей: Вінницька обл., Козятинський р-н., с. Махнівка, <br>вул. Шкільна, 57. <strong>ДСТУ- 3781:2014</strong></p>
+              </div>
+            </div>
+          </div>
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="popup about-toy-popup mfp-hide zoom-anim-dialog popup_third" id="about-toy-popup"><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
+          <div class="popup__layout_secondary about-toy-popup__layout">
+            <div class="center"> 
+              <h2 class="popup__title h2-title about-toy-popup__title">Зателефонувати мені</h2>
+              <div class="about-toy-popup__form-layer">
+                <form class="about-toy-popup__form" id="about-toy-popup__form" method="POST">
+                  <fieldset class="fieldset">
+                    <div class="field-row about-toy-popup__field-row">
+                      <div class="field-wrapper about-toy-popup__field-wrapper">
+                        <input class="field" type="tel" placeholder=" " id="about-toy-tel-input">
+                        <label class="text-field-label" for="about-toy-tel-input">Ваш номер телефону</label>
+                      </div>
+                    </div>
+                    <div class="field-row about-toy-popup__field-row">
+                      <button class="popup__btn about-toy-popup__btn btn red-orange big" type="submit"><span>Зателефонуйте</span></button>
+                    </div>
+                  </fieldset>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="popup about-cookie-popup mfp-hide zoom-anim-dialog popup_third" id="about-cookie-popup"><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
+          <div class="popup__layout_secondary about-cookie-popup__layout">
+            <div class="center"> 
+              <h2 class="popup__title h2-title about-cookie-popup__title">Про печиво</h2>
+              <div class="about-cookie-popup__text-layer">
+                <p class="about-cookie__text popup__text">
+                  Борошно пшеничне вищого сорту, цукор, жир кондитерський (жири та олії рослинні рафіновані дезодоровані:
+                  олія пальмова та її фракції, емульгатори (E433, E471), антиоксидант (E306)), жир кондитерський (олія пальмова та її фракції рафіновані вибілені дезодоровані, антиоксиданти (E304, E306)), какао-порошок, сіль кухонна, молоко сухе незбиране, емульгатор лецитин соєвий, розпушувач натрій двовуглекислий, регулятот кислотності кислота лимонна, ароматизатор «Ваніль», регулятот кислотності кислота лимонна.
+                </p>
+                <div class="about-cookie__consist-tables-wrapper">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Склад</th>
+                        <th scope="col">Вага</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Білки</td>
+                        <td>5,7 г.</td>
+                      </tr>
+                      <tr>
+                        <td>Жири</td>
+                        <td>21,6 г.</td>
+                      </tr>
+                      <tr>
+                        <td>з них насичені жирні кислоти</td>
+                        <td>4,1 г.</td>
+                      </tr>
+                      <tr>
+                        <td>Вуглеводи</td>
+                        <td>63,5 г.</td>
+                      </tr>
+                      <tr>
+                        <td>(із них цукрів)</td>
+                        <td>30,8 г.</td>
+                      </tr>
+                      <tr>
+                        <td>Крохмаль і полісахариди</td>
+                        <td>32,7 г.</td>
+                      </tr>
+                      <tr>
+                        <td>Сіль</td>
+                        <td>0,4 г.</td>
+                      </tr>
+                      <tr>
+                        <td>Харчові волокна</td>
+                        <td>2,4 г.</td>
+                      </tr>
+                      <tr>
+                        <td>Органічні кислоти</td>
+                        <td>0,1 г.</td>
+                      </tr>
+                      <tr>
+                        <td>Калорійність (ккал)</td>
+                        <td>478 г.</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>Енергетична цінність (кДж)</td>
+                        <td>2000 г.</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Склад</th>
+                        <th scope="col">Вага</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Білки</td>
+                        <td>0,9 г.</td>
+                      </tr>
+                      <tr>
+                        <td>Жири</td>
+                        <td>2,7 г.</td>
+                      </tr>
+                      <tr>
+                        <td>Вуглеводи</td>
+                        <td>8,4 г.</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>Калорійність (кДж)</td>
+                        <td>62,8 г.</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+                <p class="about-cookie__text text_bg-blue popup__text">Містить продукти переробки пшениці, молока, сої. Може вміщувати в незначній кількості ядра арахісу смажені подрібнені.</p>
+                <p class="about-cookie__text text_bg-blue popup__text">Термін придатності - 1 рік із дати вирробництва, вказаної на упаковці.</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1620859124314" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1620859124314" as="script">
-    <script src="js/main.min.js?v=1620859124314" async></script>
+    <script src="js/libs.min.js?v=1621204825478" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1621204825478" as="script">
+    <script src="js/main.min.js?v=1621204825478" async></script>
   </body>
 </html>

@@ -1,4 +1,7 @@
 import {
+    $
+} from '../../../libs/libs'
+import {
     BOTTOM_ANIMATION_CLASS,
     LEFT_ANIMATION_CLASS,
     TOP_ANIMATION_CLASS
@@ -8,7 +11,28 @@ import {
     removeClass
 } from "./Helpers"
 
-import {PlayAndOrderPopupShow} from '../';
+import PlayAndOrderPopupShow from './PlayAndOrderPopupShow';
+
+
+function changeClassesReverse(data) {
+    const {
+        ballWrapper,
+        firstAnimation,
+        secondAnimation,
+        header,
+        body,
+        footer,
+        pageHeader
+    } = data
+    addClass(ballWrapper, 'active')
+    addClass(firstAnimation, 'active')
+    removeClass(secondAnimation, 'active')
+    removeClass(pageHeader, TOP_ANIMATION_CLASS)
+    removeClass(header, TOP_ANIMATION_CLASS)
+    removeClass(body, LEFT_ANIMATION_CLASS)
+    removeClass(footer, BOTTOM_ANIMATION_CLASS)
+
+}
 
 
 const BallClickAnimation = (data) => {
@@ -39,19 +63,10 @@ const BallClickAnimation = (data) => {
         addClass(header, TOP_ANIMATION_CLASS)
         addClass(body, LEFT_ANIMATION_CLASS)
         addClass(footer, BOTTOM_ANIMATION_CLASS)
-        
+
     }
 
-    function changeClassesReverse() {
-        addClass(ballWrapper, 'active')
-        addClass(firstAnimation, 'active')
-        removeClass(secondAnimation, 'active')
-        removeClass(pageHeader, TOP_ANIMATION_CLASS)
-        removeClass(header, TOP_ANIMATION_CLASS)
-        removeClass(body, LEFT_ANIMATION_CLASS)
-        removeClass(footer, BOTTOM_ANIMATION_CLASS)
-        
-    }
+
 
     function secondAnimationAction() {
         firstAnimation.pause()
@@ -59,11 +74,25 @@ const BallClickAnimation = (data) => {
     }
 
     function secondAnimationEndedHandler(e) {
-        changeClassesReverse()
-        secondAnimation.currentTime = 0;
-        firstAnimation.play()
         PlayAndOrderPopupShow()
     }
+
+    function popupOpenHandler(e) {
+        const instance = $.magnificPopup.instance
+        if (instance.currItem.src = "#play-and-order-popup") {
+            instance.bgOverlay[0].addEventListener('transitionend', transitionEndHandler)
+        }
+
+    }
+
+
+    function transitionEndHandler() {
+        changeClassesReverse(data)
+        secondAnimation.currentTime = 0;
+        firstAnimation.play()
+    }
+
+
 
 
     // let promise1 = new Promise(function (res, rej) {
@@ -96,12 +125,13 @@ const BallClickAnimation = (data) => {
 
     // Promise.all([promise1, promise2, promise3])
     //     .then(res => {
-            
+
     //     })
     //     .catch(err => console.error(err))
 
     ball.addEventListener('click', ballClickHandler)
     secondAnimation.addEventListener('ended', secondAnimationEndedHandler)
+    $(document).on('mfpOpen', popupOpenHandler);
 
 
 
@@ -110,3 +140,8 @@ const BallClickAnimation = (data) => {
 
 
 export default BallClickAnimation
+
+
+export {
+    changeClassesReverse
+}

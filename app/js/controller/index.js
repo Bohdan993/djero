@@ -36,7 +36,7 @@ import {
 const app = {
 	init() {
 		this.bm()
-		this.fpi()
+		this.ifp()
 		this.it()
 		this.stb()
 		this.is()
@@ -52,8 +52,18 @@ const app = {
 		// console.log(Fullpage, Splide)
 		// BurgerMenu(body)
 	},
-	fpi() {
-		InitFullPage()
+	ifp() {
+		InitFullPage({
+			ball: $mainScreenFooterBall,
+			ballWrapper: $mainScreenFooterBallWrapper,
+			firstAnimation: $backgroundVideoAnimation1,
+			secondAnimation: $backgroundVideoAnimation2,
+			pageHeader: $header,
+			header: $mainScreenHeaderLayer,
+			body: $mainScreenBodyLayer,
+			footer: $mainScreenFooterLayer,
+			animation: $backgroundVideoAnimation1
+		})
 	},
 	it() {
 		InitTippy(SOCIAL_SHARE_BTN, $socialShareList)
@@ -77,18 +87,28 @@ const app = {
 		})
 	},
 	imp() {
-		InitMagnificPopups($body)
+		InitMagnificPopups($body, {
+			ball: $mainScreenFooterBall,
+			ballWrapper: $mainScreenFooterBallWrapper,
+			firstAnimation: $backgroundVideoAnimation1,
+			secondAnimation: $backgroundVideoAnimation2,
+			pageHeader: $header,
+			header: $mainScreenHeaderLayer,
+			body: $mainScreenBodyLayer,
+			footer: $mainScreenFooterLayer,
+			animation: $backgroundVideoAnimation1
+		})
 	},
-	cp(){
+	cp() {
 		ClosePopup($closePopup)
 	},
-	ic(){
+	ic() {
 		InitChoices($choices)
 	},
-	pv(){
+	pv() {
 		PlayVideo($screenPlayVideo)
 	},
-	pvy(){
+	pvy() {
 		PlayVideoYoutube()
 	}
 	// iosb() {

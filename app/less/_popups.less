@@ -160,22 +160,48 @@
 		min-height: unset;
 	}
 
-	
+
 
 }
 
 .popup-open_second-branch {
 	.fullpage-popup {
 		// height: auto!important;
+
+		.iScrollIndicator {
+			box-sizing: border-box;
+			position: absolute;
+			border: 1px solid rgba(255, 255, 255, 0.9);
+			border-radius: 3px;
+			width: 100%;
+			transition-duration: 0ms;
+			display: block;
+			height: 1429px;
+			transform: translate(0px, 0px) translateZ(0px);
+			transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1);
+			background: rgba(@orange, 0.5);
+		}
+
+		.iScrollVerticalScrollbar {
+			position: absolute;
+			z-index: 9999;
+			width: 7px;
+			bottom: 2px;
+			top: 2px;
+			right: 1px;
+			overflow: hidden;
+		}
 	}
 
-	.mfp-wrap,
-	.mfp-bg,
-	.header {
-		width: 100%;
-	}
+	// .mfp-wrap,
+	// .mfp-bg,
+	// .header {
+	// 	width: 100%;
+	// }
+
 	.mfp-wrap {
-		overflow: hidden!important;
+		overflow: hidden !important;
+		background: @blue;
 	}
 
 	.mfp-content {
@@ -183,11 +209,17 @@
 		padding: 0;
 	}
 
+	.popup__layout {
+		padding: 178px 0;
+		height: auto;
+	}
+
 	.popup__layout .center {
 		min-height: unset;
-		padding-top: 105px;
+		height: auto;
+		// padding-top: 105px;
 	}
-	
+
 }
 
 
@@ -247,7 +279,9 @@
 }
 
 
-
+.popup_third {
+	max-width: 1012px;
+}
 
 
 .popup__cards {
@@ -427,6 +461,37 @@
 			fill: @red-orange;
 		}
 	}
+}
+
+
+.popup__text-subtitle {
+	font-size: 20/16 * 1rem;
+	letter-spacing: 1px;
+	line-height: 28/20;
+	color: @dark-blue;
+	font-weight: 500;
+	padding-bottom: 6px;
+}
+
+.popup__text {
+	font-size: 18/16 * 1rem;
+	letter-spacing: 0px;
+	line-height: 28/18;
+	color: @dark-blue;
+	font-weight: 300;
+}
+
+.popup__text_white:extend(.popup__text) {
+	color: @font-color;
+	font-size: 1rem;
+	line-height: 24/16;
+}
+
+.popup__text-subtitle_white:extend(.popup__text-subtitle) {
+	color: @font-color;
+	font-family: 'Adventure Indiana Jones', cursive;
+	font-size: 26/16 * 1rem;
+	letter-spacing: 1px;
 }
 
 /**

@@ -30,8 +30,6 @@ const settings = {
                 addClass(this.bgOverlay[0], 'mfp-ready')
             }, 50)
 
-            // console.log(this.content[0])
-
             if (this.content[0].classList.contains('popup_secondary')) {
                 addClass($body, 'popup-open_secondary')
                 instance.destroy()

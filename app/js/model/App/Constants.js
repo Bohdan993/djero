@@ -9,6 +9,7 @@ const OPEN_POPUP_LINK_MENU = '.open-popup-link-menu'
 const DEPARTMENT_SELECT = 'department-select'
 const SCREEN_VIDEO_LAYER = 'screen-video-layer'
 const OPEN_POPUP_LINK_SECOND_BRANCH = '.open-popup-link-second-branch'
+const OPEN_POPUP_LINK_ABOUT_SET = '.open-popup-link-about-set'
 
 
 export {
@@ -22,5 +23,6 @@ export {
     DEPARTMENT_SELECT,
     OPEN_POPUP_LINK_MENU,
     SCREEN_VIDEO_LAYER,
-    OPEN_POPUP_LINK_SECOND_BRANCH
+    OPEN_POPUP_LINK_SECOND_BRANCH,
+    OPEN_POPUP_LINK_ABOUT_SET
 }

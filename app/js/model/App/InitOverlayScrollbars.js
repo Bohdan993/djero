@@ -8,7 +8,6 @@ const InitOverlayScrollbars = (elems) => {
     } = elems
 
 
-    console.log(popup)
     const instance = OverlayScrollbars(popup, {
         className: "os-theme-dark",
         sizeAutoCapable: true,

@@ -80,7 +80,8 @@ body {
     // }
 
     &.popup-open_secondary,
-    &.popup-open_menu {
+    &.popup-open_menu,
+    &.popup-open_third {
       .header {
         z-index: 99;
 
@@ -102,6 +103,7 @@ body {
       .header__menu {
         display: flex;
         pointer-events: all;
+        justify-content: flex-end;
       }
     }
   }
@@ -244,6 +246,19 @@ main {
   letter-spacing: 2px;
 }
 
+.subtitle {
+  font-size: 24/16 * 1rem;
+  letter-spacing: 1px;
+  line-height: 55/24;
+  color: @white;
+  font-weight: 500;
+  text-align: center;
+  padding-bottom: 45px;
+
+  span {
+    color: @red-orange;
+  }
+}
 
 
 .btn {
@@ -351,12 +366,38 @@ main {
 
   }
 
+
+  &.sky-blue {
+    background-color: @transparent;
+    color: @sky-blue;
+    border: 1px solid @sky-blue;
+
+    &:hover {
+      background-color: @transparent;
+      color: @font-color;
+    }
+
+    &:after {
+      background: @sky-blue;
+    }
+
+  }
+
   &.big {
     height: 60px;
     border-radius: 30px;
     font-size: 1rem;
     letter-spacing: 1px;
     font-weight: 400;
+  }
+
+
+  &.small {
+    font-size: 1rem;
+    max-width: 123px;
+    height: 40px;
+    border-radius: 4px;
+    
   }
 }
 
@@ -955,6 +996,10 @@ main {
 @import url("app/less/Popups/_order-popup.less");
 @import url("app/less/Popups/_order-call-popup.less");
 @import url("app/less/Popups/_call-me-popup.less");
+@import url("app/less/Popups/_about-set-popup.less");
+@import url("app/less/Popups/_additional-info-popup.less");
+@import url("app/less/Popups/_about-manufacturer-popup.less");
+@import url("app/less/Popups/_delivery-popup.less");
 
 
 

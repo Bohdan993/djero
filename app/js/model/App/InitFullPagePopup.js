@@ -9,16 +9,24 @@ const InitFullPagePopup = () => {
         scrollOverflow: true,
         lazyLoading: true,
         scrollingSpeed: 350,
-        anchors: ['about-set', 'about-set2', 'about-set3'],
+        anchors: ['about-set', 'news', 'delivery', 'footer-2'],
         scrollOverflowOptions: {
+            click: false,
             disableTouch: true,
             disablePointer: true,
             disableMouse: true,
             scrollbars: 'custom'
-        }
+        },
+        onLeave
     })
 
+    function onLeave(origin, destination, direction) {
+        setTimeout(function () {
+            $.fn.fullpage.reBuild()
+        }, 0)
 
+
+    }
 
 }
 
