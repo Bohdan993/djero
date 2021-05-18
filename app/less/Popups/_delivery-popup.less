@@ -1,5 +1,21 @@
 .delivery-popup__layout {
 
+    &:before {
+        content: '';
+        position: absolute;
+        width: 49.31506849%;
+        height: 68.87755102%;
+        left: 0;
+        bottom: 0;
+        z-index: 4;
+        background: url(../img/ball-left.png) left bottom/contain no-repeat;
+    }
+
+    & > * {
+        position: relative;
+        z-index: 5;
+    }
+
     .delivery-section {
         width: 100%;
     }
@@ -94,5 +110,85 @@
         display: flex;
         justify-content: space-between;
         align-items: stretch;
+
+        .popup__text-subtitle_white {
+            padding-bottom: 20px;
+        }
+    }
+
+    .delivery-popup__return-method-text {
+        
+    }
+
+    .popup__text_white {
+        strong {
+            font-weight: 700;
+        }
+    }
+
+    .delivery-popup__delivery-note {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: ((145 + 12.5)/2)/669.5 * 100%;
+    }
+
+    .delivery-popup__delivery-note-text {
+        max-width: 260px;
+        line-height: 24/16 * 1rem;
+        span {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    }
+
+    .delivery-popup__delivery-ico {
+        position: relative;
+        margin-right: 27px;
+
+        &:before {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: @red-orange;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: -1;
+        }
+    }
+
+    .delivery-popup__return-methods_left,
+    .delivery-popup__delivery-image-wrapper:first-child {
+        flex-basis: (478 + (145/2))/1220 * 100%;
+        padding-right: (145/2)/1220 * 100%;
+    }
+
+    .delivery-popup__return-methods_right
+    {
+        flex-basis: ((1220 - (478 + (145/2)))/1220) * 100%;
+        padding-left: (145/2)/1220 * 100%;
+
+        .delivery-popup__return-methods {
+            padding-right: 35px;
+        }
+    }
+
+    .delivery-popup__delivery-image-wrapper:last-child {
+        flex-basis: ((1220 - (478 + (145/2)))/1220) * 100%;
+    }
+
+    .delivery-popup__text-wrapper {
+        padding-bottom: 27px;
+    }
+
+    .delivery-popup__delivery-time {
+        padding-bottom: 60px;
+    }
+
+    .delivery-popup__delivery-methods-layer {
+        padding-bottom: 155/1220 * 100%;
     }
 }
