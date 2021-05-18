@@ -107,12 +107,13 @@ const InitSplide = () => {
         autoplay: true,
         type: 'fade',
         rewind: true,
-        interval: 3000,
+        interval: 5000,
         arrows: false,
         speed: 1500,
         // drag: true,
         lazyLoad: 'nearby',
         pagination: true,
+        // heightRatio: 435/625,
         // pauseOnHover: true,
         autoWidth: true
     }).mount()

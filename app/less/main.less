@@ -296,7 +296,7 @@ main {
   &::after {
     /*background-color: #f00;*/
     height: 100%;
-    left: -35%;
+    left: -55%;
     top: 0;
     transform: skew(50deg);
     transition-duration: 0.6s;
@@ -309,7 +309,7 @@ main {
 
   &:hover:after {
     height: 100%;
-    width: 135%;
+    width: 155%;
   }
 
 
@@ -394,9 +394,12 @@ main {
 
   &.small {
     font-size: 1rem;
-    max-width: 123px;
+    max-width: unset;
     height: 40px;
     border-radius: 4px;
+    min-width: unset;
+    width: auto;
+    padding: 0 10px;
     
   }
 }

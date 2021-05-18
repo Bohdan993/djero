@@ -1,3 +1,98 @@
 .delivery-popup__layout {
-    
+
+    .delivery-section {
+        width: 100%;
+    }
+
+    .delivery-popup__payment-methods-title {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .delivery-popup__payment-methods {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        // width: 100%;
+         margin: 0 -15px;
+    }
+
+    .delivery-popup__payment-methods-layer {
+       padding-bottom: 150/1220 * 100%;
+    }
+
+    .delivery-popup__payment-methods-card-wrapper {
+        flex-basis: 100/3 * 1%;
+        padding: 0 15px;
+    }
+
+    .delivery-popup__payment-methods-card {
+        position: relative;
+        border-radius: 14px;
+        background-color: @semi-light-blue;
+        border: 1px solid gray;
+        padding: 35px 60px;
+
+        &:hover {
+            .delivery-popup__ico {
+                svg {
+                    fill: @orange;
+                }
+            }
+        }
+        
+        
+    }
+
+    .delivery-popup__ico {
+        max-width: 85px;
+        max-height: 85px;
+        margin: 0 auto;
+
+        svg {
+            max-width: 85px;
+            max-height: 85px;
+            fill: @dirty-blue;
+            transition: fill 0.25s linear;
+        }
+    }
+
+    .delivery-popup__payment-methods-card-name {
+        text-align: center;
+        font-size: 1rem;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+        letter-spacing: 0;
+        white-space: nowrap;
+    }
+
+    .delivery-popup__payment-services {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+
+        .ico {
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+    }
+
+    .delivery-popup__delivery-methods-title {
+        span {
+            color: @orange;
+        }
+    }
+
+    .delivery-popup__delivery-images {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .delivery-popup__return-methods-layer {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+    }
 }

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1621204825478" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1621204825478">
-    <link rel="stylesheet" href="css/main.min.css?v=1621204825478">
+    <link rel="preload" href="css/main.min.css?v=1621290931571" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1621290931571">
+    <link rel="stylesheet" href="css/main.min.css?v=1621290931571">
   </head>
   <body class="home-page">
     <header class="header">
@@ -915,22 +915,38 @@
                 <div class="center"> 
                   <h2 class="popup__title h2-title delivery-popup__title">Оплата, доставка та повернення</h2>
                   <div class="f-container">
-                    <section class="delivery-popup__payment-methods-layer">
-                      <h3 class="delivery-popup__payment-methods-title popup__text-subtitle_white">Як оплачувати</h3>
+                    <section class="delivery-popup__payment-methods-layer delivery-section">
+                      <h3 class="delivery-popup__payment-methods-title popup__text-subtitle_white">Як оплачувати?</h3>
                       <div class="delivery-popup__payment-methods">
-                        <div class="delivery-popup__payment-methods-card payment-methods-card">
-                          <p class="delivery-popup__payment-methods-card-name">На карту</p>
+                        <div class="delivery-popup__payment-methods-card-wrapper">
+                          <div class="delivery-popup__payment-methods-card payment-methods-card">
+                            <p class="delivery-popup__payment-methods-card-name">На карту</p><i class="ico delivery-popup__ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#cash"></use>
+                              </svg></i>
+                            <div class="delivery-popup__payment-services"> <i class="ico visa-ico"></i><i class="ico mastercard-ico"></i></div>
+                          </div>
                         </div>
-                        <div class="delivery-popup__payment-methods-card">
-                          <p class="delivery-popup__payment-methods-card-name">На розрахунковий рахунок</p>
+                        <div class="delivery-popup__payment-methods-card-wrapper">
+                          <div class="delivery-popup__payment-methods-card">
+                            <p class="delivery-popup__payment-methods-card-name">На розрахунковий рахунок</p><i class="ico delivery-popup__ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#list"></use>
+                              </svg></i>
+                          </div>
                         </div>
-                        <div class="delivery-popup__payment-methods-card"> 
-                          <p class="delivery-popup__payment-methods-card-name">Накладний платіж</p>
+                        <div class="delivery-popup__payment-methods-card-wrapper">
+                          <div class="delivery-popup__payment-methods-card"> 
+                            <p class="delivery-popup__payment-methods-card-name">Накладний платіж</p><i class="ico delivery-popup__ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#wallet"></use>
+                              </svg></i>
+                          </div>
                         </div>
                       </div>
                     </section>
-                    <section class="delivery-popup__delivery-methods-layer">
-                      <h3 class="delivery-popup__delivery-methods-title popup__text-subtitle_white">Доставимо печиво Новою Поштою<span>в будь яке місто України!</span></h3>
+                    <section class="delivery-popup__delivery-methods-layer delivery-section">
+                      <h3 class="delivery-popup__delivery-methods-title popup__text-subtitle_white">Доставимо печиво Новою Поштою<br><span>в будь яке місто України!</span></h3>
                       <div class="delivery-popup__delivery-images">
                         <div class="delivery-popup__delivery-image-wrapper"><img class="delivery-popup__delivery-image" src="img/map.png" alt="Map"></div>
                         <div class="delivery-popup__delivery-image-wrapper"><img class="delivery-popup__delivery-image" src="img/boxes.png" alt="Boxes">
@@ -940,7 +956,7 @@
                         </div>
                       </div>
                     </section>
-                    <section class="delivery-popup__return-methods-layer">
+                    <section class="delivery-popup__return-methods-layer delivery-section">
                       <div class="delivery-popup__return-methods_left">
                         <div class="delivery-popup__delivery-time">
                           <h3 class="delivery-popup__delivery-time-title popup__text-subtitle_white">Скільки чекати?</h3>
@@ -1209,8 +1225,8 @@
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1621204825478" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1621204825478" as="script">
-    <script src="js/main.min.js?v=1621204825478" async></script>
+    <script src="js/libs.min.js?v=1621290931571" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1621290931571" as="script">
+    <script src="js/main.min.js?v=1621290931571" async></script>
   </body>
 </html>

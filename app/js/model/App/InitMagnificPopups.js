@@ -19,7 +19,8 @@ import InitFullPagePopup from './InitFullPagePopup'
 import InitOverlayScrollbars from './InitOverlayScrollbars'
 
 
-let instance
+let instanceSecondBranchPopup
+let instanceAboutSetPopup
 
 const InitMagnificPopups = (body, data) => {
 
@@ -62,6 +63,7 @@ const InitMagnificPopups = (body, data) => {
                 change() {
                     removeClass(this.wrap[0], 'mfp-ready')
                     removeClass(this.bgOverlay[0], 'mfp-ready')
+                    instanceAboutSetPopup && instanceAboutSetPopup.destroy()
 
                     setTimeout(() => {
                         addClass(this.wrap[0], 'mfp-ready')
@@ -82,6 +84,9 @@ const InitMagnificPopups = (body, data) => {
                     if (this.content[0].classList.contains('popup_third')) {
                         addClass(body, 'popup-open_third')
                         removeClass(body, 'popup-open_second-branch')
+                        instanceAboutSetPopup = InitOverlayScrollbars({
+                            popup: this.wrap[0]
+                        })
                     } else {
                         removeClass(body, 'popup-open_third')
                     }
@@ -91,6 +96,7 @@ const InitMagnificPopups = (body, data) => {
                         addClass(body, 'popup-open_second-branch')
                         removeClass(body, 'popup-open_third')
                         
+
                     } else {
                         removeClass(body, 'popup-open_second-branch')
                     }
@@ -104,12 +110,11 @@ const InitMagnificPopups = (body, data) => {
 
 
                     if (this.content[0].classList.contains('payment-popup')) {
-                        instance = InitOverlayScrollbars({
+                        instanceSecondBranchPopup = InitOverlayScrollbars({
                             popup: this.wrap[0]
                         })
-                    } else {
                     }
-                
+
                 },
                 open() {
                     addClass(body, 'popup-open', 'popup-open_second-branch')
@@ -123,7 +128,8 @@ const InitMagnificPopups = (body, data) => {
                     removeClass(body, 'popup-open', 'popup-open_second-branch', 'popup-open_secondary')
                     $.fn.fullpage.destroy('all')
                     InitFullPage(data)
-                    instance && instance.destroy()
+                    instanceSecondBranchPopup && instanceSecondBranchPopup.destroy()
+                    instanceAboutSetPopup && instanceAboutSetPopup.destroy()
                 }
             }
         }
@@ -150,11 +156,13 @@ const InitMagnificPopups = (body, data) => {
                 open() {
                     addClass(body, 'popup-open', 'popup-open_about-set')
 
+
+
                 },
 
                 close() {
                     removeClass(body, 'popup-open', 'popup-open_about-set')
-
+                    
                 }
             }
         }

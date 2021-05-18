@@ -5,22 +5,35 @@
 			h2.popup__title.h2-title.delivery-popup__title
 				|Оплата, доставка та повернення
 			.f-container
-				section.delivery-popup__payment-methods-layer
+				section.delivery-popup__payment-methods-layer.delivery-section
 					h3.delivery-popup__payment-methods-title.popup__text-subtitle_white
-						|Як оплачувати
+						|Як оплачувати?
 					.delivery-popup__payment-methods
-						.delivery-popup__payment-methods-card.payment-methods-card
-							p.delivery-popup__payment-methods-card-name
-								|На карту
-						.delivery-popup__payment-methods-card
-							p.delivery-popup__payment-methods-card-name
-								|На розрахунковий рахунок
-						.delivery-popup__payment-methods-card 
-							p.delivery-popup__payment-methods-card-name
-								|Накладний платіж
-				section.delivery-popup__delivery-methods-layer
+						.delivery-popup__payment-methods-card-wrapper
+							.delivery-popup__payment-methods-card.payment-methods-card
+								p.delivery-popup__payment-methods-card-name
+									|На карту
+								i.ico.delivery-popup__ico
+									+svg2('cash')
+								.delivery-popup__payment-services 
+									i.ico.visa-ico
+									i.ico.mastercard-ico
+						.delivery-popup__payment-methods-card-wrapper
+							.delivery-popup__payment-methods-card
+								p.delivery-popup__payment-methods-card-name
+									|На розрахунковий рахунок
+								i.ico.delivery-popup__ico
+									+svg2('list')
+						.delivery-popup__payment-methods-card-wrapper
+							.delivery-popup__payment-methods-card 
+								p.delivery-popup__payment-methods-card-name
+									|Накладний платіж
+								i.ico.delivery-popup__ico
+									+svg2('wallet')
+				section.delivery-popup__delivery-methods-layer.delivery-section
 					h3.delivery-popup__delivery-methods-title.popup__text-subtitle_white
 						|Доставимо печиво Новою Поштою
+						br
 						span
 							|в будь яке місто України!
 					.delivery-popup__delivery-images
@@ -34,7 +47,7 @@
 									|Доставка замовлень на суму від 500 грн – 
 									span
 										|безкоштовно!
-				section.delivery-popup__return-methods-layer
+				section.delivery-popup__return-methods-layer.delivery-section
 					.delivery-popup__return-methods_left
 						.delivery-popup__delivery-time
 							h3.delivery-popup__delivery-time-title.popup__text-subtitle_white

@@ -1,8 +1,18 @@
 .about-set-popup__layout {
+    .about-set-popup__info-layer {
+        flex-basis: 625/1220 * 100%;
+    }
     .about-set-popup__buttons {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-start;
         align-items: center;
+        padding-bottom: 60px;
+    }
+
+    .about-set-popup__subtitle {
+        span {
+            color: @orange;
+        }
     }
 
     .about-set-popup__button {
@@ -15,6 +25,47 @@
 
         &:hover {
             color: @font-color;
+        }
+
+        &:not(:last-child) {
+            margin-right: 10px;
+        }
+
+        padding: 0 7px;
+    }
+
+    .about-set-popup__slider
+    {  
+        
+        &:before {
+            content: '';
+            position: absolute;
+            width: 80%;
+            height: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: url('../img/Djero.png') no-repeat center/contain;
+            z-index: 10;
+        }
+    }
+
+    .about-set-popup__slider-slide {
+        max-height: 435px;
+    }
+
+    .about-set-popup__slider-list,
+    .about-set-popup__slider-slide,
+    .about-set-popup__slider-img {
+        width: 100%;
+    }
+    .about-set-popup__images-layer {
+        flex-basis: (1220 - 625)/1220 * 100%;
+    }
+
+    .splide__pagination__page {
+        &.is-active {
+            background: @red-orange;
         }
     }
 }
