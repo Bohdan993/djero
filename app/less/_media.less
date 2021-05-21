@@ -37,6 +37,17 @@
     .center {
         padding: 0 25px;
     }
+
+    .news-popup__layout {
+        .f-container {
+            flex-wrap: wrap;
+        }
+
+        .news-popup__cards-layer,
+        .news-popup__sidebar-layer {
+            flex-basis: 100%;
+        }
+    }
 }
 
 @media screen and(max-width: 768px) {
@@ -63,6 +74,12 @@
         br {
             display: none
         }
+    }
+
+    .news-popup__layout {
+       .news-popup__card-wrapper {
+           flex-basis: 100%;
+       }
     }
 }
 

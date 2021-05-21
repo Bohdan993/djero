@@ -1,0 +1,75 @@
+ .widget {
+     &:not(:last-child) {
+         background-image: url("data:image/svg+xml,%3Csvg%20width%3D'100%25'%20height%3D'100%25'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cline%20x1%3D%220%22%20y1%3D%22100%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20stroke%3D%22%238b909a%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%224%202%22%20%2F%3E%3C%2Fsvg%3E");
+     }
+
+     &:not(:first-child) {
+         padding-top: 48px;
+     }
+
+ }
+
+ .widget__cards {
+     padding-bottom: 10px;
+ }
+
+ .widget__title {
+     font-size: 18/16 * 1rem;
+     line-height: 21/18;
+     font-weight: 500;
+     text-transform: uppercase;
+     padding-bottom: 38px;
+ }
+
+ .widget__card-wrapper {
+     padding-bottom: 37px;
+ }
+
+ .widget__card {
+     display: flex;
+     justify-content: space-between;
+     align-items: flex-start;
+
+     &:hover {
+         .widget__text {
+             color: @red-orange;
+         }
+     }
+ }
+
+ .widget__img,
+ .widget__img-wrapper {
+     flex-basis: 104/354 * 100%;
+ }
+
+ .widget__content {
+     flex-basis: (354 - 104)/354 * 100%;
+     padding-left: 11px;
+ }
+
+ .widget__text {
+     font-size: 14/16 * 1rem;
+     line-height: 21/14;
+     transition: 0.25s linear color;
+ }
+
+ .widget__img {
+     border-radius: 4px;
+ }
+
+ .widget__date.sky-blue {
+     display: inline-block;
+     height: auto;
+     padding: 6px 7px;
+     font-size: 12/16 * 1rem;
+     margin-bottom: 7px;
+
+     &:hover {
+         color: @sky-blue;
+
+         &:after {
+             width: 0;
+             height: 0;
+         }
+     }
+ }

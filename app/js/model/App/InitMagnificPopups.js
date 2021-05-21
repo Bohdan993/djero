@@ -6,7 +6,8 @@ import {
     OPEN_POPUP_LINK_ABOUT_SET,
     OPEN_POPUP_LINK_MENU,
     OPEN_POPUP_LINK_SECONDARY,
-    OPEN_POPUP_LINK_SECOND_BRANCH
+    OPEN_POPUP_LINK_SECOND_BRANCH,
+    OPEN_POPUP_LINK_NEW
 } from "./Constants"
 import {
     addClass,
@@ -21,8 +22,9 @@ import InitOverlayScrollbars from './InitOverlayScrollbars'
 
 let instanceSecondBranchPopup
 let instanceAboutSetPopup
+let instanceNewPopup
 
-const InitMagnificPopups = (body, data) => {
+const InitMagnificPopups = (body, headerClosePopup, data) => {
 
     const settingsSecondary = {
         ...settings,
@@ -41,7 +43,7 @@ const InitMagnificPopups = (body, data) => {
     }
 
 
-    const settingMenu = {
+    const settingsMenu = {
         ...settings,
         ...{
             callbacks: {
@@ -56,7 +58,7 @@ const InitMagnificPopups = (body, data) => {
         }
     }
 
-    const settingSecondBranch = {
+    const settingsSecondBranch = {
         ...settings,
         ...{
             callbacks: {
@@ -64,6 +66,7 @@ const InitMagnificPopups = (body, data) => {
                     removeClass(this.wrap[0], 'mfp-ready')
                     removeClass(this.bgOverlay[0], 'mfp-ready')
                     instanceAboutSetPopup && instanceAboutSetPopup.destroy()
+                    instanceNewPopup && instanceNewPopup.destroy()
 
                     setTimeout(() => {
                         addClass(this.wrap[0], 'mfp-ready')
@@ -81,6 +84,25 @@ const InitMagnificPopups = (body, data) => {
                     }
 
 
+                    if (this.content[0].classList.contains('popup_fourth')) {
+                        addClass(body, 'popup-open_fourth')
+                        // addClass(headerClosePopup, 'open-popup-link-second-branch')
+                        // headerClosePopup.setAttribute('href', '#second-branch-popup')
+                        removeClass(body, 'popup-open_second-branch')
+
+                        // instanceAboutSetPopup = InitOverlayScrollbars({
+                        //     popup: this.wrap[0]
+                        // })
+                        instanceNewPopup = InitOverlayScrollbars({
+                            popup: this.wrap[0]
+                        })
+                    } else {
+                        removeClass(body, 'popup-open_fourth')
+                        // removeClass(headerClosePopup, 'open-popup-link-second-branch')
+                        // headerClosePopup.setAttribute('href', '#')
+                    }
+
+
                     if (this.content[0].classList.contains('popup_third')) {
                         addClass(body, 'popup-open_third')
                         removeClass(body, 'popup-open_second-branch')
@@ -94,7 +116,7 @@ const InitMagnificPopups = (body, data) => {
 
                     if (this.content[0].classList.contains('second-branch-popup')) {
                         addClass(body, 'popup-open_second-branch')
-                        removeClass(body, 'popup-open_third')
+                        removeClass(body, 'popup-open_third', 'popup-open_fourth')
                         
 
                     } else {
@@ -118,7 +140,6 @@ const InitMagnificPopups = (body, data) => {
                 },
                 open() {
                     addClass(body, 'popup-open', 'popup-open_second-branch')
-                    // console.log('dferer')
                     $.fn.fullpage.destroy('all')
                     InitFullPagePopup()
                 },
@@ -130,23 +151,14 @@ const InitMagnificPopups = (body, data) => {
                     InitFullPage(data)
                     instanceSecondBranchPopup && instanceSecondBranchPopup.destroy()
                     instanceAboutSetPopup && instanceAboutSetPopup.destroy()
+                    instanceNewPopup && instanceNewPopup.destroy()
                 }
             }
         }
     }
 
-    // const settingsSecondBranchWithItem = {
-    //     ...settingSecondBranch,
-    //     ...{
-    //         items: {
-    //             src: '#second-branch-popup'
-    //         }
-    //     }
 
-    // }
-
-
-    const settingAboutSet = {
+    const settingsAboutSet = {
         ...settings,
         ...{
             callbacks: {
@@ -154,14 +166,37 @@ const InitMagnificPopups = (body, data) => {
 
                 },
                 open() {
-                    addClass(body, 'popup-open', 'popup-open_about-set')
+                    addClass(body, 'popup-open', 'popup-open_third')
 
 
 
                 },
 
                 close() {
-                    removeClass(body, 'popup-open', 'popup-open_about-set')
+                    removeClass(body, 'popup-open', 'popup-open_third')
+                    
+                }
+            }
+        }
+
+    }
+
+    const settingsNew = {
+        ...settings,
+        ...{
+            callbacks: {
+                change() {
+
+                },
+                open() {
+                    addClass(body, 'popup-open', 'popup-open_fourth')
+
+
+
+                },
+
+                close() {
+                    removeClass(body, 'popup-open', 'popup-open_fourth')
                     
                 }
             }
@@ -175,9 +210,10 @@ const InitMagnificPopups = (body, data) => {
 
     $(OPEN_POPUP_LINK).magnificPopup(settings)
     $(OPEN_POPUP_LINK_SECONDARY).magnificPopup(settingsSecondary)
-    $(OPEN_POPUP_LINK_MENU).magnificPopup(settingMenu)
-    $(OPEN_POPUP_LINK_SECOND_BRANCH).magnificPopup(settingSecondBranch)
-    $(OPEN_POPUP_LINK_ABOUT_SET).magnificPopup(settingAboutSet)
+    $(OPEN_POPUP_LINK_MENU).magnificPopup(settingsMenu)
+    $(OPEN_POPUP_LINK_SECOND_BRANCH).magnificPopup(settingsSecondBranch)
+    $(OPEN_POPUP_LINK_ABOUT_SET).magnificPopup(settingsAboutSet)
+    $(OPEN_POPUP_LINK_NEW).magnificPopup(settingsNew)
 
 
 

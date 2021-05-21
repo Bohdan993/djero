@@ -29,7 +29,8 @@ import {
 	$mainScreenFooterBallWrapper,
 	$closePopup,
 	$choices,
-	$screenPlayVideo
+	$screenPlayVideo,
+	$headerClosePopup
 	// $popupMain
 } from '../view';
 
@@ -87,7 +88,7 @@ const app = {
 		})
 	},
 	imp() {
-		InitMagnificPopups($body, {
+		InitMagnificPopups($body, $headerClosePopup, {
 			ball: $mainScreenFooterBall,
 			ballWrapper: $mainScreenFooterBallWrapper,
 			firstAnimation: $backgroundVideoAnimation1,

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1621379329681" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1621379329681">
-    <link rel="stylesheet" href="css/main.min.css?v=1621379329681">
+    <link rel="preload" href="css/main.min.css?v=1621556714996" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1621556714996">
+    <link rel="stylesheet" href="css/main.min.css?v=1621556714996">
   </head>
   <body class="home-page">
     <header class="header">
@@ -22,8 +22,7 @@
                     <use xlink:href="img/logo.svg#Logo"></use>
                   </svg></a></div>
             </div>
-            <div class="header__menu-layer header-inner-layer">
-              <div class="close-popup close-popup-btn"><span></span><span></span></div>
+            <div class="header__menu-layer header-inner-layer"><a class="close-popup close-popup-btn" href="#"><span></span><span></span></a><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
               <nav class="header__menu">
                 <ul class="header__menu-list">
                   <li class="header__menu-list-item"> <a class="header__menu-link" href="#">Як це працює? </a></li>
@@ -183,6 +182,8 @@
                               <li class="splide__slide screen-5__slider-slide"><img class="screen-5__slider-img" src="img/slider-photo2.png" alt="Slide2"></li>
                               <li class="splide__slide screen-5__slider-slide"><img class="screen-5__slider-img" src="img/slider-photo3.png" alt="Slide3"></li>
                               <li class="splide__slide screen-5__slider-slide"><img class="screen-5__slider-img" src="img/slider-photo1.png" alt="Slide4"></li>
+                              <li class="splide__slide screen-5__slider-slide"><img class="screen-5__slider-img" src="img/slider-photo2.png" alt="Slide5"></li>
+                              <li class="splide__slide screen-5__slider-slide"><img class="screen-5__slider-img" src="img/slider-photo2.png" alt="Slide5"></li>
                               <li class="splide__slide screen-5__slider-slide"><img class="screen-5__slider-img" src="img/slider-photo2.png" alt="Slide5"></li>
                             </ul>
                           </div>
@@ -888,77 +889,93 @@
                   <div class="f-container">
                     <div class="news-popup__cards-layer">
                       <div class="news-popup__cards">
-                        <div class="news-popup__card-wrapper"><a class="news-popup__card" href="" rel="noreferrer noopener"><img class="news-popup__card-img" src="img/slider-photo2.png" alt="Image">
-                            <time class="news-popup__card-date">19.05.2021</time>
-                            <h3 class="news-popup__card-title">Виставка продуктів харчування</h3>
-                            <p class="news-popup__card-text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                              Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
-                            </p>
-                            <div class="news-popup__card-more">Читати далі</div></a></div>
-                        <div class="news-popup__card-wrapper news-popup-card_big"><a class="news-popup__card" href="" rel="noreferrer noopener">
-                            <div class="screen-play-video"></div><img class="news-popup__card-img" src="img/slider-photo2.png" alt="Image">
-                            <time class="news-popup__card-date">19.05.2021</time>
-                            <h3 class="news-popup__card-title">Виставка продуктів харчування</h3>
-                            <p class="news-popup__card-text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                              Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
-                            </p></a></div>
-                        <div class="news-popup__card-wrapper"><a class="news-popup__card" href="" rel="noreferrer noopener"><img class="news-popup__card-img" src="img/slider-photo2.png" alt="Image">
-                            <time class="news-popup__card-date">19.05.2021</time>
-                            <h3 class="news-popup__card-title">Виставка продуктів харчування</h3>
-                            <p class="news-popup__card-text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                              Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
-                            </p>
-                            <div class="news-popup__card-more">Читати далі</div></a></div>
-                        <div class="news-popup__card-wrapper"><a class="news-popup__card" href="" rel="noreferrer noopener"><img class="news-popup__card-img" src="img/slider-photo2.png" alt="Image">
-                            <time class="news-popup__card-date">19.05.2021</time>
-                            <h3 class="news-popup__card-title">Виставка продуктів харчування</h3>
-                            <p class="news-popup__card-text">
-                              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                              Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
-                            </p>
-                            <div class="news-popup__card-more">Читати далі</div></a></div>
+                        <div class="news-popup__card-wrapper"><a class="news-popup__card open-popup-link-new" href="#new-popup" rel="noreferrer noopener">
+                            <div class="news-popup__card-img-wrapper"><img class="news-popup__card-img" src="img/slider-photo2.png" alt="Image"></div>
+                            <div class="news-popup__card-content">
+                              <time class="news-popup__card-date">19.05.2021</time>
+                              <h3 class="news-popup__card-title">Виставка продуктів харчування</h3>
+                              <p class="news-popup__card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
+                              </p>
+                              <div class="news-popup__card-more">Читати далі</div>
+                            </div></a></div>
+                        <div class="news-popup__card-wrapper"><a class="news-popup__card open-popup-link-new" href="#new-popup" rel="noreferrer noopener">
+                            <div class="news-popup__card-img-wrapper"><img class="news-popup__card-img" src="img/slider-photo2.png" alt="Image"></div>
+                            <div class="news-popup__card-content">
+                              <time class="news-popup__card-date">19.05.2021</time>
+                              <h3 class="news-popup__card-title">Виставка продуктів харчування</h3>
+                              <p class="news-popup__card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
+                              </p>
+                              <div class="news-popup__card-more">Читати далі</div>
+                            </div></a></div>
+                        <div class="news-popup__card-wrapper news-popup-card_big"><a class="news-popup__card open-popup-link-new" href="#new-popup" rel="noreferrer noopener">
+                            <div class="screen-play-video"></div>
+                            <div class="news-popup__card-img-wrapper"><img class="news-popup__card-img" src="img/slider-photo2.png" alt="Image"></div>
+                            <div class="news-popup__card-content">
+                              <time class="news-popup__card-date">19.05.2021</time>
+                              <h3 class="news-popup__card-title">Виставка продуктів харчування</h3>
+                              <p class="news-popup__card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis.
+                              </p>
+                            </div></a></div>
+                        <div class="news-popup__card-wrapper"><a class="news-popup__card open-popup-link-new" href="#new-popup" rel="noreferrer noopener">
+                            <div class="news-popup__card-img-wrapper"><img class="news-popup__card-img" src="img/slider-photo2.png" alt="Image"></div>
+                            <div class="news-popup__card-content">
+                              <time class="news-popup__card-date">19.05.2021</time>
+                              <h3 class="news-popup__card-title">Виставка продуктів харчування</h3>
+                              <p class="news-popup__card-text">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
+                              </p>
+                              <div class="news-popup__card-more">Читати далі</div>
+                            </div></a></div>
                       </div>
                     </div>
                     <aside class="news-popup__sidebar-layer">
                       <div class="news-popup__popular-widget widget">
                         <h3 class="news-popup__popular-title widget__title">Популярні новини</h3>
                         <div class="news-popup__popular-cards widget__cards">
-                          <div class="news-popup__popular-card-wrapper widget__card-wrapper"><a class="news-popup__popular-card widget__card" href=""><img class="news-popup__popular-card-img" src="img/slider-photo2.png" alt="Image">
-                              <div class="news-popup__popular-card-content">
-                                <time class="news-popup__popular-card-date">19.05.2021</time>
-                                <p class="news-popup__popular-card-text">
+                          <div class="news-popup__popular-card-wrapper widget__card-wrapper"><a class="news-popup__popular-card widget__card open-popup-link-new" href="#new-popup">
+                              <div class="widget__img-wrapper"><img class="news-popup__popular-card-img widget__img" src="img/slider-photo2.png" alt="Image"></div>
+                              <div class="news-popup__popular-card-content widget__content">
+                                <time class="news-popup__popular-card-date widget__date btn small sky-blue">19.05.2021</time>
+                                <p class="news-popup__popular-card-text widget__text">
                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                   Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
                                 </p>
                               </div></a></div>
-                          <div class="news-popup__popular-card-wrapper widget__card-wrapper"><a class="news-popup__popular-car widget__card" href=""><img class="news-popup__popular-card-img" src="img/slider-photo2.png" alt="Image">
-                              <div class="news-popup__popular-card-content">
-                                <time class="news-popup__popular-card-date">19.05.2021</time>
-                                <p class="news-popup__popular-card-text">
+                          <div class="news-popup__popular-card-wrapper widget__card-wrapper"><a class="news-popup__popular-car widget__card open-popup-link-new" href="#new-popup">
+                              <div class="widget__img-wrapper"><img class="news-popup__popular-card-img widget__img" src="img/slider-photo2.png" alt="Image"></div>
+                              <div class="news-popup__popular-card-content widget__content">
+                                <time class="news-popup__popular-card-date widget__date btn small sky-blue">19.05.2021</time>
+                                <p class="news-popup__popular-card-text widget__text">
                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                   Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
                                 </p>
                               </div></a></div>
                         </div>
                       </div>
-                      <div class="news-popup__recommend-widget">
+                      <div class="news-popup__recommend-widget widget">
                         <h3 class="news-popup__recommend-title widget__title">Рекомендовані новини</h3>
                         <div class="news-popup__recommend-cards widget__cards">
-                          <div class="news-popup__recommend-card-wrapper widget__card-wrapper"><a class="news-popup__recommend-card widget__card" href=""><img class="news-popup__recommend-card-img" src="img/slider-photo2.png" alt="Image">
-                              <div class="news-popup__recommend-card-content">
-                                <time class="news-popup__recommend-card-date">19.05.2021</time>
-                                <p class="news-popup__recommend-card-text">
+                          <div class="news-popup__recommend-card-wrapper widget__card-wrapper"><a class="news-popup__recommend-card widget__card open-popup-link-new" href="#new-popup">
+                              <div class="widget__img-wrapper"><img class="news-popup__recommend-card-img widget__img" src="img/slider-photo2.png" alt="Image"></div>
+                              <div class="news-popup__recommend-card-content widget__content">
+                                <time class="news-popup__recommend-card-date widget__date btn small sky-blue">19.05.2021</time>
+                                <p class="news-popup__recommend-card-text widget__text">
                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                   Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
                                 </p>
                               </div></a></div>
-                          <div class="news-popup__recommend-card-wrapper widget__card-wrapper"><a class="news-popup__recommend-car widget__card" href=""><img class="news-popup__recommend-card-img" src="img/slider-photo2.png" alt="Image">
-                              <div class="news-popup__recommend-card-content">
-                                <time class="news-popup__recommend-card-date">19.05.2021</time>
-                                <p class="news-popup__recommend-card-text">
+                          <div class="news-popup__recommend-card-wrapper widget__card-wrapper"><a class="news-popup__recommend-car widget__card open-popup-link-new" href="#new-popup">
+                              <div class="widget__img-wrapper"><img class="news-popup__recommend-card-img widget__img" src="img/slider-photo2.png" alt="Image"></div>
+                              <div class="news-popup__recommend-card-content widget__content">
+                                <time class="news-popup__recommend-card-date widget__date btn small sky-blue">19.05.2021</time>
+                                <p class="news-popup__recommend-card-text widget__text">
                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                                   Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
                                 </p>
@@ -1282,11 +1299,128 @@
               </div>
             </div>
           </div>
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="new-popup popup mfp-hide zoom-anim-dialog popup_fourth" id="new-popup">
+          <div class="new-popup__layout popup__layout">
+            <div class="center"> 
+              <h2 class="popup__title h2-title new-popup__title">Новина</h2>
+              <div class="f-container">
+                <div class="new-popup__content-layer">
+                  <div class="new-popup__preview">
+                    <div class="new-popup__preview-img-wrapper"><img class="new-popup__preview-img" src="img/slider-photo3.png" alt="Preview"></div>
+                    <time class="new-popup__preview-date">30.03.20</time>
+                  </div>
+                  <div class="new-popup__content">
+                    <h3 class="new-popup__text-title">Виставка продуктів харчування</h3>
+                    <p class="new-popup__text-text"><strong>Sed ut perspiciatis </strong>unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                    <p class="new-popup__text-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </p>
+                    <p class="new-popup__text-text">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+                    <div class="new-popup__slider-wrapper">
+                      <div class="splide new-popup__slider" id="new-popup__slider">
+                        <div class="splide__arrows new-popup__slider-arrows">
+                          <div class="splide__arrow splide__arrow--prev new-popup__slider-arrow new-popup__slider-arrow-prev">
+                            <svg>
+                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#arrow"></use>
+                            </svg>
+                          </div>
+                          <div class="splide__arrow splide__arrow--next new-popup__slider-arrow new-popup__slider-arrow-next">
+                            <svg>
+                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#arrow"></use>
+                            </svg>
+                          </div>
+                        </div>
+                        <div class="splide__track new-popup__slider-track">
+                          <ul class="splide__list new-popup__slider-list">
+                            <li class="splide__slide new-popup__slider-slide"><img class="new-popup__slider-img" src="img/slider-photo1.png" alt="Slide1"></li>
+                            <li class="splide__slide new-popup__slider-slide"><img class="new-popup__slider-img" src="img/slider-photo2.png" alt="Slide2"></li>
+                            <li class="splide__slide new-popup__slider-slide"><img class="new-popup__slider-img" src="img/slider-photo3.png" alt="Slide3"></li>
+                            <li class="splide__slide new-popup__slider-slide"><img class="new-popup__slider-img" src="img/slider-photo1.png" alt="Slide4"></li>
+                            <li class="splide__slide new-popup__slider-slide"><img class="new-popup__slider-img" src="img/slider-photo2.png" alt="Slide5"></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="new-popup__text-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? </p>
+                    <p class="new-popup__text-text">Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.</p>
+                  </div>
+                  <div class="new-popup__share">
+                    <p class="new-popup__share-text">Поділитися:</p>
+                    <ul class="new-popup__social-share-list">
+                      <li class="new-popup__social-share-list-item"><a class="new-popup__social-share-link" href=""> <i class="ico new-popup__social-ico social-ico">
+                            <svg>
+                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#facebook"></use>
+                            </svg></i></a></li>
+                      <li class="new-popup__social-share-list-item"><a class="new-popup__social-share-link" href=""><i class="ico new-popup__social-ico social-ico">
+                            <svg>
+                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#google+"></use>
+                            </svg></i></a></li>
+                      <li class="new-popup__social-share-list-item"><a class="new-popup__social-share-link" href=""> <i class="ico new-popup__social-ico social-ico">
+                            <svg>
+                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#instagram"></use>
+                            </svg></i></a></li>
+                      <li class="new-popup__social-share-list-item"><a class="new-popup__social-share-link" href=""><i class="ico new-popup__social-ico social-ico">
+                            <svg>
+                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#pinterest"></use>
+                            </svg></i></a></li>
+                    </ul>
+                  </div>
+                </div>
+                <aside class="new-popup__sidebar-layer">
+                  <div class="new-popup__popular-widget widget">
+                    <h3 class="new-popup__popular-title widget__title">Популярні новини</h3>
+                    <div class="new-popup__popular-cards widget__cards">
+                      <div class="new-popup__popular-card-wrapper widget__card-wrapper"><a class="new-popup__popular-card widget__card" href="">
+                          <div class="widget__img-wrapper"><img class="new-popup__popular-card-img widget__img" src="img/slider-photo2.png" alt="Image"></div>
+                          <div class="new-popup__popular-card-content widget__content">
+                            <time class="new-popup__popular-card-date widget__date btn small sky-blue">19.05.2021</time>
+                            <p class="new-popup__popular-card-text widget__text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                              Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
+                            </p>
+                          </div></a></div>
+                      <div class="new-popup__popular-card-wrapper widget__card-wrapper"><a class="new-popup__popular-car widget__card" href="">
+                          <div class="widget__img-wrapper"><img class="new-popup__popular-card-img widget__img" src="img/slider-photo2.png" alt="Image"></div>
+                          <div class="new-popup__popular-card-content widget__content">
+                            <time class="new-popup__popular-card-date widget__date btn small sky-blue">19.05.2021</time>
+                            <p class="new-popup__popular-card-text widget__text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                              Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
+                            </p>
+                          </div></a></div>
+                    </div>
+                  </div>
+                  <div class="new-popup__recommend-widget widget">
+                    <h3 class="new-popup__recommend-title widget__title">Рекомендовані новини</h3>
+                    <div class="new-popup__recommend-cards widget__cards">
+                      <div class="new-popup__recommend-card-wrapper widget__card-wrapper"><a class="new-popup__recommend-card widget__card" href="">
+                          <div class="widget__img-wrapper"><img class="new-popup__recommend-card-img widget__img" src="img/slider-photo2.png" alt="Image"></div>
+                          <div class="new-popup__recommend-card-content widget__content">
+                            <time class="new-popup__recommend-card-date widget__date btn small sky-blue">19.05.2021</time>
+                            <p class="new-popup__recommend-card-text widget__text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                              Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
+                            </p>
+                          </div></a></div>
+                      <div class="new-popup__recommend-card-wrapper widget__card-wrapper"><a class="new-popup__recommend-car widget__card" href="">
+                          <div class="widget__img-wrapper"><img class="new-popup__recommend-card-img widget__img" src="img/slider-photo2.png" alt="Image"></div>
+                          <div class="new-popup__recommend-card-content widget__content">
+                            <time class="new-popup__recommend-card-date widget__date btn small sky-blue">19.05.2021</time>
+                            <p class="new-popup__recommend-card-text widget__text">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                              Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
+                            </p>
+                          </div></a></div>
+                    </div>
+                  </div>
+                </aside>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1621379329682" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1621379329682" as="script">
-    <script src="js/main.min.js?v=1621379329682" async></script>
+    <script src="js/libs.min.js?v=1621556714996" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1621556714996" as="script">
+    <script src="js/main.min.js?v=1621556714996" async></script>
   </body>
 </html>

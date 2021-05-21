@@ -60,7 +60,7 @@ const InitSplide = () => {
         // fixedWidth: 290,
         // height: 210,
         // heightRatio: 210/290,
-        // perPage: 4,
+        perPage: 1,
         gap: 15,
         // cover: true,
         isNavigation: true,
@@ -118,12 +118,45 @@ const InitSplide = () => {
         autoWidth: true
     }).mount()
 
+
+    const newPopupSlider = new Splide('#new-popup__slider', {
+        // fixedWidth: 290,
+        // height: 210,
+        // heightRatio: 210/290,
+        perPage: 1,
+        gap: 15,
+        // cover: true,
+        isNavigation: true,
+        pagination: false,
+        autoWidth: true,
+        drag: true,
+        lazyLoad: 'nearby',
+        focus: 'center',
+        trimSpace: true,
+        classes: {
+            // Add classes for arrows.
+            arrows: 'splide__arrows new-popup__slider-arrows',
+            arrow: 'splide__arrow new-popup__slider-arrow',
+            prev: 'splide__arrow--prev new-popup__slider-arrow-prev',
+            next: 'splide__arrow--next new-popup__slider-arrow-next',
+        },
+        // breakpoints : {
+        // 	'600': {
+        // 		fixedWidth: 66,
+        // 		height    : 40,
+        // 	}
+        // },
+    })
+
     screen5MainSlider.on('arrows:mounted', arrowsMountedHandler.bind(screen5MainSlider))
     screen5thumbnailSlider.on('arrows:mounted', arrowsMountedHandler.bind(screen5thumbnailSlider))
     screen5thumbnailSlider.mount()
     screen5MainSlider.sync(screen5thumbnailSlider).mount();
     screen5MainSlider.on('move', moveHandler.bind(screen5MainSlider))
     screen5thumbnailSlider.on('move', moveHandler.bind(screen5thumbnailSlider))
+    newPopupSlider.on('arrows:mounted', arrowsMountedHandler.bind(newPopupSlider))
+    newPopupSlider.mount()
+    newPopupSlider.on('move', moveHandler.bind(newPopupSlider))
 
 }
 
