@@ -17,13 +17,13 @@ const InitFullPagePopup = () => {
             disableMouse: true,
             scrollbars: 'custom'
         },
-        onLeave
+        onLeave,
     })
 
     function onLeave(origin, destination, direction) {
         setTimeout(function () {
             $.fn.fullpage.reBuild()
-        }, 0)
+        }, 50)
 
 
     }

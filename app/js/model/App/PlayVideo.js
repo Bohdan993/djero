@@ -1,4 +1,5 @@
 import {
+    NO_VIDEO_PLAY,
     SCREEN_VIDEO_LAYER
 } from "./Constants"
 
@@ -8,6 +9,7 @@ import {addStyle} from './Helpers'
 const PlayVideo = (btsn) => {
 
     function forEachBtn(el) {
+        if(el.classList.contains(NO_VIDEO_PLAY)) return
         el.addEventListener('click', clickHandler)
 
     }

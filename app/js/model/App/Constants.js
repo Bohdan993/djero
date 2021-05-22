@@ -11,6 +11,8 @@ const SCREEN_VIDEO_LAYER = 'screen-video-layer'
 const OPEN_POPUP_LINK_SECOND_BRANCH = '.open-popup-link-second-branch'
 const OPEN_POPUP_LINK_ABOUT_SET = '.open-popup-link-about-set'
 const OPEN_POPUP_LINK_NEW = '.open-popup-link-new'
+const OPEN_POPUP_LINK_VIDEO = '.open-popup-link-video'
+const NO_VIDEO_PLAY = 'no-video-play'
 
 
 export {
@@ -26,5 +28,7 @@ export {
     SCREEN_VIDEO_LAYER,
     OPEN_POPUP_LINK_SECOND_BRANCH,
     OPEN_POPUP_LINK_ABOUT_SET,
-    OPEN_POPUP_LINK_NEW
+    OPEN_POPUP_LINK_NEW,
+    OPEN_POPUP_LINK_VIDEO,
+    NO_VIDEO_PLAY
 }

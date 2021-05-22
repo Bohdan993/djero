@@ -21,7 +21,7 @@ export default function onLeave(data) {
 
     setTimeout(function () {
         $.fn.fullpage.reBuild()
-    }, 0)
+    }, 50)
 
     return function (origin, destination, direction) {
         addClass(

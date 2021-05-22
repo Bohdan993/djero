@@ -8,22 +8,6 @@ import {
 
 const InitSplide = () => {
 
-    const mainScreenSlider = new Splide('#main-screen__slider', {
-        // autoplay: true,
-        type: 'fade',
-        rewind: true,
-        // interval: 5000,
-        arrows: false,
-        // speed: 1500,
-        // drag: true,
-        lazyLoad: 'nearby',
-        pagination: false,
-        pauseOnHover: true,
-        autoWidth: true
-    }).mount()
-
-
-
     function moveHandler(newIndex, oldIndex, destIndex) {
 
 
@@ -54,6 +38,22 @@ const InitSplide = () => {
     function arrowsMountedHandler(prev, next) {
         addClass(prev, 'disabled')
     }
+
+    const mainScreenSlider = new Splide('#main-screen__slider', {
+        // autoplay: true,
+        type: 'fade',
+        rewind: true,
+        // interval: 5000,
+        arrows: false,
+        // speed: 1500,
+        // drag: true,
+        lazyLoad: 'nearby',
+        pagination: false,
+        pauseOnHover: true,
+        autoWidth: true
+    }).mount()
+
+
 
 
     const screen5thumbnailSlider = new Splide('#screen-5__slider-secondary', {

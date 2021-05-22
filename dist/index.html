@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1621556714996" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1621556714996">
-    <link rel="stylesheet" href="css/main.min.css?v=1621556714996">
+    <link rel="preload" href="css/main.min.css?v=1621642507609" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1621642507609">
+    <link rel="stylesheet" href="css/main.min.css?v=1621642507609">
   </head>
   <body class="home-page">
     <header class="header">
@@ -876,7 +876,15 @@
                       </div>
                     </div>
                     <div class="about-set-popup__images-layer">
-                      <div class="about-set-popup__images"></div>
+                      <div class="about-set-popup__images">
+                        <div class="about-set-popup__image-wrapper image-wrapper_top"><img class="about-set-popup__image" src="img/cookie-box-2.png" alt=""></div>
+                        <div class="about-set-popup__image-wrapper image-wrapper_middle"><img class="about-set-popup__image" src="img/cookies.png" alt=""></div>
+                        <div class="about-set-popup__image-wrapper image-wrapper_bottom"><img class="about-set-popup__image" src="img/cookies-pack-2.png" alt="">
+                          <div class="about-set-popup__ball-image-wrapper"><img class="about-set-popup__image" src="img/ball-2.png" alt="">
+                            <div class="about-set-popup__icos"><i class="ico ico-0-3 about-set-popup__ico"></i><i class="ico eco-ico about-set-popup__ico"></i></div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -912,7 +920,7 @@
                               <div class="news-popup__card-more">Читати далі</div>
                             </div></a></div>
                         <div class="news-popup__card-wrapper news-popup-card_big"><a class="news-popup__card open-popup-link-new" href="#new-popup" rel="noreferrer noopener">
-                            <div class="screen-play-video"></div>
+                            <div class="screen-play-video no-video-play"></div>
                             <div class="news-popup__card-img-wrapper"><img class="news-popup__card-img" src="img/slider-photo2.png" alt="Image"></div>
                             <div class="news-popup__card-content">
                               <time class="news-popup__card-date">19.05.2021</time>
@@ -1332,10 +1340,10 @@
                         <div class="splide__track new-popup__slider-track">
                           <ul class="splide__list new-popup__slider-list">
                             <li class="splide__slide new-popup__slider-slide"><img class="new-popup__slider-img" src="img/slider-photo1.png" alt="Slide1"></li>
-                            <li class="splide__slide new-popup__slider-slide"><img class="new-popup__slider-img" src="img/slider-photo2.png" alt="Slide2"></li>
-                            <li class="splide__slide new-popup__slider-slide"><img class="new-popup__slider-img" src="img/slider-photo3.png" alt="Slide3"></li>
-                            <li class="splide__slide new-popup__slider-slide"><img class="new-popup__slider-img" src="img/slider-photo1.png" alt="Slide4"></li>
-                            <li class="splide__slide new-popup__slider-slide"><img class="new-popup__slider-img" src="img/slider-photo2.png" alt="Slide5"></li>
+                            <li class="splide__slide new-popup__slider-slide"><a class="screen-play-video open-popup-link-video no-video-play" href="#video-popup"></a><img class="new-popup__slider-img" src="img/slider-photo2.png" alt="Slide2"></li>
+                            <li class="splide__slide new-popup__slider-slide"><a class="screen-play-video open-popup-link-video no-video-play" href="#video-popup"></a><img class="new-popup__slider-img" src="img/slider-photo3.png" alt="Slide3"></li>
+                            <li class="splide__slide new-popup__slider-slide"><a class="screen-play-video open-popup-link-video no-video-play" href="#video-popup"></a><img class="new-popup__slider-img" src="img/slider-photo1.png" alt="Slide4"></li>
+                            <li class="splide__slide new-popup__slider-slide"><a class="screen-play-video open-popup-link-video no-video-play" href="#video-popup"></a><img class="new-popup__slider-img" src="img/slider-photo2.png" alt="Slide5"></li>
                           </ul>
                         </div>
                       </div>
@@ -1416,11 +1424,18 @@
               </div>
             </div>
           </div>
+        </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
+        <div class="popup video-popup mfp-hide zoom-anim-dialog popup_fifth" id="video-popup"><a class="close-popup close-popup_secondary open-popup-link-new" href="#new-popup"><span></span><span></span></a>
+          <div class="popup__layout_fifth video-popup__layout">
+            <div class="center"> 
+              <iframe class="video-popup__iframe" src="https://www.youtube.com/embed/0O2aH4XLbto" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1621556714996" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1621556714996" as="script">
-    <script src="js/main.min.js?v=1621556714996" async></script>
+    <script src="js/libs.min.js?v=1621642507609" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1621642507609" as="script">
+    <script src="js/main.min.js?v=1621642507609" async></script>
   </body>
 </html>

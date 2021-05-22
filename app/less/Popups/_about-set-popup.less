@@ -2,6 +2,25 @@
     .about-set-popup__info-layer {
         flex-basis: 625/1220 * 100%;
     }
+
+
+    & > * {
+        position: relative;
+        z-index: 2;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 720/1460 * 100%;
+        height: 675/980 * 100%;
+        right: -20px;
+        bottom: 50px;
+        z-index: 2;
+        background: url('../img/bg-pattern-about-set.png') no-repeat right center/contain;
+
+    }
+
     .about-set-popup__buttons {
         display: flex;
         justify-content: flex-start;
@@ -16,6 +35,7 @@
     }
 
     .about-set-popup__button {
+
         &:focus,
         &:visited,
         &:active {
@@ -34,9 +54,8 @@
         padding: 0 7px;
     }
 
-    .about-set-popup__slider
-    {  
-        
+    .about-set-popup__slider {
+
         &:before {
             content: '';
             position: absolute;
@@ -59,13 +78,39 @@
     .about-set-popup__slider-img {
         width: 100%;
     }
+
     .about-set-popup__images-layer {
         flex-basis: (1220 - 625)/1220 * 100%;
+        padding-left: 119px;
     }
 
     .splide__pagination__page {
         &.is-active {
             background: @red-orange;
         }
+    }
+
+    .about-set-popup__icos {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .about-set-popup__image-wrapper {
+        display: flex;
+        
+        align-items: center;
+    }
+
+    .image-wrapper_top {
+        justify-content: flex-end;
+    }
+
+    .image-wrapper_middle {
+        justify-content: center;
+    }
+
+    .image-wrapper_bottom {
+        justify-content: space-around;
     }
 }
