@@ -12,6 +12,10 @@ import ClosePopup from './App/ClosePopup';
 import InitChoices from './App/InitChoises';
 import PlayVideo from './App/PlayVideo';
 import PlayVideoYoutube from './App/PlayVideoYoutube';
+import MoveToScreens from './App/MoveToScreens';
+import InitMagnificPopupSecondBranch from './App/InitMagnificPopupSecondBranch';
+
+
 
 export {
 	BurgerMenu,
@@ -22,10 +26,12 @@ export {
 	InitSplide,
 	BallClickAnimation,
 	InitMagnificPopups,
+	InitMagnificPopupSecondBranch,
 	PlayAndOrderPopupShow,
 	InitOverlayScrollbars,
 	ClosePopup,
 	InitChoices,
 	PlayVideo,
-	PlayVideoYoutube
+	PlayVideoYoutube,
+	MoveToScreens
 }

@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1621642507609" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1621642507609">
-    <link rel="stylesheet" href="css/main.min.css?v=1621642507609">
+    <link rel="preload" href="css/main.min.css?v=1621816484184" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1621816484184">
+    <link rel="stylesheet" href="css/main.min.css?v=1621816484184">
   </head>
   <body class="home-page">
     <header class="header">
@@ -22,11 +22,11 @@
                     <use xlink:href="img/logo.svg#Logo"></use>
                   </svg></a></div>
             </div>
-            <div class="header__menu-layer header-inner-layer"><a class="close-popup close-popup-btn" href="#"><span></span><span></span></a><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
+            <div class="header__menu-layer header-inner-layer"><a class="close-popup close-popup-btn" href="#main-section"><span></span><span></span></a><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
               <nav class="header__menu">
                 <ul class="header__menu-list">
-                  <li class="header__menu-list-item"> <a class="header__menu-link" href="#">Як це працює? </a></li>
-                  <li class="header__menu-list-item"> <a class="header__menu-link" href="#">Розважайся з Djero! </a></li>
+                  <li class="header__menu-list-item"> <a class="header__menu-link menu-link" href="#" data-is-popup="false" data-to="screen-2" data-position="main">Як це працює? </a></li>
+                  <li class="header__menu-list-item"> <a class="header__menu-link menu-link" href="#" data-is-popup="false" data-to="screen-5" data-position="main">Розважайся з Djero! </a></li>
                 </ul>
               </nav>
             </div>
@@ -37,7 +37,7 @@
     <main class="main">
       <div class="main__layout">
         <div class="f-container main__f-container">
-          <section class="main__content fullpage">
+          <section class="main__content fullpage" id="main-section">
             <div class="main-screen fullpage-section section">
               <div class="main-screen__layout">
                 <div class="main-screen__background-layer">
@@ -288,11 +288,11 @@
                       </div>
                       <nav class="footer__menu">
                         <ul class="footer__menu-list">
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Головна</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Про набір</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Новини</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Доставка</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Контакти</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="false" data-to="main-screen" data-position="main">Головна</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="about-set" data-position="main">Про набір</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="news" data-position="main">Новини</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="delivery" data-position="main">Доставка</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="false" data-to="footer" data-position="main">Контакти</a></li>
                         </ul>
                       </nav>
                       <div class="footer__contacts"><a class="footer__phone footer-contact-link" href="tel:+380679312635"><i class="ico">
@@ -307,7 +307,7 @@
                       <div class="footer__oferta"><a class="footer__oferta-link transparent-btn with-underline" href="#">Договір оферти </a></div>
                       <p class="footer__copyright">Copyright Djero 2021. Всі права захищені.</p>
                       <div class="footer__arrow-up">
-                        <div class="footer__arrow-up-link" href="#"><i class="ico">
+                        <div class="footer__arrow-up-link menu-link" href="#" data-is-popup="false" data-to="main-screen"><i class="ico">
                             <svg>
                               <use xlink:href="img/sprites/svg/symbol/sprite.svg#arrow"></use>
                             </svg></i></div>
@@ -386,14 +386,17 @@
         <div class="popup menu-popup mfp-hide zoom-anim-dialog" id="menu-popup">
           <div class="close-popup close-popup-btn close-popup_menu"><span></span><span></span></div>
           <div class="popup__layout menu-popup__layout">
+            <div class="menu-popup__background-layer">
+              <div class="menu-popup__background"><img class="menu-popup__background-img" src="img/cookies-pack.png"><img class="menu-popup__background-img-2" src="img/cookies-pack-2.png"><img class="menu-popup__background-img-3" src="img/cookie.png"><img class="menu-popup__background-img-4" src="img/cookie-2.png"><img class="menu-popup__background-img-5" src="img/cookie-3.png"></div>
+            </div>
             <div class="center">
               <div class="menu-popup__navigation-layer">
                 <nav class="menu-popup__navigation">
                   <ul class="menu-popup__list">
                     <li class="menu-popup__list-item"><a class="menu-popup__link" href="#"><i class="ico arrow-menu-ico"></i><span>Головна</span></a></li>
-                    <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link" href="#"><i class="ico arrow-menu-ico"></i><span>Про набір</span></a></li>
-                    <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link" href="#"><i class="ico arrow-menu-ico"></i><span>Новини</span></a></li>
-                    <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link" href="#"><i class="ico arrow-menu-ico"></i><span>Доставка</span></a></li>
+                    <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link menu-link" href="#" data-is-popup="false" data-to="about-set" data-position="menu"><i class="ico arrow-menu-ico"></i><span>Про набір</span></a></li>
+                    <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link menu-link" href="#" data-is-popup="false" data-to="news" data-position="menu"><i class="ico arrow-menu-ico"></i><span>Новини</span></a></li>
+                    <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link menu-link" href="#" data-is-popup="false" data-to="delivery" data-position="menu"><i class="ico arrow-menu-ico"></i><span>Доставка</span></a></li>
                     <li class="menu-popup__list-item"><i class="ico arrow-menu-ico"></i><a class="menu-popup__link" href="#contacts"><i class="ico arrow-menu-ico"></i><span>Контакти</span></a></li>
                   </ul>
                 </nav>
@@ -865,11 +868,21 @@
                         <div class="splide about-set-popup__slider" id="about-set-popup__slider">
                           <div class="splide__track about-set-popup__slider-track">
                             <ul class="splide__list about-set-popup__slider-list">
-                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-1.png" alt="Cookie Box"></li>
-                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-2.png" alt="Cookie Box"></li>
-                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-3.png" alt="Cookie Box"></li>
-                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-4.png" alt="Cookie Box"></li>
-                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-5.png" alt="Cookie Box"></li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-1.png" alt="Cookie Box">
+                                <p class="about-set-popup__slider-text">Ідеально до сніданку</p>
+                              </li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-2.png" alt="Cookie Box">
+                                <p class="about-set-popup__slider-text">Смачно з молоком або чаєм</p>
+                              </li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-3.png" alt="Cookie Box">
+                                <p class="about-set-popup__slider-text">Поживний перекус на навчанні</p>
+                              </li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-4.png" alt="Cookie Box">
+                                <p class="about-set-popup__slider-text">Завжди з тобою в подорожах</p>
+                              </li>
+                              <li class="splide__slide about-set-popup__slider-slide"><img class="about-set-popup__slider-img" data-src="img/about-set-slider-image-5.png" alt="Cookie Box">
+                                <p class="about-set-popup__slider-text">Особливо смакує на відпочинку</p>
+                              </li>
                             </ul>
                           </div>
                         </div>
@@ -879,9 +892,13 @@
                       <div class="about-set-popup__images">
                         <div class="about-set-popup__image-wrapper image-wrapper_top"><img class="about-set-popup__image" src="img/cookie-box-2.png" alt=""></div>
                         <div class="about-set-popup__image-wrapper image-wrapper_middle"><img class="about-set-popup__image" src="img/cookies.png" alt=""></div>
-                        <div class="about-set-popup__image-wrapper image-wrapper_bottom"><img class="about-set-popup__image" src="img/cookies-pack-2.png" alt="">
+                        <div class="about-set-popup__image-wrapper image-wrapper_bottom">
+                          <div class="about-set-popup__cookie-image-wrapper"><img class="about-set-popup__image" src="img/cookies-pack-2.png" alt=""></div>
                           <div class="about-set-popup__ball-image-wrapper"><img class="about-set-popup__image" src="img/ball-2.png" alt="">
-                            <div class="about-set-popup__icos"><i class="ico ico-0-3 about-set-popup__ico"></i><i class="ico eco-ico about-set-popup__ico"></i></div>
+                            <div class="about-set-popup__icos">
+                              <div class="about-set-popup__ico-wrapper"><i class="ico ico-0-3 about-set-popup__ico"></i></div>
+                              <div class="about-set-popup__ico-wrapper"><i class="ico eco-ico about-set-popup__ico"></i></div>
+                            </div>
                           </div>
                         </div>
                       </div>
@@ -1123,11 +1140,11 @@
                       </div>
                       <nav class="footer__menu">
                         <ul class="footer__menu-list">
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Головна</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Про набір</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Новини</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Доставка</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link" href="#">Контакти</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="false" data-to="main-screen" data-position="popup">Головна</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="about-set" data-position="popup">Про набір</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="news" data-position="popup">Новини</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="delivery" data-position="popup">Доставка</a></li>
+                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="footer2" data-position="popup">Контакти</a></li>
                         </ul>
                       </nav>
                       <div class="footer__contacts"><a class="footer__phone footer-contact-link" href="tel:+380679312635"><i class="ico">
@@ -1142,7 +1159,7 @@
                       <div class="footer__oferta"><a class="footer__oferta-link transparent-btn with-underline" href="#">Договір оферти </a></div>
                       <p class="footer__copyright">Copyright Djero 2021. Всі права захищені.</p>
                       <div class="footer__arrow-up">
-                        <div class="footer__arrow-up-link" href="#"><i class="ico">
+                        <div class="footer__arrow-up-link menu-link" href="#" data-is-popup="false" data-to="main-screen"><i class="ico">
                             <svg>
                               <use xlink:href="img/sprites/svg/symbol/sprite.svg#arrow"></use>
                             </svg></i></div>
@@ -1155,7 +1172,7 @@
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
         <div class="popup additional-info-popup mfp-hide zoom-anim-dialog popup_third" id="additional-info-popup"><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
-          <div class="popup__layout_secondary additional-info-popup__layout">
+          <div class="popup__layout_third additional-info-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title additional-info-popup__title">Додаткова інформація</h2>
               <div class="additional-info-popup__text-layer">
@@ -1174,43 +1191,44 @@
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
         <div class="popup about-manufacturer-popup mfp-hide zoom-anim-dialog popup_third" id="about-manufacturer-popup"><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
-          <div class="popup__layout_secondary about-manufacturer-popup__layout">
+          <div class="popup__layout_third about-manufacturer-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title about-manufacturer-popup__title">Про виробника</h2>
               <div class="about-manufacturer-popup__text-layer">
-                <p class="about-manufacturer__text popup__text">Вироблено на сучасних поточно-механізованих лініях за класичною рецептурою на підприємстві <strong>ТОВ «ФАБРИКА ПЕЧИВА №1».</strong></p>
-                <p class="about-manufacturer__text popup__text">Виробництво компанії сертифіковане за міжнародною системою менеджменту якості <strong>ISO 22000: 2005, ISO 9001: 2015, </strong>також отриманий сертифікат якості HALAL CERTIFICATE. Введена система забезпечення безпеки харчової продукції НАССР, яка дає можливість своєчасно попередити виникнення будь-яких ризиків.</p>
-                <p class="about-manufacturer__text text_bg-blue popup__text">Адреса виробничих потужностей: Вінницька обл., Козятинський р-н., с. Махнівка, <br>вул. Шкільна, 57. <strong>ДСТУ- 3781:2014</strong></p>
+                <p class="about-manufacturer-popup__text popup__text">Вироблено на сучасних поточно-механізованих лініях за класичною рецептурою на підприємстві <strong>ТОВ «ФАБРИКА ПЕЧИВА №1».</strong></p>
+                <p class="about-manufacturer-popup__text popup__text">Виробництво компанії сертифіковане за міжнародною системою менеджменту якості <strong>ISO 22000: 2005, ISO 9001: 2015, </strong>також отриманий сертифікат якості HALAL CERTIFICATE. Введена система забезпечення безпеки харчової продукції НАССР, яка дає можливість своєчасно попередити виникнення будь-яких ризиків.</p>
+                <p class="about-manufacturer-popup__text text_bg-blue popup__text">Адреса виробничих потужностей: Вінницька обл., Козятинський р-н., с. Махнівка, <br>вул. Шкільна, 57. <strong>ДСТУ- 3781:2014</strong></p>
               </div>
             </div>
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
         <div class="popup about-toy-popup mfp-hide zoom-anim-dialog popup_third" id="about-toy-popup"><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
-          <div class="popup__layout_secondary about-toy-popup__layout">
+          <div class="popup__layout_third about-toy-popup__layout">
             <div class="center"> 
-              <h2 class="popup__title h2-title about-toy-popup__title">Зателефонувати мені</h2>
-              <div class="about-toy-popup__form-layer">
-                <form class="about-toy-popup__form" id="about-toy-popup__form" method="POST">
-                  <fieldset class="fieldset">
-                    <div class="field-row about-toy-popup__field-row">
-                      <div class="field-wrapper about-toy-popup__field-wrapper">
-                        <input class="field" type="tel" placeholder=" " id="about-toy-tel-input">
-                        <label class="text-field-label" for="about-toy-tel-input">Ваш номер телефону</label>
-                      </div>
-                    </div>
-                    <div class="field-row about-toy-popup__field-row">
-                      <button class="popup__btn about-toy-popup__btn btn red-orange big" type="submit"><span>Зателефонуйте</span></button>
-                    </div>
-                  </fieldset>
-                </form>
+              <h2 class="popup__title h2-title about-toy-popup__title">Про іграшку</h2>
+              <p class="popup__subtitle about-toy-popup__subtitle">Всередині коробки - іграшка-м'ячик</p>
+              <div class="about-toy-popup__ball-layer"><img class="about-toy-popup__ball-img" src="img/ball-3.png" alt="">
+                <p class="about-toy-popup__text text_bg-red popup__text"><span class="about-toy-popup__ico-wrapper"><i class="ico exclamation-mark-ico about-toy-popup__ico"></i></span><span class="about-toy-popup__text-wrapper">Під час використання рекомендується<br><strong>Нагляд дорослої особи</strong></span></p>
+              </div>
+              <div class="about-toy-popup__text-layer">
+                <p class="about-toy-popup__text popup__text"><strong>Серійний номер ................ </strong><strong>Партія ................... </strong>вказана на упаковці набору.</p>
+                <p class="about-toy-popup__text popup__text"><strong>Матеріал:</strong>100% етиленвінілацетат. Дата виробництва: вказана на упаковці набору. </p>
+                <p class="about-toy-popup__text popup__text"><strong>Виробник ................. </strong>адреса виробника ............. Вироблено в Китаї.</p>
+                <p class="about-toy-popup__text popup__text">Імпортер: ФОП Пасічник С.С. Адреса: Вінницька обл., Козятинський р-н., с. Махнівка, вул. Київська, 53 кв.4 тел.+380679312635.</p>
+              </div>
+              <div class="about-toy-popup__info-layer">
+                <p class="about-toy-popup__text text_bg-red popup__text"><span class="about-toy-popup__ico-wrapper"><i class="ico ico-0-3-black about-toy-popup__ico"></i></span><strong>
+                     Увага! </strong>Не призначено для дітей віком до 3 років.</p>
+                <p class="about-toy-popup__text text_bg-blue popup__text"><span class="about-toy-popup__ico-wrapper"><i class="ico eco-ico-black about-toy-popup__ico"></i></span>Відповідає нормам Технічного регламенту безпечності іграшок</p>
               </div>
             </div>
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
         <div class="popup about-cookie-popup mfp-hide zoom-anim-dialog popup_third" id="about-cookie-popup"><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
-          <div class="popup__layout_secondary about-cookie-popup__layout">
+          <div class="popup__layout_third about-cookie-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title about-cookie-popup__title">Про печиво</h2>
+              <p class="popup__subtitle about-cookie-popup__subtitle">Печиво-сендвіч із вмістом какао та ароматом ванілі</p>
               <div class="about-cookie-popup__text-layer">
                 <p class="about-cookie__text popup__text">
                   Борошно пшеничне вищого сорту, цукор, жир кондитерський (жири та олії рослинні рафіновані дезодоровані:
@@ -1218,92 +1236,92 @@
                 </p>
                 <div class="about-cookie__consist-tables-wrapper">
                   <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Склад</th>
-                        <th scope="col">Вага</th>
+                    <thead class="table-head">
+                      <tr class="table-row">
+                        <th class="table-head-cell" scope="col">Склад</th>
+                        <th class="table-head-cell" scope="col">Вага</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>Білки</td>
-                        <td>5,7 г.</td>
+                    <tbody class="table-body">
+                      <tr class="table-row">
+                        <td class="table-cell">Білки</td>
+                        <td class="table-cell">5,7 г.</td>
                       </tr>
-                      <tr>
-                        <td>Жири</td>
-                        <td>21,6 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">Жири</td>
+                        <td class="table-cell">21,6 г.</td>
                       </tr>
-                      <tr>
-                        <td>з них насичені жирні кислоти</td>
-                        <td>4,1 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">з них насичені жирні кислоти</td>
+                        <td class="table-cell">4,1 г.</td>
                       </tr>
-                      <tr>
-                        <td>Вуглеводи</td>
-                        <td>63,5 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">Вуглеводи</td>
+                        <td class="table-cell">63,5 г.</td>
                       </tr>
-                      <tr>
-                        <td>(із них цукрів)</td>
-                        <td>30,8 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">(із них цукрів)</td>
+                        <td class="table-cell">30,8 г.</td>
                       </tr>
-                      <tr>
-                        <td>Крохмаль і полісахариди</td>
-                        <td>32,7 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">Крохмаль і полісахариди</td>
+                        <td class="table-cell">32,7 г.</td>
                       </tr>
-                      <tr>
-                        <td>Сіль</td>
-                        <td>0,4 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">Сіль</td>
+                        <td class="table-cell">0,4 г.</td>
                       </tr>
-                      <tr>
-                        <td>Харчові волокна</td>
-                        <td>2,4 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">Харчові волокна</td>
+                        <td class="table-cell">2,4 г.</td>
                       </tr>
-                      <tr>
-                        <td>Органічні кислоти</td>
-                        <td>0,1 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">Органічні кислоти</td>
+                        <td class="table-cell">0,1 г.</td>
                       </tr>
-                      <tr>
-                        <td>Калорійність (ккал)</td>
-                        <td>478 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">Калорійність (ккал)</td>
+                        <td class="table-cell">478 г.</td>
                       </tr>
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <td>Енергетична цінність (кДж)</td>
-                        <td>2000 г.</td>
+                    <tfoot class="table-footer">
+                      <tr class="table-row">
+                        <td class="table-cell">Енергетична цінність (кДж)</td>
+                        <td class="table-cell">2000 г.</td>
                       </tr>
                     </tfoot>
                   </table>
                   <table class="table">
-                    <thead>
-                      <tr>
-                        <th scope="col">Склад</th>
-                        <th scope="col">Вага</th>
+                    <thead class="table-head">
+                      <tr class="table-row">
+                        <th class="table-head-cell" scope="col">Склад</th>
+                        <th class="table-head-cell" scope="col">Вага</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      <tr>
-                        <td>Білки</td>
-                        <td>0,9 г.</td>
+                    <tbody class="table-body">
+                      <tr class="table-row">
+                        <td class="table-cell">Білки</td>
+                        <td class="table-cell">0,9 г.</td>
                       </tr>
-                      <tr>
-                        <td>Жири</td>
-                        <td>2,7 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">Жири</td>
+                        <td class="table-cell">2,7 г.</td>
                       </tr>
-                      <tr>
-                        <td>Вуглеводи</td>
-                        <td>8,4 г.</td>
+                      <tr class="table-row">
+                        <td class="table-cell">Вуглеводи</td>
+                        <td class="table-cell">8,4 г.</td>
                       </tr>
                     </tbody>
-                    <tfoot>
-                      <tr>
-                        <td>Калорійність (кДж)</td>
-                        <td>62,8 г.</td>
+                    <tfoot class="table-footer">
+                      <tr class="table-row">
+                        <td class="table-cell">Калорійність (кДж)</td>
+                        <td class="table-cell">62,8 г.</td>
                       </tr>
                     </tfoot>
                   </table>
                 </div>
-                <p class="about-cookie__text text_bg-blue popup__text">Містить продукти переробки пшениці, молока, сої. Може вміщувати в незначній кількості ядра арахісу смажені подрібнені.</p>
-                <p class="about-cookie__text text_bg-blue popup__text">Термін придатності - 1 рік із дати вирробництва, вказаної на упаковці.</p>
+                <p class="about-cookie__text popup__text">Містить продукти переробки пшениці, молока, сої. Може вміщувати в незначній кількості ядра арахісу смажені подрібнені.</p>
+                <p class="about-cookie__text popup__text"><strong>Термін придатності - 1 рік </strong>із дати вирробництва, вказаної на упаковці.</p>
               </div>
             </div>
           </div>
@@ -1434,8 +1452,8 @@
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1621642507609" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1621642507609" as="script">
-    <script src="js/main.min.js?v=1621642507609" async></script>
+    <script src="js/libs.min.js?v=1621816484185" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1621816484185" as="script">
+    <script src="js/main.min.js?v=1621816484185" async></script>
   </body>
 </html>

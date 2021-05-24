@@ -14,23 +14,7 @@ footer.footer.section
 								i.ico.footer__payments-ico.visa-ico
 							li.footer__payments-list-item
 								i.ico.footer__payments-ico.mastercard-ico
-					nav.footer__menu
-						ul.footer__menu-list
-							li.footer__menu-list-item 
-								a.footer__menu-link(href="#")
-									|Головна
-							li.footer__menu-list-item 
-								a.footer__menu-link(href="#")
-									|Про набір
-							li.footer__menu-list-item 
-								a.footer__menu-link(href="#")
-									|Новини
-							li.footer__menu-list-item 
-								a.footer__menu-link(href="#")
-									|Доставка
-							li.footer__menu-list-item 
-								a.footer__menu-link(href="#")
-									|Контакти
+					+menu-footer('')
 					.footer__contacts
 						a.footer__phone.footer-contact-link(href="tel:+380679312635")
 							i.ico
@@ -49,6 +33,6 @@ footer.footer.section
 					p.footer__copyright
 						|Copyright Djero 2021. Всі права захищені.
 					.footer__arrow-up
-						.footer__arrow-up-link(href="#")
+						.footer__arrow-up-link.menu-link(href="#" data-is-popup="false" data-to="main-screen")
 							i.ico
 								+svg2('arrow')

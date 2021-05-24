@@ -24,8 +24,6 @@ const InitFullPagePopup = () => {
         setTimeout(function () {
             $.fn.fullpage.reBuild()
         }, 50)
-
-
     }
 
 }

@@ -1,0 +1,37 @@
+mixin menu-footer(position)
+		if position === 'popup'
+			nav.footer__menu
+				ul.footer__menu-list
+					li.footer__menu-list-item 
+						a.footer__menu-link.menu-link(href="#" data-is-popup="false" data-to="main-screen" data-position="popup")
+							|Головна
+					li.footer__menu-list-item 
+						a.footer__menu-link.menu-link(href="#" data-is-popup="true" data-to="about-set" data-position="popup")
+							|Про набір
+					li.footer__menu-list-item 
+						a.footer__menu-link.menu-link(href="#" data-is-popup="true" data-to="news" data-position="popup")
+							|Новини
+					li.footer__menu-list-item 
+						a.footer__menu-link.menu-link(href="#" data-is-popup="true" data-to="delivery" data-position="popup")
+							|Доставка
+					li.footer__menu-list-item 
+						a.footer__menu-link.menu-link(href="#" data-is-popup="true" data-to="footer2" data-position="popup")
+							|Контакти
+		else
+			nav.footer__menu
+				ul.footer__menu-list
+					li.footer__menu-list-item 
+						a.footer__menu-link.menu-link(href="#" data-is-popup="false" data-to="main-screen" data-position="main")
+							|Головна
+					li.footer__menu-list-item 
+						a.footer__menu-link.menu-link(href="#" data-is-popup="true" data-to="about-set" data-position="main")
+							|Про набір
+					li.footer__menu-list-item 
+						a.footer__menu-link.menu-link(href="#" data-is-popup="true" data-to="news" data-position="main")
+							|Новини
+					li.footer__menu-list-item 
+						a.footer__menu-link.menu-link(href="#" data-is-popup="true" data-to="delivery" data-position="main")
+							|Доставка
+					li.footer__menu-list-item 
+						a.footer__menu-link.menu-link(href="#" data-is-popup="false" data-to="footer" data-position="main")
+							|Контакти

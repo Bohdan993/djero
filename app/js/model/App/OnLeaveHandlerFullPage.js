@@ -19,6 +19,8 @@ export default function onLeave(data) {
         animation
     } = data
 
+
+
     setTimeout(function () {
         $.fn.fullpage.reBuild()
     }, 50)

@@ -109,7 +109,6 @@
 	}
 }
 
-
 .popup-open_menu {
 	.mfp-wrap {
 		position: relative;
@@ -121,7 +120,7 @@
 			position: absolute;
 			right: 0;
 			top: 0;
-			width: 1020/1600 * 100%;
+			width: 1036/1600 * 100%;
 			height: 100%;
 			background: url("../img/bg-pattern-menu.png") no-repeat center/cover,
 				@orange;
@@ -132,7 +131,7 @@
 			position: absolute;
 			left: 0;
 			top: 0;
-			width: (1600 - 1020)/1600 * 100%;
+			width: (1600 - 1036)/1600 * 100%;
 			height: 100%;
 			background: url("../img/bg-park.png") no-repeat left/cover;
 		}
@@ -229,6 +228,17 @@
 	max-width: 530px;
 }
 
+.popup_third,
+.popup_fifth {
+	max-width: 1012px;
+}
+
+.popup__layout {
+	.popup__title {
+		color: @font-color;
+	}
+}
+
 .popup__layout_secondary {
 	background-color: @white;
 	color: @dark-blue;
@@ -261,16 +271,6 @@
 
 	}
 
-	.popup__title,
-	.popup__subtitle {
-		color: @dark-blue;
-		text-align: center;
-	}
-
-	.popup__subtitle {
-		padding-bottom: 25px;
-	}
-
 	.popup__btn {
 		max-width: unset;
 	}
@@ -278,20 +278,35 @@
 	.field-row {
 		padding-bottom: 15px;
 	}
+
 }
 
 
-.popup_third,
-.popup_fifth {
-	max-width: 1012px;
+.popup__layout_third {
+	background-color: @white;
+	color: @dark-blue;
+	border-radius: 14px;
+	padding: 35px 10px;
+	padding-bottom: 50px;
 }
 
+
+.popup__title,
+.popup__subtitle {
+	color: @dark-blue;
+	text-align: center;
+}
+
+.popup__subtitle {
+	padding-bottom: 25px;
+}
 
 .popup__cards {
 	width: 100%;
 	padding-bottom: 20px;
 	margin: 0 auto;
 }
+
 
 .popup__card {
 	padding: 20px 45px 20px 20px;
@@ -482,6 +497,24 @@
 	line-height: 28/18;
 	color: @dark-blue;
 	font-weight: 300;
+
+	strong {
+		font-weight: 700;
+	}
+
+	&.text_bg-blue {
+		background-color: @light-blue-2;
+		border: 1px solid @light-blue-3;
+		border-radius: 4px;
+		padding: 11px 23px;
+	}
+
+	&.text_bg-red {
+		background-color: @light-pink;
+		border: 1px solid @light-blue-3;
+		border-radius: 4px;
+		padding: 11px 23px;
+	}
 }
 
 .popup__text_white:extend(.popup__text) {
@@ -496,6 +529,10 @@
 	font-size: 26/16 * 1rem;
 	letter-spacing: 1px;
 }
+
+
+
+
 
 /**
  * Fade-zoom animation for first dialog

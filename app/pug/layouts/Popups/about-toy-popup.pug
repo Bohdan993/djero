@@ -3,19 +3,47 @@
 	a.close-popup.close-popup_secondary.open-popup-link-second-branch(href="#second-branch-popup")
 		span
 		span
-	.popup__layout_secondary.about-toy-popup__layout
+	.popup__layout_third.about-toy-popup__layout
 		.center 
 			h2.popup__title.h2-title.about-toy-popup__title
-				|Зателефонувати мені
-			.about-toy-popup__form-layer
-				form#about-toy-popup__form.about-toy-popup__form(method="POST")
-					fieldset.fieldset
-						.field-row.about-toy-popup__field-row
-							.field-wrapper.about-toy-popup__field-wrapper
-								input.field(type="tel" placeholder=" " id="about-toy-tel-input")
-								label.text-field-label(for="about-toy-tel-input")
-									|Ваш номер телефону
-						.field-row.about-toy-popup__field-row
-							button.popup__btn.about-toy-popup__btn.btn.red-orange.big(type="submit")
-								span
-									|Зателефонуйте
+				|Про іграшку
+			p.popup__subtitle.about-toy-popup__subtitle
+				|Всередині коробки - іграшка-м'ячик
+			.about-toy-popup__ball-layer
+				img.about-toy-popup__ball-img(src="img/ball-3.png" alt="")
+				p.about-toy-popup__text.text_bg-red.popup__text
+					span.about-toy-popup__ico-wrapper
+						i.ico.exclamation-mark-ico.about-toy-popup__ico
+					span.about-toy-popup__text-wrapper
+						|Під час використання рекомендується
+						br
+						strong
+							|Нагляд дорослої особи
+			.about-toy-popup__text-layer
+				p.about-toy-popup__text.popup__text
+					strong
+						|Серійний номер ................ 
+					strong
+						|Партія ................... 
+					|вказана на упаковці набору.
+				p.about-toy-popup__text.popup__text
+					strong
+						|Матеріал:
+					|100% етиленвінілацетат. Дата виробництва: вказана на упаковці набору. 
+				p.about-toy-popup__text.popup__text
+					strong
+						|Виробник ................. 
+					|адреса виробника ............. Вироблено в Китаї.
+				p.about-toy-popup__text.popup__text
+					|Імпортер: ФОП Пасічник С.С. Адреса: Вінницька обл., Козятинський р-н., с. Махнівка, вул. Київська, 53 кв.4 тел.+380679312635.
+			.about-toy-popup__info-layer
+				p.about-toy-popup__text.text_bg-red.popup__text
+					span.about-toy-popup__ico-wrapper
+						i.ico.ico-0-3-black.about-toy-popup__ico
+					strong 
+						|Увага! 
+					|Не призначено для дітей віком до 3 років.
+				p.about-toy-popup__text.text_bg-blue.popup__text
+					span.about-toy-popup__ico-wrapper
+						i.ico.eco-ico-black.about-toy-popup__ico
+					|Відповідає нормам Технічного регламенту безпечності іграшок

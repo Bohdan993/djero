@@ -1,3 +1,118 @@
 .about-toy-popup__layout {
+    .about-toy-popup__subtitle {
+        font-size: 20/16 * 1rem;
+        letter-spacing: 1px;
+        line-height: 28/20;
+        font-weight: 500;
+    }
+
+    .about-toy-popup__info-layer {
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
+
+        .about-toy-popup__text {
+            flex-basis: 50%;
+
+            &:first-child {
+                margin-right: 10px;
+            }
+
+            &:last-child {
+                margin-left: 10px;
+            }
+        }
+    }
+
+    .about-toy-popup__ico-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 20px;
+    }
+
+    .about-toy-popup__text {
+        &.text_bg-red,
+        &.text_bg-blue {
+            border-radius: 14px;
+            text-align: center;
+            font-size: 18/16 * 1rem;
+            letter-spacing: 0px;
+            line-height: 28/18;
+            text-align: center;
+            font-weight: 500;
+            padding-top: 30px;
+            padding-bottom: 40px;
+            padding-left: 55px;
+            padding-right: 55px;
+
+            strong {
+                text-transform: uppercase;
+                color: @tomato;
+            }
+        }
+    }
+
+    .about-toy-popup__text-layer {
+        padding-bottom: 50px;
+        .fPa(0%, 25%, 0px, 25px, 768px, 992px);
+
+        .about-toy-popup__text {
+            &:not(:nth-last-child(2)) {
+                padding-bottom: 25px;
+            }
+        }
+    }
+
+
+    .about-toy-popup__ball-layer {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .fPa(0%, 55%, 0px, 55px, 768px, 992px);
+        padding-left: 35px;
+
+        .about-toy-popup__text {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 15px 55px;
+            flex-grow: 1;
+            max-width: 635px;
+        }
+
+        .about-toy-popup__text-wrapper {
+            text-align: left;
+            line-height: 25/18;
+        }
+
+        .about-toy-popup__ico-wrapper {
+            position: relative;
+            padding-bottom: 0;
+            margin-right: 45px;
+
+            & > * {
+                position: relative;
+                z-index: 2;
+            }
+
+            &:before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                background-color: @tomato;
+                z-index: 1;
+            }
+        }
+    }
+
+    .about-toy-popup__ball-img {
+        margin-right: 40px;
+    }
     
 }

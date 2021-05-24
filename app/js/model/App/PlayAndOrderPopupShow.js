@@ -7,13 +7,13 @@ import settings from './MagnificPopupSettings';
 
 const PlayAndOrderPopupShow = () => {
     
-    const pertialSettings = {
+    const partialSettings = {
         items: {
             src: '#play-and-order-popup'
         }
     }
 
-    const fullSettings = Object.assign({}, settings, pertialSettings)
+    const fullSettings = Object.assign({}, settings, partialSettings)
 
     $.magnificPopup.open(fullSettings, 0)
 

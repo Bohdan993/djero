@@ -4,6 +4,13 @@
 		span
 		span
 	.popup__layout.menu-popup__layout
+		.menu-popup__background-layer
+			.menu-popup__background
+				img.menu-popup__background-img(src="img/cookies-pack.png")
+				img.menu-popup__background-img-2(src="img/cookies-pack-2.png")
+				img.menu-popup__background-img-3(src="img/cookie.png")
+				img.menu-popup__background-img-4(src="img/cookie-2.png")
+				img.menu-popup__background-img-5(src="img/cookie-3.png")
 		.center
 			.menu-popup__navigation-layer
 				nav.menu-popup__navigation
@@ -16,19 +23,19 @@
 									|Головна
 						li.menu-popup__list-item
 							i.ico.arrow-menu-ico
-							a.menu-popup__link(href="#")
+							a.menu-popup__link.menu-link(href="#" data-is-popup="false" data-to="about-set" data-position="menu")
 								i.ico.arrow-menu-ico
 								span
 									|Про набір
 						li.menu-popup__list-item
 							i.ico.arrow-menu-ico
-							a.menu-popup__link(href="#")
+							a.menu-popup__link.menu-link(href="#" data-is-popup="false" data-to="news" data-position="menu")
 								i.ico.arrow-menu-ico
 								span
 									|Новини
 						li.menu-popup__list-item
 							i.ico.arrow-menu-ico
-							a.menu-popup__link(href="#")
+							a.menu-popup__link.menu-link(href="#" data-is-popup="false" data-to="delivery" data-position="menu")
 								i.ico.arrow-menu-ico
 								span
 									|Доставка

@@ -11,7 +11,7 @@ import onLeave from './OnLeaveHandlerFullPage'
 
 
 const InitFullPage = (data) => {
-  
+
     $('.fullpage').fullpage({
         normalScrollElements: '.' + SIDEBAR__LAYOUT,
         scrollOverflow: true,
@@ -25,13 +25,15 @@ const InitFullPage = (data) => {
             disableMouse: true,
             scrollbars: 'custom'
         },
+        afterReBuild() {
+        },
         onLeave: onLeave(data)
     })
 
 
     // function afterLoad(origin, destination, direction) {
 
-        
+
 
     // }
 
