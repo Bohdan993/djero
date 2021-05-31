@@ -7,6 +7,7 @@ const InitFullPagePopup = () => {
 
     $('.fullpage-popup').fullpage({
         scrollOverflow: true,
+        scrollOverflowReset: true,
         lazyLoading: true,
         scrollingSpeed: 350,
         anchors: ['about-set', 'news', 'delivery', 'footer-2'],
@@ -17,6 +18,7 @@ const InitFullPagePopup = () => {
             disableMouse: true,
             scrollbars: 'custom'
         },
+        bigSectionsDestination: 'top',
         onLeave,
     })
 

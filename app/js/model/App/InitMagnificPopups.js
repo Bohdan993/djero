@@ -16,12 +16,16 @@ import {
 } from "./Helpers"
 
 import InitFullPage from './InitFullPage'
-import InitFullPagePopup from './InitFullPagePopup'
+
+import { SetSecondBranchPopupSettings } from "./InitMagnificPopupSecondBranch"
 
 import settings from './MagnificPopupSettings'
 
 
+
 const InitMagnificPopups = (body, data) => {
+
+    const {callbacks: {change}} = SetSecondBranchPopupSettings(body, data)
 
     const settingsSecondary = {
         ...settings,
@@ -38,40 +42,11 @@ const InitMagnificPopups = (body, data) => {
         }
     }
 
-
     const settingsMenu = {
         ...settings,
         ...{
             callbacks: {
-                change() {
-                    removeClass(this.wrap[0], 'mfp-ready')
-                    removeClass(this.bgOverlay[0], 'mfp-ready')
-
-                    setTimeout(() => {
-                        addClass(this.wrap[0], 'mfp-ready')
-                        addClass(this.bgOverlay[0], 'mfp-ready')
-                    }, 50)
-
-
-
-                    if (this.content[0].classList.contains('second-branch-popup')) {
-                        addClass(body, 'popup-open', 'popup-open_second-branch')
-                        removeClass(body, 'popup-open_menu')
-
-                        $.fn.fullpage.destroy('all')
-                        setTimeout(() => {
-                            InitFullPagePopup()
-                        }, 50);
-
-
-
-                    } else {
-                        removeClass(body, 'popup-open_second-branch')
-
-                    }
-
-
-                },
+                change,
                 open() {
                     addClass(body, 'popup-open', 'popup-open_menu')
                 },
@@ -82,7 +57,6 @@ const InitMagnificPopups = (body, data) => {
 
                     $.fn.fullpage.destroy('all')
                     InitFullPage(data)
-
 
                 }
             }

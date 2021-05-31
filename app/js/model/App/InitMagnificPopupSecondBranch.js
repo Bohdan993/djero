@@ -33,7 +33,7 @@ const SetSecondBranchPopupSettings = (body, data) => {
                     instanceAboutSetPopup && instanceAboutSetPopup.destroy()
                     instanceNewPopup && instanceNewPopup.destroy()
 
-                    // console.log(this.currItem)
+
 
                     setTimeout(() => {
                         addClass(this.wrap[0], 'mfp-ready')
@@ -86,8 +86,13 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('second-branch-popup')) {
+                        // console.log(this.currItem)
                         addClass(body, 'popup-open_second-branch')
-                        removeClass(body, 'popup-open_third', 'popup-open_fourth')
+                        removeClass(body, 'popup-open_third', 'popup-open_fourth', 'popup-open_menu')
+                        $.fn.fullpage.destroy('all')
+                        setTimeout(function () {
+                            InitFullPagePopup()
+                        }, 50)
 
 
                     } else {
@@ -96,9 +101,11 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('menu-popup')) {
-                        addClass(body, 'popup-open_menu')
+                        console.log('i am here')
+                        $.fn.fullpage.destroy('all')
+                        addClass(body, 'popup-open_menu', 'fixed')
                     } else {
-                        removeClass(body, 'popup-open_menu')
+                        removeClass(body, 'popup-open_menu', 'fixed')
                     }
 
 
@@ -110,7 +117,6 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
                 },
                 open() {
-                    console.log('df')
                     addClass(body, 'popup-open', 'popup-open_second-branch')
 
                     $.fn.fullpage.destroy('all')
@@ -121,13 +127,12 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
                     removeClass(body, 'popup-open', 'popup-open_second-branch', 'popup-open_secondary')
                     $.fn.fullpage.destroy('all')
-
-                    setTimeout(() => {
+                    $('html, body').animate({
+                        scrollTop: 0
+                    }, 2, function () {
                         InitFullPage(data)
-                    }, 50000);
-                    
-                    
-                    
+                    })
+
 
                     instanceSecondBranchPopup && instanceSecondBranchPopup.destroy()
                     instanceAboutSetPopup && instanceAboutSetPopup.destroy()

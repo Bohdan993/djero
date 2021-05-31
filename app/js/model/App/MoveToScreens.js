@@ -5,10 +5,12 @@ import settings from './MagnificPopupSettings'
 import {
     SetSecondBranchPopupSettings
 } from './InitMagnificPopupSecondBranch'
+import { menuClickEvent } from './CustomEvents'
 
 
 const MoveToScreens = (links, body, data) => {
 
+    const timeout = 500
 
     function clickHandler(e) {
 
@@ -37,13 +39,15 @@ const MoveToScreens = (links, body, data) => {
 
             setTimeout(function () {
                 $.fn.fullpage.moveTo(anchor)
-            }, 500)
+            }, timeout)
 
             return
         }
 
 
         if (position === 'main') {
+
+            document.dispatchEvent(menuClickEvent)
 
             if (!isPopupScreen) {
                 $.fn.fullpage.moveTo(anchor)
@@ -54,7 +58,7 @@ const MoveToScreens = (links, body, data) => {
 
             setTimeout(function () {
                 $.fn.fullpage.moveTo(anchor)
-            }, 500)
+            }, timeout)
 
 
             return
@@ -62,18 +66,21 @@ const MoveToScreens = (links, body, data) => {
 
         if (position === 'menu') {
 
-            if (isPopupScreen) {
-                $.fn.fullpage.moveTo(anchor)
+            if (!isPopupScreen) {
+                $.magnificPopup.instance.close()
+                setTimeout(function () {
+                    $.fn.fullpage.moveTo(anchor)
+                }, timeout)
                 return
             }
 
 
             $.magnificPopup.open(fullSettings)
-            
+
 
             setTimeout(function () {
                 $.fn.fullpage.moveTo(anchor)
-            }, 500)
+            }, timeout)
 
             return
         }
