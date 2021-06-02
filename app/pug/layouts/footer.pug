@@ -1,38 +1,39 @@
 footer.footer.section
-	include contacts
-	.footer__layout
-		.center
-			.footer__logo-layer
-				img.footer__logo.logo(src="img/logo.png", alt="Logo")
-			.footer__info-layer
-				.footer__info-main
-					.footer__payments
-						p.footer__payments-text
-							|Платіжні системи
-						ul.footer__payments-list
-							li.footer__payments-list-item
-								i.ico.footer__payments-ico.visa-ico
-							li.footer__payments-list-item
-								i.ico.footer__payments-ico.mastercard-ico
-					+menu-footer('')
-					.footer__contacts
-						a.footer__phone.footer-contact-link(href="tel:+380679312635")
-							i.ico
-								+svg2('call')
-							|+ 38 (067) 931 26 35
-						a.footer__call-me.open-popup-link_secondary.transparent-btn.with-underline(href='#order-call-popup')
-							|Зателефонувати мені 
-						a.footer__email.footer-contact-link(href="mailto:office@djero.com.ua")
-							i.ico
-								+svg2('envelope')
-							|office@djero.com.ua
-				.footer__info-secondary
-					.footer__oferta
-						a.footer__oferta-link.transparent-btn.with-underline(href="#")
-							|Договір оферти 
-					p.footer__copyright
-						|Copyright Djero 2021. Всі права захищені.
-					.footer__arrow-up
-						.footer__arrow-up-link.menu-link(href="#" data-position="main" data-is-popup="false" data-to="main-screen")
-							i.ico
-								+svg2('arrow')
+	.is-screen
+		include contacts
+		.footer__layout
+			.center
+				.footer__logo-layer
+					img.footer__logo.logo(src="img/logo.png", alt="Logo")
+				.footer__info-layer
+					.footer__info-main
+						.footer__payments
+							p.footer__payments-text
+								|Платіжні системи
+							ul.footer__payments-list
+								li.footer__payments-list-item
+									i.ico.footer__payments-ico.visa-ico
+								li.footer__payments-list-item
+									i.ico.footer__payments-ico.mastercard-ico
+						+menu-footer('')
+						.footer__contacts
+							a.footer__phone.footer-contact-link(href="tel:+380679312635")
+								i.ico
+									+svg2('call')
+								|+ 38 (067) 931 26 35
+							a.footer__call-me.open-popup-link_secondary.transparent-btn.with-underline(href='#order-call-popup')
+								|Зателефонувати мені 
+							a.footer__email.footer-contact-link(href="mailto:office@djero.com.ua")
+								i.ico
+									+svg2('envelope')
+								|office@djero.com.ua
+					.footer__info-secondary
+						.footer__oferta
+							a.footer__oferta-link.transparent-btn.with-underline(href="#")
+								|Договір оферти 
+						p.footer__copyright
+							|Copyright Djero 2021. Всі права захищені.
+						.footer__arrow-up
+							.footer__arrow-up-link.menu-link(href="#" data-position="main" data-is-popup="false" data-to="main-screen")
+								i.ico
+									+svg2('arrow')

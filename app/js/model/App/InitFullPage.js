@@ -39,6 +39,8 @@ const InitFullPage = (data) => {
         onLeave: onLeave(data)
     })
 
+     
+
 
     // function afterLoad(origin, destination, direction) {
 
@@ -50,5 +52,7 @@ const InitFullPage = (data) => {
 
 
 }
+
+
 
 export default InitFullPage

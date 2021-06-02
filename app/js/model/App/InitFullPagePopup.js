@@ -2,6 +2,13 @@ import {
     $
 } from '../../../libs/libs'
 
+import {
+    menuclickeventHandler
+} from "./Helpers"
+
+
+const callBacksArr = []
+
 
 const InitFullPagePopup = () => {
 
@@ -20,12 +27,28 @@ const InitFullPagePopup = () => {
         },
         bigSectionsDestination: 'top',
         onLeave,
+        afterLoad
     })
 
+
+    function afterLoad(origin, destination, direction) {
+        const callback = menuclickeventHandler.bind(this)
+
+        if (callBacksArr.length) {
+            document.removeEventListener('menuclickevent', callBacksArr[0])
+            const elem = callBacksArr.shift()
+        }
+
+        callBacksArr.push(callback)
+        document.addEventListener('menuclickevent', callback)
+    }
+
     function onLeave(origin, destination, direction) {
+        console.log(this)
         setTimeout(function () {
             $.fn.fullpage.reBuild()
         }, 50)
+
     }
 
 }

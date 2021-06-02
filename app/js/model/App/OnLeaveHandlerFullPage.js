@@ -6,7 +6,8 @@ import {
 } from '../../../libs/libs'
 import {
     addClass,
-    removeClass
+    removeClass,
+    menuclickeventHandler
 } from "./Helpers"
 import {
     changeClassesReverse
@@ -14,17 +15,9 @@ import {
 
 
 
-function myeventHandler(e) {
-    const loadedSection = $(this)
-    if (loadedSection.hasClass('fp-auto-height')) {
-        const IScroll = loadedSection.find('.fp-scrollable').data('iscrollInstance')
-        IScroll.scrollTo(0, 0, 0)
-    }
-}
+
 
 const callBacksArr = []
-
-
 
 
 export default function onLeave(data) {
@@ -39,7 +32,7 @@ export default function onLeave(data) {
 
     return function (origin, destination, direction) {
 
-        const callback = myeventHandler.bind(this)
+        const callback = menuclickeventHandler.bind(this)
 
         if(callBacksArr.length) {
             document.removeEventListener('menuclickevent', callBacksArr[0])

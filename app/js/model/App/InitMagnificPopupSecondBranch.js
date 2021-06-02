@@ -28,6 +28,7 @@ const SetSecondBranchPopupSettings = (body, data) => {
         ...{
             callbacks: {
                 change() {
+
                     removeClass(this.wrap[0], 'mfp-ready')
                     removeClass(this.bgOverlay[0], 'mfp-ready')
                     instanceAboutSetPopup && instanceAboutSetPopup.destroy()
@@ -42,6 +43,7 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('popup_secondary')) {
+
                         addClass(body, 'popup-open_secondary')
                         removeClass(body, 'popup-open_second-branch')
                         $.fn.fullpage.destroy('all')
@@ -86,10 +88,11 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('second-branch-popup')) {
-                        // console.log(this.currItem)
+
                         addClass(body, 'popup-open_second-branch')
                         removeClass(body, 'popup-open_third', 'popup-open_fourth', 'popup-open_menu')
                         $.fn.fullpage.destroy('all')
+                        console.log('dfr')
                         setTimeout(function () {
                             InitFullPagePopup()
                         }, 50)
@@ -101,7 +104,7 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('menu-popup')) {
-                        console.log('i am here')
+                        // console.log('i am here')
                         $.fn.fullpage.destroy('all')
                         addClass(body, 'popup-open_menu', 'fixed')
                     } else {
@@ -110,6 +113,7 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('payment-popup')) {
+                        console.log('dferer')
                         instanceSecondBranchPopup = InitOverlayScrollbars({
                             popup: this.wrap[0]
                         })
@@ -118,18 +122,18 @@ const SetSecondBranchPopupSettings = (body, data) => {
                 },
                 open() {
                     addClass(body, 'popup-open', 'popup-open_second-branch')
-
-                    $.fn.fullpage.destroy('all')
-                    InitFullPagePopup()
+                    // сonsole.log('dfer')
+                    // $.fn.fullpage.destroy('all')
+                    // InitFullPagePopup()
                 },
 
                 close() {
 
                     removeClass(body, 'popup-open', 'popup-open_second-branch', 'popup-open_secondary')
-                    $.fn.fullpage.destroy('all')
                     $('html, body').animate({
                         scrollTop: 0
                     }, 2, function () {
+                        $.fn.fullpage.destroy('all')
                         InitFullPage(data)
                     })
 

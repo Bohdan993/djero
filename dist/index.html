@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1622413186574" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1622413186574">
-    <link rel="stylesheet" href="css/main.min.css?v=1622413186574">
+    <link rel="preload" href="css/main.min.css?v=1622568668904" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1622568668904">
+    <link rel="stylesheet" href="css/main.min.css?v=1622568668904">
   </head>
   <body class="home-page">
     <header class="header">
@@ -22,7 +22,7 @@
                     <use xlink:href="img/logo.svg#Logo"></use>
                   </svg></a></div>
             </div>
-            <div class="header__menu-layer header-inner-layer"><a class="close-popup close-popup-btn" href="#main-section"><span></span><span></span></a><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
+            <div class="header__menu-layer header-inner-layer"><a class="close-popup close-popup-btn" href="#"><span></span><span></span></a><a class="close-popup close-popup_secondary open-popup-link-second-branch" href="#second-branch-popup"><span></span><span></span></a>
               <nav class="header__menu">
                 <ul class="header__menu-list">
                   <li class="header__menu-list-item"> <a class="header__menu-link menu-link" href="#" data-is-popup="false" data-to="screen-2" data-position="main">Як це працює? </a></li>
@@ -39,7 +39,7 @@
         <div class="f-container main__f-container">
           <section class="main__content fullpage" id="main-section">
             <div class="main-screen fullpage-section section">
-              <div class="main-screen__layout">
+              <div class="main-screen__layout is-screen">
                 <div class="main-screen__background-layer">
                   <div class="main-screen__background">
                     <video class="main-screen__background-video active" autoplay="true" loop muted preload="metadata">
@@ -88,7 +88,7 @@
               </div>
             </div>
             <div class="screen-2 fullpage-section section screen">
-              <div class="screen-2__layout screen__layout">
+              <div class="screen-2__layout screen__layout is-screen">
                 <div class="center screen-2__center">
                   <h2 class="h2-title screen-2__title">Як це працює?</h2>
                   <div class="f-container screen-2__f-container screen-f-container">
@@ -106,7 +106,7 @@
               </div>
             </div>
             <div class="screen-3 fullpage-section section screen">
-              <div class="screen-3__layout screen__layout">
+              <div class="screen-3__layout screen__layout is-screen">
                 <div class="center screen-3__center">
                   <h2 class="h2-title screen-3__title">Як це працює?</h2>
                   <div class="f-container screen-3__f-container screen-f-container">
@@ -124,7 +124,7 @@
               </div>
             </div>
             <div class="screen-4 fullpage-section section screen">
-              <div class="screen-4__layout screen__layout">
+              <div class="screen-4__layout screen__layout is-screen">
                 <div class="screen-4__background-layer">
                   <div class="screen-4__background"><img class="screen-4__background-image" data-src="img/cookie-2.png" alt=""><img class="screen-4__background-image" data-src="img/cookie.png" alt=""></div>
                 </div>
@@ -155,7 +155,7 @@
             </div>
             <div class="fullpage-section section fp-auto-height">
               <div class="screen-5 screen">
-                <div class="screen-5__layout screen__layout">
+                <div class="screen-5__layout screen__layout is-screen">
                   <div class="screen-5__background-layer">
                     <div class="screen-5__background"><img class="screen-5__background-image" data-src="img/cookie-2.png" alt=""><img class="screen-5__background-image" data-src="img/cookie.png" alt=""><img class="screen-5__background-image" data-src="img/cookie-3.png" alt=""></div>
                   </div>
@@ -247,70 +247,72 @@
               </div>
             </div>
             <footer class="footer section">
-              <div class="contacts__layout">
-                <div class="center">
-                  <div class="f-container">
-                    <div class="contacts__address-layer">
-                      <h3 class="contacts__title">Контакти</h3>
-                      <address class="contacts__address"><a class="contacts__email" href="mailto:office@djero.com.ua">office@djero.com.ua </a>
-                        <p class="contacts__name">ФОП Пасічник С.С.</p>
-                        <p class="contacts__location">Вінницька обл., Козятинський р-н., с.Махнівка, вул. Київська, 53 кв. 4</p>
-                      </address>
-                    </div>
-                    <div class="contacts__question-layer">
-                      <h3 class="contacts__title">Виникли питання?</h3>
-                      <p class="contacts__action-call">Зателефонуйте нам!</p><a class="contacts__phone" href="tel:+380679312635">+38 (067) 931 26 35</a>
-                      <ul class="contacts__social-list social-list">
-                        <li class="contacts__social-list-item social-list-item"><a class="contacts__social-link social-link" href="#" rel=""><i class="ico contacts__social-ico social-ico">
-                              <svg>
-                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#call-2"></use>
-                              </svg></i></a></li>
-                        <li class="contacts__social-list-item social-list-item"><a class="contacts__social-link social-link" href="#" rel=""><i class="ico contacts__social-ico social-ico">
-                              <svg>
-                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#tg"></use>
-                              </svg></i></a></li>
-                      </ul>
+              <div class="is-screen">
+                <div class="contacts__layout">
+                  <div class="center">
+                    <div class="f-container">
+                      <div class="contacts__address-layer">
+                        <h3 class="contacts__title">Контакти</h3>
+                        <address class="contacts__address"><a class="contacts__email" href="mailto:office@djero.com.ua">office@djero.com.ua </a>
+                          <p class="contacts__name">ФОП Пасічник С.С.</p>
+                          <p class="contacts__location">Вінницька обл., Козятинський р-н., с.Махнівка, вул. Київська, 53 кв. 4</p>
+                        </address>
+                      </div>
+                      <div class="contacts__question-layer">
+                        <h3 class="contacts__title">Виникли питання?</h3>
+                        <p class="contacts__action-call">Зателефонуйте нам!</p><a class="contacts__phone" href="tel:+380679312635">+38 (067) 931 26 35</a>
+                        <ul class="contacts__social-list social-list">
+                          <li class="contacts__social-list-item social-list-item"><a class="contacts__social-link social-link" href="#" rel=""><i class="ico contacts__social-ico social-ico">
+                                <svg>
+                                  <use xlink:href="img/sprites/svg/symbol/sprite.svg#call-2"></use>
+                                </svg></i></a></li>
+                          <li class="contacts__social-list-item social-list-item"><a class="contacts__social-link social-link" href="#" rel=""><i class="ico contacts__social-ico social-ico">
+                                <svg>
+                                  <use xlink:href="img/sprites/svg/symbol/sprite.svg#tg"></use>
+                                </svg></i></a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="footer__layout">
-                <div class="center">
-                  <div class="footer__logo-layer"><img class="footer__logo logo" src="img/logo.png" alt="Logo"></div>
-                  <div class="footer__info-layer">
-                    <div class="footer__info-main">
-                      <div class="footer__payments">
-                        <p class="footer__payments-text">Платіжні системи</p>
-                        <ul class="footer__payments-list">
-                          <li class="footer__payments-list-item"><i class="ico footer__payments-ico visa-ico"></i></li>
-                          <li class="footer__payments-list-item"><i class="ico footer__payments-ico mastercard-ico"></i></li>
-                        </ul>
+                <div class="footer__layout">
+                  <div class="center">
+                    <div class="footer__logo-layer"><img class="footer__logo logo" src="img/logo.png" alt="Logo"></div>
+                    <div class="footer__info-layer">
+                      <div class="footer__info-main">
+                        <div class="footer__payments">
+                          <p class="footer__payments-text">Платіжні системи</p>
+                          <ul class="footer__payments-list">
+                            <li class="footer__payments-list-item"><i class="ico footer__payments-ico visa-ico"></i></li>
+                            <li class="footer__payments-list-item"><i class="ico footer__payments-ico mastercard-ico"></i></li>
+                          </ul>
+                        </div>
+                        <nav class="footer__menu">
+                          <ul class="footer__menu-list">
+                            <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="false" data-to="main-screen" data-position="main">Головна</a></li>
+                            <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="about-set" data-position="main">Про набір</a></li>
+                            <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="news" data-position="main">Новини</a></li>
+                            <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="delivery" data-position="main">Доставка</a></li>
+                            <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="false" data-to="footer" data-position="main">Контакти</a></li>
+                          </ul>
+                        </nav>
+                        <div class="footer__contacts"><a class="footer__phone footer-contact-link" href="tel:+380679312635"><i class="ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#call"></use>
+                              </svg></i>+ 38 (067) 931 26 35</a><a class="footer__call-me open-popup-link_secondary transparent-btn with-underline" href="#order-call-popup">Зателефонувати мені </a><a class="footer__email footer-contact-link" href="mailto:office@djero.com.ua"><i class="ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#envelope"></use>
+                              </svg></i>office@djero.com.ua</a></div>
                       </div>
-                      <nav class="footer__menu">
-                        <ul class="footer__menu-list">
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="false" data-to="main-screen" data-position="main">Головна</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="about-set" data-position="main">Про набір</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="news" data-position="main">Новини</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="delivery" data-position="main">Доставка</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="false" data-to="footer" data-position="main">Контакти</a></li>
-                        </ul>
-                      </nav>
-                      <div class="footer__contacts"><a class="footer__phone footer-contact-link" href="tel:+380679312635"><i class="ico">
-                            <svg>
-                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#call"></use>
-                            </svg></i>+ 38 (067) 931 26 35</a><a class="footer__call-me open-popup-link_secondary transparent-btn with-underline" href="#order-call-popup">Зателефонувати мені </a><a class="footer__email footer-contact-link" href="mailto:office@djero.com.ua"><i class="ico">
-                            <svg>
-                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#envelope"></use>
-                            </svg></i>office@djero.com.ua</a></div>
-                    </div>
-                    <div class="footer__info-secondary">
-                      <div class="footer__oferta"><a class="footer__oferta-link transparent-btn with-underline" href="#">Договір оферти </a></div>
-                      <p class="footer__copyright">Copyright Djero 2021. Всі права захищені.</p>
-                      <div class="footer__arrow-up">
-                        <div class="footer__arrow-up-link menu-link" href="#" data-position="main" data-is-popup="false" data-to="main-screen"><i class="ico">
-                            <svg>
-                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#arrow"></use>
-                            </svg></i></div>
+                      <div class="footer__info-secondary">
+                        <div class="footer__oferta"><a class="footer__oferta-link transparent-btn with-underline" href="#">Договір оферти </a></div>
+                        <p class="footer__copyright">Copyright Djero 2021. Всі права захищені.</p>
+                        <div class="footer__arrow-up">
+                          <div class="footer__arrow-up-link menu-link" href="#" data-position="main" data-is-popup="false" data-to="main-screen"><i class="ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#arrow"></use>
+                              </svg></i></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -534,7 +536,7 @@
                      70 грн.</p>
                 </div>
               </div>
-              <div class="popup__btns catalog-popup__btns"><a class="popup__card-btn catalog-popup__card-btn btn transparent close-popup-btn" href="#"><span>На головну</span></a><a class="popup__btn catalog-popup__btn btn red-orange open-popup-link" href="#order-popup"><span>Оформити замовлення</span></a></div>
+              <div class="popup__btns catalog-popup__btns"><a class="popup__card-btn catalog-popup__card-btn btn transparent menu-link" href="#" data-is-popup="false" data-to="main-screen" data-position="popup" data-silent="true"><span>На головну</span></a><a class="popup__btn catalog-popup__btn btn red-orange open-popup-link" href="#order-popup"><span>Оформити замовлення</span></a></div>
             </div>
           </div>
         </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
@@ -591,7 +593,7 @@
               </div>
               <p class="popup__note cart-popup__note">* Вага нетто</p>
               <div class="cart-popup__summary">
-                <div class="popup__card-btn-wrapper cart-popup__card-btn-wrapper"><a class="popup__card-btn cart-popup__card-btn btn transparent close-popup-btn" href="#"><span>На головну</span></a></div>
+                <div class="popup__card-btn-wrapper cart-popup__card-btn-wrapper"><a class="popup__card-btn cart-popup__card-btn btn transparent menu-link" href="#" data-is-popup="false" data-to="main-screen" data-position="popup" data-silent="true"><span>На головну</span></a></div>
                 <button class="popup__basket-clear cart-popup__basket-clear transparent-btn with-underline"><span>Очистити корзину</span></button>
                 <div class="cart-popup__total">
                   <p class="popup__total-price cart-popup__total-price">
@@ -857,7 +859,7 @@
         <div class="popup second-branch-popup mfp-hide zoom-anim-dialog" id="second-branch-popup">
           <div class="fullpage-popup"><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
             <div class="popup about-set-popup fullpage-section section screen">
-              <div class="popup__layout about-set-popup__layout">
+              <div class="popup__layout about-set-popup__layout is-screen">
                 <div class="center"> 
                   <h2 class="popup__title h2-title about-set-popup__title">Про набір</h2>
                   <p class="subtitle about-set-popup__subtitle"><span>Печиво-сендвіч - </span>талісман для Djero та ключ до перемог</p>
@@ -908,7 +910,7 @@
               </div>
             </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
             <div class="news-popup popup fullpage-section section screen">
-              <div class="news-popup__layout popup__layout">
+              <div class="news-popup__layout popup__layout is-screen">
                 <div class="center"> 
                   <h2 class="popup__title h2-title news-popup__title">Новини</h2>
                   <div class="f-container">
@@ -1013,7 +1015,7 @@
               </div>
             </div><!-- dialog itself, mfp-hide class is required to make dialog hidden -->
             <div class="delivery-popup popup fullpage-section section screen">
-              <div class="delivery-popup__layout popup__layout">
+              <div class="delivery-popup__layout popup__layout is-screen">
                 <div class="center"> 
                   <h2 class="popup__title h2-title delivery-popup__title">Оплата, доставка та повернення</h2>
                   <div class="f-container">
@@ -1099,70 +1101,72 @@
               </div>
             </div>
             <footer class="footer section">
-              <div class="contacts__layout">
-                <div class="center">
-                  <div class="f-container">
-                    <div class="contacts__address-layer">
-                      <h3 class="contacts__title">Контакти</h3>
-                      <address class="contacts__address"><a class="contacts__email" href="mailto:office@djero.com.ua">office@djero.com.ua </a>
-                        <p class="contacts__name">ФОП Пасічник С.С.</p>
-                        <p class="contacts__location">Вінницька обл., Козятинський р-н., с.Махнівка, вул. Київська, 53 кв. 4</p>
-                      </address>
-                    </div>
-                    <div class="contacts__question-layer">
-                      <h3 class="contacts__title">Виникли питання?</h3>
-                      <p class="contacts__action-call">Зателефонуйте нам!</p><a class="contacts__phone" href="tel:+380679312635">+38 (067) 931 26 35</a>
-                      <ul class="contacts__social-list social-list">
-                        <li class="contacts__social-list-item social-list-item"><a class="contacts__social-link social-link" href="#" rel=""><i class="ico contacts__social-ico social-ico">
-                              <svg>
-                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#call-2"></use>
-                              </svg></i></a></li>
-                        <li class="contacts__social-list-item social-list-item"><a class="contacts__social-link social-link" href="#" rel=""><i class="ico contacts__social-ico social-ico">
-                              <svg>
-                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#tg"></use>
-                              </svg></i></a></li>
-                      </ul>
+              <div class="is-screen">
+                <div class="contacts__layout">
+                  <div class="center">
+                    <div class="f-container">
+                      <div class="contacts__address-layer">
+                        <h3 class="contacts__title">Контакти</h3>
+                        <address class="contacts__address"><a class="contacts__email" href="mailto:office@djero.com.ua">office@djero.com.ua </a>
+                          <p class="contacts__name">ФОП Пасічник С.С.</p>
+                          <p class="contacts__location">Вінницька обл., Козятинський р-н., с.Махнівка, вул. Київська, 53 кв. 4</p>
+                        </address>
+                      </div>
+                      <div class="contacts__question-layer">
+                        <h3 class="contacts__title">Виникли питання?</h3>
+                        <p class="contacts__action-call">Зателефонуйте нам!</p><a class="contacts__phone" href="tel:+380679312635">+38 (067) 931 26 35</a>
+                        <ul class="contacts__social-list social-list">
+                          <li class="contacts__social-list-item social-list-item"><a class="contacts__social-link social-link" href="#" rel=""><i class="ico contacts__social-ico social-ico">
+                                <svg>
+                                  <use xlink:href="img/sprites/svg/symbol/sprite.svg#call-2"></use>
+                                </svg></i></a></li>
+                          <li class="contacts__social-list-item social-list-item"><a class="contacts__social-link social-link" href="#" rel=""><i class="ico contacts__social-ico social-ico">
+                                <svg>
+                                  <use xlink:href="img/sprites/svg/symbol/sprite.svg#tg"></use>
+                                </svg></i></a></li>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="footer__layout">
-                <div class="center">
-                  <div class="footer__logo-layer"><img class="footer__logo logo" src="img/logo.png" alt="Logo"></div>
-                  <div class="footer__info-layer">
-                    <div class="footer__info-main">
-                      <div class="footer__payments">
-                        <p class="footer__payments-text">Платіжні системи</p>
-                        <ul class="footer__payments-list">
-                          <li class="footer__payments-list-item"><i class="ico footer__payments-ico visa-ico"></i></li>
-                          <li class="footer__payments-list-item"><i class="ico footer__payments-ico mastercard-ico"></i></li>
-                        </ul>
+                <div class="footer__layout">
+                  <div class="center">
+                    <div class="footer__logo-layer"><img class="footer__logo logo" src="img/logo.png" alt="Logo"></div>
+                    <div class="footer__info-layer">
+                      <div class="footer__info-main">
+                        <div class="footer__payments">
+                          <p class="footer__payments-text">Платіжні системи</p>
+                          <ul class="footer__payments-list">
+                            <li class="footer__payments-list-item"><i class="ico footer__payments-ico visa-ico"></i></li>
+                            <li class="footer__payments-list-item"><i class="ico footer__payments-ico mastercard-ico"></i></li>
+                          </ul>
+                        </div>
+                        <nav class="footer__menu">
+                          <ul class="footer__menu-list">
+                            <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="false" data-to="main-screen" data-position="popup">Головна</a></li>
+                            <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="about-set" data-position="popup">Про набір</a></li>
+                            <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="news" data-position="popup">Новини</a></li>
+                            <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="delivery" data-position="popup">Доставка</a></li>
+                            <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="footer2" data-position="popup">Контакти</a></li>
+                          </ul>
+                        </nav>
+                        <div class="footer__contacts"><a class="footer__phone footer-contact-link" href="tel:+380679312635"><i class="ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#call"></use>
+                              </svg></i>+ 38 (067) 931 26 35</a><a class="footer__call-me open-popup-link_secondary transparent-btn with-underline" href="#order-call-popup">Зателефонувати мені </a><a class="footer__email footer-contact-link" href="mailto:office@djero.com.ua"><i class="ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#envelope"></use>
+                              </svg></i>office@djero.com.ua</a></div>
                       </div>
-                      <nav class="footer__menu">
-                        <ul class="footer__menu-list">
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="false" data-to="main-screen" data-position="popup">Головна</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="about-set" data-position="popup">Про набір</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="news" data-position="popup">Новини</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="delivery" data-position="popup">Доставка</a></li>
-                          <li class="footer__menu-list-item"> <a class="footer__menu-link menu-link" href="#" data-is-popup="true" data-to="footer2" data-position="popup">Контакти</a></li>
-                        </ul>
-                      </nav>
-                      <div class="footer__contacts"><a class="footer__phone footer-contact-link" href="tel:+380679312635"><i class="ico">
-                            <svg>
-                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#call"></use>
-                            </svg></i>+ 38 (067) 931 26 35</a><a class="footer__call-me open-popup-link_secondary transparent-btn with-underline" href="#order-call-popup">Зателефонувати мені </a><a class="footer__email footer-contact-link" href="mailto:office@djero.com.ua"><i class="ico">
-                            <svg>
-                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#envelope"></use>
-                            </svg></i>office@djero.com.ua</a></div>
-                    </div>
-                    <div class="footer__info-secondary">
-                      <div class="footer__oferta"><a class="footer__oferta-link transparent-btn with-underline" href="#">Договір оферти </a></div>
-                      <p class="footer__copyright">Copyright Djero 2021. Всі права захищені.</p>
-                      <div class="footer__arrow-up">
-                        <div class="footer__arrow-up-link menu-link" href="#" data-is-popup="false" data-to="main-screen"><i class="ico">
-                            <svg>
-                              <use xlink:href="img/sprites/svg/symbol/sprite.svg#arrow"></use>
-                            </svg></i></div>
+                      <div class="footer__info-secondary">
+                        <div class="footer__oferta"><a class="footer__oferta-link transparent-btn with-underline" href="#">Договір оферти </a></div>
+                        <p class="footer__copyright">Copyright Djero 2021. Всі права захищені.</p>
+                        <div class="footer__arrow-up">
+                          <div class="footer__arrow-up-link menu-link" href="#" data-is-popup="false" data-to="main-screen"><i class="ico">
+                              <svg>
+                                <use xlink:href="img/sprites/svg/symbol/sprite.svg#arrow"></use>
+                              </svg></i></div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -1452,8 +1456,8 @@
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1622413186574" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1622413186574" as="script">
-    <script src="js/main.min.js?v=1622413186574" async></script>
+    <script src="js/libs.min.js?v=1622568668904" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1622568668904" as="script">
+    <script src="js/main.min.js?v=1622568668904" async></script>
   </body>
 </html>

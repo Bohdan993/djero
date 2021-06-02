@@ -1,10 +1,14 @@
-function throttle(f, ms){
-	
+import {
+	$
+} from "../../../libs/libs"
+
+function throttle(f, ms) {
+
 	let isThrottled = false,
-	t, a
-	
-	function d(){
-		
+		t, a
+
+	function d() {
+
 		if (isThrottled) {
 			t = this;
 			a = arguments;
@@ -15,9 +19,9 @@ function throttle(f, ms){
 
 		isThrottled = true;
 
-		setTimeout(function(){
+		setTimeout(function () {
 			isThrottled = false;
-			if(a) {
+			if (a) {
 				d.apply(t, a);
 				t = a = null;
 			}
@@ -26,8 +30,6 @@ function throttle(f, ms){
 
 	return d
 }
-
-
 
 
 
@@ -49,11 +51,25 @@ function removeClass(elem, ...clazz) {
 }
 
 function addStyle(elem, styles) {
-	for(let key in styles) {
+	for (let key in styles) {
 		elem.style[key] = styles[key]
 	}
 
 	return elem
+}
+
+
+function menuclickeventHandler(e) {
+	e.stopImmediatePropagation()
+	const {detail: {
+		anchor
+	}} = e
+	const loadedSection = $(document).find(`[data-anchor="${anchor}"]`)
+	const screen = loadedSection.find('.is-screen')
+	if (screen.height() > loadedSection.height()) {
+		const IScroll = loadedSection.find('.fp-scrollable').data('iscrollInstance')
+		IScroll.scrollTo(0, 0, 0)
+	}
 }
 
 
@@ -65,5 +81,6 @@ export {
 	addText,
 	addClass,
 	removeClass,
-	addStyle
+	addStyle,
+	menuclickeventHandler
 }

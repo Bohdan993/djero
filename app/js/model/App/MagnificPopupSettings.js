@@ -1,6 +1,10 @@
 import InitOverlayScrollbars from './InitOverlayScrollbars'
 
 import {
+    $
+} from '../../../libs/libs'
+
+import {
     $body
 } from "../../view"
 
@@ -45,6 +49,7 @@ const settings = {
             }
         },
         open() {
+            $.fn.fullpage.setMouseWheelScrolling(false)
             instance = InitOverlayScrollbars({
                 popup: this.wrap[0]
             })
