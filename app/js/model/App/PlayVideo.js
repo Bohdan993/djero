@@ -4,12 +4,14 @@ import {
 } from "./Constants"
 
 
-import {addStyle} from './Helpers'
+import {
+    addStyle
+} from './Helpers'
 
 const PlayVideo = (btsn) => {
 
     function forEachBtn(el) {
-        if(el.classList.contains(NO_VIDEO_PLAY)) return
+        if (el.classList.contains(NO_VIDEO_PLAY)) return
         el.addEventListener('click', clickHandler)
 
     }
@@ -45,6 +47,31 @@ const PlayVideo = (btsn) => {
 
     btsn.forEach(forEachBtn)
 
+
+    // function include(arr, x) {
+
+    //     for(let i = 0; i < arr.length; i++) {
+    //         if(arr[i] === x) return true
+    //     }
+
+    //     return false
+    // }
+
+
+    // function diffArray (a, b) {
+    //     const res = []
+
+
+    //     for(let i = 0; i < a.length; i++) {
+    //         if(!include(b, a[i])) res.push(a[i])
+    //     }
+
+
+    //     return res
+    // }
+
+
+    // console.log(diffArray([3,6,7,4,3,2,1,2,3,4,4,4,3,3,3,3,2], []))
 }
 
 export default PlayVideo
