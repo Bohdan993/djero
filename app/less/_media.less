@@ -9,9 +9,32 @@
 }
 
 @media screen and(max-width: 992px) {
+    html {
+        font-size: 15px;
+    }
+
     // .main-screen__layout .main-screen__background-video {
     //     transform: translate(((50% + (85vw/1600px * 100%)) * -1), -50%);
     // }
+    .center {
+        padding: 0 25px;
+    }
+
+    .sidebar {
+        width: 100px;
+    }
+
+    .main__content,
+    .header,
+    .popup-open .mfp-wrap {
+        width: calc(100% - 100px);
+    }
+
+    .menu-popup__layout {
+        .menu-popup__list-item {
+            height: 80px * 0.9;
+        }
+    }
 
     .order-popup__layout {
         .order-popup__f-container {
@@ -38,11 +61,6 @@
 
     }
 
-
-    .center {
-        padding: 0 25px;
-    }
-
     .news-popup__layout {
         .f-container {
             flex-wrap: wrap;
@@ -53,16 +71,72 @@
             flex-basis: 100%;
         }
     }
+
+    .header__layout {
+        .header__logo {
+            width: 79px * 0.75;
+            height: 82px * 0.75;
+        }
+    }
+
+    .screen-text-counter {
+        width: 50px;
+        height: 50px;
+        min-width: 50px;
+    }
+
+    .about-set-popup__layout {
+        .f-container {
+            flex-wrap: wrap;
+        }
+
+        .about-set-popup__info-layer,
+        .about-set-popup__images-layer {
+            flex-basis: 100%;
+        }
+
+        .about-set-popup__images-layer {
+            padding-left: 0;
+        }
+
+        .image-wrapper_top {
+            justify-content: center;
+        }
+
+        .about-set-popup__slider {
+            max-width: unset;
+        }
+
+        .about-set-popup__buttons {
+            justify-content: center;
+        }
+    }
 }
 
 @media screen and(max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+
     .center {
         padding: 0 20px;
     }
+
+    .menu-popup__layout {
+        .menu-popup__list-item {
+            height: 80px * 0.8;
+        }
+    }
+
+
 }
 
 
 @media screen and(max-width: 576px) {
+    html {
+        font-size: 12px;
+    }
+
     .center {
         padding: 0 15px;
     }
@@ -113,7 +187,9 @@
         width: 50px;
     }
 
-    .main__content {
+    .main__content,
+    .popup-open .mfp-wrap,
+    .header {
         width: calc(100% - 50px);
     }
 
@@ -126,6 +202,16 @@
     .news-popup__layout {
         .news-popup__card-wrapper {
             flex-basis: 100%;
+        }
+    }
+
+    .menu-popup__layout {
+        .menu-popup__list-item {
+            height: 80px * 0.7;
+        }
+
+        .menu-popup__navigation-layer {
+            padding-left: 0;
         }
     }
 }

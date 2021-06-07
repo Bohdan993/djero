@@ -1,4 +1,7 @@
 import {
+    get
+} from "jquery"
+import {
     NO_VIDEO_PLAY,
     SCREEN_VIDEO_LAYER
 } from "./Constants"
@@ -48,30 +51,63 @@ const PlayVideo = (btsn) => {
     btsn.forEach(forEachBtn)
 
 
-    // function include(arr, x) {
 
-    //     for(let i = 0; i < arr.length; i++) {
-    //         if(arr[i] === x) return true
-    //     }
+    // const P = (f = (a) => a) => new Proxy(f, {get:(m, t)=>P((...a) => m(`<${ t }>${ a.join`` }</${ t }>`))})
 
-    //     return false
+    // const Format = P();
+
+    // console.log(Format)
+    // console.log(Format.div.span.tag.r.vggg.fdfe.sd.ew.gh.df.er.dlll('Hello world'))
+
+    // TODO: complete this object/class
+
+    // The constructor takes in an array of items and a integer indicating how many
+    // items fit within a single page
+    // function PaginationHelper(collection, itemsPerPage) {
+    //     this.collection = collection
+    //     this.itemsPerPage = itemsPerPage
     // }
 
+    // // returns the number of items within the entire collection
+    // PaginationHelper.prototype.itemCount = function () {
+    //     return this.collection.length
+    // }
 
-    // function diffArray (a, b) {
-    //     const res = []
+    // // returns the number of pages
+    // PaginationHelper.prototype.pageCount = function () {
+    //     return Math.ceil(this.collection.length / this.itemsPerPage)
+    // }
 
+    // // returns the number of items on the current page. page_index is zero based.
+    // // this method should return -1 for pageIndex values that are out of range
+    // PaginationHelper.prototype.pageItemCount = function (pageIndex) {
 
-    //     for(let i = 0; i < a.length; i++) {
-    //         if(!include(b, a[i])) res.push(a[i])
+    //     if (pageIndex > this.pageCount() || pageIndex < 0) {
+    //         return -1
+    //     }
+
+    //     for (let i = 0; i < this.pageCount(); i++) {
+    //         return 
     //     }
 
 
-    //     return res
     // }
 
+    // // determines what page an item is on. Zero based indexes
+    // // this method should return -1 for itemIndex values that are out of range
+    // PaginationHelper.prototype.pageIndex = function (itemIndex) {
+    //     if (itemIndex > this.itemCount() || itemIndex < 0 || this.itemCount() === 0) return -1
+    //     if (itemIndex === 0) return 0
+    //     return Math.ceil(itemIndex / this.itemsPerPage) - 1
+    // }
 
-    // console.log(diffArray([3,6,7,4,3,2,1,2,3,4,4,4,3,3,3,3,2], []))
+    // var helper = new PaginationHelper(['a', 'b', 'c', 'd', 'e', 'f'], 6);
+
+    // console.log(helper.pageItemCount(0))
+
+
+
+
 }
 
 export default PlayVideo
