@@ -10,11 +10,13 @@
 
     .catalog-popup__cards {
         display: flex;
-        padding-bottom: 20px;
+        // padding-bottom: 20px;
+        justify-content: center;
     }
 
     .catalog-popup__card-layer {
         padding: 0 15px;
+        padding-bottom: 20px;
 
         // &:first-child {
         //     padding-left: 0;
@@ -25,6 +27,8 @@
         // }
 
         flex-basis: 100/3 * 1%;
+        min-width: 260px;
+        max-width: 320px;
     }
 
     .catalog-popup__card {

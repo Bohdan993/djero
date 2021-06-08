@@ -225,7 +225,7 @@ main {
 
 
 .h1-title {
-  .fSize(60vw, 60px * (768/1220), 60px, 576px, 1220px);
+  .fSize(60vw, 60px * (576/1220), 60px, 576px, 1220px);
   font-weight: 300;
   font-family: 'Adventure Indiana Jones', cursive;
   text-align: center;
@@ -239,7 +239,7 @@ main {
 }
 
 .h2-title {
-  .fSize(36vw, 36px * (768/1220), 36px, 576px, 1220px);
+  .fSize(36vw, 36px * (768/1220), 36px, 768px, 1220px);
   font-weight: 300;
   font-family: 'Adventure Indiana Jones', cursive;
   text-align: center;
@@ -821,7 +821,8 @@ main {
 
 
 .screen-text {
-  font-size: 28/16 * 1rem;
+  // font-size: 28/16 * 1rem;
+  .fSize(28vw, 28px * (576/1220), 28px, 576px, 1220px);
   letter-spacing: 1px;
   line-height: 43/28;
   color: @white;
