@@ -77,12 +77,11 @@ const InitSplide = () => {
             prev: 'splide__arrow--prev screen-5__slider-arrow-prev',
             next: 'splide__arrow--next screen-5__slider-arrow-next',
         },
-        // breakpoints : {
-        // 	'600': {
-        // 		fixedWidth: 66,
-        // 		height    : 40,
-        // 	}
-        // },
+        breakpoints : {
+        	'768': {
+        		gap: 8,
+        	}
+        },
     })
 
 

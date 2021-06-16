@@ -28,25 +28,20 @@ const InitFullPage = (data) => {
             scrollbars: 'custom'
         },
         bigSectionsDestination: 'top',
-        afterReBuild() {},
-        afterRender() {
-        //    console.log(this)
-            // if (prevSection.hasClass('fp-auto-height')) {
-            //     var IScroll = prevSection.find('.fp-scrollable').data('iscrollInstance');
-            //     IScroll.scrollTo(0, IScroll.maxScrollY, 0)
-            // }
-        },
+        afterResize: rebuild,
+        afterLoad: rebuild,
+        afterRender: rebuild,
         onLeave: onLeave(data)
     })
 
-     
-
-
-    // function afterLoad(origin, destination, direction) {
 
 
 
-    // }
+    function rebuild() {
+        setTimeout(function () {
+            $.fn.fullpage.reBuild()
+        }, 100)
+    }
 
 
 
