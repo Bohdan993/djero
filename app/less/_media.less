@@ -4,6 +4,11 @@
         .main-screen__body::before {
             display: none;
         }
+
+        .main-screen__background-video,
+        .main-screen__background-video-2 {
+            object-position: 65%;
+        }
     }
 
 }
@@ -219,6 +224,17 @@
             margin-bottom: 25px;
         }
     }
+
+    .cart-popup__layout {
+        .cart-popup__summary {
+            flex-wrap: wrap;
+        }
+
+        .cart-popup__total {
+            margin-top: 25px;
+            flex-basis: 100%;
+        }
+    }
 }
 
 @media screen and(max-width: 768px) {
@@ -253,7 +269,8 @@
             }
         }
 
-        .header__menu {
+        .header__menu,
+        .header__btn {
             display: none;
         }
     }
@@ -442,6 +459,38 @@
             padding-left: 0;
             padding-right: 0;
         }
+
+        .cart-popup__total {
+            flex-basis: 100%;
+        }
+    }
+
+
+    .popup__card {
+        flex-direction: column;
+        height: auto;
+        max-width: 480px;
+        margin: 0 auto;
+        padding: 15px 25px 40px;
+    }
+
+    .popup__card-boxing {
+        flex-basis: 100%;
+        width: 100%;
+        padding-bottom: 25px;
+    }
+
+
+    .popup__card-price,
+    .popup__card-quantity,
+    .popup__card-total-price {
+        width: 100%;
+        padding-bottom: 25px;
+
+    }
+
+    .popup__basket-remove {
+        position: static;
     }
 
 }
@@ -582,6 +631,13 @@
             flex-direction: column;
         }
 
+        .main-screen__header-layer {
+            margin-top: auto;
+        }
+
+        .main-screen__body-layer {
+            // padding-bottom: 0;
+        }
 
         .main-screen__body {
             width: 70%;
@@ -599,10 +655,7 @@
             text-align: left;
         }
 
-        .main-screen__background-video,
-        .main-screen__background-video-2 {
-            object-position: 65%;
-        }
+
 
         .main-screen__footer-layer {
             margin-top: auto;
@@ -651,6 +704,7 @@
                     border-radius: 8px;
                 }
             }
+
             .screen-5__slider-slide {
                 width: calc((100/3 * 1%) - 8px);
 
