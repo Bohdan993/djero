@@ -54,6 +54,7 @@
 
         &:before {
             content: '';
+            pointer-events: none;
             display: block;
             position: absolute;
             height: 615px;
@@ -88,8 +89,8 @@
             width: 115px;
             height: 55px;
             left: 50%;
-            bottom: -150px;
-            transform: translateX(-25%);
+            bottom: -150/350 * 100%;
+            transform: translateX(-50%);
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -282,7 +283,8 @@
     }
 
     .screen-5__social-text {
-        font-size: 26/16 * 1rem;
+        // font-size: 26/16 * 1rem;
+        .fSize(26vw, 26px * (768/1220), 28px, 768px, 1220px);
         letter-spacing: 2px;
         line-height: 52/26;
         font-weight: 700;
