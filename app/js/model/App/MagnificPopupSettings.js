@@ -4,17 +4,26 @@ import {
     $
 } from '../../../libs/libs'
 
+
+import { args } from '..'
+
 import {
-    $body
+    $body,
+    $headerLayout as headerLayout
 } from "../../view"
+
 
 import {
     addClass,
     removeClass
 } from "./Helpers"
 
+import InitFullPagePopup from './InitFullPagePopup'
+import InitFullPage from './InitFullPage'
+
 
 let instance
+let instanceAboutSetPopup
 
 
 $.extend(true, $.magnificPopup.defaults, {
@@ -45,6 +54,7 @@ const settings = {
         change() {
             removeClass(this.wrap[0], 'mfp-ready')
             removeClass(this.bgOverlay[0], 'mfp-ready')
+            instanceAboutSetPopup && instanceAboutSetPopup.destroy()
 
             setTimeout(() => {
                 addClass(this.wrap[0], 'mfp-ready')
@@ -53,16 +63,42 @@ const settings = {
 
             if (this.content[0].classList.contains('popup_secondary')) {
                 addClass($body, 'popup-open_secondary')
-                instance.destroy()
+                instance && instance.destroy()
             } else {
                 removeClass($body, 'popup-open_secondary')
             }
 
             if (this.content[0].classList.contains('menu-popup')) {
                 addClass($body, 'popup-open_menu')
-                instance.destroy()
+                instance && instance.destroy()
             } else {
                 removeClass($body, 'popup-open_menu')
+            }
+
+            if (this.content[0].classList.contains('second-branch-popup')) {
+
+                addClass($body, 'popup-open_second-branch')
+                removeClass($body, 'popup-open_third', 'popup-open_fourth', 'popup-open_menu')
+                $.fn.fullpage.destroy('all')
+                setTimeout(function () {
+                    InitFullPagePopup(headerLayout)
+                }, 50)
+
+
+            } else {
+                removeClass($body, 'popup-open_second-branch')
+            }
+
+
+            if (this.content[0].classList.contains('popup_third')) {
+                addClass($body, 'popup-open_third', 'fixed1')
+                removeClass($body, 'popup-open_second-branch')
+                $.fn.fullpage.destroy('all')
+                instanceAboutSetPopup = InitOverlayScrollbars({
+                    popup: this.wrap[0]
+                })
+            } else {
+                removeClass($body, 'popup-open_third', 'fixed1')
             }
         },
         open() {
@@ -71,13 +107,22 @@ const settings = {
                 popup: this.wrap[0]
             })
 
-            addClass($body, 'popup-open')
+            addClass($body, 'popup-open', 'fixed1')
 
         },
 
         close() {
-            removeClass($body, 'popup-open', 'popup-open_secondary', 'popup-open_menu')
-            instance.destroy()
+            removeClass($body, 'popup-open', 'popup-open_second-branch', 'popup-open_secondary', 'popup-open_menu', 'fixed1')
+
+            $('html, body').animate({
+                scrollTop: 0
+            }, 2, function () {
+                $.fn.fullpage.destroy('all')
+                InitFullPage(args)
+            })
+
+            instance && instance.destroy()
+            instanceAboutSetPopup && instanceAboutSetPopup.destroy()
         }
     }
 }

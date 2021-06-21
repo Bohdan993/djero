@@ -5,6 +5,8 @@ const $mainScreenFooterBall = document.querySelector('.main-screen__footer-ball'
 const $mainScreenFooterBallWrapper = document.querySelector('.main-screen__footer-ball-wrapper')
 const $backgroundVideoAnimation1 = document.querySelector('.main-screen__background-video')
 const $backgroundVideoAnimation2 = document.querySelector('.main-screen__background-video-2')
+const $videoAnimation3 = document.querySelector('.screen-2__video')
+const $videoAnimation4 = document.querySelector('.screen-3__video')
 const $header = document.querySelector('.header')
 const $mainScreenHeaderLayer = document.querySelector('.main-screen__header-layer')
 const $mainScreenBodyLayer = document.querySelector('.main-screen__body-layer')
@@ -25,6 +27,8 @@ export {
 	$mainScreenFooterBallWrapper,
 	$backgroundVideoAnimation1,
 	$backgroundVideoAnimation2,
+	$videoAnimation3,
+	$videoAnimation4,
 	$header,
 	$mainScreenHeaderLayer,
 	$mainScreenBodyLayer,

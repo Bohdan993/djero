@@ -23,6 +23,9 @@ let instanceAboutSetPopup
 let instanceNewPopup
 
 const SetSecondBranchPopupSettings = (body, data) => {
+    const {
+        headerLayout
+    } = data
     return {
         ...settings,
         ...{
@@ -54,13 +57,14 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('popup_third')) {
-                        addClass(body, 'popup-open_third')
+                        addClass(body, 'popup-open_third', 'fixed1')
                         removeClass(body, 'popup-open_second-branch')
+                        $.fn.fullpage.destroy('all')
                         instanceAboutSetPopup = InitOverlayScrollbars({
                             popup: this.wrap[0]
                         })
                     } else {
-                        removeClass(body, 'popup-open_third')
+                        removeClass(body, 'popup-open_third', 'fixed1')
                     }
 
 
@@ -91,11 +95,10 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
                         addClass(body, 'popup-open_second-branch')
                         removeClass(body, 'popup-open_third', 'popup-open_fourth', 'popup-open_menu')
-                        // $.fn.fullpage.destroy('all')
-                        // // console.log('dfr')
-                        // setTimeout(function () {
-                        //     InitFullPagePopup()
-                        // }, 50)
+                        $.fn.fullpage.destroy('all')
+                        setTimeout(function () {
+                            InitFullPagePopup(headerLayout)
+                        }, 50)
 
 
                     } else {
@@ -104,26 +107,29 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('menu-popup')) {
-                        // console.log('i am here')
                         $.fn.fullpage.destroy('all')
-                        addClass(body, 'popup-open_menu', 'fixed')
+                        addClass(body, 'popup-open_menu', 'fixed1')
                     } else {
-                        removeClass(body, 'popup-open_menu', 'fixed')
+                        removeClass(body, 'popup-open_menu', 'fixed1')
                     }
 
 
                     if (this.content[0].classList.contains('payment-popup')) {
-                        console.log('dferer')
+                        console.log('paymant')
+                        $.fn.fullpage.destroy('all')
+                        addClass(body, 'fixed')
                         instanceSecondBranchPopup = InitOverlayScrollbars({
                             popup: this.wrap[0]
                         })
+                    } else {
+                        removeClass(body, 'fixed')
                     }
 
                 },
                 open() {
                     addClass(body, 'popup-open', 'popup-open_second-branch')
-                    $.fn.fullpage.destroy('all')
-                    InitFullPagePopup()
+                    // $.fn.fullpage.destroy('all')
+                    // InitFullPagePopup()
                 },
 
                 close() {

@@ -12,7 +12,8 @@ import {
 	InitChoices,
 	PlayVideo,
 	PlayVideoYoutube,
-	MoveToScreens
+	MoveToScreens,
+	args
 } from '../model';
 import {
 	SOCIAL_SHARE_BTN
@@ -21,21 +22,12 @@ import {
 	$body,
 	$socialShareList,
 	$socialShareBtn,
-	$mainScreenFooterBall,
-	$backgroundVideoAnimation1,
-	$backgroundVideoAnimation2,
-	$mainScreenHeaderLayer,
-	$mainScreenBodyLayer,
-	$mainScreenFooterLayer,
-	$header,
-	$mainScreenFooterBallWrapper,
 	$closePopup,
 	$choices,
 	$screenPlayVideo,
-	$headerClosePopup,
-	$menuLinks
-	// $popupMain
+	$menuLinks,
 } from '../view';
+
 
 const app = {
 	init() {
@@ -59,17 +51,7 @@ const app = {
 		// BurgerMenu(body)
 	},
 	ifp() {
-		InitFullPage({
-			ball: $mainScreenFooterBall,
-			ballWrapper: $mainScreenFooterBallWrapper,
-			firstAnimation: $backgroundVideoAnimation1,
-			secondAnimation: $backgroundVideoAnimation2,
-			pageHeader: $header,
-			header: $mainScreenHeaderLayer,
-			body: $mainScreenBodyLayer,
-			footer: $mainScreenFooterLayer,
-			animation: $backgroundVideoAnimation1
-		})
+		InitFullPage(args)
 	},
 	it() {
 		InitTippy(SOCIAL_SHARE_BTN, $socialShareList)
@@ -81,42 +63,13 @@ const app = {
 		InitSplide()
 	},
 	bca() {
-		BallClickAnimation({
-			ball: $mainScreenFooterBall,
-			ballWrapper: $mainScreenFooterBallWrapper,
-			firstAnimation: $backgroundVideoAnimation1,
-			secondAnimation: $backgroundVideoAnimation2,
-			pageHeader: $header,
-			header: $mainScreenHeaderLayer,
-			body: $mainScreenBodyLayer,
-			footer: $mainScreenFooterLayer
-		})
+		BallClickAnimation(args)
 	},
 	imp() {
-		InitMagnificPopups($body, {
-			ball: $mainScreenFooterBall,
-			ballWrapper: $mainScreenFooterBallWrapper,
-			firstAnimation: $backgroundVideoAnimation1,
-			secondAnimation: $backgroundVideoAnimation2,
-			pageHeader: $header,
-			header: $mainScreenHeaderLayer,
-			body: $mainScreenBodyLayer,
-			footer: $mainScreenFooterLayer,
-			animation: $backgroundVideoAnimation1
-		})
+		InitMagnificPopups($body, args)
 	},
-	impsb(){
-		InitMagnificPopupSecondBranch($body, {
-			ball: $mainScreenFooterBall,
-			ballWrapper: $mainScreenFooterBallWrapper,
-			firstAnimation: $backgroundVideoAnimation1,
-			secondAnimation: $backgroundVideoAnimation2,
-			pageHeader: $header,
-			header: $mainScreenHeaderLayer,
-			body: $mainScreenBodyLayer,
-			footer: $mainScreenFooterLayer,
-			animation: $backgroundVideoAnimation1
-		})
+	impsb() {
+		InitMagnificPopupSecondBranch($body, args)
 	},
 	cp() {
 		ClosePopup($closePopup)
@@ -131,24 +84,8 @@ const app = {
 		PlayVideoYoutube()
 	},
 	mts() {
-		MoveToScreens($menuLinks, $body, {
-			ball: $mainScreenFooterBall,
-			ballWrapper: $mainScreenFooterBallWrapper,
-			firstAnimation: $backgroundVideoAnimation1,
-			secondAnimation: $backgroundVideoAnimation2,
-			pageHeader: $header,
-			header: $mainScreenHeaderLayer,
-			body: $mainScreenBodyLayer,
-			footer: $mainScreenFooterLayer,
-			animation: $backgroundVideoAnimation1
-		})
+		MoveToScreens($menuLinks, $body, args)
 	}
-
-	// iosb() {
-	// 	InitOverlayScrollbars({
-	// 		popup: $popupMain
-	// 	})
-	// }
 
 }
 

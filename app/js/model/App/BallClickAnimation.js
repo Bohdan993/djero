@@ -94,41 +94,6 @@ const BallClickAnimation = (data) => {
 
 
 
-
-    // let promise1 = new Promise(function (res, rej) {
-    //     header.addEventListener('animationend', headerAnimationHandler)
-
-    //     function headerAnimationHandler(e) {
-    //         console.log('ended')
-    //         res('ok')
-    //     }
-    // })
-
-    // let promise2 = new Promise(function (res, rej) {
-    //     body.addEventListener('animationend', bodyAnimationHandler)
-
-    //     function bodyAnimationHandler(e) {
-
-
-    //         res('ok')
-    //     }
-    // })
-
-    // let promise3 = new Promise(function (res, rej) {
-    //     footer.addEventListener('animationend', footerAnimationHandler)
-
-    //     function footerAnimationHandler(e) {
-
-    //         res('ok')
-    //     }
-    // })
-
-    // Promise.all([promise1, promise2, promise3])
-    //     .then(res => {
-
-    //     })
-    //     .catch(err => console.error(err))
-
     ball.addEventListener('click', ballClickHandler)
     secondAnimation.addEventListener('ended', secondAnimationEndedHandler)
     $(document).on('mfpOpen', popupOpenHandler);

@@ -68,6 +68,7 @@
     .new-popup__content-layer {
         flex-basis: (1220 - 405)/1220 * 100%;
         padding-right: 15px;
+        width: 100%;
     }
 
     .new-popup__content {
@@ -81,8 +82,13 @@
     }
 
     .new-popup__slider {
-        max-width: 530px;
+        // max-width: 530px;
         position: static;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
     .new-popup__slider-wrapper {
@@ -91,6 +97,9 @@
     }
 
     .new-popup__slider-track {
+        margin-right: 20px;
+        width: 100%;
+        max-width: 530px;
         &>.new-popup__slider-list > .new-popup__slider-slide.is-active,
         &>.new-popup__slider-list > .new-popup__slider-slide {
             border: unset;
@@ -174,8 +183,9 @@
     }
 
     .new-popup__slider-arrows {
-        position: absolute;
-        width: 120px;
+        // position: absolute;
+        width: 115px;
+        min-width: 115px;
         height: 100%;
         right: 55px;
         display: flex;

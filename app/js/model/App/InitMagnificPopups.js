@@ -26,12 +26,14 @@ import settings from './MagnificPopupSettings'
 
 
 const InitMagnificPopups = (body, data) => {
+    
 
     const {
         callbacks: {
             change
         }
     } = SetSecondBranchPopupSettings(body, data)
+
 
     const settingsSecondary = {
         ...settings,
@@ -54,13 +56,11 @@ const InitMagnificPopups = (body, data) => {
             callbacks: {
                 change,
                 open() {
-                    addClass(body, 'popup-open', 'popup-open_menu')
+                    addClass(body, 'popup-open', 'popup-open_menu', 'fixed1')
                 },
 
                 close() {
-                    removeClass(body, 'popup-open', 'popup-open_menu')
-                    console.log(!this.content[0].classList.contains('second-branch-popup'))
-
+                    removeClass(body, 'popup-open', 'popup-open_menu', 'fixed1')
                     $.fn.fullpage.destroy('all')
                     InitFullPage(data)
 
@@ -73,20 +73,19 @@ const InitMagnificPopups = (body, data) => {
     const settingsAboutSet = {
         ...settings,
         ...{
+            // fixedBgPos: true,
+            // fixedContentPos: true,
             callbacks: {
                 change() {
 
                 },
                 open() {
-                    addClass(body, 'popup-open', 'popup-open_third')
-
-
-
+                    addClass(body, 'popup-open', 'popup-open_third', 'fixed')
                 },
 
                 close() {
-                    removeClass(body, 'popup-open', 'popup-open_third')
-
+                    console.log('DLLLDLD')
+                    removeClass(body, 'popup-open', 'popup-open_third', 'fixed')
                 }
             }
         }
@@ -143,8 +142,8 @@ const InitMagnificPopups = (body, data) => {
 
 
 
-
     $(OPEN_POPUP_LINK).magnificPopup(settings)
+    // $(OPEN_POPUP_LINK).magnificPopup(settings2)
     $(OPEN_POPUP_LINK_SECONDARY).magnificPopup(settingsSecondary)
     $(OPEN_POPUP_LINK_MENU).magnificPopup(settingsMenu)
     $(OPEN_POPUP_LINK_ABOUT_SET).magnificPopup(settingsAboutSet)

@@ -14,6 +14,7 @@ import PlayVideo from './App/PlayVideo';
 import PlayVideoYoutube from './App/PlayVideoYoutube';
 import MoveToScreens from './App/MoveToScreens';
 import InitMagnificPopupSecondBranch from './App/InitMagnificPopupSecondBranch';
+import {args} from './App/FullPageData'
 
 
 
@@ -33,5 +34,6 @@ export {
 	InitChoices,
 	PlayVideo,
 	PlayVideoYoutube,
-	MoveToScreens
+	MoveToScreens,
+	args
 }

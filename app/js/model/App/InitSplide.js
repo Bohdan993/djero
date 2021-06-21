@@ -139,12 +139,11 @@ const InitSplide = () => {
             prev: 'splide__arrow--prev new-popup__slider-arrow-prev',
             next: 'splide__arrow--next new-popup__slider-arrow-next',
         },
-        // breakpoints : {
-        // 	'600': {
-        // 		fixedWidth: 66,
-        // 		height    : 40,
-        // 	}
-        // },
+        breakpoints : {
+        	'576': {
+        		gap: 8,
+        	}
+        },
     })
 
     screen5MainSlider.on('arrows:mounted', arrowsMountedHandler.bind(screen5MainSlider))

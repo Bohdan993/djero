@@ -24,11 +24,6 @@
         font-size: 15px;
     }
 
-    // .main-screen__layout .main-screen__background-video {
-    //     transform: translate(((50% + (85vw/1600px * 100%)) * -1), -50%);
-    // }
-
-
     .center {
         padding: 0 25px;
     }
@@ -184,11 +179,6 @@
 
         }
 
-        .screen-5__slider-secondary {
-            // .screen-5__slider-arrows {
-            //     width: 115px * (40/55);
-            // }
-        }
 
         .screen-5__social-link {
             width: 40px;
@@ -204,15 +194,9 @@
         }
     }
 
-    .contacts__layout {
-        // height: auto;
-        // min-height: unset;
-    }
 
 
     .footer__layout {
-        // height: auto;
-        // min-height: unset;
 
         .footer__info-main {
             flex-wrap: wrap;
@@ -302,6 +286,41 @@
             padding: 25px;
         }
     }
+
+    .new-popup__layout {
+
+        .f-container {
+            flex-wrap: wrap;
+        }
+
+        .new-popup__content {
+            padding-bottom: 0;
+        }
+
+        .new-popup__content-layer,
+        .new-popup__sidebar-layer {
+            flex-basis: 100%;
+        }
+
+        .new-popup__slider-arrows {
+            width: 115px * (45/55);
+            min-width: 115px * (45/55);
+        }
+
+        .new-popup__slider-arrow {
+            width: 40px;
+            height: 40px;
+        }
+
+        .new-popup__sidebar-layer {
+            padding-left: 0;
+        }
+
+        .new-popup__content-layer {
+            padding-bottom: 25px;
+            padding-right: 0;
+        }
+    }
 }
 
 @media screen and(max-width: 768px) {
@@ -349,15 +368,32 @@
             }
         }
 
-        .header__menu,
-        .header__btn {
-            display: none;
+         .header__menu,
+         .header__btn {
+             display: none;
+         }
+
+    }
+
+    .popup-open {
+
+        &.popup-open_fifth,
+        &.popup-open_menu,
+        &.popup-open_secondary,
+        &.popup-open_third {
+            .header__layout {
+
+                .header__menu,
+                .header__btn {
+                    display: none;
+                }
+            }
         }
+
     }
 
     .main-screen__layout {
         .main-screen__header-layer {
-            // padding-top: 150/1220 * 100%;
             padding-bottom: 245/1220 * 100%;
         }
 
@@ -470,15 +506,6 @@
 
             &:not(:last-child) {
                 margin-bottom: 40px;
-
-                // &:after {
-                //     content: '';
-                //     position: absolute;
-                //     bottom: -20px;
-                //     width: 1px;
-                //     height: 100%;
-                //     background-image: url("data:image/svg+xml,%3Csvg%20width%3D'100%25'%20height%3D'100%25'%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%3E%3Cline%20x1%3D%220%22%20y1%3D%22100%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%20stroke%3D%22%238b909a%22%0A%20%20%20%20%20%20%20%20%20%20stroke-dasharray%3D%224%202%22%20%2F%3E%3C%2Fsvg%3E");
-                // }
             }
 
             &:before {
@@ -543,7 +570,6 @@
             .screen-5__slider-arrows {
                 width: 115px * (40/55);
                 height: 35px;
-                // bottom: -130px;
             }
         }
 
@@ -785,6 +811,46 @@
         }
     }
 
+    .widget:not(:first-child) {
+        padding-top: 40px;
+    }
+
+    .widget__card-wrapper {
+        padding-bottom: 30px;
+    }
+
+    .new-popup__layout {
+        .new-popup__slider {
+            flex-wrap: wrap;
+        }
+
+        .new-popup__slider-track {
+            max-width: unset;
+            order: 0;
+            margin-right: 0;
+            margin-bottom: 25px;
+        }
+
+        .new-popup__slider-arrows {
+            order: 1;
+            margin: 0 auto;
+            width: 115px * (40/55);
+        }
+
+        .new-popup__slider-arrow {
+            width: 35px;
+            height: 35px;
+        }
+    }
+
+    .popup__layout_third {
+        padding: 35px * 0.75 10px * 0.75 50px * 0.75;
+    }
+
+
+    .popup__layout_secondary .field-wrapper {
+        height: 50px;
+    }
 
 }
 
@@ -1417,6 +1483,46 @@
         padding: 25px 10px;
     }
 
+    .popup-gallery-open {
+        .mfp-gallery {
+            width: calc(100% - 50px);
+        }
+    }
+
+    .widget__card-wrapper {
+        padding-bottom: 25px;
+    }
+
+    .widget:not(:first-child) {
+        padding-top: 35px;
+    }
+
+    .new-popup__layout {
+        .new-popup__share {
+            flex-wrap: wrap;
+        }
+
+        .new-popup__share-text {
+            padding-bottom: 20px;
+            padding-right: 0;
+        }
+
+        .new-popup__social-share-list {
+            flex-basis: 100%;
+        }
+
+        .new-popup__slider-slide {
+            width: calc(50% - 8px);
+        }
+    }
+
+    .popup__layout_third {
+        padding: 35px * 0.5 0px 50px * 0.5;
+    }
+
+    .popup__layout_secondary .field-wrapper {
+        height: 45px;
+    }
 
 }
 

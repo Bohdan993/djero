@@ -7,7 +7,8 @@ import {
 import {
     addClass,
     removeClass,
-    menuclickeventHandler
+    menuclickeventHandler,
+    addStyle
 } from "./Helpers"
 import {
     changeClassesReverse
@@ -20,10 +21,48 @@ import {
 const callBacksArr = []
 
 
+function playVideo(video) {
+    let playPromise = video.play()
+
+    if (playPromise !== undefined) {
+        playPromise.then(res => {
+                console.log(res)
+                // Automatic playback started!
+                // Show playing UI.
+            })
+            .catch(error => {
+                console.log(error)
+                video.play()
+                // Auto-play was prevented
+                // Show paused UI.
+            })
+    }
+    addStyle(video, {
+        zIndex: '32'
+    })
+    video.setAttribute('controls', true)
+    onVideoEnded(video)
+}
+
+function onVideoEnded(video) {
+    video.addEventListener('ended', videoEndedHandler.bind(video))
+}
+
+function videoEndedHandler(e) {
+    this.removeAttribute('controls')
+    this.setAttribute('poster', this.getAttribute('poster'))
+    addStyle(this, {
+        zIndex: '-1'
+    })
+}
+
+
 export default function onLeave(data) {
 
     const {
-        animation
+        firstAnimation,
+        thirdAnimation,
+        fourthAnimation
     } = data
 
     setTimeout(function () {
@@ -34,7 +73,7 @@ export default function onLeave(data) {
 
         const callback = menuclickeventHandler.bind(this)
 
-        if(callBacksArr.length) {
+        if (callBacksArr.length) {
             document.removeEventListener('menuclickevent', callBacksArr[0])
             const elem = callBacksArr.shift()
         }
@@ -44,10 +83,8 @@ export default function onLeave(data) {
 
         addClass(
             removeClass(
-                removeClass(
-                    headerLayout,
-                    'white'),
-                'blue'),
+                headerLayout,
+                'white'),
             'blue-full')
 
         if (destination === 1) {
@@ -56,18 +93,33 @@ export default function onLeave(data) {
                 'blue-full')
 
             changeClassesReverse(data)
-            animation.play()
+            firstAnimation.play()
 
 
             return
         }
 
+
+        if (destination === 2) {
+            playVideo(thirdAnimation)
+            // thirdAnimation.play()
+            return
+        }
+
+
+        if (destination === 3) {
+            playVideo(fourthAnimation)
+            // fourthAnimation.play()
+            return
+        }
+
+
         if (destination === 5) {
-            removeClass(
-                addClass(
-                    headerLayout,
-                    'blue'),
-                'blue-full')
+            // removeClass(
+            //     addClass(
+            //         headerLayout,
+            //         'blue'),
+            //     'blue-full')
             return
         }
 
