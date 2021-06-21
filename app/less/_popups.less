@@ -230,7 +230,23 @@
 
 .popup_third,
 .popup_fifth {
-	max-width: 1012px;
+	max-width: 1012px + 60px;
+	padding: 0 30px;
+
+	.close-popup.close-popup_secondary {
+		right: 5px;
+	}
+}
+
+
+.popup-gallery-open {
+	.mfp-gallery {
+		width: calc(100% - 140px);
+	}
+
+	.mfp-container {
+		padding: 0;
+	}
 }
 
 .popup__layout {

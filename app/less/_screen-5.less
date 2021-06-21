@@ -62,9 +62,6 @@
             background: url('../img/TV.png') no-repeat center/contain;
         }
 
-        // max-width: 750px;
-        // margin: 0 auto;
-        // background: url('../img/TV.png') no-repeat center;
     }
 
     .screen-5__slider-main {
@@ -156,6 +153,7 @@
 
             &:before {
                 content: '';
+                pointer-events: none;
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -192,7 +190,8 @@
 
 
 
-            .screen-5__slider-img {
+            .screen-5__slider-img,
+            .screen-5__slider-link {
                 position: absolute;
                 top: 50%;
                 left: 50%;
@@ -202,6 +201,7 @@
                 object-fit: cover;
                 border-radius: 14px;
             }
+
         }
 
 

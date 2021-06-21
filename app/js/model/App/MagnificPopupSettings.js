@@ -16,6 +16,23 @@ import {
 
 let instance
 
+
+$.extend(true, $.magnificPopup.defaults, {
+    tClose: 'Закрити (Esc)', // Alt text on close button
+    tLoading: 'Завантаження...', // Text that is displayed during loading. Can contain %curr% and %total% keys
+    gallery: {
+        tPrev: 'Попередній (Ліва клавіша стрілка)', // Alt text on left arrow
+        tNext: 'Наступний (Права клавіша стрілка)', // Alt text on right arrow
+        tCounter: '%curr% із %total%' // Markup for "1 of 7" counter
+    },
+    image: {
+        tError: '<a href="%url%">Зображення</a> не може бути завантажене.' // Error message when image could not be loaded
+    },
+    ajax: {
+        tError: '<a href="%url%">Контент</a> не може бути завантажений.' // Error message when ajax request failed
+    }
+});
+
 const settings = {
     type: 'inline',
     closeBtnInside: false,

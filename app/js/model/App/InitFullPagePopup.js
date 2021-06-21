@@ -25,7 +25,7 @@ const InitFullPagePopup = () => {
             disableMouse: true,
             scrollbars: 'custom'
         },
-        bigSectionsDestination: 'top',
+        // bigSectionsDestination: 'top',
         onLeave,
         afterLoad
     })
@@ -44,7 +44,7 @@ const InitFullPagePopup = () => {
     }
 
     function onLeave(origin, destination, direction) {
-        console.log(this)
+        // console.log(this)
         setTimeout(function () {
             $.fn.fullpage.reBuild()
         }, 50)

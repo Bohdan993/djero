@@ -91,11 +91,11 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
                         addClass(body, 'popup-open_second-branch')
                         removeClass(body, 'popup-open_third', 'popup-open_fourth', 'popup-open_menu')
-                        $.fn.fullpage.destroy('all')
-                        console.log('dfr')
-                        setTimeout(function () {
-                            InitFullPagePopup()
-                        }, 50)
+                        // $.fn.fullpage.destroy('all')
+                        // // console.log('dfr')
+                        // setTimeout(function () {
+                        //     InitFullPagePopup()
+                        // }, 50)
 
 
                     } else {
@@ -122,9 +122,8 @@ const SetSecondBranchPopupSettings = (body, data) => {
                 },
                 open() {
                     addClass(body, 'popup-open', 'popup-open_second-branch')
-                    // сonsole.log('dfer')
-                    // $.fn.fullpage.destroy('all')
-                    // InitFullPagePopup()
+                    $.fn.fullpage.destroy('all')
+                    InitFullPagePopup()
                 },
 
                 close() {

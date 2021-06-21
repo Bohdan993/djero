@@ -61,6 +61,7 @@ function addStyle(elem, styles) {
 
 function menuclickeventHandler(e) {
 	e.stopImmediatePropagation()
+	console.log('dfdd')
 	const {detail: {
 		anchor
 	}} = e

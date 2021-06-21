@@ -16,7 +16,7 @@ const InitTippy = (element, content) => {
         hideOnClick: true,
         trigger: 'click',
         animation: 'shift-away-extreme',
-        zIndex: 0,
+        zIndex: 9999,
         popperOptions: {
             // strategy: 'fixed',
             modifiers: [

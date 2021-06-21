@@ -17,7 +17,9 @@ import {
 
 import InitFullPage from './InitFullPage'
 
-import { SetSecondBranchPopupSettings } from "./InitMagnificPopupSecondBranch"
+import {
+    SetSecondBranchPopupSettings
+} from "./InitMagnificPopupSecondBranch"
 
 import settings from './MagnificPopupSettings'
 
@@ -25,7 +27,11 @@ import settings from './MagnificPopupSettings'
 
 const InitMagnificPopups = (body, data) => {
 
-    const {callbacks: {change}} = SetSecondBranchPopupSettings(body, data)
+    const {
+        callbacks: {
+            change
+        }
+    } = SetSecondBranchPopupSettings(body, data)
 
     const settingsSecondary = {
         ...settings,
@@ -144,6 +150,37 @@ const InitMagnificPopups = (body, data) => {
     $(OPEN_POPUP_LINK_ABOUT_SET).magnificPopup(settingsAboutSet)
     $(OPEN_POPUP_LINK_NEW).magnificPopup(settingsNew)
     $(OPEN_POPUP_LINK_VIDEO).magnificPopup(settingsVideo)
+
+    $('#screen-5__slider-secondary').magnificPopup({
+        delegate: 'a',
+        type: 'image',
+        tLoading: 'Завантаження зображення #%curr%...',
+        mainClass: 'zoom-in-animation my-mfp-zoom-in',
+        gallery: {
+            enabled: true,
+            navigateByImgClick: true,
+            preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+        },
+        image: {
+            tError: '<a href="%url%">Зображення #%curr%</a> не може бути завантажене.',
+            // titleSrc: function(item) {
+            // 	return item.el.attr('title') + '<small>by Marsel Van Oosten</small>';
+            // }
+        },
+        callbacks: {
+            open() {
+                console.log('opened')
+                addClass(body, 'popup-gallery-open')
+            },
+
+            close() {
+                removeClass(body, 'popup-open', 'popup-gallery-open')
+            }
+
+        }
+
+    })
+
 
 
 
