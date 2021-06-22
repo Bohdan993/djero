@@ -13,6 +13,9 @@ import {
 	PlayVideo,
 	PlayVideoYoutube,
 	MoveToScreens,
+	MountCart,
+	MountCartsQuantity,
+	MountTotals,
 	args
 } from '../model';
 import {
@@ -26,6 +29,9 @@ import {
 	$choices,
 	$screenPlayVideo,
 	$menuLinks,
+	$cart,
+	$cartsQuantity,
+	$popupTotalPrices
 } from '../view';
 
 
@@ -44,6 +50,9 @@ const app = {
 		this.pv()
 		this.pvy()
 		this.mts()
+		this.mcq()
+		this.mc()
+		this.mt()
 		// this.iosb()
 	},
 	bm() {
@@ -85,6 +94,15 @@ const app = {
 	},
 	mts() {
 		MoveToScreens($menuLinks, $body, args)
+	},
+	mc(){
+		MountCart($cart)
+	},
+	mcq(){
+		MountCartsQuantity($cartsQuantity)
+	},
+	mt(){
+		MountTotals($popupTotalPrices)
 	}
 
 }

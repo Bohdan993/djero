@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1624312025334" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1624312025334">
-    <link rel="stylesheet" href="css/main.min.css?v=1624312025334">
+    <link rel="preload" href="css/main.min.css?v=1624403774773" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1624403774773">
+    <link rel="stylesheet" href="css/main.min.css?v=1624403774773">
   </head>
   <body class="home-page">
     <header class="header">
@@ -183,8 +183,6 @@
                               <li class="splide__slide screen-5__slider-slide"><a class="screen-5__slider-link" href="img/slider-photo3.png"><img class="screen-5__slider-img" src="img/slider-photo3.png" alt="Slide3"></a></li>
                               <li class="splide__slide screen-5__slider-slide"><a class="screen-5__slider-link" href="img/slider-photo1.png"><img class="screen-5__slider-img" src="img/slider-photo1.png" alt="Slide4"></a></li>
                               <li class="splide__slide screen-5__slider-slide"><a class="screen-5__slider-link" href="img/slider-photo2.png"><img class="screen-5__slider-img" src="img/slider-photo2.png" alt="Slide5"></a></li>
-                              <li class="splide__slide screen-5__slider-slide"><a class="screen-5__slider-link" href="img/slider-photo2.png"><img class="screen-5__slider-img" src="img/slider-photo2.png" alt="Slide5"></a></li>
-                              <li class="splide__slide screen-5__slider-slide"><a class="screen-5__slider-link" href="img/slider-photo2.png"><img class="screen-5__slider-img" src="img/slider-photo2.png" alt="Slide5"></a></li>
                             </ul>
                           </div>
                         </div>
@@ -207,20 +205,35 @@
                           </div>
                           <div class="splide__track screen-5__slider-track">
                             <ul class="splide__list screen-5__slider-list">
-                              <li class="splide__slide screen-5__slider-slide">
-                                <div class="screen-play-video screen-5__play-video"></div><img src="img/slider-photo1.png" alt="Slide1">
+                              <li class="splide__slide screen-5__slider-slide screen-video-layer">
+                                <div class="screen-play-video screen-5__play-video"></div><img class="screen-5__slider-img" src="img/slider-photo1.png" alt="Slide1">
+                                <video class="screen-5__video screen-video" preload="metadata" muted>
+                                  <source data-src="video/paint-ball.mp4" type="video/mp4">
+                                </video>
                               </li>
-                              <li class="splide__slide screen-5__slider-slide">
-                                <div class="screen-play-video screen-5__play-video"></div><img src="img/slider-photo2.png" alt="Slide2">
+                              <li class="splide__slide screen-5__slider-slide screen-video-layer">
+                                <div class="screen-play-video screen-5__play-video"></div><img class="screen-5__slider-img" src="img/slider-photo2.png" alt="Slide2">
+                                <video class="screen-5__video screen-video" preload="metadata" muted>
+                                  <source data-src="video/paint-ball.mp4" type="video/mp4">
+                                </video>
                               </li>
-                              <li class="splide__slide screen-5__slider-slide">
-                                <div class="screen-play-video screen-5__play-video"></div><img src="img/slider-photo3.png" alt="Slide3">
+                              <li class="splide__slide screen-5__slider-slide screen-video-layer">
+                                <div class="screen-play-video screen-5__play-video"></div><img class="screen-5__slider-img" src="img/slider-photo3.png" alt="Slide3">
+                                <video class="screen-5__video screen-video" preload="metadata" muted>
+                                  <source data-src="video/paint-ball.mp4" type="video/mp4">
+                                </video>
                               </li>
-                              <li class="splide__slide screen-5__slider-slide">
-                                <div class="screen-play-video screen-5__play-video"></div><img src="img/slider-photo1.png" alt="Slide4">
+                              <li class="splide__slide screen-5__slider-slide screen-video-layer">
+                                <div class="screen-play-video screen-5__play-video"></div><img class="screen-5__slider-img" src="img/slider-photo1.png" alt="Slide4">
+                                <video class="screen-5__video screen-video" preload="metadata" muted>
+                                  <source data-src="video/paint-ball.mp4" type="video/mp4">
+                                </video>
                               </li>
-                              <li class="splide__slide screen-5__slider-slide">
-                                <div class="screen-play-video screen-5__play-video"></div><img src="img/slider-photo2.png" alt="Slide5">
+                              <li class="splide__slide screen-5__slider-slide screen-video-layer">
+                                <div class="screen-play-video screen-5__play-video"></div><img class="screen-5__slider-img" src="img/slider-photo2.png" alt="Slide5">
+                                <video class="screen-5__video screen-video" preload="metadata" muted>
+                                  <source data-src="video/paint-ball.mp4" type="video/mp4">
+                                </video>
                               </li>
                             </ul>
                           </div>
@@ -484,7 +497,7 @@
                       <p class="popup__card-price catalog-popup__card-price">35 грн.</p>
                       <div class="popup__card-quantity-wrapper catalog-popup__card-quantity-wrapper">
                         <p>Кількість:</p>
-                        <div class="popup__card-quantity catalog-popup__card-quantity"><span class="popup__card-quantity-minus popup__card-quantity-control catalog-popup__card-quantity-minus">-</span><span class="popup__card-quantity-count popup__card-quantity-count">2</span><span class="popup__card-quantity-plus popup__card-quantity-control catalog-popup__card-quantity-plus">+</span></div>
+                        <div class="popup__card-quantity catalog-popup__card-quantity"></div>
                       </div>
                     </div>
                   </div>
@@ -501,7 +514,7 @@
                       <p class="popup__card-price catalog-popup__card-price">850 грн.</p>
                       <div class="popup__card-quantity-wrapper catalog-popup__card-quantity-wrapper">
                         <p>Кількість:</p>
-                        <div class="popup__card-quantity catalog-popup__card-quantity"><span class="popup__card-quantity-minus popup__card-quantity-control catalog-popup__card-quantity-minus">-</span><span class="popup__card-quantity-count popup__card-quantity-count">0</span><span class="popup__card-quantity-plus popup__card-quantity-control catalog-popup__card-quantity-plus">+</span></div>
+                        <div class="popup__card-quantity catalog-popup__card-quantity"></div>
                       </div>
                     </div>
                   </div>
@@ -524,8 +537,7 @@
                 <button class="popup__basket-clear catalog-popup__basket-clear transparent-btn with-underline"><span>Очистити корзину</span></button>
                 <div class="popup__total catalog-popup__total">
                   <p class="popup__total-text catalog-popup__total-text">Загальна вартість</p>
-                  <p class="popup__total-price catalog-popup__total-price">
-                     70 грн.</p>
+                  <p class="popup__total-price catalog-popup__total-price"> </p>
                 </div>
               </div>
               <div class="popup__btns catalog-popup__btns">
@@ -539,60 +551,13 @@
           <div class="popup__layout cart-popup__layout">
             <div class="center"> 
               <h2 class="popup__title h2-title cart-popup__title">Корзина</h2>
-              <div class="popup__cards cart-popup__cards">
-                <div class="popup__card-layer cart-popup__card-layer">
-                  <div class="popup__card cart-popup__card">
-                    <figure class="popup__card-boxing cart-popup__card-boxing">
-                      <div class="popup__card-img-wrapper cart-popup__card-img-wrapper"><img class="popup__card-img cart-popup__card-img" src="img/cookies-sandwich-big.png" alt="Cookies box"></div>
-                      <figcaption class="popup__card-mass cart-popup__card-mass"><span>1 упаковка</span><span>* 120 г.</span></figcaption>
-                    </figure>
-                    <p class="popup__card-price cart-popup__card-price">35 грн.</p>
-                    <div class="popup__card-quantity cart-popup__card-quantity"><span class="popup__card-quantity-minus popup__card-quantity-control cart-popup__card-quantity-minus">-</span><span class="popup__card-quantity-count popup__card-quantity-count">2</span><span class="popup__card-quantity-plus popup__card-quantity-control cart-popup__card-quantity-plus">+</span></div>
-                    <p class="popup__card-total-price cart-popup__card-total-price">70 грн.</p>
-                    <button class="popup__basket-remove cart-popup__basket-remove transparent-btn"><i class="ico rubbish-ico cart-popup__rubbish-ico">
-                        <svg>
-                          <use xlink:href="img/sprites/svg/symbol/sprite.svg#rubbish-bin"></use>
-                        </svg></i><span>Прибрати з корзини</span></button>
-                  </div>
-                </div>
-                <div class="popup__card-layer cart-popup__card-layer">
-                  <div class="popup__card cart-popup__card">
-                    <figure class="popup__card-boxing cart-popup__card-boxing">
-                      <div class="popup__card-img-wrapper cart-popup__card-img-wrapper"><img class="popup__card-img cart-popup__card-img" src="img/box.png" alt="Cookies box"></div>
-                      <figcaption class="popup__card-mass cart-popup__card-mass"><span>1 ящик (30 упаковок)</span><span>* 3,6 кг.</span></figcaption>
-                    </figure>
-                    <p class="popup__card-price cart-popup__card-price">850 грн.</p>
-                    <div class="popup__card-quantity cart-popup__card-quantity"><span class="popup__card-quantity-minus popup__card-quantity-control cart-popup__card-quantity-minus">-</span><span class="popup__card-quantity-count popup__card-quantity-count">1</span><span class="popup__card-quantity-plus popup__card-quantity-control cart-popup__card-quantity-plus">+</span></div>
-                    <p class="popup__card-total-price cart-popup__card-total-price">850 грн.</p>
-                    <button class="popup__basket-remove cart-popup__basket-remove transparent-btn"><i class="ico rubbish-ico cart-popup__rubbish-ico">
-                        <svg>
-                          <use xlink:href="img/sprites/svg/symbol/sprite.svg#rubbish-bin"></use>
-                        </svg></i><span>Прибрати з корзини</span></button>
-                  </div>
-                </div>
-                <div class="popup__card-layer cart-popup__card-layer">
-                  <div class="popup__card cart-popup__card">
-                    <figure class="popup__card-boxing cart-popup__card-boxing">
-                      <div class="popup__card-img-wrapper cart-popup__card-img-wrapper"><img class="popup__card-img cart-popup__card-img" src="img/pallet.png" alt="Pallet"></div>
-                      <figcaption class="popup__card-mass cart-popup__card-mass"><span>Піддон</span></figcaption>
-                    </figure>
-                    <p class="popup__card-price cart-popup__card-price">8000 грн.</p>
-                    <div class="popup__card-quantity cart-popup__card-quantity"><span class="popup__card-quantity-minus popup__card-quantity-control cart-popup__card-quantity-minus">-</span><span class="popup__card-quantity-count popup__card-quantity-count">5</span><span class="popup__card-quantity-plus popup__card-quantity-control cart-popup__card-quantity-plus">+</span></div>
-                    <p class="popup__card-total-price cart-popup__card-total-price">40000 грн.</p>
-                    <button class="popup__basket-remove cart-popup__basket-remove transparent-btn"><i class="ico rubbish-ico cart-popup__rubbish-ico">
-                        <svg>
-                          <use xlink:href="img/sprites/svg/symbol/sprite.svg#rubbish-bin"></use>
-                        </svg></i><span>Прибрати з корзини</span></button>
-                  </div>
-                </div>
-              </div>
+              <div class="popup__cards cart-popup__cards"></div>
               <p class="popup__note cart-popup__note">* Вага нетто</p>
               <div class="cart-popup__summary">
                 <div class="popup__card-btn-wrapper cart-popup__card-btn-wrapper"><a class="popup__card-btn cart-popup__card-btn btn transparent menu-link" href="#" data-is-popup="false" data-to="main-screen" data-position="popup" data-silent="true"><span>На головну</span></a></div>
                 <button class="popup__basket-clear cart-popup__basket-clear transparent-btn with-underline"><span>Очистити корзину</span></button>
                 <div class="cart-popup__total">
-                  <p class="popup__total-price cart-popup__total-price">
-                     70 грн.</p><a class="popup__btn cart-popup__btn btn red-orange open-popup-link" href="#order-popup"><span>Оформити замовлення</span></a>
+                  <p class="popup__total-price cart-popup__total-price"> </p><a class="popup__btn cart-popup__btn btn red-orange open-popup-link" href="#order-popup"><span>Оформити замовлення</span></a>
                 </div>
               </div>
             </div>
@@ -787,8 +752,7 @@
                     <div class="order-popup__preview-section total-section">
                       <div class="popup__total order-popup__total">
                         <p class="popup__total-text order-popup__total-text">Разом</p>
-                        <p class="popup__total-price order-popup__total-price">
-                           70 грн.</p>
+                        <p class="popup__total-price order-popup__total-price"> </p>
                       </div>
                       <button class="popup__btn order-popup__btn btn red-orange big" type="submit" form="order-popup__form"><span>Замовлення підтверджую</span></button>
                     </div>
@@ -1446,8 +1410,8 @@
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1624312025335" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1624312025335" as="script">
-    <script src="js/main.min.js?v=1624312025335" async></script>
+    <script src="js/libs.min.js?v=1624403774773" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1624403774773" as="script">
+    <script src="js/main.min.js?v=1624403774773" async></script>
   </body>
 </html>

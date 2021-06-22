@@ -89,7 +89,7 @@ const InitSplide = () => {
         type: 'fade',
         heightRatio: 350 / 625,
         pagination: false,
-        cover: true,
+        // cover: true,
         pagination: false,
         lazyLoad: 'nearby',
         classes: {

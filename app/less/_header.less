@@ -4,22 +4,27 @@
 	// width: (1600 - 140)/1600 * 100%;
 	width: calc(100% - 140px);
 	top: 0;
-	
+
 }
 
 .header__layout {
-	
+
 	background: @transparent;
 
 
-	&.blue {
-		background: linear-gradient(90deg, @blue calc(100% - 8px), @transparent calc(100% - 8px));
-	}
+	// &.blue {
+	// 	background: linear-gradient(90deg, @blue calc(100% - 8px), @transparent calc(100% - 8px));
+	// }
 
-	&.blue-full {
-		// background: @blue;
-		background: linear-gradient(90deg, @blue calc(100% - 8px), @transparent calc(100% - 8px));
-	}
+	// &.blue-full {
+	// 	// background: @blue;
+	// 	background: linear-gradient(90deg, @blue calc(100% - 8px), @transparent calc(100% - 8px));
+	// }
+
+	// &.white {
+	// 	background: linear-gradient(90deg, @light-gray calc(100% - 8px), @transparent calc(100% - 8px));
+	// }
+
 	// width: 100%;
 	.f-container {
 		justify-content: space-between;
@@ -54,22 +59,30 @@
 		top: -12px;
 
 		&:after {
-			content: ''; 
-			position: absolute; /* Абсолютное позиционирование */
-			left: 0px; 
-			bottom: -15px; /* Положение треугольника */
-			border: 15px solid @transparent; /* Прозрачные границы */
-			border-left: 51.5px solid @orange; /* Добавляем треугольник */
+			content: '';
+			position: absolute;
+			/* Абсолютное позиционирование */
+			left: 0px;
+			bottom: -15px;
+			/* Положение треугольника */
+			border: 15px solid @transparent;
+			/* Прозрачные границы */
+			border-left: 51.5px solid @orange;
+			/* Добавляем треугольник */
 			transition: border-left 0.25s linear;
-		   }
+		}
 
 		&:before {
-			content: ''; 
-			position: absolute; /* Абсолютное позиционирование */
-			right: 0px; 
-			bottom: -15px; /* Положение треугольника */
-			border: 15px solid @transparent; /* Прозрачные границы */
-			border-right: 51.5px solid @orange; /* Добавляем треугольник */
+			content: '';
+			position: absolute;
+			/* Абсолютное позиционирование */
+			right: 0px;
+			bottom: -15px;
+			/* Положение треугольника */
+			border: 15px solid @transparent;
+			/* Прозрачные границы */
+			border-right: 51.5px solid @orange;
+			/* Добавляем треугольник */
 			transition: border-right 0.25s linear;
 		}
 
@@ -77,11 +90,13 @@
 			background-color: @red-orange;
 
 			&:after {
-				border-left: 51.5px solid @red-orange; /* Добавляем треугольник */
-			   }
-	
+				border-left: 51.5px solid @red-orange;
+				/* Добавляем треугольник */
+			}
+
 			&:before {
-				border-right: 51.5px solid @red-orange; /* Добавляем треугольник */
+				border-right: 51.5px solid @red-orange;
+				/* Добавляем треугольник */
 			}
 		}
 	}
@@ -107,7 +122,7 @@
 			color: @red-orange;
 		}
 
-	
+
 	}
 
 	.header__logo {

@@ -117,12 +117,12 @@ const SetSecondBranchPopupSettings = (body, data) => {
                     if (this.content[0].classList.contains('payment-popup')) {
                         console.log('paymant')
                         $.fn.fullpage.destroy('all')
-                        addClass(body, 'fixed')
+                        addClass(body, 'fixed1')
                         instanceSecondBranchPopup = InitOverlayScrollbars({
                             popup: this.wrap[0]
                         })
                     } else {
-                        removeClass(body, 'fixed')
+                        removeClass(body, 'fixed1')
                     }
 
                 },

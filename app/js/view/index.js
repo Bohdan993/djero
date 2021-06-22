@@ -18,6 +18,9 @@ const $screenPlayVideo = document.querySelectorAll('.screen-play-video')
 const $headerLayout = document.querySelector('.header__layout')
 const $headerClosePopup = document.querySelector('.header .close-popup-btn')
 const $menuLinks = document.querySelectorAll('.menu-link')
+const $cart = document.querySelector('.popup__cards.cart-popup__cards')
+const $cartsQuantity = document.querySelectorAll('.popup__card-quantity.catalog-popup__card-quantity')
+const $popupTotalPrices = document.querySelectorAll('.popup__total-price')
 
 export {
 	$body,
@@ -39,5 +42,8 @@ export {
 	$screenPlayVideo,
 	$headerLayout,
 	$headerClosePopup,
-	$menuLinks
+	$menuLinks,
+	$cart,
+	$cartsQuantity,
+	$popupTotalPrices
 }

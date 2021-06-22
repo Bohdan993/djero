@@ -46,7 +46,7 @@
       overflow: hidden;
    }
 
-   .sidebar__social-link{
+   .sidebar__social-link {
       cursor: pointer;
       border-radius: 50%;
       border: 2px solid @white;
@@ -69,14 +69,16 @@
       }
    }
 
-   .sidebar__wantbuy, .sidebar__cart {
+   .sidebar__wantbuy,
+   .sidebar__cart {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
    }
 
-   .sidebar__wantbuy-text, .sidebar__cart-text {
+   .sidebar__wantbuy-text,
+   .sidebar__cart-text {
       text-align: center;
       text-transform: uppercase;
 
@@ -88,7 +90,8 @@
       }
    }
 
-   .sidebar__wantbuy-icon, .sidebar__cart-icon {
+   .sidebar__wantbuy-icon,
+   .sidebar__cart-icon {
       display: inline-flex;
       justify-content: center;
       align-items: center;
@@ -118,7 +121,8 @@
       }
    }
 
-   .sidebar__wantbuy-ico, .sidebar__cart-ico {
+   .sidebar__wantbuy-ico,
+   .sidebar__cart-ico {
       height: 35px;
       width: 35px;
 
@@ -161,6 +165,7 @@
             }
          }
       }
+
       span {
          width: 27px;
          height: 2px;
@@ -169,7 +174,7 @@
          position: relative;
          overflow: hidden;
 
-         
+
 
          &:before {
             content: '';
@@ -184,23 +189,24 @@
 
          &:first-child {
             &:before {
-               transition-delay: 0.05s; 
-            }  
+               transition-delay: 0.05s;
+            }
          }
 
          &:nth-child(2) {
             width: 27px/2;
             transition: width 0.1s linear;
             transition-delay: 0.1s + 0.25s;
+
             &:before {
-               transition-delay: 0.1s; 
-            }  
+               transition-delay: 0.1s;
+            }
          }
 
          &:last-child {
             &:before {
-               transition-delay: 0.15s; 
-            }  
+               transition-delay: 0.15s;
+            }
          }
 
          &:not(:last-child) {
@@ -236,38 +242,38 @@
       }
 
       &:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border: 2px solid @white;
-        width: 35px;
-        height: 35px;
-        border-radius: 50%;
-        z-index: 0;
-        transition: background-color 0.25s linear;
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         border: 2px solid @white;
+         width: 35px;
+         height: 35px;
+         border-radius: 50%;
+         z-index: 0;
+         transition: background-color 0.25s linear;
       }
 
-       &:before {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 100%;
-          transform: translate(-50%, -50%);
-          background-color: @dark-orange;
-          width: 42px;
-          height: 42px;
-          border-radius: 50%;
-          z-index: -1;
-          border-top-left-radius: 0;
-          border-bottom-left-radius: 0;
-          opacity: 0;
-          transition: opacity 0.15s linear, left 0.15s linear;
-          pointer-events: none;
-       }
+      &:before {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 100%;
+         transform: translate(-50%, -50%);
+         background-color: @dark-orange;
+         width: 42px;
+         height: 42px;
+         border-radius: 50%;
+         z-index: -1;
+         border-top-left-radius: 0;
+         border-bottom-left-radius: 0;
+         opacity: 0;
+         transition: opacity 0.15s linear, left 0.15s linear;
+         pointer-events: none;
+      }
 
-       &.active {
+      &.active {
 
          &:before {
             opacity: 1;
@@ -281,18 +287,18 @@
          svg {
             fill: @orange;
          }
-       }
+      }
 
-       &:hover {
-           &:after {
-              background-color: @white;
-           }
+      &:hover {
+         &:after {
+            background-color: @white;
+         }
 
-            svg {
-               fill: @orange;
-            }
-          
-       }
+         svg {
+            fill: @orange;
+         }
+
+      }
    }
 
 
@@ -306,7 +312,7 @@
    background-color: @dark-orange;
    padding: 12px 15px;
    z-index: 0;
-   width: 212px - 42px;
+   width: 132px - 42px;
    border-top-right-radius: 0;
    border-bottom-right-radius: 0;
    display: none;

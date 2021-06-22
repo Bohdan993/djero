@@ -6,13 +6,29 @@ import magnificPopup from 'magnific-popup'
 import './jquery-fullpage-scrolloverflow'
 import OverlayScrollbars from 'overlayscrollbars'
 import Choices from 'choices.js'
+import * as CartLS from 'cart-localstorage'
+import * as Redom from 'redom'
 
 
+console.log(Redom)
 
 export {
 	Splide,
 	$,
 	tippy,
 	OverlayScrollbars,
-	Choices
+	Choices,
+	CartLS,
+	Redom
+	// list,
+	// get,
+	// add,
+	// remove,
+	// update,
+	// quantity,
+	// total,
+	// destroy,
+	// exists,
+	// subtotal,
+	// onChange
 }
