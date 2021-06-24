@@ -149,7 +149,7 @@ const InitSplide = () => {
     screen5MainSlider.on('arrows:mounted', arrowsMountedHandler.bind(screen5MainSlider))
     screen5thumbnailSlider.on('arrows:mounted', arrowsMountedHandler.bind(screen5thumbnailSlider))
     screen5thumbnailSlider.mount()
-    screen5MainSlider.sync(screen5thumbnailSlider).mount();
+    screen5MainSlider.mount()
     screen5MainSlider.on('move', moveHandler.bind(screen5MainSlider))
     screen5thumbnailSlider.on('move', moveHandler.bind(screen5thumbnailSlider))
     newPopupSlider.on('arrows:mounted', arrowsMountedHandler.bind(newPopupSlider))

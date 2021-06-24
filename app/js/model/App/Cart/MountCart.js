@@ -4,16 +4,16 @@ import {
 } from '../../../../libs/libs'
 
 import {
-    Cart
-} from './Cart'
+    CartList
+} from './CartList'
 
 
 const MountCart = (root) => {
 
-    const cart = new Cart('Cart')
+    const cartList = new CartList('Cart')
 
-    Redom.mount(root, cart)
-    cart.update(CartLS.list())
+    Redom.mount(root, cartList)
+    cartList.update(CartLS.list())
 
 
 }

@@ -16,6 +16,7 @@ const PlayVideo = (btsn) => {
     function forEachBtn(el) {
         if (el.classList.contains(NO_VIDEO_PLAY)) return
         el.addEventListener('click', clickHandler)
+        // el.addEventListener('touchstart', clickHandler)
 
     }
 

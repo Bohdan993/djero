@@ -17,14 +17,14 @@ const InitFullPage = (data) => {
         scrollOverflow: true,
         scrollOverflowReset: true,
         lazyLoading: true,
-        scrollingSpeed: 350,
+        scrollingSpeed: 1000,
 
-        anchors: ['main-screen', 'screen-2', 'screen-3', 'screen-4', 'screen-5', 'footer'],
+        anchors: ['main-screen', 'screen-2', 'screen-3', 'screen-4', 'screen-5', 'screen-6', 'contacts', 'footer'],
         scrollOverflowOptions: {
             click: false,
-            disableTouch: true,
-            disablePointer: true,
-            disableMouse: true,
+            disableTouch: false,
+            disablePointer: false,
+            disableMouse: false,
             scrollbars: 'custom'
         },
         bigSectionsDestination: 'top',

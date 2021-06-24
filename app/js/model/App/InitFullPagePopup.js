@@ -18,13 +18,13 @@ const InitFullPagePopup = (headerLayout) => {
         scrollOverflow: true,
         scrollOverflowReset: true,
         lazyLoading: true,
-        scrollingSpeed: 350,
-        anchors: ['about-set', 'news', 'delivery', 'footer-2'],
+        scrollingSpeed: 1000,
+        anchors: ['about-set', 'news', 'delivery', 'delivery-2', 'footer-2'],
         scrollOverflowOptions: {
             click: false,
-            disableTouch: true,
-            disablePointer: true,
-            disableMouse: true,
+            disableTouch: false,
+            disablePointer: false,
+            disableMouse: false,
             scrollbars: 'custom'
         },
         // bigSectionsDestination: 'top',

@@ -55,6 +55,7 @@ const settings = {
             removeClass(this.wrap[0], 'mfp-ready')
             removeClass(this.bgOverlay[0], 'mfp-ready')
             instanceAboutSetPopup && instanceAboutSetPopup.destroy()
+            instance && instance.scroll({ y : "0%"  })
 
             setTimeout(() => {
                 addClass(this.wrap[0], 'mfp-ready')

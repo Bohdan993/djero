@@ -39,8 +39,8 @@ const app = {
 	init() {
 		this.bm()
 		this.ifp()
-		this.it()
-		this.stb()
+		// this.it()
+		// this.stb()
 		this.is()
 		this.bca()
 		this.imp()

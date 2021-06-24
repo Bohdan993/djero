@@ -1,11 +1,18 @@
-
 .contacts__layout {
-    .fPa(90%, 95%, 90px, 95px, 576px, 1220px);
-     background: url('../img/bg-pattern-contacts.png') no-repeat right/contain, @light-gray;
-     height: 50vh;
-     min-height: 420px;
+    // .fPa(90%, 95%, 90px, 95px, 576px, 1220px);
+    background: url('../img/bg-pattern-contacts.png') no-repeat right/contain, @light-gray;
+
+    //  height: 50vh;
+    //  min-height: 420px;
     .f-container {
         align-items: stretch;
+    }
+
+    .center {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
     }
 
     a {
@@ -114,32 +121,32 @@
     }
 
     .contacts__social-link {
-    cursor: pointer;
-      border-radius: 50%;
-      border: 2px solid @dark-blue;
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      width: 35px;
-      height: 35px;
-      transition: background-color 0.25s linear;
+        cursor: pointer;
+        border-radius: 50%;
+        border: 2px solid @dark-blue;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        transition: background-color 0.25s linear;
 
-      .contacts__social-ico {
+        .contacts__social-ico {
             svg {
-               fill: @dark-blue;
+                fill: @dark-blue;
             }
-         }
+        }
 
 
-      &:hover {
-         background-color: @dark-blue;
+        &:hover {
+            background-color: @dark-blue;
 
-         .contacts__social-ico {
-            svg {
-               fill: @light-gray;
+            .contacts__social-ico {
+                svg {
+                    fill: @light-gray;
+                }
             }
-         }
-      }
+        }
     }
 
 

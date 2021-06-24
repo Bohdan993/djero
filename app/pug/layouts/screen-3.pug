@@ -1,12 +1,10 @@
 .screen-3.fullpage-section.section.screen
 	.screen-3__layout.screen__layout.is-screen
 		.center.screen-3__center
-			h2.h2-title.screen-3__title
-				|Як це працює?
 			.f-container.screen-3__f-container.screen-f-container
 				.screen-3__video-layer.screen-video-layer
 					.screen-play-video.screen-3__play-video
-					video.screen-3__video.screen-video(preload="metadata" muted)
+					video.screen-3__video.screen-video(preload="metadata" muted controlsList="nodownload")
 						source(data-src="video/paint-ball.mp4" type="video/mp4")
 				.screen-3__text-layer.screen-text-layer
 					span.screen-3__text-counter.screen-text-counter

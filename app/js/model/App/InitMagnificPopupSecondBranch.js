@@ -57,20 +57,21 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('popup_third')) {
-                        addClass(body, 'popup-open_third', 'fixed1')
+                        addClass(body, 'popup-open_third', 'fixed2')
                         removeClass(body, 'popup-open_second-branch')
                         $.fn.fullpage.destroy('all')
                         instanceAboutSetPopup = InitOverlayScrollbars({
                             popup: this.wrap[0]
                         })
                     } else {
-                        removeClass(body, 'popup-open_third', 'fixed1')
+                        removeClass(body, 'popup-open_third', 'fixed2')
                     }
 
 
                     if (this.content[0].classList.contains('popup_fourth')) {
                         addClass(body, 'popup-open_fourth')
                         removeClass(body, 'popup-open_second-branch')
+                        $.fn.fullpage.destroy('all')
                         instanceNewPopup = InitOverlayScrollbars({
                             popup: this.wrap[0]
                         })
@@ -96,9 +97,11 @@ const SetSecondBranchPopupSettings = (body, data) => {
                         addClass(body, 'popup-open_second-branch')
                         removeClass(body, 'popup-open_third', 'popup-open_fourth', 'popup-open_menu')
                         $.fn.fullpage.destroy('all')
+                        console.log($.fn)
                         setTimeout(function () {
+                            console.log('after 150 ms')
                             InitFullPagePopup(headerLayout)
-                        }, 50)
+                        }, 150)
 
 
                     } else {
@@ -108,9 +111,10 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
                     if (this.content[0].classList.contains('menu-popup')) {
                         $.fn.fullpage.destroy('all')
-                        addClass(body, 'popup-open_menu', 'fixed1')
+                        console.log('OPEN MENU')
+                        addClass(body, 'popup-open_menu', 'fixed')
                     } else {
-                        removeClass(body, 'popup-open_menu', 'fixed1')
+                        removeClass(body, 'popup-open_menu', 'fixed')
                     }
 
 
