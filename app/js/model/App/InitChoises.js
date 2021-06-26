@@ -7,7 +7,7 @@ import {
 
 const InitChoices = (choices) => {
 
-
+    const res = []
     // function showDropdownHandler(instance, e) {
     //     console.log(instance, e)
     // }
@@ -78,9 +78,14 @@ const InitChoices = (choices) => {
 
         }
 
+
+        res.push(instance)
+
     }
 
     choices.forEach(forEachChoice)
+
+    return res
 }
 
 

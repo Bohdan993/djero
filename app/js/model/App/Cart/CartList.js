@@ -14,25 +14,14 @@ class CartList {
         this.list = Redom.list(this.el, CartItem, 'id', this.type)
 
 
-        this.cartupdateeventHandler = (e) => {
-            this.update(CartLS.list())
-        }
+
     }
 
     update(data) {
         this.list.update(data)
     }
 
-    onmount() {
 
-
-        document.addEventListener('cartupdateevent', this.cartupdateeventHandler)
-    }
-
-
-    onunmount() {
-        document.removeEventListener('cartupdateevent', this.cartupdateeventHandler)
-    }
 }
 
 export {

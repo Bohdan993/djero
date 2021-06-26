@@ -1,7 +1,20 @@
 .order-popup__layout {
-    .order-popup__f-container {
+    // .order-popup__f-container {
+    //     align-items: stretch;
+    //     flex-wrap: nowrap;
+    // }
+
+
+    .order-popup__form {
+        display: flex;
+        justify-content: space-between;
         align-items: stretch;
         flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .order-popup__form-wrapper {
+        width: 100%;
     }
 
     .order-popup__title {
@@ -337,8 +350,9 @@
 
     .order-popup__product-item-price {
         flex-basis: (438 - (140 + 160))/438 * 100%;
-        text-align: right;
+        text-align: center;
         font-size: 24/16 * 1rem;
+
     }
 
     // font-size: 1rem;

@@ -9,13 +9,14 @@ import {
 	InitMagnificPopups,
 	InitMagnificPopupSecondBranch,
 	ClosePopup,
-	InitChoices,
+	// InitChoices,
 	PlayVideo,
 	PlayVideoYoutube,
 	MoveToScreens,
 	MountCart,
 	MountCartsQuantity,
 	MountTotals,
+	MountOrder,
 	args
 } from '../model';
 import {
@@ -26,12 +27,16 @@ import {
 	$socialShareList,
 	$socialShareBtn,
 	$closePopup,
-	$choices,
+	// $choices,
 	$screenPlayVideo,
 	$menuLinks,
 	$cart,
 	$cartsQuantity,
-	$popupTotalPrices
+	$popupTotalPrices,
+	$orderPopupFContainer
+	// $orderPopupFormLayer,
+	// $orderPopupPreviewLayer
+
 } from '../view';
 
 
@@ -46,13 +51,14 @@ const app = {
 		this.imp()
 		this.impsb()
 		this.cp()
-		this.ic()
+		// this.ic()
 		this.pv()
 		this.pvy()
 		this.mts()
 		this.mcq()
 		this.mc()
 		this.mt()
+		this.mo()
 		// this.iosb()
 	},
 	bm() {
@@ -83,9 +89,9 @@ const app = {
 	cp() {
 		ClosePopup($closePopup)
 	},
-	ic() {
-		InitChoices($choices)
-	},
+	// ic() {
+	// 	InitChoices($choices)
+	// },
 	pv() {
 		PlayVideo($screenPlayVideo)
 	},
@@ -95,15 +101,19 @@ const app = {
 	mts() {
 		MoveToScreens($menuLinks, $body, args)
 	},
-	mc(){
-		MountCart($cart)
+	mc() {
+		MountCart($cart, $body, args)
 	},
-	mcq(){
+	mcq() {
 		MountCartsQuantity($cartsQuantity)
 	},
-	mt(){
+	mo() {
+		MountOrder($orderPopupFContainer)
+	},
+	mt() {
 		MountTotals($popupTotalPrices)
-	}
+	},
+
 
 }
 

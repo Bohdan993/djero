@@ -5,82 +5,82 @@
 			h2.popup__title.h2-title.order-popup__title
 				|Оформити замовлення
 			.f-container.order-popup__f-container
-				.order-popup__form-layer
-					form#order-popup__form.order-popup__form(method="POST")
-						fieldset.fieldset
-							legend.legend.order-popup__legend
-								|Данні покупця
-							.field-row
-								.field-wrapper
-									input.field(type="text" placeholder=" " id="name-input")
-									label.text-field-label(for="name-input")
-										|Ім'я
-								.field-wrapper
-									input.field(type="text" placeholder=" " id="surname-input")
-									label.text-field-label(for="surname-input")
-										|Прізвище
-							.field-row
-								.field-wrapper
-									input.field(type="tel" placeholder=" " id="tel-input")
-									label.text-field-label(for="tel-input")
-										|Телефон
-								.field-wrapper
-									input.field(type="email" placeholder=" " id="email-input")
-									label.text-field-label(for="email-input")
-										|E-mail
-							.field-row
-								.field-wrapper.textarea-field-wrapper
-									textarea.field.textarea(name="" rows="5" placeholder=" " id="comment-textarea" value="")
-									label.textarea-field-label(for="comment-textarea")
-										|Коментар
-						fieldset.fieldset
-							legend.legend.order-popup__legend 
-								|Спосіб оплати
-							.field-row
-								.field-wrapper.order-popup__radio-field-wrapper 
-									input.field(type="radio" name="payment-radio" id="payment-radio-1" checked="true")
-									label(for="payment-radio-1")
-										|Готівкою
-								.field-wrapper.order-popup__radio-field-wrapper 
-									input.field(type="radio" name="payment-radio" id="payment-radio-2")
-									label(for="payment-radio-2")
-										|Банківською картою
-							.field-row
-								.field-wrapper.order-popup__radio-field-wrapper 
-									input.field(type="radio" name="payment-radio" id="payment-radio-3")
-									label(for="payment-radio-3")
-										|Розрахунковий рахунок
-						fieldset.fieldset
-							legend.legend.order-popup__legend 
-								|Доставка
-							.field-row
-								.field-wrapper.order-popup__radio-field-wrapper 
-									input.field(type="radio" name="delivery-radio"  id="delivery-radio-1" checked="true")
-									label(for="delivery-radio-1")
-										|Cамовивіз з Нової Пошти
-								.field-wrapper.order-popup__radio-field-wrapper 
-									input.field(type="radio" name="delivery-radio" id="delivery-radio-2")
-									label(for="delivery-radio-2")
-										|Кур'єр Нова Пошта
-							.field-row
-								.field-wrapper.order-popup__select-field-wrapper
-									select.choice.order-popup__select-field.department-select
-							.field-row
-								.field-wrapper.order-popup__select-field-wrapper
-									select.choice.order-popup__select-field.town-select
-								.field-wrapper
-									input.field(type="text" placeholder=" " id="street-input")
-									label.text-field-label(for="street-input")
-										|Вулиця
-							.field-row
-								.field-wrapper
-									input.field(type="text" placeholder=" " id="house-input")
-									label.text-field-label(for="house-input")
-										|Будинок
-								.field-wrapper
-									input.field(type="text" placeholder=" " id="flat-input")
-									label.text-field-label(for="flat-input")
-										|Квартира
+				//- .order-popup__form-layer
+					//- form#order-popup__form.order-popup__form(method="POST")
+					//- 	fieldset.fieldset
+					//- 		legend.legend.order-popup__legend
+					//- 			|Данні покупця
+					//- 		.field-row
+					//- 			.field-wrapper
+					//- 				input.field(type="text" placeholder=" " id="name-input")
+					//- 				label.text-field-label(for="name-input")
+					//- 					|Ім'я
+					//- 			.field-wrapper
+					//- 				input.field(type="text" placeholder=" " id="surname-input")
+					//- 				label.text-field-label(for="surname-input")
+					//- 					|Прізвище
+					//- 		.field-row
+					//- 			.field-wrapper
+					//- 				input.field(type="tel" placeholder=" " id="tel-input")
+					//- 				label.text-field-label(for="tel-input")
+					//- 					|Телефон
+					//- 			.field-wrapper
+					//- 				input.field(type="email" placeholder=" " id="email-input")
+					//- 				label.text-field-label(for="email-input")
+					//- 					|E-mail
+					//- 		.field-row
+					//- 			.field-wrapper.textarea-field-wrapper
+					//- 				textarea.field.textarea(name="" rows="5" placeholder=" " id="comment-textarea" value="")
+					//- 				label.textarea-field-label(for="comment-textarea")
+					//- 					|Коментар
+					//- 	fieldset.fieldset
+					//- 		legend.legend.order-popup__legend 
+					//- 			|Спосіб оплати
+					//- 		.field-row
+					//- 			.field-wrapper.order-popup__radio-field-wrapper 
+					//- 				input.field(type="radio" name="payment-radio" id="payment-radio-1" checked="true")
+					//- 				label(for="payment-radio-1")
+					//- 					|Готівкою
+					//- 			.field-wrapper.order-popup__radio-field-wrapper 
+					//- 				input.field(type="radio" name="payment-radio" id="payment-radio-2")
+					//- 				label(for="payment-radio-2")
+					//- 					|Банківською картою
+					//- 		.field-row
+					//- 			.field-wrapper.order-popup__radio-field-wrapper 
+					//- 				input.field(type="radio" name="payment-radio" id="payment-radio-3")
+					//- 				label(for="payment-radio-3")
+					//- 					|Розрахунковий рахунок
+					//- 	fieldset.fieldset
+					//- 		legend.legend.order-popup__legend 
+					//- 			|Доставка
+					//- 		.field-row
+					//- 			.field-wrapper.order-popup__radio-field-wrapper 
+					//- 				input.field(type="radio" name="delivery-radio"  id="delivery-radio-1" checked="true")
+					//- 				label(for="delivery-radio-1")
+					//- 					|Cамовивіз з Нової Пошти
+					//- 			.field-wrapper.order-popup__radio-field-wrapper 
+					//- 				input.field(type="radio" name="delivery-radio" id="delivery-radio-2")
+					//- 				label(for="delivery-radio-2")
+					//- 					|Кур'єр Нова Пошта
+					//- 		.field-row
+					//- 			.field-wrapper.order-popup__select-field-wrapper
+					//- 				select.choice.order-popup__select-field.department-select
+					//- 		.field-row
+					//- 			.field-wrapper.order-popup__select-field-wrapper
+					//- 				select.choice.order-popup__select-field.town-select
+					//- 			.field-wrapper
+					//- 				input.field(type="text" placeholder=" " id="street-input")
+					//- 				label.text-field-label(for="street-input")
+					//- 					|Вулиця
+					//- 		.field-row
+					//- 			.field-wrapper
+					//- 				input.field(type="text" placeholder=" " id="house-input")
+					//- 				label.text-field-label(for="house-input")
+					//- 					|Будинок
+					//- 			.field-wrapper
+					//- 				input.field(type="text" placeholder=" " id="flat-input")
+					//- 				label.text-field-label(for="flat-input")
+					//- 					|Квартира
 						//- fieldset.fieldset
 						//- 	legend.legend.order-popup__legend 
 						//- 		|Консультація
@@ -123,63 +123,63 @@
 									input.field(type="tel" placeholder=" " id="mob-tel-input")
 									label.text-field-label(for="mob-tel-input")
 										|Мобільний телефон
-				.order-popup__preview-layer
-					.order-popup__preview
-						.order-popup__preview-section.total-product-section
-							p.order-popup__product-text
-								|Ваше замовлення
-							p.order-popup__product-count
-								|2 товара
-						.order-popup__preview-section.product-list-section
-							ul.order-popup__product-list
-								li.order-popup__product-list-item
-									.order-popup__product-item-img-wrapper
-										img.order-popup__product-item-img(src="img/cookies-sandwich-big.png" alt="Cookies box")
-									p.order-popup__product-item-count
-										|2 упаковки
-									p.order-popup__product-item-price
-										|70 грн.
-								li.order-popup__product-list-item
-									.order-popup__product-item-img-wrapper
-										img.order-popup__product-item-img(src="img/box.png" alt="Cookies box")
-									p.order-popup__product-item-count
-										|2 упаковки
-									p.order-popup__product-item-price
-										|70 грн.
-								li.order-popup__product-list-item
-									.order-popup__product-item-img-wrapper
-										img.order-popup__product-item-img(src="img/pallet.png" alt="Cookies box")
-									p.order-popup__product-item-count
-										|2 упаковки
-									p.order-popup__product-item-price
-										|70 грн. 
-							.order-popup__return-basket-btn-wrapper
-								a.order-popup__return-basket-btn.transparent-btn.with-underline.open-popup-link(href='#cart-popup')
-									span
-										|Повернутися в корзину
-						.order-popup__preview-section.product-stats-section
-							ul.order-popup__list
-								li.order-popup__list-item
-									p.order-popup__list-item-text
-										|Товар  на суму
-									p.order-popup__list-item-price
-										|70 грн.
-								li.order-popup__list-item
-									p.order-popup__list-item-text
-										|Вигода від знижок
-									p.order-popup__list-item-price
-										|0 грн.
-								li.order-popup__list-item 
-									p.order-popup__list-item-text
-										|Доставка
-									p.order-popup__list-item-price
-										|Платна
-						.order-popup__preview-section.total-section
-							.popup__total.order-popup__total
-								p.popup__total-text.order-popup__total-text
-									|Разом
-								p.popup__total-price.order-popup__total-price 
-									//- |70 грн.
-							button.popup__btn.order-popup__btn.btn.red-orange.big(type="submit" form="order-popup__form")
-								span
-									|Замовлення підтверджую
+				//- .order-popup__preview-layer
+					//- .order-popup__preview
+					//- 	.order-popup__preview-section.total-product-section
+					//- 		p.order-popup__product-text
+					//- 			|Ваше замовлення
+					//- 		p.order-popup__product-count
+					//- 			|2 товара
+					//- 	.order-popup__preview-section.product-list-section
+					//- 		ul.order-popup__product-list
+					//- 			li.order-popup__product-list-item
+					//- 				.order-popup__product-item-img-wrapper
+					//- 					img.order-popup__product-item-img(src="img/cookies-sandwich-big.png" alt="Cookies box")
+					//- 				p.order-popup__product-item-count
+					//- 					|2 упаковки
+					//- 				p.order-popup__product-item-price
+					//- 					|70 грн.
+					//- 			li.order-popup__product-list-item
+					//- 				.order-popup__product-item-img-wrapper
+					//- 					img.order-popup__product-item-img(src="img/box.png" alt="Cookies box")
+					//- 				p.order-popup__product-item-count
+					//- 					|2 упаковки
+					//- 				p.order-popup__product-item-price
+					//- 					|70 грн.
+					//- 			li.order-popup__product-list-item
+					//- 				.order-popup__product-item-img-wrapper
+					//- 					img.order-popup__product-item-img(src="img/pallet.png" alt="Cookies box")
+					//- 				p.order-popup__product-item-count
+					//- 					|2 упаковки
+					//- 				p.order-popup__product-item-price
+					//- 					|70 грн. 
+					//- 		.order-popup__return-basket-btn-wrapper
+					//- 			a.order-popup__return-basket-btn.transparent-btn.with-underline.open-popup-link(href='#cart-popup')
+					//- 				span
+					//- 					|Повернутися в корзину
+					//- 	.order-popup__preview-section.product-stats-section
+					//- 		ul.order-popup__list
+					//- 			li.order-popup__list-item
+					//- 				p.order-popup__list-item-text
+					//- 					|Товар  на суму
+					//- 				p.order-popup__list-item-price
+					//- 					|70 грн.
+					//- 			li.order-popup__list-item
+					//- 				p.order-popup__list-item-text
+					//- 					|Вигода від знижок
+					//- 				p.order-popup__list-item-price
+					//- 					|0 грн.
+					//- 			li.order-popup__list-item 
+					//- 				p.order-popup__list-item-text
+					//- 					|Доставка
+					//- 				p.order-popup__list-item-price
+					//- 					|Платна
+					//- 	.order-popup__preview-section.total-section
+					//- 		.popup__total.order-popup__total
+					//- 			p.popup__total-text.order-popup__total-text
+					//- 				|Разом
+					//- 			p.popup__total-price.order-popup__total-price 
+					//- 				//- |70 грн.
+					//- 		button.popup__btn.order-popup__btn.btn.red-orange.big(type="submit" form="order-popup__form")
+					//- 			span
+					//- 				|Замовлення підтверджую

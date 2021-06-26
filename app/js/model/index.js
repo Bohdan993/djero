@@ -18,6 +18,7 @@ import {args} from './App/FullPageData'
 import { MountCart } from './App/Cart/MountCart'
 import { MountCartsQuantity } from './App/Cart/MountCartsQuantity'
 import { MountTotals } from './App/CommonComponents/MountTotal'
+import { MountOrder } from './App/Order/MountOrder'
 
 
 
@@ -42,5 +43,6 @@ export {
 	MountCart,
 	MountCartsQuantity,
 	MountTotals,
+	MountOrder,
 	args
 }

@@ -52,7 +52,6 @@ class CartItem {
 
 
     update(data, index, items, context) {
-        // console.log(this.type)
 
         Redom.setAttr(this.image, {
             src: data.src
