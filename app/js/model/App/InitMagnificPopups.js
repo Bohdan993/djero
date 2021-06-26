@@ -60,7 +60,7 @@ const InitMagnificPopups = (body, data) => {
                 },
 
                 close() {
-                    removeClass(body, 'popup-open', 'popup-open_menu', 'fixed1')
+                    removeClass(body, 'popup-open', 'popup-open_menu', 'fixed1', 'popup-open_second-branch')
                     $.fn.fullpage.destroy('all')
                     InitFullPage(data)
 
@@ -84,7 +84,6 @@ const InitMagnificPopups = (body, data) => {
                 },
 
                 close() {
-                    console.log('DLLLDLD')
                     removeClass(body, 'popup-open', 'popup-open_third', 'fixed')
                 }
             }
@@ -168,7 +167,6 @@ const InitMagnificPopups = (body, data) => {
         },
         callbacks: {
             open() {
-                console.log('opened')
                 addClass(body, 'popup-gallery-open')
             },
 

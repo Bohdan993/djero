@@ -15,7 +15,7 @@
         background: url(../img/ball-left.png) left bottom/contain no-repeat;
     }
 
-    & > * {
+    &>* {
         position: relative;
         z-index: 5;
     }
@@ -35,11 +35,11 @@
         align-items: center;
         flex-wrap: wrap;
         // width: 100%;
-         margin: 0 -30px;
+        margin: 0 -30px;
     }
 
     .delivery-popup__payment-methods-layer {
-       padding-bottom: 125/1220 * 100%;
+        padding-bottom: 125/1220 * 100%;
     }
 
     .delivery-popup__payment-methods-card-wrapper {
@@ -67,8 +67,8 @@
                 }
             }
         }
-        
-        
+
+
     }
 
     .delivery-popup__ico {
@@ -127,9 +127,7 @@
         }
     }
 
-    .delivery-popup__return-method-text {
-        
-    }
+    .delivery-popup__return-method-text {}
 
     .popup__text_white {
         strong {
@@ -147,6 +145,7 @@
     .delivery-popup__delivery-note-text {
         max-width: 260px;
         line-height: 24/16 * 1rem;
+
         span {
             text-transform: uppercase;
             font-weight: 500;
@@ -178,8 +177,7 @@
         padding-right: (145/2)/1220 * 100%;
     }
 
-    .delivery-popup__return-methods_right
-    {
+    .delivery-popup__return-methods_right {
         flex-basis: ((1220 - (478 + (145/2)))/1220) * 100%;
         padding-left: (145/2)/1220 * 100%;
 
@@ -193,7 +191,11 @@
     }
 
     .delivery-popup__text-wrapper {
-        padding-bottom: 27px;
+
+        &:not(:last-child) {
+            padding-bottom: 27px;
+        }
+
     }
 
     .delivery-popup__delivery-time {

@@ -81,6 +81,7 @@ const settings = {
                 addClass($body, 'popup-open_second-branch')
                 removeClass($body, 'popup-open_third', 'popup-open_fourth', 'popup-open_menu')
                 $.fn.fullpage.destroy('all')
+                instance && instance.destroy()
                 setTimeout(function () {
                     InitFullPagePopup(headerLayout)
                 }, 50)
@@ -95,6 +96,7 @@ const settings = {
                 addClass($body, 'popup-open_third', 'fixed1')
                 removeClass($body, 'popup-open_second-branch')
                 $.fn.fullpage.destroy('all')
+                instance && instance.destroy()
                 instanceAboutSetPopup = InitOverlayScrollbars({
                     popup: this.wrap[0]
                 })

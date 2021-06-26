@@ -69,25 +69,25 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('popup_fourth')) {
-                        addClass(body, 'popup-open_fourth')
+                        addClass(body, 'popup-open_fourth', 'fixed')
                         removeClass(body, 'popup-open_second-branch')
                         $.fn.fullpage.destroy('all')
                         instanceNewPopup = InitOverlayScrollbars({
                             popup: this.wrap[0]
                         })
                     } else {
-                        removeClass(body, 'popup-open_fourth')
+                        removeClass(body, 'popup-open_fourth', 'fixed')
                     }
 
 
                     if (this.content[0].classList.contains('popup_fifth')) {
-                        addClass(body, 'popup-open_fifth')
+                        addClass(body, 'popup-open_fifth', 'fixed')
                         removeClass(body, 'popup-open_fourth')
                         instanceNewPopup = InitOverlayScrollbars({
                             popup: this.wrap[0]
                         })
                     } else {
-                        removeClass(body, 'popup-open_fifth')
+                        removeClass(body, 'popup-open_fifth', 'fixed')
                     }
 
 
@@ -132,12 +132,10 @@ const SetSecondBranchPopupSettings = (body, data) => {
                 },
                 open() {
                     addClass(body, 'popup-open', 'popup-open_second-branch')
-                    // $.fn.fullpage.destroy('all')
-                    // InitFullPagePopup()
                 },
 
                 close() {
-
+                    console.log('LDLDLDL')
                     removeClass(body, 'popup-open', 'popup-open_second-branch', 'popup-open_secondary')
                     $('html, body').animate({
                         scrollTop: 0

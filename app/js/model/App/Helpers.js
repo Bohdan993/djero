@@ -61,13 +61,16 @@ function addStyle(elem, styles) {
 
 function menuclickeventHandler(e) {
 	e.stopImmediatePropagation()
-	console.log('dfdd')
+	
 	const {detail: {
 		anchor
 	}} = e
+	
 	const loadedSection = $(document).find(`[data-anchor="${anchor}"]`)
 	const screen = loadedSection.find('.is-screen')
-	if (screen.height() > loadedSection.height()) {
+	console.log(screen.outerHeight())
+	console.log(loadedSection.height())
+	if (screen.outerHeight() > loadedSection.height()) {
 		const IScroll = loadedSection.find('.fp-scrollable').data('iscrollInstance')
 		IScroll.scrollTo(0, 0, 0)
 	}
