@@ -1,11 +1,23 @@
 import {
+    $,
     CartLS,
     Redom
 } from '../../../../libs/libs'
-import { moveToScreenFuncion } from '../MoveToScreens'
+import {
+    CleanBasket
+} from '../CommonComponents/CleanBasket'
+import { fullSettingsFunction } from '../Helpers'
+import {
+    moveToScreenFuncion
+} from '../MoveToScreens'
 import {
     CartList
 } from './CartList'
+
+
+
+
+
 
 
 class Cart {
@@ -25,18 +37,21 @@ class Cart {
                         'data-silent': true,
                         innerText: 'На головну'
                     })),
-                Redom.el('button.popup__basket-clear.cart-popup__basket-clear.transparent-btn.with-underline',
-                    Redom.el('span', 'Очистити корзину')),
+                new CleanBasket('cart'),
                 Redom.el('div.cart-popup__total',
                     Redom.el('p.popup__total-price.cart-popup__total-price',
                         this.totalPrice = Redom.el('span')),
-                    Redom.el('a.popup__btn.cart-popup__btn btn.red-orange.open-popup-link',
+                    this.orderLink = Redom.el('a.popup__btn.cart-popup__btn btn.red-orange.open-popup-link',
                         Redom.el('span', 'Оформити замовлення'), {
                             href: '#order-popup'
                         })))
 
         ))
-        this.emptyEl = Redom.place(Redom.el('div.order-popup__empty', 'Корзина порожня'))
+        this.emptyEl = Redom.place(Redom.el('div.popup__empty.cart-popup__empty',
+            Redom.el('span.popup__empty-text.cart-popup__empty-text', 'Корзина порожня'),
+            this.returnToCatalogLink = Redom.el(`button.popup__empty-return.cart-popup__return.transparent-btn.with-underline`,
+                Redom.el('span', 'Перейти в каталог'))
+        ))
 
         this.el = Redom.el('div.cart-popup__cart-wrapper',
             this.mainEl,
@@ -47,9 +62,18 @@ class Cart {
             this.update(CartLS.list())
         }
 
+        this.orderLinkHandler = (e) => {
+            $.magnificPopup.open(fullSettingsFunction('#order-popup'))
+        }
+
+        this.returnToCatalogHandler = (e) => {
+            $.magnificPopup.open(fullSettingsFunction('#catalog-popup'))
+        }
+
 
         this.backToMain.addEventListener('click', moveToScreenFuncion.bind(this.backToMain, body, propData, 1000))
-
+        this.orderLink.addEventListener('click', this.orderLinkHandler)
+        this.returnToCatalogLink.addEventListener('click', this.returnToCatalogHandler)
 
     }
 

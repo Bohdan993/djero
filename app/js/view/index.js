@@ -16,7 +16,7 @@ const $closePopup = document.querySelectorAll('.close-popup-btn')
 const $choices = document.querySelectorAll('.choice')
 const $screenPlayVideo = document.querySelectorAll('.screen-play-video')
 const $headerLayout = document.querySelector('.header__layout')
-const $headerClosePopup = document.querySelector('.header .close-popup-btn')
+// const $headerClosePopup = document.querySelector('.header .close-popup-btn')
 const $menuLinks = document.querySelectorAll('.menu-link')
 const $cart = document.querySelector('.popup__cart.cart-popup__cart')
 const $cartsQuantity = document.querySelectorAll('.popup__card-quantity.catalog-popup__card-quantity')
@@ -24,6 +24,8 @@ const $popupTotalPrices = document.querySelectorAll('.popup__total-price')
 // const $orderPopupFormLayer = document.querySelector('.order-popup__form-layer')
 // const $orderPopupPreviewLayer = document.querySelector('.order-popup__preview-layer')
 const $orderPopupFContainer = document.querySelector('.order-popup__f-container')
+const $popupBasketClearWrappers = document.querySelectorAll('.popup__basket-clear-wrapper')
+const $sidebarCartCounterWrapper = document.querySelector('.sidebar__cart-counter-wrapper')
 
 export {
 	$body,
@@ -44,12 +46,14 @@ export {
 	$choices,
 	$screenPlayVideo,
 	$headerLayout,
-	$headerClosePopup,
+	// $headerClosePopup,
 	$menuLinks,
 	$cart,
 	$cartsQuantity,
 	$popupTotalPrices,
-	$orderPopupFContainer
+	$orderPopupFContainer,
+	$popupBasketClearWrappers,
+	$sidebarCartCounterWrapper
 	// $orderPopupFormLayer,
 	// $orderPopupPreviewLayer
 }

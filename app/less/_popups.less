@@ -79,6 +79,15 @@
 			// min-height: 730px;
 		}
 	}
+
+
+	.header__logo-link:not(.logo-in-popup) {
+		display: none;
+	}
+
+	.logo-in-popup {
+		display: inline-block;
+	}
 }
 
 .popup-open_secondary {
@@ -175,7 +184,6 @@
 
 .popup-open_second-branch {
 	.fullpage-popup {
-		// height: auto!important;
 
 		.iScrollIndicator {
 			box-sizing: border-box;
@@ -215,15 +223,8 @@
 
 	.popup__layout {
 		padding: 125px 0;
-		// padding-bottom: 0;
-		// height: auto;
 	}
 
-	.popup__layout .center {
-		// min-height: unset;
-		// height: auto;
-		// padding-top: 105px;
-	}
 
 }
 
@@ -464,8 +465,6 @@
 	width: 47px;
 }
 
-.popup__basket-clear {}
-
 .popup__note {
 	font-size: 14/16 * 1rem;
 }
@@ -551,6 +550,23 @@
 	font-family: 'Adventure Indiana Jones', cursive;
 	font-size: 26/16 * 1rem;
 	letter-spacing: 1px;
+}
+
+
+.popup__empty {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.popup__empty-text {
+	padding-bottom: 20px;
+	text-align: center;
+}
+
+.popup__empty-return {
+	display: inline-flex;
 }
 
 

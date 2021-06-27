@@ -1,4 +1,5 @@
 import {
+    $,
     CartLS,
     Redom
 } from '../../../../libs/libs'
@@ -8,7 +9,17 @@ import {
 import {
     OrderItem
 } from './OrderItem'
+import settings from '../MagnificPopupSettings'
 
+
+const partialSettings = {
+    items: {
+        src: '#cart-popup'
+    }
+}
+
+
+const fullSettings = Object.assign({}, settings, partialSettings)
 
 
 class OrderPreview {
@@ -22,8 +33,8 @@ class OrderPreview {
             Redom.el('div.order-popup__preview-section.product-list-section',
                 this.orderList = Redom.list('ul.order-popup__product-list', OrderItem, 'id'),
                 Redom.el('div.order-popup__return-basket-btn-wrapper',
-                    Redom.el('a.order-popup__return-basket-btn.transparent-btn.with-underline.open-popup-link', {
-                        href: '#cart-popup'
+                    this.cartPopupLink = Redom.el('a.order-popup__return-basket-btn.transparent-btn.with-underline.open-popup-link', {
+                        href: '#'
                     }, Redom.el('span', 'Повернутися в корзину')))),
             Redom.el('div.order-popup__preview-section.product-stats-section',
                 Redom.el('ul.order-popup__list',
@@ -46,11 +57,17 @@ class OrderPreview {
                     },
                     Redom.el('span', 'Замовлення підтверджую')))
         )
+        
+
+        this.cartPopupLinkHandler = (e) => {
+            $.magnificPopup.open(fullSettings)
+        }
+
+        this.cartPopupLink.addEventListener('click', this.cartPopupLinkHandler)
     }
 
 
     update(data) {
-        console.log(data)
         Redom.setAttr(this.productCount, {
             innerText: `${data.length} ${declOfNum(data.length, ['товар', 'товара', 'товарів'])}`
         })

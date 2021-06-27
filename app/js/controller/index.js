@@ -17,6 +17,8 @@ import {
 	MountCartsQuantity,
 	MountTotals,
 	MountOrder,
+	MountCleanBasket,
+	MountProductCounter,
 	args
 } from '../model';
 import {
@@ -33,7 +35,9 @@ import {
 	$cart,
 	$cartsQuantity,
 	$popupTotalPrices,
-	$orderPopupFContainer
+	$orderPopupFContainer,
+	$popupBasketClearWrappers,
+	$sidebarCartCounterWrapper
 	// $orderPopupFormLayer,
 	// $orderPopupPreviewLayer
 
@@ -59,6 +63,8 @@ const app = {
 		this.mc()
 		this.mt()
 		this.mo()
+		this.mcb()
+		this.mpc()
 		// this.iosb()
 	},
 	bm() {
@@ -113,6 +119,12 @@ const app = {
 	mt() {
 		MountTotals($popupTotalPrices)
 	},
+	mcb(){
+		MountCleanBasket($popupBasketClearWrappers)
+	},
+	mpc(){
+		MountProductCounter($sidebarCartCounterWrapper)
+	}
 
 
 }

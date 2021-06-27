@@ -19,6 +19,7 @@ const InitFullPagePopup = (headerLayout) => {
         scrollOverflowReset: true,
         lazyLoading: true,
         scrollingSpeed: 1000,
+        lockAnchors: true,
         anchors: ['about-set', 'news', 'delivery', 'delivery-2', 'footer-2'],
         scrollOverflowOptions: {
             click: false,
@@ -43,6 +44,10 @@ const InitFullPagePopup = (headerLayout) => {
 
         callBacksArr.push(callback)
         document.addEventListener('menuclickevent', callback)
+
+        setTimeout(function () {
+            $.fn.fullpage.reBuild()
+        }, 50)
     }
 
     function onLeave(origin, destination, direction) {

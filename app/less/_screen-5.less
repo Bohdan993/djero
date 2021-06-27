@@ -15,10 +15,10 @@
         position: absolute;
         width: 720/1460 * 100%;
         height: 675/980 * 100%;
-        left: 0;
+        right: 0;
         bottom: 0;
         z-index: 4;
-        background: url('../img/ball-left.png') no-repeat left bottom/contain;
+        background: url('../img/ball-right.png') no-repeat right bottom/contain;
 
     }
 
@@ -407,5 +407,17 @@
 
     .center {
         max-width: 1280px;
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        width: 720/1460 * 100%;
+        height: 675/980 * 100%;
+        left: 0;
+        bottom: 0;
+        z-index: 4;
+        background: url('../img/ball-left.png') no-repeat left bottom/contain;
+
     }
 }

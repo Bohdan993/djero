@@ -1,14 +1,17 @@
 import {
+    $,
     Redom,
     CartLS
 } from '../../../../libs/libs'
+import {
+    fullSettingsFunction
+} from '../Helpers'
 import {
     OrderForm
 } from './OrderForm'
 import {
     OrderPreview
 } from './OrderPreview'
-
 
 
 
@@ -25,7 +28,12 @@ class OrderFormMain {
             ),
         ))
 
-        this.emptyEl = Redom.place(Redom.el('div.order-popup__empty', 'Ви ще не додали в корзину жодного товару'))
+
+        this.emptyEl = Redom.place(Redom.el('div.popup__empty.order-popup__empty',
+            Redom.el('span.popup__empty-text.order-popup__empty-text', 'Ви ще не додали в корзину жодного товару'),
+            this.returnToCatalogLink = Redom.el(`button.popup__empty-return.order-popup__return.transparent-btn.with-underline`,
+                Redom.el('span', 'Перейти в каталог'))
+        ))
 
         this.el = Redom.el('div.order-popup__form-wrapper',
             (this.mainEl),
@@ -41,7 +49,13 @@ class OrderFormMain {
             this.update(CartLS.list())
         }
 
+
+        this.returnToCatalogHandler = (e) => {
+            $.magnificPopup.open(fullSettingsFunction('#catalog-popup'))
+        }
+
         this.mainEl._el.addEventListener('submit', this.submitHandler)
+        this.returnToCatalogLink.addEventListener('click', this.returnToCatalogHandler)
     }
 
     update(data) {

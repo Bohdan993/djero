@@ -54,7 +54,11 @@
     }
 
     .new-popup__text-text {
-        padding-bottom: 25px;
+
+        &:not(:last-child) {
+            padding-bottom: 25px;
+        }
+
 
         strong {
             font-weight: 700;

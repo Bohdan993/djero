@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width">
     <!-- link(rel="preconnect" href="https://fonts.gstatic.com")-->
     <!-- link(href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet")-->
-    <link rel="preload" href="css/main.min.css?v=1624747005828" as="style">
-    <link rel="stylesheet" href="css/libs.min.css?v=1624747005828">
-    <link rel="stylesheet" href="css/main.min.css?v=1624747005828">
+    <link rel="preload" href="css/main.min.css?v=1624832288149" as="style">
+    <link rel="stylesheet" href="css/libs.min.css?v=1624832288149">
+    <link rel="stylesheet" href="css/main.min.css?v=1624832288149">
   </head>
   <body class="home-page">
     <header class="header">
@@ -18,6 +18,9 @@
             <div class="header__btn-layer header-inner-layer"><a class="header__btn btn white open-popup-link_secondary" href="#order-call-popup"><span>Замовити дзвінок</span></a></div>
             <div class="header__logo-layer header-inner-layer">
               <div class="header__logo-link-wrapper"><a class="header__logo-link menu-link" href="#" data-position="main" data-is-popup="false" data-to="main-screen">
+                  <svg class="header__logo">
+                    <use xlink:href="img/logo.svg#Logo"></use>
+                  </svg></a><a class="header__logo-link menu-link logo-in-popup" href="#" data-position="popup" data-is-popup="false" data-to="main-screen">
                   <svg class="header__logo">
                     <use xlink:href="img/logo.svg#Logo"></use>
                   </svg></a></div>
@@ -335,11 +338,13 @@
                         <use xlink:href="img/sprites/svg/symbol/sprite.svg#ball"></use>
                       </svg></i></div>
                   <p class="sidebar__wantbuy-text">Хочу <br><span>придбати!</span></p></a></div>
-              <div class="sidebar__cart-layer"><a class="sidebar__cart open-popup-link" href="#cart-popup"><span class="sidebar__cart-counter"></span>
-                  <div class="sidebar__cart-icon"><i class="sidebar__cart-ico ico">
+              <div class="sidebar__cart-layer"><a class="sidebar__cart open-popup-link" href="#cart-popup">
+                  <div class="sidebar__cart-icon">
+                    <div class="sidebar__cart-counter-wrapper"></div><i class="sidebar__cart-ico ico">
                       <svg>
                         <use xlink:href="img/sprites/svg/symbol/sprite.svg#basket"></use>
-                      </svg></i></div>
+                      </svg></i>
+                  </div>
                   <p class="sidebar__cart-text"><span>Замовлення <br>з'явиться </span>тут</p></a></div>
               <div class="sidebar__social-layer social-layer">
                 <div class="sidebar__social social">
@@ -510,7 +515,7 @@
               </div>
               <p class="popup__note catalog-popup__note">* Вага нетто</p>
               <div class="popup__basket-info catalog-popup__basket-info">
-                <button class="popup__basket-clear catalog-popup__basket-clear transparent-btn with-underline"><span>Очистити корзину</span></button>
+                <div class="popup__basket-clear-wrapper"></div>
                 <div class="popup__total catalog-popup__total">
                   <p class="popup__total-text catalog-popup__total-text">Загальна вартість</p>
                   <p class="popup__total-price catalog-popup__total-price"> </p>
@@ -1025,8 +1030,8 @@
         </div>
       </div>
     </div>
-    <script src="js/libs.min.js?v=1624747005829" defer></script>
-    <link rel="preload" href="js/main.min.js?v=1624747005829" as="script">
-    <script src="js/main.min.js?v=1624747005829" async></script>
+    <script src="js/libs.min.js?v=1624832288149" defer></script>
+    <link rel="preload" href="js/main.min.js?v=1624832288149" as="script">
+    <script src="js/main.min.js?v=1624832288149" async></script>
   </body>
 </html>

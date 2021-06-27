@@ -10,8 +10,6 @@ import * as CartLS from 'cart-localstorage'
 import * as Redom from 'redom'
 
 
-console.log(Redom)
-
 export {
 	Splide,
 	$,
@@ -20,15 +18,4 @@ export {
 	Choices,
 	CartLS,
 	Redom
-	// list,
-	// get,
-	// add,
-	// remove,
-	// update,
-	// quantity,
-	// total,
-	// destroy,
-	// exists,
-	// subtotal,
-	// onChange
 }

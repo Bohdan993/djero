@@ -1,6 +1,8 @@
 import {
 	$
 } from "../../../libs/libs"
+import settings from "./MagnificPopupSettings";
+
 
 function throttle(f, ms) {
 
@@ -81,6 +83,17 @@ function declOfNum(number, words) {
 }
 
 
+const fullSettingsFunction = (link) => {
+    const partialSettings = {
+        items: {
+            src: link
+        }
+    }
+
+    return Object.assign({}, settings, partialSettings)
+}
+
+
 
 
 
@@ -91,5 +104,6 @@ export {
 	removeClass,
 	addStyle,
 	menuclickeventHandler,
-	declOfNum
+	declOfNum,
+	fullSettingsFunction
 }

@@ -5,7 +5,9 @@ import {
 } from '../../../libs/libs'
 
 
-import { args } from '..'
+import {
+    args
+} from '..'
 
 import {
     $body,
@@ -52,14 +54,19 @@ const settings = {
     mainClass: 'zoom-in-animation my-mfp-zoom-in',
     callbacks: {
         change() {
+            
             removeClass(this.wrap[0], 'mfp-ready')
             removeClass(this.bgOverlay[0], 'mfp-ready')
+            $.fn.fullpage.destroy('all')
             instanceAboutSetPopup && instanceAboutSetPopup.destroy()
-            instance && instance.scroll({ y : "0%"  })
+
 
             setTimeout(() => {
                 addClass(this.wrap[0], 'mfp-ready')
                 addClass(this.bgOverlay[0], 'mfp-ready')
+                instance && instance.scroll({
+                    y: "0%"
+                })
             }, 50)
 
             if (this.content[0].classList.contains('popup_secondary')) {
@@ -72,6 +79,7 @@ const settings = {
             if (this.content[0].classList.contains('menu-popup')) {
                 addClass($body, 'popup-open_menu')
                 instance && instance.destroy()
+                // $.fn.fullpage.destroy('all')
             } else {
                 removeClass($body, 'popup-open_menu')
             }
@@ -80,7 +88,8 @@ const settings = {
 
                 addClass($body, 'popup-open_second-branch')
                 removeClass($body, 'popup-open_third', 'popup-open_fourth', 'popup-open_menu')
-                $.fn.fullpage.destroy('all')
+
+                // $.fn.fullpage.destroy('all')
                 instance && instance.destroy()
                 setTimeout(function () {
                     InitFullPagePopup(headerLayout)
@@ -95,7 +104,7 @@ const settings = {
             if (this.content[0].classList.contains('popup_third')) {
                 addClass($body, 'popup-open_third', 'fixed1')
                 removeClass($body, 'popup-open_second-branch')
-                $.fn.fullpage.destroy('all')
+                // $.fn.fullpage.destroy('all')
                 instance && instance.destroy()
                 instanceAboutSetPopup = InitOverlayScrollbars({
                     popup: this.wrap[0]
@@ -103,9 +112,11 @@ const settings = {
             } else {
                 removeClass($body, 'popup-open_third', 'fixed1')
             }
+
+            addClass($body, 'fixed1')
         },
         open() {
-            $.fn.fullpage.setMouseWheelScrolling(false)
+            $.fn.fullpage.destroy('all')
             instance = InitOverlayScrollbars({
                 popup: this.wrap[0]
             })
@@ -115,6 +126,7 @@ const settings = {
         },
 
         close() {
+            console.log('ddrrrewe')
             removeClass($body, 'popup-open', 'popup-open_second-branch', 'popup-open_secondary', 'popup-open_menu', 'fixed1')
 
             $('html, body').animate({
