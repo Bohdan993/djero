@@ -3,6 +3,7 @@ import {
     Redom,
     CartLS
 } from '../../../../libs/libs'
+import { FormProcessing } from '../FormProcessing'
 import {
     fullSettingsFunction
 } from '../Helpers'
@@ -12,6 +13,8 @@ import {
 import {
     OrderPreview
 } from './OrderPreview'
+
+
 
 
 
@@ -42,6 +45,7 @@ class OrderFormMain {
 
         this.submitHandler = (e) => {
             e.preventDefault()
+            FormProcessing(this.mainEl._el)
 
         }
 

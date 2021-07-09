@@ -1,5 +1,6 @@
 import {
-    Redom
+    Redom,
+    CartLS
 } from '../../../../libs/libs'
 import {
     InitChoices
@@ -32,10 +33,38 @@ function createFieldRow(...inputs) {
             ...inputs.filter(x => 'row' in x)[0]?.row
         }, result) :
         Redom.el('div.field-row', result)
+}
 
 
+class HiddenInput {
+    constructor(){
+        this.el = Redom.el('input.hidden', {
+            type: 'hidden',
+            name: 'products[]'
+        })
+    }
 
-    // .order-popup__field-row_small
+    update(data){
+        Redom.setAttr(this.el, {
+            value: `${data.id}|${data.quantity}`
+        })
+    }
+}
+
+
+class HiddenFieldset {
+    constructor() {
+        this.data = {}
+        this.el = Redom.place(this.list = Redom.list('fieldset.fieldset', HiddenInput))
+    }
+
+
+    update(data, context) {
+        this.el.update(data)
+        this.list.update(context)
+        this.data = context
+    }
+
 }
 
 
@@ -67,6 +96,7 @@ class OrderForm {
                     input: {
                         class: 'field',
                         id: 'surname-input',
+                        name: 'surname-input',
                         type: 'text',
                         required: true,
                         placeholder: ' ',
@@ -85,6 +115,7 @@ class OrderForm {
                     input: {
                         class: 'field',
                         id: 'tel-input',
+                        name: 'tel-input',
                         type: 'tel',
                         placeholder: ' ',
                     },
@@ -101,6 +132,7 @@ class OrderForm {
                     input: {
                         class: 'field',
                         id: 'email-input',
+                        name: 'email-input',
                         type: 'email',
                         placeholder: ' ',
                     },
@@ -117,7 +149,7 @@ class OrderForm {
                 Redom.el('div.field-row',
                     Redom.el('div.field-wrapper.textarea-field-wrapper',
                         Redom.el('textarea.field.textarea', {
-                            name: '',
+                            name: 'comment-textarea',
                             rows: '5',
                             placeholder: ' ',
                             id: 'comment-textarea',
@@ -136,6 +168,7 @@ class OrderForm {
                         checked: true,
                         type: 'radio',
                         name: 'payment-radio',
+                        value: 'cash'
                     },
                     label: {
                         innerText: `Готівкою`,
@@ -152,6 +185,7 @@ class OrderForm {
                         checked: false,
                         type: 'radio',
                         name: 'payment-radio',
+                        value: 'card'
                     },
                     label: {
                         innerText: `Банківською картою`,
@@ -169,6 +203,7 @@ class OrderForm {
                         checked: false,
                         type: 'radio',
                         name: 'payment-radio',
+                        value: 'account'
                     },
                     label: {
                         innerText: `Розрахунковий рахунок`,
@@ -189,7 +224,8 @@ class OrderForm {
                         checked: true,
                         type: 'radio',
                         name: 'delivery-radio',
-                        'data-delivery-type': 'self-pickup'
+                        'data-delivery-type': 'self-pickup',
+                        value: 'self-pickup'
                     },
                     label: {
                         innerText: `Cамовивіз з Нової Пошти`,
@@ -206,7 +242,8 @@ class OrderForm {
                         checked: false,
                         type: 'radio',
                         name: 'delivery-radio',
-                        'data-delivery-type': 'courier'
+                        'data-delivery-type': 'courier',
+                        value: 'courier'
                     },
                     label: {
                         innerText: `Кур'єр Нова Пошта`,
@@ -221,17 +258,22 @@ class OrderForm {
                         'data-delivery': 'self-pickup'
                     },
                     Redom.el('div.field-wrapper.order-popup__select-field-wrapper',
-                        this.departmentChoice = Redom.el('select.choice order-popup__select-field.department-select')))),
+                        this.departmentChoice = Redom.el('select.choice order-popup__select-field.department-select', {
+                            name: 'department-select'
+                        })))),
                 this.deliveryRow2 = Redom.place(Redom.el('div.field-row', {
                         'data-delivery': 'courier'
                     },
                     Redom.el('div.field-wrapper.order-popup__select-field-wrapper',
-                        this.townChoice = Redom.el('select.choice order-popup__select-field.town-select')),
+                        this.townChoice = Redom.el('select.choice order-popup__select-field.town-select', {
+                            name: 'town-select'
+                        })),
                     Redom.el('div.field-wrapper',
                         Redom.el('input.field', {
                             type: 'text',
                             placeholder: ' ',
-                            id: 'street-input'
+                            id: 'street-input',
+                            name: 'street-input'
                         }),
                         Redom.el('label.text-field-label', {
                             for: 'street-input',
@@ -243,7 +285,8 @@ class OrderForm {
                         class: 'field',
                         id: 'house-input',
                         type: 'text',
-                        placeholder: ' '
+                        placeholder: ' ',
+                        name: 'house-input'
                     },
                     label: {
                         innerText: `Будинок`,
@@ -262,7 +305,8 @@ class OrderForm {
                         class: 'field',
                         id: 'flat-input',
                         type: 'text',
-                        placeholder: ' '
+                        placeholder: ' ',
+                        name: 'flat-input'
                     },
                     label: {
                         innerText: `Квартира`,
@@ -284,7 +328,8 @@ class OrderForm {
                         checked: true,
                         type: 'radio',
                         name: 'contacts-radio',
-                        'data-contacts-type': 'me'
+                        'data-contacts-type': 'me',
+                        value: 'me'
                     },
                     label: {
                         innerText: `Я`,
@@ -304,7 +349,8 @@ class OrderForm {
                         checked: false,
                         type: 'radio',
                         name: 'contacts-radio',
-                        'data-contacts-type': 'other-person'
+                        'data-contacts-type': 'other-person',
+                        value: 'other-person'
                     },
                     label: {
                         innerText: `Інша особа`,
@@ -320,7 +366,8 @@ class OrderForm {
                         class: 'field',
                         id: 'name-input-2',
                         type: 'text',
-                        placeholder: ' '
+                        placeholder: ' ',
+                        name: 'name-input-2'
                     },
                     label: {
                         innerText: `Ім'я`,
@@ -339,7 +386,8 @@ class OrderForm {
                         class: 'field',
                         id: 'surname-input-2',
                         type: 'text',
-                        placeholder: ' '
+                        placeholder: ' ',
+                        name: 'surname-input-2'
                     },
                     label: {
                         innerText: `Прізвище`,
@@ -356,7 +404,8 @@ class OrderForm {
                         class: 'field',
                         id: 'middle-name-input',
                         type: 'text',
-                        placeholder: ' '
+                        placeholder: ' ',
+                        name: 'middle-name-input'
                     },
                     label: {
                         innerText: `По батькові`,
@@ -375,7 +424,8 @@ class OrderForm {
                         class: 'field',
                         id: 'mob-tel-input',
                         type: 'tel',
-                        placeholder: ' '
+                        placeholder: ' ',
+                        name: 'mob-tel-input'
                     },
                     label: {
                         innerText: `Мобільний телефон`,
@@ -387,11 +437,14 @@ class OrderForm {
                     }
 
                 }))
-            ))
+            ),
+            this.hiddenFieldset = new HiddenFieldset())
 
         this.deliveryRow1.update(true)
         this.contactsRow1.update(false)
         this.contactsRow2.update(false)
+
+        CartLS.list().length ?  this.hiddenFieldset.update(true, CartLS.list()) : this.hiddenFieldset.update(false)
 
         this.deliveryInputHandler = function (input, e) {
             if (input.getAttribute('data-delivery-type') === 'self-pickup') {
@@ -426,9 +479,8 @@ class OrderForm {
         }
 
 
-        this.submitHandler = (e) => {
-            console.log('ddf')
-            this.el.submit()
+        this.cartupdateeventHandler = (e) => {
+            this.update(CartLS.list())
         }
 
         this.delivery.querySelectorAll('input').forEach(input => {
@@ -445,16 +497,19 @@ class OrderForm {
     }
 
     update(data) {
-
-        this.list.update(data)
+        data.length ?
+            this.hiddenFieldset.update(true, data) :
+            this.hiddenFieldset.update(false)
     }
 
     onmount() {
         this.choices = InitChoices([this.departmentChoice, this.townChoice])
+        document.addEventListener('cartupdateevent', this.cartupdateeventHandler)
     }
 
     onunmount() {
         this.choices && this.choices.forEach(choice => choice.destroy())
+        document.removeEventListener('cartupdateevent', this.cartupdateeventHandler)
     }
 
 }

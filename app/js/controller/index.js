@@ -37,11 +37,13 @@ import {
 	$popupTotalPrices,
 	$orderPopupFContainer,
 	$popupBasketClearWrappers,
-	$sidebarCartCounterWrapper
+	$sidebarCartCounterWrapper,
 	// $orderPopupFormLayer,
 	// $orderPopupPreviewLayer
 
 } from '../view';
+
+
 
 
 const app = {
@@ -124,7 +126,7 @@ const app = {
 	},
 	mpc(){
 		MountProductCounter($sidebarCartCounterWrapper)
-	}
+	},
 
 
 }
