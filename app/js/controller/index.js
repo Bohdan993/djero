@@ -19,6 +19,7 @@ import {
 	MountOrder,
 	MountCleanBasket,
 	MountProductCounter,
+	ContactsFormsProcessing,
 	args
 } from '../model';
 import {
@@ -38,6 +39,7 @@ import {
 	$orderPopupFContainer,
 	$popupBasketClearWrappers,
 	$sidebarCartCounterWrapper,
+	$forms
 	// $orderPopupFormLayer,
 	// $orderPopupPreviewLayer
 
@@ -50,8 +52,8 @@ const app = {
 	init() {
 		this.bm()
 		this.ifp()
-		// this.it()
-		// this.stb()
+		this.it()
+		this.stb()
 		this.is()
 		this.bca()
 		this.imp()
@@ -67,6 +69,7 @@ const app = {
 		this.mo()
 		this.mcb()
 		this.mpc()
+		this.cfp()
 		// this.iosb()
 	},
 	bm() {
@@ -127,6 +130,9 @@ const app = {
 	mpc(){
 		MountProductCounter($sidebarCartCounterWrapper)
 	},
+	cfp(){
+		ContactsFormsProcessing($forms)
+	}
 
 
 }

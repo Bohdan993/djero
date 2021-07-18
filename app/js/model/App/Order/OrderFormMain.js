@@ -20,7 +20,7 @@ import {
 
 class OrderFormMain {
     constructor() {
-        this.mainEl = Redom.place(Redom.el("form.order-popup__form#order-popup__form", {
+        this.mainEl = Redom.place(this.mainForm = Redom.el("form.order-popup__form#order-popup__form", {
                 method: 'POST'
             },
             Redom.el('div.order-popup__form-layer',
@@ -63,11 +63,12 @@ class OrderFormMain {
     }
 
     update(data) {
-
-        data.length ? (this.mainEl.update(true), this.emptyEl.update(false)) :
-            (this.mainEl.update(false), this.emptyEl.update(true))
+        // console.log(this.form)
+        data.length ? (this.mainEl.update(true), this.emptyEl.update(false), this.form.hiddenFieldset.update(true, data)) :
+            (this.mainEl.update(false), this.emptyEl.update(true), this.form.hiddenFieldset.update(false))
 
         this.preview.update(data)
+
     }
 
     onmount() {

@@ -2,7 +2,10 @@ import {
     CartLS,
     Redom
 } from '../../../../libs/libs'
-import { declOfNum } from '../Helpers'
+import {
+    declOfNum,
+    // calcDiscount
+} from '../Helpers'
 
 
 
@@ -18,7 +21,6 @@ class OrderItem {
 
 
     update(data) {
-        
         Redom.setAttr(this.img, {
             src: data.src,
             alt: data.title
@@ -29,7 +31,7 @@ class OrderItem {
         })
 
         Redom.setAttr(this.price, {
-            innerText: `${ data.price * data.quantity } грн`
+            innerText: `${ data.price * data.quantity} грн`
         })
 
 

@@ -36,7 +36,7 @@ const InitTippy = (element, content) => {
         return tippy(element, settings)
     }
 
-    console.log(element, content)
+    // console.log(element, content)
 
 
     createTippy(element, content)

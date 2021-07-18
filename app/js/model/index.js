@@ -21,6 +21,7 @@ import { MountTotals } from './App/CommonComponents/MountTotal'
 import { MountOrder } from './App/Order/MountOrder'
 import { MountCleanBasket } from './App/CommonComponents/MountCleanBasket'
 import { MountProductCounter } from './App/CommonComponents/MountProductCounter'
+import { ContactsFormsProcessing } from './App/ContactsFormsProcessing'
 
 
 
@@ -49,5 +50,6 @@ export {
 	MountOrder,
 	MountCleanBasket,
 	MountProductCounter,
+	ContactsFormsProcessing,
 	args
 }

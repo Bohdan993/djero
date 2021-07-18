@@ -4,7 +4,8 @@ import {
     Redom
 } from '../../../../libs/libs'
 import {
-    declOfNum
+    declOfNum,
+    calcDiscount
 } from '../Helpers'
 import {
     OrderItem
@@ -19,12 +20,15 @@ const partialSettings = {
 }
 
 
+
+// console.log(calcDiscount('pack'))
+
 const fullSettings = Object.assign({}, settings, partialSettings)
 
 
 class OrderPreview {
     constructor() {
-        this.discountPrice = 0
+        this.discountPrice = calcDiscount('pack')
         this.deliveryPrice = 0
         this.el = Redom.el('div.order-popup__preview',
             Redom.el('div.order-popup__preview-section.total-product-section',
@@ -57,17 +61,31 @@ class OrderPreview {
                     },
                     Redom.el('span', 'Замовлення підтверджую')))
         )
-        
+
 
         this.cartPopupLinkHandler = (e) => {
             $.magnificPopup.open(fullSettings)
         }
+
+        // this.cartupdateeventHandler = (e) => {
+        //     this.discountPrice = calcDiscount('pack')
+
+        //     Redom.setAttr(this.discount, {
+        //         innerText: `${this.discountPrice} грн`
+        //     })
+
+        //     Redom.setAttr(this.totalPrice, {
+        //         innerText: `${+CartLS.total() - this.discountPrice + this.deliveryPrice} грн`
+        //     })
+        // }
 
         this.cartPopupLink.addEventListener('click', this.cartPopupLinkHandler)
     }
 
 
     update(data) {
+        this.discountPrice = calcDiscount('pack')
+
         Redom.setAttr(this.productCount, {
             innerText: `${data.length} ${declOfNum(data.length, ['товар', 'товара', 'товарів'])}`
         })
@@ -77,7 +95,7 @@ class OrderPreview {
         })
 
         Redom.setAttr(this.discount, {
-            innerText: `0 грн`
+            innerText: `${this.discountPrice} грн`
         })
 
         Redom.setAttr(this.delivery, {
@@ -92,6 +110,14 @@ class OrderPreview {
         this.orderList.update(data)
 
     }
+
+    // onmount() {
+    //     document.addEventListener('cartupdateevent', this.cartupdateeventHandler)
+    // }
+
+    // onunmount() {
+    //     document.removeEventListener('cartupdateevent', this.cartupdateeventHandler)
+    // }
 }
 
 

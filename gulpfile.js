@@ -37,7 +37,7 @@ const critical = require('critical').stream;
 
 
 
-let isDev = true;
+let isDev = false;
 let isProd = !isDev;
 
 let webConfig = {

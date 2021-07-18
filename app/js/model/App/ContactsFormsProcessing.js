@@ -1,23 +1,18 @@
 import {
-    $,
-    CartLS
+    $
 } from "../../../libs/libs"
 
 
 
-const FormProcessing = (form) => {
+const ContactsFormsProcessing = (forms) => {
 
 
-    function undloadHandler(e) {
-        CartLS.destroy()
-    }
-
-    function sendForm() {
+    function sendForm(form) {
         const form_id = '#' + form.id
         const msg = $(form_id).serialize()
         $.ajax({
             type: 'POST',
-            url: 'payment/payment.php',
+            url: 'mail/send.php',
             data: msg,
             success: function (json) {
                 const data = JSON.parse(json)
@@ -26,10 +21,9 @@ const FormProcessing = (form) => {
                     alert('Виникла непередбачувана помилка.')
                     return
                 }
-                
+
                 if (data.responce == "send_success") {
-                    window.location.replace(data.url)
-                    window.addEventListener('unload', undloadHandler)
+
                     return
                 }
             },
@@ -39,10 +33,20 @@ const FormProcessing = (form) => {
         });
     }
 
-    sendForm()
+
+    function submitHandler(e) {
+        e.preventDefault()
+        sendForm(this)
+    }
+
+    function forEachForm(form) {
+        form.addEventListener('submit', submitHandler)
+    }
+
+    forms.forEach(forEachForm)
 }
 
 
 export {
-    FormProcessing
+    ContactsFormsProcessing
 }

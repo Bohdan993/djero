@@ -1,5 +1,6 @@
 import {
-	$
+	$,
+	CartLS
 } from "../../../libs/libs"
 import settings from "./MagnificPopupSettings";
 
@@ -94,6 +95,29 @@ const fullSettingsFunction = (link) => {
 }
 
 
+function calcDiscount(id) {
+    let discount = 0
+    if (CartLS.exists(id)) {
+        let quantity = +CartLS.get(id).quantity
+        switch(id) {
+            case 'pack': {
+                console.log('pack')
+                for(let i  = 0; i <= quantity; i += 3) {
+                    if(i !== 0) discount += 6
+                }
+            }
+            case 'box': {
+
+            }
+
+            default : {
+
+            }
+        }
+    }
+    return discount
+}
+
 
 
 
@@ -105,5 +129,6 @@ export {
 	addStyle,
 	menuclickeventHandler,
 	declOfNum,
-	fullSettingsFunction
+	fullSettingsFunction,
+	calcDiscount
 }

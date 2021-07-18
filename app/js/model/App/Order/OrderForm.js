@@ -1,14 +1,9 @@
 import {
-    Redom,
-    CartLS
+    Redom
 } from '../../../../libs/libs'
 import {
     InitChoices
 } from '../..'
-import {
-    el,
-    setAttr
-} from 'redom'
 
 
 
@@ -444,7 +439,7 @@ class OrderForm {
         this.contactsRow1.update(false)
         this.contactsRow2.update(false)
 
-        CartLS.list().length ?  this.hiddenFieldset.update(true, CartLS.list()) : this.hiddenFieldset.update(false)
+        // CartLS.list().length ?  this.hiddenFieldset.update(true, CartLS.list()) : this.hiddenFieldset.update(false)
 
         this.deliveryInputHandler = function (input, e) {
             if (input.getAttribute('data-delivery-type') === 'self-pickup') {
@@ -478,11 +473,6 @@ class OrderForm {
 
         }
 
-
-        this.cartupdateeventHandler = (e) => {
-            this.update(CartLS.list())
-        }
-
         this.delivery.querySelectorAll('input').forEach(input => {
             this.deliveryInputHandlerBinded = this.deliveryInputHandler.bind(this, input)
             input.addEventListener('change', this.deliveryInputHandlerBinded)
@@ -497,19 +487,15 @@ class OrderForm {
     }
 
     update(data) {
-        data.length ?
-            this.hiddenFieldset.update(true, data) :
-            this.hiddenFieldset.update(false)
+        
     }
 
     onmount() {
         this.choices = InitChoices([this.departmentChoice, this.townChoice])
-        document.addEventListener('cartupdateevent', this.cartupdateeventHandler)
     }
 
     onunmount() {
         this.choices && this.choices.forEach(choice => choice.destroy())
-        document.removeEventListener('cartupdateevent', this.cartupdateeventHandler)
     }
 
 }

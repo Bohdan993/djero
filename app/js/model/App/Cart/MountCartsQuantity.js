@@ -23,7 +23,7 @@ const MountCartsQuantity = (roots) => {
         1: {
             id: 'box',
             name: '1 ящик (30 упаковок)',
-            price: 850,
+            price: 855,
             src: "img/box.png",
             weight: 3600
         }

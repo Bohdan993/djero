@@ -21,12 +21,15 @@ if ( !empty($_POST['name-input']) && !empty($_POST['tel-input']) ) {
   $mobile_phone    = trim(htmlspecialchars($_POST['mob-tel-input']));
   $products        = $_POST['products'];
 
-  $box_price       = 850;
+
+  $box_price       = 855;
   $pack_price      = 35;
   $total_price     = 0;
+  $discount = 0;
 
   $boxes           = 0;
   $packs           = 0;
+
   if( $products ) {
     foreach ($products as $key => $product) {
       $product = trim(htmlspecialchars($product));
@@ -36,6 +39,9 @@ if ( !empty($_POST['name-input']) && !empty($_POST['tel-input']) ) {
  				case 'pack':
  					$total_price = $total_price + ((int) $arr[1] * $pack_price);
  					$packs = (int) $arr[1];
+ 					for($i = 0; $i < (int) $arr[1]; $i = $i + 3) {
+ 						if($i != 0) $discount = $discount + 6;
+ 					}
  					break;
  				case 'box':
  					$total_price = $total_price + ((int) $arr[1] * $box_price);
@@ -47,6 +53,7 @@ if ( !empty($_POST['name-input']) && !empty($_POST['tel-input']) ) {
  			}
  		}
   }
+
 //-----------------------------------------------------------------------------------------//
 //------------------------------------------LIQPAY-----------------------------------------//
 
@@ -62,7 +69,7 @@ file_put_contents('./order_id.txt', $order_id + 1);
 $liqpay = new LiqPay($public_key, $private_key, 'https://www.liqpay.ua/api/3/checkout');
 $server_responce = $liqpay->api('', array(
 'action'         => 'pay',
-'amount'         => $total_price,
+'amount'         => $total_price - $discount,
 'currency'       => 'UAH',
 'description'    => 'Оплата покупки в інтернет магазині Djero',
 'order_id'       => 'order_id_' .$order_id,
@@ -108,7 +115,7 @@ $server_responce = $liqpay->api('', array(
           <tr><td>-----------</td><td>-----------</td></tr>
           <tr><td><b>Кількість коробок з печивом:</b></td><td>$boxes шт.</td></tr>
           <tr><td><b>Кількість упаковок з печивом:</b></td><td>$packs шт.</td></tr>
-          <tr><td><b>Загальна сума замовлення:</b></td><td>$total_price</td></tr>
+          <tr><td><b>Загальна сума замовлення:</b></td><td>$total_price грн.</td></tr>
         </table>
       </body> 
   </html>"; 

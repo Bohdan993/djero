@@ -23,6 +23,7 @@ const $popupTotalPrices = document.querySelectorAll('.popup__total-price')
 const $orderPopupFContainer = document.querySelector('.order-popup__f-container')
 const $popupBasketClearWrappers = document.querySelectorAll('.popup__basket-clear-wrapper')
 const $sidebarCartCounterWrapper = document.querySelector('.sidebar__cart-counter-wrapper')
+const $forms = document.querySelectorAll('form')
 
 export {
 	$body,
@@ -50,4 +51,5 @@ export {
 	$orderPopupFContainer,
 	$popupBasketClearWrappers,
 	$sidebarCartCounterWrapper,
+	$forms
 }
