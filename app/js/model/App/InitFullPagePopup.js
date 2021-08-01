@@ -21,6 +21,7 @@ const InitFullPagePopup = (headerLayout) => {
         scrollingSpeed: 1000,
         lockAnchors: true,
         touchSensitivity: 20,
+        recordHistory: false,
         anchors: ['about-set', 'news', 'delivery', 'delivery-2', 'footer-2'],
         scrollOverflowOptions: {
             click: false,

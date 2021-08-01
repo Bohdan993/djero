@@ -537,6 +537,19 @@ main {
       text-align: center;
     }
 
+
+    &[disabled]+label {
+      color: @gray;
+
+      &:hover {
+        border-color: @gray;
+      }
+
+      &:before {
+        border-color: @gray;
+      }
+    }
+
   }
 
   &:not([type="checkbox"]):not([type="radio"]) {
@@ -607,8 +620,8 @@ main {
   transition: 0.25s border-color linear;
 
 
-  &:hover,
-  &:focus-within {
+  &:hover:not(.disabled),
+  &:focus-within:not(.disabled) {
     border-color: @red-orange;
   }
 
@@ -865,7 +878,7 @@ main {
   z-index: -1;
 }
 
-.screen-play-video {
+.screen-play-video, .youtube-play-video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -904,6 +917,26 @@ main {
   flex-wrap: nowrap;
 }
 
+
+[data-youtube] {
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 32;
+  }
+}
+
+
+// .desctop-video {
+//   display: block;
+// }
+
+// .mobile-video {
+//   display: none;
+// }
 
 
 

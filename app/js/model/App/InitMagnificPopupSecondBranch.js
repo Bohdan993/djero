@@ -86,8 +86,17 @@ const SetSecondBranchPopupSettings = (body, data) => {
                         instanceNewPopup = InitOverlayScrollbars({
                             popup: this.wrap[0]
                         })
+                        const link = this.items.filter(item => !(item instanceof HTMLElement))[0].el[0]
+                        const youtube = link.getAttribute('data-video')
+                        const parent = this.content[0].querySelector('.center')
+                        const prevIframe = parent.querySelector('iframe')
+                        const iframe = '<iframe class="video-popup__iframe" src="https://www.youtube.com/embed/' + youtube + '?autoplay=1" frameborder="0" rel="0" allow="autoplay; encrypted-media" allowfullscreen>'
+                        if(prevIframe) prevIframe.remove()
+                        parent.insertAdjacentHTML("beforeend", iframe)
+
                     } else {
                         removeClass(body, 'popup-open_fifth', 'fixed4')
+                        console.log('close')
                     }
 
 

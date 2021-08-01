@@ -8,6 +8,11 @@ import {
 
 const InitSplide = () => {
 
+    function forEachSlide(el) {
+        const iframe = el.querySelector('iframe')
+        if(iframe) iframe.remove()
+    }
+
     function moveHandler(newIndex, oldIndex, destIndex) {
 
 
@@ -29,6 +34,12 @@ const InitSplide = () => {
         if (newIndex <= 0) {
             addClass(prevArrow, 'disabled')
             removeClass(nextArrow, 'disabled')
+        }
+
+
+        if(this.root.id === 'screen-5__slider-main') {
+            console.log(this)
+            this.Components.Elements.slides.forEach(forEachSlide)
         }
 
 

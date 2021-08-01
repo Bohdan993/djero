@@ -5,6 +5,14 @@ const menuClickEvent = new CustomEvent('menuclickevent', {
 })
 
 
+const townChoosenEvent = new CustomEvent('townchoosen', {
+    detail: {
+        name: 'townchoosen'
+    }
+})
+
+
 export {
-    menuClickEvent
+    menuClickEvent,
+    townChoosenEvent
 }

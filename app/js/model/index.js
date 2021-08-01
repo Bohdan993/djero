@@ -22,6 +22,9 @@ import { MountOrder } from './App/Order/MountOrder'
 import { MountCleanBasket } from './App/CommonComponents/MountCleanBasket'
 import { MountProductCounter } from './App/CommonComponents/MountProductCounter'
 import { ContactsFormsProcessing } from './App/ContactsFormsProcessing'
+import ChangeVideoSource from './App/ChangeVideoSource'
+
+
 
 
 
@@ -51,5 +54,6 @@ export {
 	MountCleanBasket,
 	MountProductCounter,
 	ContactsFormsProcessing,
+	ChangeVideoSource,
 	args
 }

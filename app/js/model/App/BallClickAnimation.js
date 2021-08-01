@@ -51,8 +51,6 @@ const BallClickAnimation = (data) => {
     function ballClickHandler(e) {
         changeClasses()
         secondAnimationAction()
-
-        // console.log('click')
     }
 
     function changeClasses() {
@@ -96,7 +94,7 @@ const BallClickAnimation = (data) => {
 
     ball.addEventListener('click', ballClickHandler)
     secondAnimation.addEventListener('ended', secondAnimationEndedHandler)
-    $(document).on('mfpOpen', popupOpenHandler);
+    $(document).on('mfpOpen', popupOpenHandler)
 
 
 

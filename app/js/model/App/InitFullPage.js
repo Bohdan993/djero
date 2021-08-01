@@ -19,6 +19,7 @@ const InitFullPage = (data) => {
         lazyLoading: true,
         scrollingSpeed: 1000,
         touchSensitivity: 20,
+        recordHistory: false,
 
         anchors: ['main-screen', 'screen-2', 'screen-3', 'screen-4', 'screen-5', 'screen-6', 'contacts', 'footer'],
         scrollOverflowOptions: {

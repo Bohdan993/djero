@@ -188,7 +188,8 @@
         }
 
         .about-set-popup__slider {
-            max-width: unset;
+            max-width: 625px;
+            margin: 0 auto;
         }
 
         .about-set-popup__buttons {
@@ -354,6 +355,16 @@
         .new-popup__content-layer {
             padding-bottom: 25px;
             padding-right: 0;
+        }
+    }
+
+    .popup-gallery-open {
+        .mfp-gallery {
+            width: 100%;
+        }
+
+        .mfp-container {
+            padding: 0 15px;
         }
     }
 }
@@ -746,6 +757,10 @@
         .splide__pagination {
             bottom: -60px;
         }
+
+        .about-set-popup__slider-img {
+            max-height: 370px;
+        }
     }
 
 
@@ -906,11 +921,11 @@
         height: 50px;
     }
 
-     .play-and-order-popup__layout {
-         .play-and-order-popup__card-price {
-             text-align: center;
-         }
-     }
+    .play-and-order-popup__layout {
+        .play-and-order-popup__card-price {
+            text-align: center;
+        }
+    }
 
 
 }
@@ -949,6 +964,14 @@
         min-width: 125px;
         padding: 0 5px;
     }
+
+    // .desctop-video {
+    //     display: none;
+    // }
+
+    // .mobile-video {
+    //     display: block;
+    // }
 
     .sidebar__layout {
 
@@ -1569,7 +1592,7 @@
             }
         }
 
-        .about-toy-popup__text.text_bg-blue, 
+        .about-toy-popup__text.text_bg-blue,
         .about-toy-popup__text.text_bg-red {
             padding: 30px * 0.5 55px * 0.5 40px * 0.5;
         }
@@ -1594,15 +1617,7 @@
         padding: 25px 10px;
     }
 
-    .popup-gallery-open {
-        .mfp-gallery {
-            width: 100%;
-        }
 
-        .mfp-container {
-            padding: 0 15px;
-        }
-    }
 
     .widget__card-wrapper {
         padding-bottom: 25px;
@@ -1673,7 +1688,7 @@
     }
 
 
-   
+
 
 }
 
@@ -1827,6 +1842,10 @@
             flex-direction: column;
         }
     }
+    .about-set-popup__layout .f-container,
+    .contacts__layout .f-container {
+        align-items: stretch;
+    }
 
     // .screen-3__layout {
 
@@ -1884,6 +1903,10 @@
         .about-set-popup__slider {
             max-width: 625/1220 * 100%;
             margin: 0 auto;
+
+            &:before {
+                top: 40%;
+            }
         }
 
         .splide__pagination {
@@ -1909,7 +1932,15 @@
         }
 
         .about-set-popup__cookie-image-wrapper {
-            padding-right: 10.612524%;
+            // padding-right: 10.612524%;
+        }
+
+        .about-set-popup__slider-img {
+            max-height: 215px;
+        }
+
+        .about-set-popup__slider-text {
+            font-size: 15/16 * 1rem;
         }
     }
 

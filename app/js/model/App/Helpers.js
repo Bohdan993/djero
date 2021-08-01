@@ -2,7 +2,23 @@ import {
 	$,
 	CartLS
 } from "../../../libs/libs"
-import settings from "./MagnificPopupSettings";
+import settings from "./MagnificPopupSettings"
+
+
+
+
+function debounce(f, ms) {
+	let timer
+	return function () {
+
+		clearTimeout(timer)
+
+		timer = setTimeout(() => {
+			f.apply(this, arguments)
+		}, ms)
+
+	}
+}
 
 
 function throttle(f, ms) {
@@ -64,11 +80,13 @@ function addStyle(elem, styles) {
 
 function menuclickeventHandler(e) {
 	e.stopImmediatePropagation()
-	
-	const {detail: {
-		anchor
-	}} = e
-	
+
+	const {
+		detail: {
+			anchor
+		}
+	} = e
+
 	const loadedSection = $(document).find(`[data-anchor="${anchor}"]`)
 	const screen = loadedSection.find('.is-screen')
 	console.log(screen.outerHeight())
@@ -79,43 +97,43 @@ function menuclickeventHandler(e) {
 	}
 }
 
-function declOfNum(number, words) {  
-    return words[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? Math.abs(number) % 10 : 5]];
+function declOfNum(number, words) {
+	return words[(number % 100 > 4 && number % 100 < 20) ? 2 : [2, 0, 1, 1, 1, 2][(number % 10 < 5) ? Math.abs(number) % 10 : 5]];
 }
 
 
 const fullSettingsFunction = (link) => {
-    const partialSettings = {
-        items: {
-            src: link
-        }
-    }
+	const partialSettings = {
+		items: {
+			src: link
+		}
+	}
 
-    return Object.assign({}, settings, partialSettings)
+	return Object.assign({}, settings, partialSettings)
 }
 
 
 function calcDiscount(id) {
-    let discount = 0
-    if (CartLS.exists(id)) {
-        let quantity = +CartLS.get(id).quantity
-        switch(id) {
-            case 'pack': {
-                console.log('pack')
-                for(let i  = 0; i <= quantity; i += 3) {
-                    if(i !== 0) discount += 6
-                }
-            }
-            case 'box': {
+	let discount = 0
+	if (CartLS.exists(id)) {
+		let quantity = +CartLS.get(id).quantity
+		switch (id) {
+			case 'pack': {
+				// console.log('pack')
+				for (let i = 0; i <= quantity; i += 3) {
+					if (i !== 0) discount += 6
+				}
+			}
+			case 'box': {
 
-            }
+			}
 
-            default : {
+			default: {
 
-            }
-        }
-    }
-    return discount
+			}
+		}
+	}
+	return discount
 }
 
 
@@ -130,5 +148,6 @@ export {
 	menuclickeventHandler,
 	declOfNum,
 	fullSettingsFunction,
-	calcDiscount
+	calcDiscount,
+	debounce
 }

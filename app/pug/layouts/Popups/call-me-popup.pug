@@ -12,9 +12,10 @@
 					fieldset.fieldset
 						.field-row.call-me-popup__field-row
 							.field-wrapper.call-me-popup__field-wrapper
-								input.field(type="tel" placeholder=" " id="call-me-tel-input" required)
+								input.field(type="tel" placeholder=" " id="call-me-tel-input" required name="phone")
 								label.text-field-label(for="call-me-tel-input")
 									|Ваш номер телефону
+						input.field(type="hidden" name="subject" value="Форма зворотнього зв'язку із каталога (замовити піддон)")
 						.field-row.call-me-popup__field-row
 							button.popup__btn.call-me-popup__btn.btn.red-orange.big(type="submit")
 								span

@@ -98,6 +98,7 @@
             transform: translate(-50%, -50%);
             background: url('../img/Djero.png') no-repeat center/contain;
             z-index: 10;
+            // transition: all 3s linear;
         }
     }
 
@@ -111,9 +112,11 @@
     .about-set-popup__slider-slide,
     .about-set-popup__slider-img {
         width: 100%;
+        margin: 0 auto;
     }
 
     .about-set-popup__slider-img {
+        // max-height: 415/625 * 100%;
         max-height: 415px;
         margin-bottom: 25px;
     }
@@ -160,7 +163,7 @@
             transform: translate(-50%, -50%);
             width: 60px;
             height: 60px;
-            background-color: @semi-light-blue;
+            background-color: @white;
             z-index: 0;
         }
 
@@ -204,12 +207,15 @@
 
     .image-wrapper_bottom {
         justify-content: space-around;
+        // flex-wrap: wrap;
     }
 
 
     .about-set-popup__cookie-image-wrapper {
         flex-basis: 75%;
-        padding-right: 90/511 * 100%;
+        // padding-right: 90/511 * 100%;
+        max-width: 293px;
+        min-width: 125px;
     }
 
     .about-set-popup__ball-image-wrapper {

@@ -4,6 +4,7 @@ import {
 import {
     InitChoices
 } from '../..'
+import { addClass, removeClass } from '../Helpers'
 
 
 
@@ -32,14 +33,14 @@ function createFieldRow(...inputs) {
 
 
 class HiddenInput {
-    constructor(){
+    constructor() {
         this.el = Redom.el('input.hidden', {
             type: 'hidden',
             name: 'products[]'
         })
     }
 
-    update(data){
+    update(data) {
         Redom.setAttr(this.el, {
             value: `${data.id}|${data.quantity}`
         })
@@ -156,7 +157,7 @@ class OrderForm {
             ),
             Redom.el('fieldset.fieldset',
                 createLegeng('Спосіб оплати'),
-                createFieldRow({
+                this.paymentMethod1 = createFieldRow({
                     input: {
                         class: 'field',
                         id: 'payment-radio-1',
@@ -191,7 +192,7 @@ class OrderForm {
                     }
 
                 }),
-                createFieldRow({
+                this.paymentMethod2 = createFieldRow({
                     input: {
                         class: 'field',
                         id: 'payment-radio-3',
@@ -253,10 +254,17 @@ class OrderForm {
                         'data-delivery': 'self-pickup'
                     },
                     Redom.el('div.field-wrapper.order-popup__select-field-wrapper',
-                        this.departmentChoice = Redom.el('select.choice order-popup__select-field.department-select', {
-                            name: 'department-select'
+                        this.departmentChoice1 = Redom.el('select.choice order-popup__select-field.department-select.department-select-1', {
+                            name: 'department-select-1'
                         })))),
                 this.deliveryRow2 = Redom.place(Redom.el('div.field-row', {
+                        'data-delivery': 'self-pickup'
+                    },
+                    Redom.el('div.field-wrapper.order-popup__select-field-wrapper',
+                        this.departmentChoice2 = Redom.el('select.choice order-popup__select-field.department-select.department-select-2', {
+                            name: 'department-select-2'
+                        })))),
+                this.deliveryRow3 = Redom.place(Redom.el('div.field-row', {
                         'data-delivery': 'courier'
                     },
                     Redom.el('div.field-wrapper.order-popup__select-field-wrapper',
@@ -275,7 +283,7 @@ class OrderForm {
                             innerText: 'Вулиця'
                         })))),
 
-                this.deliveryRow3 = Redom.place(createFieldRow({
+                this.deliveryRow4 = Redom.place(createFieldRow({
                     input: {
                         class: 'field',
                         id: 'house-input',
@@ -436,6 +444,7 @@ class OrderForm {
             this.hiddenFieldset = new HiddenFieldset())
 
         this.deliveryRow1.update(true)
+        this.deliveryRow2.update(true)
         this.contactsRow1.update(false)
         this.contactsRow2.update(false)
 
@@ -444,15 +453,17 @@ class OrderForm {
         this.deliveryInputHandler = function (input, e) {
             if (input.getAttribute('data-delivery-type') === 'self-pickup') {
                 this.deliveryRow1.update(true)
-                this.deliveryRow2.update(false)
+                this.deliveryRow2.update(true)
                 this.deliveryRow3.update(false)
+                this.deliveryRow4.update(false)
                 return
             }
 
             if (input.getAttribute('data-delivery-type') === 'courier') {
                 this.deliveryRow1.update(false)
-                this.deliveryRow2.update(true)
+                this.deliveryRow2.update(false)
                 this.deliveryRow3.update(true)
+                this.deliveryRow4.update(true)
                 return
             }
 
@@ -460,12 +471,41 @@ class OrderForm {
 
         this.contactsInputHandler = function (input, e) {
             if (input.getAttribute('data-contacts-type') === 'me') {
+                [this.paymentMethod1, this.paymentMethod2].forEach(el => {
+                    const inputs = el.querySelectorAll('input')
+                    const fieldWrapper = el.querySelectorAll('.field-wrapper')
+                    console.log(fieldWrapper)
+                    
+                    inputs.forEach((input, ind) => {
+                        input.disabled = false
+                        removeClass(fieldWrapper[ind], 'disabled')
+                        if (input.id === 'payment-radio-1') {
+                            input.checked = true
+                        }
+                    })
+                })
                 this.contactsRow1.update(false)
                 this.contactsRow2.update(false)
                 return
             }
 
             if (input.getAttribute('data-contacts-type') === 'other-person') {
+                [this.paymentMethod1, this.paymentMethod2].forEach(el => {
+                    const inputs = el.querySelectorAll('input')
+                    const fieldWrapper = el.querySelectorAll('.field-wrapper')
+                    console.log(fieldWrapper)
+                    inputs.forEach((input, ind) => {
+                        input.checked = false
+                        input.disabled = true
+                        addClass(fieldWrapper[ind], 'disabled')
+
+                        if (input.id === 'payment-radio-2') {
+                            input.checked = true
+                            input.disabled = false
+                            removeClass(fieldWrapper[ind], 'disabled')
+                        }
+                    })
+                })
                 this.contactsRow1.update(true)
                 this.contactsRow2.update(true)
                 return
@@ -487,11 +527,11 @@ class OrderForm {
     }
 
     update(data) {
-        
+
     }
 
     onmount() {
-        this.choices = InitChoices([this.departmentChoice, this.townChoice])
+        this.choices = InitChoices([this.departmentChoice1, this.departmentChoice2, this.townChoice])
     }
 
     onunmount() {

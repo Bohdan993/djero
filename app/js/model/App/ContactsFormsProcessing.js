@@ -14,16 +14,15 @@ const ContactsFormsProcessing = (forms) => {
             type: 'POST',
             url: 'mail/send.php',
             data: msg,
-            success: function (json) {
-                const data = JSON.parse(json)
+            success: function (data) {
 
-                if (data.responce == "send_error") {
+                if (data == "send_error") {
                     alert('Виникла непередбачувана помилка.')
                     return
                 }
 
-                if (data.responce == "send_success") {
-
+                if (data == "send_success") {
+                    alert('Дякуємо, менеджер скоро зв\'яжеться з Вами.')
                     return
                 }
             },

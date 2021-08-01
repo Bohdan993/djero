@@ -4,10 +4,20 @@ import {
 import {
     DEPARTMENT_SELECT
 } from "./Constants"
+import {
+    townChoosenEvent
+} from "./CustomEvents"
+import {
+    debounce
+} from "./Helpers"
+
+
 
 const InitChoices = (choices) => {
 
     const res = []
+    const apiKey = "769d4d840985b21e16045ca913379840"
+    const url = "https://api.novaposhta.ua/v2.0/json/"
     // function showDropdownHandler(instance, e) {
     //     console.log(instance, e)
     // }
@@ -18,12 +28,12 @@ const InitChoices = (choices) => {
             noResultsText: 'Нічого не знайдено',
             noChoicesText: 'Список порожній',
             shouldSort: false,
-            searchPlaceholderValue: el.classList.contains(DEPARTMENT_SELECT) ? 'Введіть адресу відділення' : 'Введіть місто',
+            searchResultLimit: 9999,
+            searchPlaceholderValue: el.classList.contains('department-select-2') ? 'Пошук відділення' : 'Пошук населеного пункту',
             itemSelectText: '',
             classNames: {
                 containerOuter: 'choices order-popup__select-field_outer',
                 containerInner: 'choices__inner order-popup__select-field_inner',
-
                 // listDropdown: 'order-popup__select-list-dropdown',
             },
         })
@@ -31,53 +41,198 @@ const InitChoices = (choices) => {
 
 
         if (instance.passedElement.element.classList.contains(DEPARTMENT_SELECT)) {
-            instance.setChoices([{
+            if (instance.passedElement.element.classList.contains('department-select-1')) {
+
+                async function searchHandler(event) {
+                    try {
+                        let response = await fetch(url, {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json;charset=utf-8'
+                            },
+                            body: JSON.stringify({
+                                "apiKey": "" + apiKey + "",
+                                "modelName": "Address",
+                                "calledMethod": "getCities",
+                                "methodProperties": {
+                                    "FindByString": "" + event.detail.value + "",
+                                    // "Limit": 500
+                                }
+                            })
+                        })
+
+                        if (response.ok) {
+                            let json = await response.json()
+                            const data = json.data
+                            const result = data.map(el => {
+                                // if (el.SettlementTypeDescription === 'село') {
+                                //     return {
+                                //         value: el.Description + ', ' + el.AreaDescription + ', ' + el.RegionsDescription,
+                                //         label: el.Description + ', ' + el.AreaDescription + ', ' + el.RegionsDescription,
+                                //     }
+                                // }
+
+                                return {
+                                    value: el.Description + ', ' + el.AreaDescription,
+                                    label: el.Description + ', ' + el.AreaDescription,
+                                    customProperties: {
+                                        ref: el.Ref
+                                    }
+                                }
+
+
+                            }).filter(Boolean)
+
+                            instance.clearChoices()
+                            if (result.length) instance.setChoices([...result])
+
+
+                        } else {
+                            alert("Помилка HTTP: " + response.status);
+                        }
+                    } catch (err) {
+                        console.error(err)
+                    }
+
+                }
+                const debouncedSearchHandler = debounce(searchHandler, 500)
+                instance.passedElement.element.addEventListener('search', debouncedSearchHandler, false)
+
+                instance.passedElement.element.addEventListener('choice', async function (e) {
+
+                    try {
+                        let response = await fetch(url, {
+                            method: "POST",
+                            headers: {
+                                'Content-Type': 'application/json;charset=utf-8'
+                            },
+                            body: JSON.stringify({
+                                "apiKey": "" + apiKey + "",
+                                "modelName": "Address",
+                                "calledMethod": "getWarehouses",
+                                "methodProperties": {
+                                    "CityRef": e.detail.choice.customProperties.ref,
+                                    "Limit": 500
+                                }
+                            })
+                        })
+
+                        if (response.ok) {
+                            let json = await response.json()
+                            const data = json.data
+                            const result = data.map(el => {
+                                if (el.CategoryOfWarehouse !== 'Postomat') {
+                                    return {
+                                        value: el.Description,
+                                        label: el.Description,
+                                    }
+                                }
+
+                            }).filter(Boolean)
+
+                            townChoosenEvent.detail.result = result
+                            document.dispatchEvent(townChoosenEvent)
+
+
+                        } else {
+                            alert("Помилка HTTP: " + response.status);
+                        }
+
+                    } catch (err) {
+                        console.error(err)
+                    }
+                })
+
+
+                instance.setChoices([{
+                    value: 'Виберіть населений пункт',
+                    label: 'Виберіть населений пункт',
+                    disabled: true,
+                    selected: true
+                }])
+
+
+            } else {
+                instance.setChoices([{
                     value: 'Виберіть відповідне відділення',
                     label: 'Виберіть відповідне відділення',
                     disabled: true,
                     selected: true
-                },
-                {
-                    value: 'Відділення №1',
-                    label: 'Відділення №1',
-                },
-                {
-                    value: 'Відділення №2',
-                    label: 'Відділення №2',
-                },
-                {
-                    value: 'Відділення №3',
-                    label: 'Відділення №3',
-                },
-            ])
+                }])
+
+                document.addEventListener('townchoosen', function (e) {
+                    const result = e.detail.result
+                    instance.clearChoices()
+                    instance.removeActiveItems()
+                    if (result.length) {
+                        instance.setChoices([{
+                            value: 'Виберіть відповідне відділення',
+                            label: 'Виберіть відповідне відділення',
+                            disabled: true,
+                            selected: true
+                        }, ...result])
+                    } else {
+                        instance.setChoices([{
+                            value: 'Не знайдено підходящих відділень',
+                            label: 'Не знайдено підходящих відділень',
+                            disabled: true,
+                            selected: true
+                        }])
+                    }
+                })
+            }
+
 
         } else {
-            instance.setChoices([{
-                    value: 'Виберіть місто',
-                    label: 'Виберіть місто',
-                    disabled: true,
-                    selected: true
-                },
-                {
-                    value: 'Бердичів',
-                    label: 'Бердичів',
-                },
-                 {
-                    value: 'Вінниця',
-                    label: 'Вінниця',
-                },
-                {
-                    value: 'Житомир',
-                    label: 'Житомир',
-                },
-                {
-                    value: 'Київ',
-                    label: 'Київ',
-                },
-            ])
+            async function getCities() {
+                try {
+                    let response = await fetch(url, {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json;charset=utf-8'
+                        },
+                        body: JSON.stringify({
+                            "apiKey": "" + apiKey + "",
+                            "modelName": "Address",
+                            "calledMethod": "getCities"
+                        })
+                    })
+
+                    if (response.ok) {
+                        let json = await response.json()
+                        const data = json.data
+                        const result = data.map(el => {
+                            return {
+                                value: el.Description,
+                                label: el.Description,
+                            }
+
+                        })
+
+                        instance.clearChoices()
+                        instance.setChoices([{
+                            value: 'Виберіть населений пункт',
+                            label: 'Виберіть населений пункт',
+                            disabled: true,
+                            selected: true
+                        }])
+                        if (result.length) instance.setChoices([...result])
+
+
+                    } else {
+                        alert("Помилка HTTP: " + response.status);
+                    }
+
+                } catch (err) {
+                    console.error(err)
+                }
+
+
+            }
+
+            getCities()
 
         }
-
 
         res.push(instance)
 

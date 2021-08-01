@@ -20,6 +20,7 @@ import {
 	MountCleanBasket,
 	MountProductCounter,
 	ContactsFormsProcessing,
+	ChangeVideoSource,
 	args
 } from '../model';
 import {
@@ -32,6 +33,7 @@ import {
 	$closePopup,
 	// $choices,
 	$screenPlayVideo,
+	$youtubePlayVideo,
 	$menuLinks,
 	$cart,
 	$cartsQuantity,
@@ -51,6 +53,7 @@ import {
 const app = {
 	init() {
 		this.bm()
+		this.cvs()
 		this.ifp()
 		this.it()
 		this.stb()
@@ -75,6 +78,9 @@ const app = {
 	bm() {
 		// console.log(Fullpage, Splide)
 		// BurgerMenu(body)
+	},
+	cvs(){
+		ChangeVideoSource()
 	},
 	ifp() {
 		InitFullPage(args)
@@ -107,7 +113,7 @@ const app = {
 		PlayVideo($screenPlayVideo)
 	},
 	pvy() {
-		PlayVideoYoutube()
+		PlayVideoYoutube($youtubePlayVideo)
 	},
 	mts() {
 		MoveToScreens($menuLinks, $body, args)

@@ -124,14 +124,14 @@ const InitMagnificPopups = (body, data) => {
                 },
                 open() {
                     addClass(body, 'popup-open', 'popup-open_fifth')
-
+                    console.log('open')
 
 
                 },
 
                 close() {
                     removeClass(body, 'popup-open', 'popup-open_fifth')
-
+                    console.log('close')
                 }
             }
         }

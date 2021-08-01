@@ -15,6 +15,7 @@ const $popupMain = document.querySelector('.popup-main')
 const $closePopup = document.querySelectorAll('.close-popup-btn')
 const $choices = document.querySelectorAll('.choice')
 const $screenPlayVideo = document.querySelectorAll('.screen-play-video')
+const $youtubePlayVideo = document.querySelectorAll('.youtube-play-video')
 const $headerLayout = document.querySelector('.header__layout')
 const $menuLinks = document.querySelectorAll('.menu-link')
 const $cart = document.querySelector('.popup__cart.cart-popup__cart')
@@ -51,5 +52,6 @@ export {
 	$orderPopupFContainer,
 	$popupBasketClearWrappers,
 	$sidebarCartCounterWrapper,
+	$youtubePlayVideo,
 	$forms
 }

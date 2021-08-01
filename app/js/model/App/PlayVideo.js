@@ -1,7 +1,4 @@
 import {
-    get
-} from "jquery"
-import {
     NO_VIDEO_PLAY,
     SCREEN_VIDEO_LAYER
 } from "./Constants"
@@ -11,13 +8,11 @@ import {
     addStyle
 } from './Helpers'
 
-const PlayVideo = (btsn) => {
+const PlayVideo = (btns) => {
 
     function forEachBtn(el) {
         if (el.classList.contains(NO_VIDEO_PLAY)) return
         el.addEventListener('click', clickHandler)
-        // el.addEventListener('touchstart', clickHandler)
-
     }
 
     function clickHandler(e) {
@@ -49,7 +44,7 @@ const PlayVideo = (btsn) => {
         })
     }
 
-    btsn.forEach(forEachBtn)
+    btns.forEach(forEachBtn)
 
 
 }

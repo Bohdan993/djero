@@ -12,7 +12,7 @@ const InitTippy = (element, content) => {
         interactiveBorder: 5,
         interactiveDebounce: 0,
         placement: 'left',
-        offset: [0, 0],
+        offset: [0, 4],
         hideOnClick: true,
         trigger: 'click',
         animation: 'shift-away-extreme',

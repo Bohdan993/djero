@@ -12,11 +12,16 @@ const ShareButtonToggle = (btn) => {
         const target = e.target
         const name = btn.className.split(' ')[0]
 
+        if (target.classList.contains('sidebar__social-share-list') || target.closest(`.sidebar__social-share-list`)) {
+            return
+        }
+
         if (isActive) {
             removeClass(btn, 'active')
             isActive = false
             return
         }
+
 
         if (!target.classList.contains(name) || !target.closest(`.${name}`)) return
 
@@ -26,6 +31,7 @@ const ShareButtonToggle = (btn) => {
             isActive = true
             return
         }
+
 
 
     }

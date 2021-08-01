@@ -14,14 +14,15 @@
 					fieldset.fieldset
 						.field-row.order-call-popup__field-row
 							.field-wrapper.order-call-popup__field-wrapper
-								input.field(type="text" placeholder=" " id="order-call-name-input")
+								input.field(type="text" placeholder=" " id="order-call-name-input" name="name")
 								label.text-field-label(for="order-call-name-input")
 									|Ваше ім'я
 						.field-row.order-call-popup__field-row
 							.field-wrapper.order-call-popup__field-wrapper
-								input.field(type="tel" placeholder=" " id="order-call-tel-input" required)
+								input.field(type="tel" placeholder=" " id="order-call-tel-input" required name="phone")
 								label.text-field-label(for="order-call-tel-input")
 									|Ваш номер телефону
+						input.field(type="hidden" name="subject" value="Форма зворотнього зв'язку 'Зателефонувати мені'")
 						.field-row.order-call-popup__field-row
 							button.popup__btn.order-call-popup__btn.btn.red-orange.big(type="submit")
 								span
