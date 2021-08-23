@@ -89,8 +89,6 @@ function menuclickeventHandler(e) {
 
 	const loadedSection = $(document).find(`[data-anchor="${anchor}"]`)
 	const screen = loadedSection.find('.is-screen')
-	console.log(screen.outerHeight())
-	console.log(loadedSection.height())
 	if (screen.outerHeight() > loadedSection.height()) {
 		const IScroll = loadedSection.find('.fp-scrollable').data('iscrollInstance')
 		IScroll.scrollTo(0, 0, 0)
@@ -119,7 +117,6 @@ function calcDiscount(id) {
 		let quantity = +CartLS.get(id).quantity
 		switch (id) {
 			case 'pack': {
-				// console.log('pack')
 				for (let i = 0; i <= quantity; i += 3) {
 					if (i !== 0) discount += 6
 				}

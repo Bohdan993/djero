@@ -5,7 +5,6 @@ import {
 const ClosePopup = (btns) => {
 
     function clickHandler(e) {
-        console.log('dfdff')
         $.magnificPopup.close()
     }
 

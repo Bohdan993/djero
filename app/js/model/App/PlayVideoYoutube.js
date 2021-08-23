@@ -14,7 +14,6 @@ const PlayVideoYoutube = (btns) => {
     function clickHandler(e) {
         const parent = this.closest(`[data-youtube]`)
         const video = parent.getAttribute('data-youtube')
-        // console.log(video)
 
         const iframe = '<iframe src="https://www.youtube.com/embed/' + video + '?autoplay=1" frameborder="0" rel="0" allow="autoplay; encrypted-media" allowfullscreen>'
         parent.insertAdjacentHTML("beforeend", iframe)

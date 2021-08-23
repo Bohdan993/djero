@@ -22,7 +22,6 @@ import {
 
 class Cart {
     constructor(type, body, propData) {
-        console.log(body, propData)
         this.type = type
         this.mainEl = Redom.place(Redom.el("div.cart-popup__cart-main-wrapper",
             this.cartList = new CartList('Cart'),

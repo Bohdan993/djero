@@ -96,7 +96,6 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
                     } else {
                         removeClass(body, 'popup-open_fifth', 'fixed4')
-                        console.log('close')
                     }
 
 
@@ -106,7 +105,6 @@ const SetSecondBranchPopupSettings = (body, data) => {
                         removeClass(body, 'popup-open_third', 'popup-open_fourth', 'popup-open_menu')
                         $.fn.fullpage.destroy('all')
                         setTimeout(function () {
-                            console.log('after 150 ms')
                             InitFullPagePopup(headerLayout)
                         }, 0)
 
@@ -125,7 +123,6 @@ const SetSecondBranchPopupSettings = (body, data) => {
 
 
                     if (this.content[0].classList.contains('payment-popup')) {
-                        console.log('paymant')
                         $.fn.fullpage.destroy('all')
                         addClass(body, 'fixed1')
                         instanceSecondBranchPopup = InitOverlayScrollbars({

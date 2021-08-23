@@ -126,7 +126,6 @@ const settings = {
         },
 
         close() {
-            console.log('ddrrrewe')
             removeClass($body, 'popup-open', 'popup-open_second-branch', 'popup-open_secondary', 'popup-open_menu', 'fixed1')
 
             $('html, body').animate({

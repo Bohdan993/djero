@@ -6,11 +6,13 @@ import {
     removeClass
 } from "./Helpers"
 
+
+
 const InitSplide = () => {
 
     function forEachSlide(el) {
         const iframe = el.querySelector('iframe')
-        if(iframe) iframe.remove()
+        if (iframe) iframe.remove()
     }
 
     function moveHandler(newIndex, oldIndex, destIndex) {
@@ -37,8 +39,7 @@ const InitSplide = () => {
         }
 
 
-        if(this.root.id === 'screen-5__slider-main') {
-            console.log(this)
+        if (this.root.id === 'screen-5__slider-main') {
             this.Components.Elements.slides.forEach(forEachSlide)
         }
 
@@ -48,6 +49,13 @@ const InitSplide = () => {
 
     function arrowsMountedHandler(prev, next) {
         addClass(prev, 'disabled')
+    }
+
+
+    function screen5SliderMountedHandler() {
+        document.addEventListener('screenleaveevent', () => {
+            this.Components.Elements.slides.forEach(forEachSlide)
+        })
     }
 
     const mainScreenSlider = new Splide('#main-screen__slider', {
@@ -79,6 +87,7 @@ const InitSplide = () => {
         autoWidth: true,
         drag: true,
         lazyLoad: 'nearby',
+        preloadPages: 3,
         focus: 'center',
         trimSpace: true,
         classes: {
@@ -88,10 +97,10 @@ const InitSplide = () => {
             prev: 'splide__arrow--prev screen-5__slider-arrow-prev',
             next: 'splide__arrow--next screen-5__slider-arrow-next',
         },
-        breakpoints : {
-        	'768': {
-        		gap: 8,
-        	}
+        breakpoints: {
+            '768': {
+                gap: 8,
+            }
         },
     })
 
@@ -150,16 +159,17 @@ const InitSplide = () => {
             prev: 'splide__arrow--prev new-popup__slider-arrow-prev',
             next: 'splide__arrow--next new-popup__slider-arrow-next',
         },
-        breakpoints : {
-        	'576': {
-        		gap: 8,
-        	}
+        breakpoints: {
+            '576': {
+                gap: 8,
+            }
         },
     })
 
     screen5MainSlider.on('arrows:mounted', arrowsMountedHandler.bind(screen5MainSlider))
     screen5thumbnailSlider.on('arrows:mounted', arrowsMountedHandler.bind(screen5thumbnailSlider))
     screen5thumbnailSlider.mount()
+    screen5MainSlider.on('mounted', screen5SliderMountedHandler.bind(screen5MainSlider))
     screen5MainSlider.mount()
     screen5MainSlider.on('move', moveHandler.bind(screen5MainSlider))
     screen5thumbnailSlider.on('move', moveHandler.bind(screen5thumbnailSlider))

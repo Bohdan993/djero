@@ -63,7 +63,6 @@ class OrderFormMain {
     }
 
     update(data) {
-        // console.log(this.form)
         data.length ? (this.mainEl.update(true), this.emptyEl.update(false), this.form.hiddenFieldset.update(true, data)) :
             (this.mainEl.update(false), this.emptyEl.update(true), this.form.hiddenFieldset.update(false))
 

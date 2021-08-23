@@ -1,7 +1,5 @@
-// import { timers } from 'jquery';
 import {
 	InitFullPage,
-	BurgerMenu,
 	InitTippy,
 	ShareButtonToggle,
 	InitSplide,
@@ -9,7 +7,6 @@ import {
 	InitMagnificPopups,
 	InitMagnificPopupSecondBranch,
 	ClosePopup,
-	// InitChoices,
 	PlayVideo,
 	PlayVideoYoutube,
 	MoveToScreens,
@@ -31,7 +28,6 @@ import {
 	$socialShareList,
 	$socialShareBtn,
 	$closePopup,
-	// $choices,
 	$screenPlayVideo,
 	$youtubePlayVideo,
 	$menuLinks,
@@ -42,8 +38,6 @@ import {
 	$popupBasketClearWrappers,
 	$sidebarCartCounterWrapper,
 	$forms
-	// $orderPopupFormLayer,
-	// $orderPopupPreviewLayer
 
 } from '../view';
 
@@ -52,7 +46,6 @@ import {
 
 const app = {
 	init() {
-		this.bm()
 		this.cvs()
 		this.ifp()
 		this.it()
@@ -62,7 +55,6 @@ const app = {
 		this.imp()
 		this.impsb()
 		this.cp()
-		// this.ic()
 		this.pv()
 		this.pvy()
 		this.mts()
@@ -73,11 +65,6 @@ const app = {
 		this.mcb()
 		this.mpc()
 		this.cfp()
-		// this.iosb()
-	},
-	bm() {
-		// console.log(Fullpage, Splide)
-		// BurgerMenu(body)
 	},
 	cvs(){
 		ChangeVideoSource()

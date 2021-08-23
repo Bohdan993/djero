@@ -12,7 +12,15 @@ const townChoosenEvent = new CustomEvent('townchoosen', {
 })
 
 
+const screenLeaveEvent = new CustomEvent('screenleaveevent', {
+    detail: {
+        name: 'screenleaveevent'
+    }
+})
+
+
 export {
     menuClickEvent,
-    townChoosenEvent
+    townChoosenEvent,
+    screenLeaveEvent
 }

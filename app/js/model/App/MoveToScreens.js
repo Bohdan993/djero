@@ -55,7 +55,6 @@ function clickHandler(body, data, timeout, e) {
 
 
     if (position === 'main') {
-        // console.log('dfrrrr')
         menuClickEvent.detail.anchor = anchor
         document.dispatchEvent(menuClickEvent)
 

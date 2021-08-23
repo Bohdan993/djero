@@ -474,7 +474,6 @@ class OrderForm {
                 [this.paymentMethod1, this.paymentMethod2].forEach(el => {
                     const inputs = el.querySelectorAll('input')
                     const fieldWrapper = el.querySelectorAll('.field-wrapper')
-                    console.log(fieldWrapper)
                     
                     inputs.forEach((input, ind) => {
                         input.disabled = false
@@ -493,7 +492,7 @@ class OrderForm {
                 [this.paymentMethod1, this.paymentMethod2].forEach(el => {
                     const inputs = el.querySelectorAll('input')
                     const fieldWrapper = el.querySelectorAll('.field-wrapper')
-                    console.log(fieldWrapper)
+
                     inputs.forEach((input, ind) => {
                         input.checked = false
                         input.disabled = true

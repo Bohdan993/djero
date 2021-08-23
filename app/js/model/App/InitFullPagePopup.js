@@ -21,7 +21,7 @@ const InitFullPagePopup = (headerLayout) => {
         scrollingSpeed: 1000,
         lockAnchors: true,
         touchSensitivity: 20,
-        recordHistory: false,
+        recordHistory: true,
         anchors: ['about-set', 'news', 'delivery', 'delivery-2', 'footer-2'],
         scrollOverflowOptions: {
             click: false,
@@ -59,6 +59,9 @@ const InitFullPagePopup = (headerLayout) => {
                 headerLayout,
                 'white'),
             'blue-full')
+
+
+      
 
         if (destination === 4) {
             removeClass(

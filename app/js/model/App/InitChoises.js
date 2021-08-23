@@ -18,9 +18,7 @@ const InitChoices = (choices) => {
     const res = []
     const apiKey = "769d4d840985b21e16045ca913379840"
     const url = "https://api.novaposhta.ua/v2.0/json/"
-    // function showDropdownHandler(instance, e) {
-    //     console.log(instance, e)
-    // }
+
 
 
     function forEachChoice(el) {
@@ -65,13 +63,6 @@ const InitChoices = (choices) => {
                             let json = await response.json()
                             const data = json.data
                             const result = data.map(el => {
-                                // if (el.SettlementTypeDescription === 'село') {
-                                //     return {
-                                //         value: el.Description + ', ' + el.AreaDescription + ', ' + el.RegionsDescription,
-                                //         label: el.Description + ', ' + el.AreaDescription + ', ' + el.RegionsDescription,
-                                //     }
-                                // }
-
                                 return {
                                     value: el.Description + ', ' + el.AreaDescription,
                                     label: el.Description + ', ' + el.AreaDescription,
@@ -95,10 +86,8 @@ const InitChoices = (choices) => {
                     }
 
                 }
-                const debouncedSearchHandler = debounce(searchHandler, 500)
-                instance.passedElement.element.addEventListener('search', debouncedSearchHandler, false)
 
-                instance.passedElement.element.addEventListener('choice', async function (e) {
+                async function choiceHandler(e) {
 
                     try {
                         let response = await fetch(url, {
@@ -141,7 +130,12 @@ const InitChoices = (choices) => {
                     } catch (err) {
                         console.error(err)
                     }
-                })
+                }
+
+                const debouncedSearchHandler = debounce(searchHandler, 500)
+                instance.passedElement.element.addEventListener('search', debouncedSearchHandler, false)
+
+                instance.passedElement.element.addEventListener('choice', choiceHandler)
 
 
                 instance.setChoices([{
@@ -184,7 +178,8 @@ const InitChoices = (choices) => {
 
 
         } else {
-            async function getCities() {
+
+            async function searchHandler(event) {
                 try {
                     let response = await fetch(url, {
                         method: "POST",
@@ -194,7 +189,11 @@ const InitChoices = (choices) => {
                         body: JSON.stringify({
                             "apiKey": "" + apiKey + "",
                             "modelName": "Address",
-                            "calledMethod": "getCities"
+                            "calledMethod": "getCities",
+                            "methodProperties": {
+                                "FindByString": "" + event.detail.value + "",
+                                // "Limit": 500
+                            }
                         })
                     })
 
@@ -227,10 +226,15 @@ const InitChoices = (choices) => {
                     console.error(err)
                 }
 
-
             }
-
-            getCities()
+            const debouncedSearchHandler = debounce(searchHandler, 500)
+            instance.passedElement.element.addEventListener('search', debouncedSearchHandler, false)
+            instance.setChoices([{
+                value: 'Виберіть населений пункт',
+                label: 'Виберіть населений пункт',
+                disabled: true,
+                selected: true
+            }])
 
         }
 

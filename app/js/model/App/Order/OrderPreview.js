@@ -20,9 +20,6 @@ const partialSettings = {
 }
 
 
-
-// console.log(calcDiscount('pack'))
-
 const fullSettings = Object.assign({}, settings, partialSettings)
 
 

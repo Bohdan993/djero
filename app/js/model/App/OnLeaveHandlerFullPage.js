@@ -13,8 +13,7 @@ import {
 import {
     changeClassesReverse
 } from './BallClickAnimation'
-
-
+import { screenLeaveEvent } from "./CustomEvents"
 
 
 
@@ -57,6 +56,21 @@ function videoEndedHandler(e) {
 }
 
 
+function videoSliderMountedEventHandler(e) {
+    console.log('SLIDE CGANGE')
+    const {root} = e.detail
+    root.Components.Elements.slides.forEach(forEachSlide)
+}
+
+
+function forEachSlide(el) {
+        const iframe = el.querySelector('iframe')
+        if(iframe) iframe.remove()
+    }
+
+
+
+
 export default function onLeave(data) {
 
     const {
@@ -69,7 +83,12 @@ export default function onLeave(data) {
         $.fn.fullpage.reBuild()
     }, 50)
 
+
+
     return function (origin, destination, direction) {
+
+        
+        document.dispatchEvent(screenLeaveEvent)
 
         const callback = menuclickeventHandler.bind(this)
 
@@ -132,7 +151,7 @@ export default function onLeave(data) {
             return
         }
 
-
+        
 
     }
 

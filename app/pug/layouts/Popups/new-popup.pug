@@ -1,8 +1,5 @@
 <!-- dialog itself, mfp-hide class is required to make dialog hidden -->
 #new-popup.new-popup.popup.mfp-hide.zoom-anim-dialog.popup_fourth
-	//- a.close-popup.close-popup_secondary.open-popup-link-second-branch(href="#second-branch-popup")
-	//- 	span
-	//- 	span
 	.new-popup__layout.popup__layout
 		.center 
 			h2.popup__title.h2-title.new-popup__title
@@ -35,89 +32,20 @@
 								.splide__track.new-popup__slider-track
 									ul.splide__list.new-popup__slider-list
 										li.splide__slide.new-popup__slider-slide
-												img.new-popup__slider-img(src="img/slider-photo1.png" alt="Slide1")
+												img.new-popup__slider-img(data-splide-lazy="img/slider-photo1.png" alt="Slide1")
 										li.splide__slide.new-popup__slider-slide
 												a.screen-play-video.open-popup-link-video.no-video-play(href="#video-popup" data-video="GqVehhi47FM")
-												img.new-popup__slider-img(src="img/slider-photo2.png" alt="Slide2")
+												img.new-popup__slider-img(data-splide-lazy="img/slider-photo2.png" alt="Slide2")
 										li.splide__slide.new-popup__slider-slide
 												a.screen-play-video.open-popup-link-video.no-video-play(href="#video-popup" data-video="0O2aH4XLbto")
-												img.new-popup__slider-img(src="img/slider-photo3.png" alt="Slide3")
+												img.new-popup__slider-img(data-splide-lazy="img/slider-photo3.png" alt="Slide3")
 										li.splide__slide.new-popup__slider-slide
 												a.screen-play-video.open-popup-link-video.no-video-play(href="#video-popup" data-video="0O2aH4XLbto")
-												img.new-popup__slider-img(src="img/slider-photo1.png" alt="Slide4")
+												img.new-popup__slider-img(data-splide-lazy="img/slider-photo1.png" alt="Slide4")
 										li.splide__slide.new-popup__slider-slide
 												a.screen-play-video.open-popup-link-video.no-video-play(href="#video-popup" data-video="0O2aH4XLbto")
-												img.new-popup__slider-img(src="img/slider-photo2.png" alt="Slide5")
+												img.new-popup__slider-img(data-splide-lazy="img/slider-photo2.png" alt="Slide5")
 						p.new-popup__text-text
 							|Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
 						p.new-popup__text-text
 							|Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.
-				//- 	.new-popup__share
-				//- 		p.new-popup__share-text
-				//- 			|Поділитися:
-				//- 		ul.new-popup__social-share-list
-				//- 				li.new-popup__social-share-list-item
-				//- 					a.new-popup__social-share-link(href="https://www.facebook.com/djero.champ" rel="noopener noreffer" target="_blank") 
-				//- 						i.ico.new-popup__social-ico.social-ico
-				//- 							+svg2('facebook') 
-				//- 				//- li.new-popup__social-share-list-item
-				//- 				//- 	a.new-popup__social-share-link(href="")
-				//- 				//- 		i.ico.new-popup__social-ico.social-ico
-				//- 				//- 			+svg2('google+')  
-				//- 				li.new-popup__social-share-list-item
-				//- 					a.new-popup__social-share-link(href="https://www.instagram.com/djero_champ/" rel="noopener noreffer" target="_blank") 
-				//- 						i.ico.new-popup__social-ico.social-ico
-				//- 							+svg2('instagram') 
-				//- 				//- li.new-popup__social-share-list-item
-				//- 				//- 	a.new-popup__social-share-link(href="")
-				//- 				//- 		i.ico.new-popup__social-ico.social-ico
-				//- 				//- 			+svg2('pinterest')
-				//- //- aside.new-popup__sidebar-layer
-					.new-popup__popular-widget.widget
-						h3.new-popup__popular-title.widget__title
-							|Популярні новини
-						.new-popup__popular-cards.widget__cards
-							.new-popup__popular-card-wrapper.widget__card-wrapper
-								a.new-popup__popular-card.widget__card(href="")
-									.widget__img-wrapper
-										img.new-popup__popular-card-img.widget__img(src="img/slider-photo2.png" alt="Image")
-									.new-popup__popular-card-content.widget__content
-										time.new-popup__popular-card-date.widget__date.btn.small.sky-blue
-											|19.05.2021
-										p.new-popup__popular-card-text.widget__text
-											|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-											|Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
-							.new-popup__popular-card-wrapper.widget__card-wrapper
-								a.new-popup__popular-car.widget__card(href="")
-									.widget__img-wrapper
-										img.new-popup__popular-card-img.widget__img(src="img/slider-photo2.png" alt="Image")
-									.new-popup__popular-card-content.widget__content
-										time.new-popup__popular-card-date.widget__date.btn.small.sky-blue
-											|19.05.2021
-										p.new-popup__popular-card-text.widget__text
-											|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-											|Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
-					.new-popup__recommend-widget.widget
-						h3.new-popup__recommend-title.widget__title
-							|Рекомендовані новини
-						.new-popup__recommend-cards.widget__cards
-							.new-popup__recommend-card-wrapper.widget__card-wrapper
-								a.new-popup__recommend-card.widget__card(href="")
-									.widget__img-wrapper
-										img.new-popup__recommend-card-img.widget__img(src="img/slider-photo2.png" alt="Image")
-									.new-popup__recommend-card-content.widget__content
-										time.new-popup__recommend-card-date.widget__date.btn.small.sky-blue
-											|19.05.2021
-										p.new-popup__recommend-card-text.widget__text
-											|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-											|Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
-							.new-popup__recommend-card-wrapper.widget__card-wrapper
-								a.new-popup__recommend-car.widget__card(href="")
-									.widget__img-wrapper
-										img.new-popup__recommend-card-img.widget__img(src="img/slider-photo2.png" alt="Image")
-									.new-popup__recommend-card-content.widget__content
-										time.new-popup__recommend-card-date.widget__date.btn.small.sky-blue
-											|19.05.2021
-										p.new-popup__recommend-card-text.widget__text
-											|Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-											|Eveniet blanditiis perferendis officia velit quisquam dolorum quae a molestiae itaque corporis reprehenderit eos earum et magni ullam, provident perspiciatis fuga totam.
